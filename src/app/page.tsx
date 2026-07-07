@@ -7,6 +7,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import Team from "@/components/sections/Team";
 import FAQs from "@/components/sections/FAQs";
 import FinalCTA from "@/components/sections/FinalCTA";
+import Map from "@/components/sections/Map";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <Team />
       <FAQs />
       <FinalCTA />
+      <Map />
       <WhatsAppButton />
     </>
   );

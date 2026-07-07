@@ -27,6 +27,10 @@ const sacramento = Sacramento({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+  },
   title:
     "Tiffany Esthetic Group Ips SAS | Cirugía Plástica y Medicina Estética",
   description:
