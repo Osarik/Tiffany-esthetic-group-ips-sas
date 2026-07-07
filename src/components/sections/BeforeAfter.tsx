@@ -1,0 +1,48 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Section from "@/components/ui/Section";
+import Heading from "@/components/ui/Heading";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
+
+const cases = [
+  { id: "case1", beforeLabel: "Antes", afterLabel: "Después" },
+  { id: "case2", beforeLabel: "Antes", afterLabel: "Después" },
+  { id: "case3", beforeLabel: "Antes", afterLabel: "Después" },
+];
+
+export default function BeforeAfter() {
+  return (
+    <Section dark id="resultados">
+      <div className="text-center mb-16">
+        <span className="text-primary font-body font-semibold text-sm tracking-widest uppercase">
+          Resultados Reales
+        </span>
+        <Heading as="h2" className="mt-3">
+          Antes y después de nuestros pacientes
+        </Heading>
+        <p className="mt-4 text-text-main font-body max-w-2xl mx-auto">
+          Resultados naturales y reales de pacientes reales. Desliza la barra
+          para ver la transformación.
+        </p>
+      </div>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {cases.map((c, i) => (
+          <motion.div
+            key={c.id}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: i * 0.1 }}
+          >
+            <BeforeAfterSlider
+              beforeLabel={c.beforeLabel}
+              afterLabel={c.afterLabel}
+            />
+          </motion.div>
+        ))}
+      </div>
+    </Section>
+  );
+}
