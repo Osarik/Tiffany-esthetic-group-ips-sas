@@ -7,8 +7,23 @@ import { testimonials } from "@/data/testimonials";
 
 export default function Testimonials() {
   return (
-    <Section id="testimonios">
-      <div className="text-center mb-16">
+    <Section id="testimonios" className="relative overflow-hidden">
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none hidden lg:flex">
+        <div className="text-primary/[0.08]">
+          <svg width="480" height="480" viewBox="0 0 60 60" fill="none" aria-hidden="true">
+            <rect x="2" y="2" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="4" />
+            <rect x="22.5" y="2" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="4" />
+            <rect x="43" y="2" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="4" />
+            <rect x="2" y="22.5" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="4" />
+            <circle cx="30" cy="30" r="8.5" fill="currentColor" />
+            <rect x="43" y="22.5" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="4" />
+            <rect x="2" y="43" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="4" />
+            <rect x="22.5" y="43" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="4" />
+            <rect x="43" y="43" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="4" />
+          </svg>
+        </div>
+      </div>
+      <div className="text-center mb-16 relative z-10">
         <span className="text-primary font-body font-semibold text-sm tracking-widest uppercase">
           Testimonios
         </span>

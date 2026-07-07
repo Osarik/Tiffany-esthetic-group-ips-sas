@@ -10,8 +10,23 @@ export default function FAQs() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <Section id="preguntas-frecuentes">
-      <div className="max-w-3xl mx-auto">
+    <Section id="preguntas-frecuentes" className="relative overflow-hidden">
+      <div className="absolute -right-32 top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-3xl bg-primary/[0.03] pointer-events-none hidden lg:block">
+        <div className="absolute inset-0 flex items-center justify-center text-primary/[0.06]">
+          <svg width="300" height="300" viewBox="0 0 60 60" fill="none" aria-hidden="true">
+            <rect x="2" y="2" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="4" />
+            <rect x="22.5" y="2" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="4" />
+            <rect x="43" y="2" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="4" />
+            <rect x="2" y="22.5" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="4" />
+            <circle cx="30" cy="30" r="8.5" fill="currentColor" />
+            <rect x="43" y="22.5" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="4" />
+            <rect x="2" y="43" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="4" />
+            <rect x="22.5" y="43" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="4" />
+            <rect x="43" y="43" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="4" />
+          </svg>
+        </div>
+      </div>
+      <div className="max-w-3xl mx-auto relative z-10">
         <div className="text-center mb-12">
           <span className="text-primary font-body font-semibold text-sm tracking-widest uppercase">
             FAQ

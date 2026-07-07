@@ -95,15 +95,6 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
             className="relative"
           >
-            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
-              <img
-                src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80&auto=format&fit=crop"
-                alt="Clínica estética Tiffany - Instalaciones modernas"
-                className="w-full h-full object-cover"
-                fetchPriority="high"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-            </div>
             <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-5 flex items-center gap-3">
               <div className="flex -space-x-2">
                 {[1, 2, 3].map((i) => (
@@ -115,7 +106,7 @@ export default function Hero() {
               </div>
               <div>
                 <p className="font-body font-semibold text-sm text-text-dark">
-                  +127 reseñas
+                  +20 reseñas
                 </p>
                 <div className="flex text-yellow-400 text-xs" aria-label="5 estrellas">
                   {"★★★★★"}
