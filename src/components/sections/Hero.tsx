@@ -6,28 +6,38 @@ import Button from "@/components/ui/Button";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-white via-primary/5 to-primary/10">
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/10 to-transparent" />
-        <div className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />
-        <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-secondary/5 blur-3xl" />
-      </div>
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source
+          src="/videos/hero-bg.mp4"
+          type="video/mp4"
+        />
+      </video>
 
-      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
+
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <span className="inline-block text-primary font-body font-semibold text-sm tracking-widest uppercase mb-4">
+            <span className="inline-block text-white/70 font-body font-semibold text-sm tracking-widest uppercase mb-4">
               Cirugía Plástica & Medicina Estética
             </span>
-            <Heading as="h1" className="mb-6">
+            <Heading as="h1" className="mb-6 !text-white">
               Transforma tu belleza{" "}
               <span className="text-primary">natural</span>
             </Heading>
-            <p className="text-lg md:text-xl text-text-main font-body leading-relaxed mb-8 max-w-lg">
+            <p className="text-lg md:text-xl text-white/80 font-body leading-relaxed mb-8 max-w-lg">
               Somos una clínica boutique especializada en procedimientos
               estéticos y cirugía plástica. Resultados naturales que realzan tu
               esencia con la más alta tecnología y seguridad.
@@ -57,6 +67,7 @@ export default function Hero() {
               <Button
                 variant="outline"
                 size="lg"
+                className="!border-white !text-white hover:!bg-white hover:!text-text-dark"
                 onClick={() => {
                   document
                     .getElementById("servicios")
@@ -66,7 +77,7 @@ export default function Hero() {
                 Ver servicios
               </Button>
             </div>
-            <div className="flex items-center gap-6 mt-10 text-sm text-text-main/70">
+            <div className="flex items-center gap-6 mt-10 text-sm text-white/60">
               <span className="flex items-center gap-1.5">
                 <svg className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 +500 procedimientos
