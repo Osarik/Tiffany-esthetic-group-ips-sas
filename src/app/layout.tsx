@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Manrope, Sacramento } from "next/font/google";
 import SchemaMarkup from "@/components/SchemaMarkup";
 import Logo from "@/components/Logo";
+import SplashWrapper from "@/components/SplashWrapper";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -78,6 +79,7 @@ export default function RootLayout({
         <SchemaMarkup />
       </head>
       <body className="min-h-screen flex flex-col font-body antialiased">
+        <SplashWrapper>
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-white focus:text-text-dark focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:outline-2 focus:outline-primary"
@@ -174,6 +176,7 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        </SplashWrapper>
       </body>
     </html>
   );
