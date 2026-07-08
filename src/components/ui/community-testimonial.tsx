@@ -13,29 +13,29 @@ const testimonialsData = {
         {
           id: "t1",
           quote:
-            "Desde la primera consulta sentí total confianza. El resultado superó mis expectativas. Recuperé mi silueta y mi autoestima.",
-          authorName: "María Fernanda López",
-          authorTitle: "Liposucción HD",
+            "Súper recomiendo. Me realicé un procedimiento con el doctor Oscar Acosta y la atención desde la recepción es muy agradable. El día del procedimiento me sentí muy tranquila y segura.",
+          authorName: "Alejandra García",
+          authorTitle: "Cirugía con Dr. Oscar Acosta",
           avatarUrl:
-            "https://placehold.co/100x100/2FA79C/FFFFFF?text=ML",
+            "https://placehold.co/100x100/2FA79C/FFFFFF?text=AG",
         },
         {
           id: "t2",
           quote:
-            "Un antes y después increíble. El equipo fue muy atento y el proceso fue mucho más cómodo de lo que imaginaba.",
-          authorName: "Carolina Méndez",
-          authorTitle: "Rinoplastia",
+            "Excelente clínica y excelentes profesionales. Me realizaron una lipoescultura y una corrección de hernia umbilical. Ambas cirugías fueron en un quirófano de primera calidad.",
+          authorName: "Magaly Porto",
+          authorTitle: "Lipoescultura",
           avatarUrl:
-            "https://placehold.co/100x100/2FA79C/FFFFFF?text=CM",
+            "https://placehold.co/100x100/2FA79C/FFFFFF?text=MP",
         },
         {
           id: "t3",
           quote:
-            "Resultados naturales y muy bien logrados. Exactamente lo que quería: verme mejor sin perder mi esencia.",
-          authorName: "Andrea Restrepo",
-          authorTitle: "Ácido Hialurónico",
+            "Super recomendados, larga trayectoria profesional. Ahora con una infraestructura excelente que sobrepasa todas las expectativas en seguridad, profesionalismo y cumplimiento. Excelentes profesionales.",
+          authorName: "Alba Libreros",
+          authorTitle: "Paciente",
           avatarUrl:
-            "https://placehold.co/100x100/2FA79C/FFFFFF?text=AR",
+            "https://placehold.co/100x100/2FA79C/FFFFFF?text=AL",
         },
       ],
     },
@@ -47,29 +47,29 @@ const testimonialsData = {
         {
           id: "t4",
           quote:
-            "La lipoescultura cambió mi vida. Me siento más segura, más yo misma. Todo el proceso fue profesional y cálido.",
-          authorName: "Valentina Osorio",
-          authorTitle: "Lipoescultura",
+            "Súper recomendada la clínica. Excelente atención y seguridad en todos los procedimientos. Estoy feliz con los resultados de mi cirugía.",
+          authorName: "Angie Penagoa",
+          authorTitle: "Cirugía estética",
           avatarUrl:
-            "https://placehold.co/100x100/2FA79C/FFFFFF?text=VO",
+            "https://placehold.co/100x100/2FA79C/FFFFFF?text=AP",
         },
         {
           id: "t5",
           quote:
-            "Me hicieron sentir acompañada en cada etapa. La recuperación fue más rápida de lo que esperaba gracias al seguimiento.",
-          authorName: "Sofía Ramírez",
-          authorTitle: "Pexia Mamaria",
+            "Mi experiencia fue increíble. La clínica es muy agradable y el personal siempre es amable y servicial. Muy agradecida.",
+          authorName: "Leires Altamirano",
+          authorTitle: "Paciente",
           avatarUrl:
-            "https://placehold.co/100x100/2FA79C/FFFFFF?text=SR",
+            "https://placehold.co/100x100/2FA79C/FFFFFF?text=LA",
         },
         {
           id: "t6",
           quote:
-            "Después de años queriendo hacerme la blefaroplastia, por fin encontré el lugar indicado. El resultado es sutil y rejuvenecedor.",
-          authorName: "Laura Betancur",
-          authorTitle: "Blefaroplastia",
+            "Excelente servicio al paciente. Un lugar donde prestan una atención de primera con personal altamente calificado.",
+          authorName: "Greysy Hernández",
+          authorTitle: "Paciente",
           avatarUrl:
-            "https://placehold.co/100x100/2FA79C/FFFFFF?text=LB",
+            "https://placehold.co/100x100/2FA79C/FFFFFF?text=GH",
         },
       ],
     },
@@ -81,29 +81,29 @@ const testimonialsData = {
         {
           id: "t7",
           quote:
-            "Me encantó la honestidad del equipo médico. Me explicaron todo sin presiones y el resultado fue incluso mejor de lo esperado.",
-          authorName: "Daniela Giraldo",
-          authorTitle: "Liposucción y Lipectomía",
+            "Excelente clínica. Muy agradecida con la atención y el profesionalismo del equipo médico. Una experiencia que recomiendo totalmente.",
+          authorName: "Sonia Amparo Ocoró",
+          authorTitle: "Paciente",
           avatarUrl:
-            "https://placehold.co/100x100/2FA79C/FFFFFF?text=DG",
+            "https://placehold.co/100x100/2FA79C/FFFFFF?text=SO",
         },
         {
           id: "t8",
           quote:
-            "El lifting facial me devolvió la confianza que había perdido con los años. Se nota el cuidado artesanal en cada detalle.",
-          authorName: "Patricia Uribe",
-          authorTitle: "Lifting Facial",
+            "Excelente institución. Personal muy profesional y una atención maravillosa. Sin duda la mejor decisión.",
+          authorName: "Alejandra Rudas",
+          authorTitle: "Paciente",
           avatarUrl:
-            "https://placehold.co/100x100/2FA79C/FFFFFF?text=PU",
+            "https://placehold.co/100x100/2FA79C/FFFFFF?text=AR",
         },
         {
           id: "t9",
           quote:
-            "Viajé desde otra ciudad para operarme aquí y valió cada kilómetro. Profesionalismo, calidez y resultados de primer nivel.",
-          authorName: "Manuela Cardona",
-          authorTitle: "Aumento y Liposucción",
+            "Excelente atención, buen servicio y unas instalaciones de primera. Muy recomendada.",
+          authorName: "Andrea Caicedo",
+          authorTitle: "Paciente",
           avatarUrl:
-            "https://placehold.co/100x100/2FA79C/FFFFFF?text=MC",
+            "https://placehold.co/100x100/2FA79C/FFFFFF?text=AC",
         },
       ],
     },
