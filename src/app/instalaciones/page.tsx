@@ -304,39 +304,70 @@ export default function InstalacionesPage() {
           </Container>
         </section>
 
-        {/* ─── GALERÍA ────────────────────────────────────────── */}
-        <section className="bg-[#FBFBF9] py-20 md:py-28">
+        {/* ─── GALERÍA — Sticky scroll style ──────────────────── */}
+        <section className="bg-slate-950 py-28 md:py-36 overflow-hidden relative">
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" aria-hidden="true" />
           <Container>
             <AnimateInView variant="fadeUp">
-              <div className="text-center mb-12">
-                <span className="inline-block text-primary font-body font-semibold text-xs tracking-[0.2em] uppercase mb-4 border border-primary/20 rounded-full px-4 py-1.5">
+              <div className="text-center mb-16 relative z-10">
+                <span className="inline-block text-white/60 font-body font-semibold text-xs tracking-[0.2em] uppercase mb-4 border border-white/20 rounded-full px-4 py-1.5">
                   Galería
                 </span>
-                <h2 className="font-heading font-bold text-3xl md:text-4xl text-text-dark leading-tight">
-                  Conoce nuestros espacios
+                <h2 className="font-heading font-bold text-3xl md:text-5xl text-white leading-tight">
+                  Conoce nuestros{" "}
+                  <span className="text-accent-light">espacios</span>
                 </h2>
+                <p className="mt-4 text-white/50 font-body text-base max-w-xl mx-auto">
+                  Un recorrido visual por nuestras instalaciones quirúrgicas,
+                  áreas de recuperación y farmacia habilitada.
+                </p>
               </div>
             </AnimateInView>
-            <StaggerGrid className="grid grid-cols-2 md:grid-cols-3 gap-4" staggerDelay={0.08}>
-              {gallery.map((img) => (
-                <StaggerItem key={img.label}>
-                  <div className="group relative rounded-xl overflow-hidden h-[220px] md:h-[280px] shadow-sm">
+
+            <div className="grid grid-cols-12 gap-2 relative z-10">
+              <div className="grid gap-2 col-span-4">
+                {[gallery[0], gallery[1], gallery[2], gallery[3], gallery[4]].map((img) => (
+                  <figure key={img.label} className="w-full group">
                     <img
                       src={img.src}
                       alt={img.label}
                       loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="transition-all duration-500 w-full h-96 align-bottom object-cover rounded-md group-hover:scale-[1.02] group-hover:shadow-lg"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A2A26]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-400">
-                      <span className="text-white font-body text-sm font-semibold">
-                        {img.label}
-                      </span>
-                    </div>
-                  </div>
-                </StaggerItem>
-              ))}
-            </StaggerGrid>
+                  </figure>
+                ))}
+              </div>
+              <div className="sticky top-24 h-screen w-full col-span-4 gap-2 grid grid-rows-3">
+                {[gallery[5], gallery[0], gallery[1]].map((img) => (
+                  <figure key={img.label} className="w-full h-full group">
+                    <img
+                      src={img.src}
+                      alt={img.label}
+                      loading="lazy"
+                      className="transition-all duration-500 h-full w-full align-bottom object-cover rounded-md group-hover:scale-[1.02] group-hover:shadow-lg"
+                    />
+                  </figure>
+                ))}
+              </div>
+              <div className="grid gap-2 col-span-4">
+                {[gallery[2], gallery[3], gallery[4], gallery[5], gallery[0]].map((img) => (
+                  <figure key={`${img.label}-r`} className="w-full group">
+                    <img
+                      src={img.src}
+                      alt={img.label}
+                      loading="lazy"
+                      className="transition-all duration-500 w-full h-96 align-bottom object-cover rounded-md group-hover:scale-[1.02] group-hover:shadow-lg"
+                    />
+                  </figure>
+                ))}
+              </div>
+            </div>
+
+            <AnimateInView variant="fadeUp" className="mt-16 relative z-10">
+              <h3 className="text-[12vw] md:text-[10vw] leading-[100%] uppercase font-heading font-bold text-center bg-gradient-to-r from-white/10 to-white/5 bg-clip-text text-transparent select-none">
+                Instalaciones
+              </h3>
+            </AnimateInView>
           </Container>
         </section>
 
