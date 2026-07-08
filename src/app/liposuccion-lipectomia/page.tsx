@@ -15,7 +15,7 @@ const jsonLd = {
       url: "https://www.tiffanyesthetic.com/liposuccion-lipectomia",
       name: "Liposucción y Lipectomía en Cali",
       description:
-        "Información médica sobre liposucción, lipectomía y transferencia de grasa autóloga en Tiffany Esthetic Group IPS SAS.",
+        "Información médica sobre liposucción, lipectomía y transferencia de grasa autóloga en Tiffany Esthetic Group IPS SAS. IPS habilitada con protocolos clínicos establecidos.",
       inLanguage: "es",
       medicalAudience: "Patient",
       aspect: "Treatment",
@@ -43,9 +43,9 @@ const jsonLd = {
       "@type": "MedicalProcedure",
       name: "Liposucción",
       procedureType: "SurgicalProcedure",
-      bodyLocation: ["Abdomen", "Flanks", "Back", "Tighs", "Arms"],
+      bodyLocation: ["Abdomen", "Flanks", "Back", "Thighs", "Arms"],
       description:
-        "Remoción quirúrgica de depósitos de grasa localizada en zonas específicas del cuerpo.",
+        "Remoción quirúrgica de depósitos de grasa localizada en zonas específicas del cuerpo mediante aspiración selectiva.",
     },
     {
       "@type": "MedicalProcedure",
@@ -61,43 +61,51 @@ const jsonLd = {
       procedureType: "SurgicalProcedure",
       bodyLocation: ["Gluteal Region"],
       description:
-        "Recolección, procesamiento y aplicación de grasa del propio paciente en áreas como la región glútea.",
+        "Recolección, procesamiento y aplicación de grasa del propio paciente en áreas como la región glútea para mejorar contorno y proyección.",
     },
   ],
 };
 
-export const metadata: Metadata = {
-  title:
-    "Liposucción y Lipectomía en Cali | Tiffany Esthetic Group IPS SAS",
-  description:
-    "Valoración médica para liposucción, lipectomía y transferencia de grasa autóloga en Cali. IPS habilitada, salas de cirugía, recuperación y personal calificado. Agenda tu cita.",
-  robots: { index: true, follow: true },
-  alternates: {
-    canonical: "/liposuccion-lipectomia",
+const procedureSteps = [
+  {
+    number: "01",
+    title: "Valoración clínica y exámenes preoperatorios",
+    desc: "Evaluación del estado de salud general, índice de masa corporal (IMC), antecedentes médicos y exámenes de laboratorio para determinar la idoneidad del paciente.",
   },
-  openGraph: {
-    title: "Liposucción y Lipectomía en Cali",
-    description:
-      "Moldeamiento corporal con valoración médica, instalaciones habilitadas y acompañamiento quirúrgico.",
-    url: "https://www.tiffanyesthetic.com/liposuccion-lipectomia",
-    siteName: "Tiffany Esthetic Group IPS SAS",
-    locale: "es_CO",
-    type: "article",
+  {
+    number: "02",
+    title: "Marcación quirúrgica y planificación",
+    desc: "El cirujano delimita las zonas a tratar según la anatomía del paciente y define las áreas donantes y receptoras antes de la intervención.",
   },
-};
+  {
+    number: "03",
+    title: "Aspiración selectiva de grasa",
+    desc: "Extracción del tejido adiposo mediante cánulas de diámetro controlado, respetando los planos anatómicos y minimizando el trauma tisular.",
+  },
+  {
+    number: "04",
+    title: "Procesamiento del tejido adiposo (si aplica)",
+    desc: "Centrifugación y filtrado de la grasa extraída bajo protocolos de bioseguridad para separar adipocitos viables cuando se realiza transferencia.",
+  },
+  {
+    number: "05",
+    title: "Cierre quirúrgico y vendaje compresivo",
+    desc: "Sutura de incisiones mínimas y colocación de prendas de compresión médica para estabilizar los tejidos y favorecer la recuperación.",
+  },
+];
 
-const procedures = [
+const procedureTypes = [
   {
     title: "Liposucción",
-    desc: "Remueve depósitos de grasa localizada en zonas como abdomen, flancos, espalda, muslos o brazos mediante aspiración selectiva.",
+    desc: "Remueve depósitos de grasa localizada en zonas como abdomen, flancos, espalda, muslos o brazos mediante aspiración selectiva con cánulas finas.",
   },
   {
     title: "Transferencia de grasa",
-    desc: "Recolecta grasa del propio paciente, la procesa y la aplica en áreas como la región glútea para mejorar el contorno corporal.",
+    desc: "Recolecta grasa del propio paciente, la procesa y la aplica en áreas como la región glútea para mejorar el contorno corporal con tejido autólogo.",
   },
   {
     title: "Lipectomía o abdominoplastia",
-    desc: "Retira exceso de piel y tejido graso abdominal. En algunos casos mejora la firmeza de la pared abdominal y redefine la silueta.",
+    desc: "Retira exceso de piel y tejido graso abdominal. Puede incluir reparación de la pared muscular (diástasis abdominal) cuando está indicado.",
   },
 ];
 
@@ -138,54 +146,93 @@ const candidates = [
     desc: "Índice de Masa Corporal compatible con procedimientos quirúrgicos, verificado en la valoración.",
   },
   {
-    title: "Comprensión de riesgos",
-    desc: "Pacientes que entienden los beneficios, riesgos y alternativas antes de decidir.",
+    title: "No fumador activo",
+    desc: "El tabaquismo afecta la oxigenación tisular y puede comprometer la cicatrización y el resultado final.",
+  },
+];
+
+const areas = [
+  {
+    area: "Abdomen y flancos",
+    desc: "Reducción de grasa abdominal y depósitos laterales para definir la cintura. La lipectomía retira el exceso de piel cuando existe.",
+    icon: (
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
+    ),
+  },
+  {
+    area: "Espalda y zona lumbar",
+    desc: "Eliminación de depósitos adiposos que se marcan con la ropa interior, mejorando la transición hacia la región glútea.",
+    icon: (
+      <path d="M4 4h16v16H4z" />
+    ),
+  },
+  {
+    area: "Muslos y rodillas",
+    desc: "Reducción del volumen interno o externo del muslo para estilizar las piernas y armonizar la silueta general.",
+    icon: (
+      <path d="M6 4h4v16H6zM14 4h4v16h-4z" />
+    ),
+  },
+  {
+    area: "Brazos",
+    desc: "Liposucción de brazos para reducir depósitos de grasa que pueden generar incomodidad con la ropa o limitar la definición del contorno.",
+    icon: (
+      <path d="M8 4h8v16H8z" />
+    ),
   },
 ];
 
 const recoveryTimeline = [
   {
     period: "Primeras 24 a 48 horas",
-    desc: "Reposo moderado. Es normal presentar inflamación, drenaje de fluidos y molestias controlables con analgesia formulada.",
+    desc: "Reposo moderado. Es normal presentar inflamación, drenaje de fluidos tumescentes por las incisiones y molestias controlables con analgesia formulada.",
   },
   {
     period: "Primera semana (días 1 a 7)",
-    desc: "Uso obligatorio de prendas de compresión. Se recomienda iniciar drenaje linfático suave según indicación médica.",
+    desc: "Uso obligatorio de prenda de compresión las 24 horas. Se recomienda iniciar drenaje linfático manual suave para reducir edema y favorecer la circulación.",
   },
   {
     period: "Primer mes",
-    desc: "Restricción de esfuerzo físico. Retorno progresivo a actividades cotidianas sin carga. Controles médicos periódicos.",
+    desc: "Restricción de esfuerzo físico y movimientos bruscos. Retorno progresivo a actividades laborales sedentarias. Controles médicos periódicos para evaluar la evolución.",
   },
   {
     period: "Retorno a actividades físicas",
-    desc: "Caminatas desde la primera semana. Ejercicio moderado a partir de la cuarta a sexta semana con autorización médica.",
+    desc: "Caminatas desde la primera semana. Ejercicio cardiovascular moderado a partir de la cuarta a sexta semana, siempre con autorización médica previa.",
   },
 ];
 
 const faqs = [
   {
     q: "¿La liposucción sirve para bajar de peso?",
-    a: "No. Es un procedimiento de contorno corporal, no un tratamiento para la obesidad ni una alternativa a una alimentación balanceada y ejercicio regular.",
+    a: "No. La liposucción es un procedimiento de contorno corporal, no un tratamiento para la obesidad ni una alternativa a la alimentación balanceada y el ejercicio regular. Su objetivo es eliminar depósitos de grasa localizada resistentes a la dieta.",
   },
   {
     q: "¿La grasa transferida es permanente?",
-    a: "Una parte de la grasa transferida puede ser reabsorbida por el cuerpo. La permanencia depende de factores individuales, técnica médica y cuidados posteriores. El cirujano planifica un volumen adicional para compensar este fenómeno.",
+    a: "Una parte de la grasa transferida puede ser reabsorbida por el cuerpo durante los primeros meses. La permanencia definitiva depende de factores individuales, la técnica médica y los cuidados posteriores. El cirujano planifica un volumen adicional para compensar este fenómeno de reabsorción.",
   },
   {
-    q: "¿Cuánto tiempo dura la incapacidad?",
-    a: "Depende del procedimiento, la extensión tratada y la evolución del paciente. El médico tratante indicará el tiempo adecuado durante la valoración y los controles posteriores.",
+    q: "¿Cuánto tiempo dura la incapacidad laboral?",
+    a: "Depende del tipo de procedimiento, la extensión tratada y la evolución del paciente. Para actividades sedentarias puede ser de 5 a 7 días; para trabajos que requieran esfuerzo físico, el reposo puede extenderse de 2 a 4 semanas. El médico tratante indicará el tiempo adecuado durante la valoración.",
   },
   {
     q: "¿Qué diferencia hay entre liposucción y lipectomía?",
-    a: "La liposucción remueve grasa localizada mediante cánulas de aspiración. La lipectomía o abdominoplastia retira exceso de piel y tejido graso abdominal, y puede restaurar la firmeza de la pared muscular cuando está indicado.",
+    a: "La liposucción remueve grasa localizada mediante cánulas de aspiración a través de incisiones mínimas. La lipectomía o abdominoplastia es un procedimiento que retira exceso de piel y tejido graso abdominal, y puede restaurar la firmeza de la pared muscular cuando existe diástasis abdominal.",
   },
   {
-    q: "¿Estos procedimientos son seguros?",
-    a: "Todo procedimiento quirúrgico implica riesgos. Realizarlos en instituciones habilitadas y por profesionales idóneos ayuda a minimizar complicaciones, pero no las elimina por completo. La valoración médica previa es obligatoria para determinar la relación riesgo-beneficio.",
+    q: "¿Qué es la diástasis abdominal y se corrige en el mismo procedimiento?",
+    a: "La diástasis abdominal es la separación de los músculos rectos del abdomen, frecuente después de embarazos o pérdidas significativas de peso. Durante una abdominoplastia, el cirujano puede reparar esta separación para mejorar la firmeza y funcionalidad de la pared abdominal.",
+  },
+  {
+    q: "¿Estos procedimientos son seguros en Colombia?",
+    a: "Todo procedimiento quirúrgico implica riesgos. Realizarlos en una IPS habilitada (según Resolución 3100 de 2019 del Ministerio de Salud) y por profesionales idóneos ayuda a minimizar complicaciones, pero no las elimina por completo. La valoración médica previa es obligatoria para determinar la relación riesgo-beneficio de cada paciente.",
   },
   {
     q: "¿Qué exámenes médicos necesito antes de la cirugía?",
-    a: "Se requieren exámenes preoperatorios básicos: cuadro hemático, pruebas de coagulación, función renal, prueba de embarazo (si aplica) y valoración cardiológica con aprobación del anestesiólogo.",
+    a: "Se requieren exámenes preoperatorios básicos: cuadro hemático completo, pruebas de coagulación (PT y PTT), función renal (creatinina), glicemia, prueba de embarazo (si aplica), electrocardiograma y valoración por anestesiología. El equipo médico indicará exámenes adicionales según la historia clínica.",
+  },
+  {
+    q: "¿Qué es una IPS habilitada y por qué es importante?",
+    a: "Una Institución Prestadora de Servicios de Salud (IPS) habilitada cumple con los estándares del Ministerio de Salud de Colombia en infraestructura, talento humano calificado, equipos de emergencia, bioseguridad y protocolos clínicos. Elegir una IPS habilitada minimiza los riesgos quirúrgicos y garantiza la trazabilidad del proceso de atención.",
   },
 ];
 
@@ -260,7 +307,8 @@ export default function LiposuccionLipectomiaPage() {
               <p className="mt-6 text-lg md:text-xl text-white/80 font-body leading-relaxed max-w-2xl">
                 Moldeamiento corporal con valoración médica, instalaciones
                 habilitadas y acompañamiento quirúrgico. Procedimientos
-                realizados por profesionales de la salud en IPS registrada.
+                realizados por profesionales de la salud en IPS registrada
+                ante las autoridades sanitarias de Colombia.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <a
@@ -281,16 +329,16 @@ export default function LiposuccionLipectomiaPage() {
                   Agendar valoración médica
                 </a>
                 <a
-                  href="#procedimientos"
+                  href="#procedimiento"
                   className="inline-flex items-center justify-center gap-2 border-2 border-white/40 text-white font-body font-semibold px-8 py-3.5 rounded-full hover:bg-white/10 transition-all duration-300 text-base no-underline"
                 >
-                  Ver procedimientos
+                  Conocer el procedimiento
                 </a>
               </div>
               <p className="mt-6 text-sm text-white/60 font-body">
-                Todo procedimiento quirúrgico implica riesgos. La idoneidad del
-                paciente debe ser evaluada previamente mediante valoración
-                médica presencial.
+                De acuerdo con la normativa colombiana, todo procedimiento
+                quirúrgico requiere una valoración médica presencial previa para
+                determinar la idoneidad del paciente.
               </p>
             </div>
           </Container>
@@ -307,27 +355,31 @@ export default function LiposuccionLipectomiaPage() {
                 <p>
                   La liposucción y la lipectomía son procedimientos quirúrgicos
                   orientados al contorno corporal. Mientras la liposucción aspira
-                  depósitos de grasa localizada, la lipectomía (o abdominoplastia)
-                  retira exceso de piel y tejido graso abdominal, mejorando la
-                  firmeza de la pared muscular cuando está indicado.
+                  depósitos de grasa localizada mediante cánulas finas, la
+                  lipectomía (abdominoplastia) retira exceso de piel y tejido
+                  graso abdominal, mejorando la firmeza de la pared muscular
+                  cuando existe diástasis abdominal.
                 </p>
                 <h3 className="font-heading font-bold text-text-dark text-lg">
                   Diferencia entre liposucción y lipectomía
                 </h3>
                 <p>
-                  La liposucción se enfoca en la grasa profunda y superficial,
-                  remodelando el contorno mediante cánulas finas. La lipectomía
-                  aborda el exceso de piel —frecuente después de pérdidas
-                  significativas de peso o embarazos— y puede incluir la
-                  reparación de la pared abdominal (diástasis).
+                  La liposucción se enfoca en la grasa subcutánea profunda y
+                  superficial. No está indicada para tratar excesos de piel ni
+                  para reparar la pared abdominal. La lipectomía aborda el
+                  exceso de piel —frecuente después de pérdidas significativas
+                  de peso o embarazos múltiples— y puede incluir la reparación
+                  de la diástasis de los músculos rectos abdominales.
                 </p>
                 <h3 className="font-heading font-bold text-text-dark text-lg">
                   Transferencia de grasa autóloga
                 </h3>
                 <p>
-                  La grasa extraída puede procesarse y reinyectarse en áreas como
-                  la región glútea para mejorar volumen y proyección, utilizando
-                  tejido vivo del propio paciente sin materiales sintéticos.
+                  La grasa extraída durante la liposucción puede procesarse
+                  mediante centrifugación y filtrado, y luego reinyectarse en
+                  áreas como la región glútea para mejorar volumen, proyección
+                  y contorno. Al utilizar tejido vivo del propio paciente se
+                  elimina el riesgo de rechazo inmunológico.
                 </p>
               </div>
             </div>
@@ -346,39 +398,88 @@ export default function LiposuccionLipectomiaPage() {
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                 </svg>
                 <h3 className="font-heading font-bold text-text-dark text-lg">
-                  Seguridad y habilitación
+                  Seguridad y marco legal en Colombia
                 </h3>
               </div>
               <p className="text-sm text-text-main/80 font-body leading-relaxed">
                 Tiffany Esthetic Group IPS es una institución prestadora de
-                servicios de salud debidamente habilitada ante las autoridades
-                sanitarias de Colombia, con salas de cirugía, recuperación,
-                farmacia y personal calificado para procedimientos quirúrgicos.
+                servicios de salud debidamente habilitada (Resolución 3100 de
+                2019 del Ministerio de Salud), con salas de cirugía,
+                recuperación, farmacia y personal calificado para
+                procedimientos quirúrgicos.
               </p>
-              <div className="mt-6 bg-primary/5 rounded-xl p-5 border border-primary/10">
+              <div className="mt-4 bg-primary/5 rounded-xl p-5 border border-primary/10">
                 <p className="text-sm font-body font-semibold text-primary-dark">
                   Todo procedimiento requiere valoración médica presencial,
-                  exámenes preoperatorios y consentimiento informado.
+                  exámenes preoperatorios, consentimiento informado y
+                  cumplimiento de los protocolos de bioseguridad establecidos
+                  por la normativa colombiana.
                 </p>
               </div>
             </div>
           </div>
         </Section>
 
-        <Section id="procedimientos" className="bg-[#FBFBF9]">
+        <Section id="procedimiento" className="bg-[#FBFBF9]">
           <SectionHeader
-            label="Procedimientos"
+            label="Procedimiento"
+            title="¿Cómo se realiza la intervención?"
+            desc="El proceso quirúrgico se desarrolla en etapas secuenciales, desde la valoración inicial hasta el postoperatorio."
+          />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {procedureSteps.map((step) => (
+              <article
+                key={step.number}
+                className="relative bg-white rounded-2xl p-8 border border-silver/20 shadow-sm"
+              >
+                <span
+                  className="font-heading font-bold text-5xl text-primary/10 absolute top-4 right-6 select-none"
+                  aria-hidden="true"
+                >
+                  {step.number}
+                </span>
+                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-body font-bold text-sm mb-5 relative">
+                  {step.number}
+                </div>
+                <h3 className="font-heading font-bold text-text-dark text-lg mb-3">
+                  {step.title}
+                </h3>
+                <p className="text-sm text-text-main/80 font-body leading-relaxed">
+                  {step.desc}
+                </p>
+              </article>
+            ))}
+          </div>
+        </Section>
+
+        <Section id="tipos" className="bg-white">
+          <SectionHeader
+            label="Tipos"
             title="Opciones de contorno corporal"
             desc="La elección del procedimiento depende de la historia clínica, anatomía, expectativas y criterio médico."
           />
           <div className="grid md:grid-cols-3 gap-6">
-            {procedures.map((item, i) => (
-              <article
+            {procedureTypes.map((item, i) => (
+              <div
                 key={item.title}
-                className="relative bg-white rounded-2xl p-8 border border-silver/20 shadow-sm"
+                className="bg-[#FBFBF9] rounded-2xl p-8 border border-silver/20"
               >
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-body font-bold text-sm mb-5">
-                  {String(i + 1).padStart(2, "0")}
+                <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-5">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    {i === 0 && <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />}
+                    {i === 1 && <path d="M4 4h16v16H4z" />}
+                    {i === 2 && <path d="M6 4h4v16H6zM14 4h4v16h-4z" />}
+                  </svg>
                 </div>
                 <h3 className="font-heading font-bold text-text-dark text-lg mb-3">
                   {item.title}
@@ -386,7 +487,45 @@ export default function LiposuccionLipectomiaPage() {
                 <p className="text-sm text-text-main/80 font-body leading-relaxed">
                   {item.desc}
                 </p>
-              </article>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        <Section id="areas" className="bg-[#FBFBF9]">
+          <SectionHeader
+            label="Áreas"
+            title="Zonas corporales tratables"
+            desc="Estos procedimientos pueden abordar múltiples áreas del cuerpo, ya sea de forma individual o combinada."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {areas.map((item) => (
+              <div
+                key={item.area}
+                className="bg-white rounded-2xl p-6 border border-silver/20 shadow-sm"
+              >
+                <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    {item.icon}
+                  </svg>
+                </div>
+                <h3 className="font-heading font-bold text-text-dark text-lg mb-2">
+                  {item.area}
+                </h3>
+                <p className="text-sm text-text-main/80 font-body leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
             ))}
           </div>
         </Section>
@@ -436,9 +575,9 @@ export default function LiposuccionLipectomiaPage() {
                   Atención médica con protocolos establecidos
                 </Heading>
                 <p className="mt-4 text-white/75 font-body">
-                  La seguridad se construye antes, durante y después del
-                  procedimiento. Por eso el primer paso es siempre una
-                  valoración médica presencial.
+                  La seguridad del paciente es la prioridad en cada etapa del
+                  proceso. Por eso el primer paso es siempre una valoración
+                  médica presencial obligatoria.
                 </p>
               </div>
               <ol className="grid gap-4">
@@ -497,42 +636,55 @@ export default function LiposuccionLipectomiaPage() {
           </div>
         </Section>
 
-        <Section id="riesgos-recuperacion" className="bg-[#FBFBF9]">
+        <Section id="resultados" className="bg-[#FBFBF9]">
           <SectionHeader
-            label="Riesgos y recuperación"
-            title="Información importante antes de decidir"
+            label="Resultados"
+            title="¿Qué resultados se pueden esperar?"
+            desc="Los resultados anatómicos varían en cada persona. La información aquí presentada es una referencia general."
           />
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+          <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl p-8 border border-silver/20 shadow-sm">
               <h3 className="font-heading font-bold text-text-dark text-lg mb-4">
-                Riesgos posibles
+                Resultados visibles
               </h3>
               <p className="text-sm text-text-main/80 font-body leading-relaxed">
-                Pueden presentarse inflamación, dolor, hematomas, infección,
-                irregularidades del contorno, reabsorción parcial de grasa
-                transferida, complicaciones anestésicas y, en casos poco
-                frecuentes, eventos tromboembólicos. El equipo médico explicará
-                estos riesgos en detalle durante la valoración.
+                La reducción del contorno y la mejoría en la silueta son
+                evidentes desde las primeras semanas, aunque el resultado final
+                se consolida entre los 3 y 6 meses posteriores a la cirugía,
+                una vez que la inflamación ha desaparecido por completo y los
+                tejidos se han estabilizado.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-8 border border-silver/20 shadow-sm">
               <h3 className="font-heading font-bold text-text-dark text-lg mb-4">
-                Recuperación general
+                Integración de grasa transferida
               </h3>
               <p className="text-sm text-text-main/80 font-body leading-relaxed">
-                El tiempo de recuperación depende del tipo y extensión del
-                procedimiento. De forma general incluye reposo relativo inicial,
-                uso de prendas de compresión y controles médicos posteriores
-                obligatorios. El médico tratante indicará el plan según cada
-                caso.
+                Los adipocitos transferidos requieren neovascularización
+                (formación de nuevos vasos sanguíneos) para nutrirse en su nueva
+                ubicación. Una vez superado este proceso de prendimiento durante
+                los primeros 3 a 4 meses, el tejido se comporta como grasa
+                corporal natural. Un porcentaje de reabsorción entre el 20% y
+                el 40% del volumen inicial es esperado y se contempla en la
+                planificación quirúrgica.
               </p>
             </div>
           </div>
+          <div className="mt-6 text-center max-w-2xl mx-auto">
+            <p className="text-xs text-text-main/60 font-body">
+              Los resultados varían según las condiciones anatómicas, genéticas
+              y los hábitos de vida de cada paciente. La información contenida
+              en esta página es educativa y no sustituye una consulta médica
+              formal.
+            </p>
+          </div>
+        </Section>
 
+        <Section id="recuperacion" className="bg-white">
           <SectionHeader
             label="Recuperación"
             title="Postoperatorio y evolución"
-            desc="El proceso de recuperación es progresivo. Cada etapa requiere cuidados específicos."
+            desc="El proceso de recuperación es progresivo. Cada etapa requiere cuidados específicos indicados por el equipo médico."
           />
           <div className="max-w-3xl mx-auto space-y-6">
             {recoveryTimeline.map((item) => (
@@ -605,8 +757,9 @@ export default function LiposuccionLipectomiaPage() {
                 Agenda tu valoración médica en Cali
               </h2>
               <p className="mt-4 text-white/80 font-body text-lg leading-relaxed">
-                El primer paso es una consulta presencial para evaluar tu caso,
-                resolver tus dudas y determinar el mejor tratamiento para ti.
+                El primer paso es una consulta presencial con nuestros
+                especialistas para evaluar tu caso, resolver tus dudas y
+                determinar el mejor tratamiento para ti.
               </p>
               <a
                 href={whatsappUrl}
@@ -639,11 +792,14 @@ export default function LiposuccionLipectomiaPage() {
           <p className="text-xs leading-relaxed text-center font-body">
             Tiffany Esthetic Group IPS es una institución prestadora de servicios
             de salud registrada y habilitada ante las autoridades sanitarias de
-            Colombia. Los resultados de los procedimientos quirúrgicos estéticos
-            pueden variar según las condiciones anatómicas, genéticas y los
-            hábitos de vida de cada paciente. La información contenida en este
-            sitio web es estrictamente educativa y no sustituye una consulta
-            médica formal.
+            Colombia (Resolución 3100 de 2019 del Ministerio de Salud y
+            Protección Social). Los resultados de los procedimientos quirúrgicos
+            estéticos pueden variar según las condiciones anatómicas, genéticas y
+            los hábitos de vida de cada paciente. La información contenida en
+            este sitio web es estrictamente educativa y no sustituye una consulta
+            médica formal. Todo procedimiento quirúrgico implica riesgos; la
+            idoneidad del paciente debe ser evaluada previamente mediante
+            valoración médica presencial.
           </p>
         </Container>
       </footer>
