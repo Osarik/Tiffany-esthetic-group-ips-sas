@@ -103,12 +103,12 @@ export default function RootLayout({
                   <Logo />
                 </Link>
                 <div className="hidden md:flex items-center gap-7">
-                  <a
-                    href="#servicios"
+                  <Link
+                    href="/servicios"
                     className="text-[0.85rem] font-body font-semibold text-text-main/75 hover:text-primary transition-colors no-underline"
                   >
                     Servicios
-                  </a>
+                  </Link>
                   <a
                     href="#instalaciones"
                     className="text-[0.85rem] font-body font-semibold text-text-main/75 hover:text-primary transition-colors no-underline"
@@ -157,12 +157,12 @@ export default function RootLayout({
                   </p>
                 </div>
                 <div className="flex items-center gap-6 text-sm font-body">
-                  <a
-                    href="#servicios"
+                  <Link
+                    href="/servicios"
                     className="hover:text-primary transition-colors no-underline text-white/80"
                   >
                     Servicios
-                  </a>
+                  </Link>
                   <a
                     href="#instalaciones"
                     className="hover:text-primary transition-colors no-underline text-white/80"
