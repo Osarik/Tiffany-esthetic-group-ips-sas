@@ -42,6 +42,8 @@ export const services: Service[] = [
     description:
       "Plan quirúrgico integral para definir el cuerpo y complementar volumen según la valoración médica.",
     category: "Cirugía Corporal",
+    detailUrl: "/liposuccion-aumento",
+    popular: true,
   },
   {
     id: "pexia",
