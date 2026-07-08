@@ -1,28 +1,80 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 const whatsappUrl =
-  "https://wa.me/573XXXXXXXXX?text=Hola, quiero agendar una valoración médica para liposucción y lipectomía en Cali.";
+  "https://wa.me/573XXXXXXXXX?text=Hola%2C%20quiero%20agendar%20mi%20valoraci%C3%B3n%20para%20liposucci%C3%B3n%20o%20lipectom%C3%ADa%20en%20Cali.";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "@id": "https://www.tiffanyesthetic.com/liposuccion-lipectomia#webpage",
+      url: "https://www.tiffanyesthetic.com/liposuccion-lipectomia",
+      name: "Liposucción y Lipectomía en Cali",
+      description:
+        "Información médica sobre liposucción, lipectomía y transferencia de grasa autóloga en Tiffany Esthetic Group IPS SAS.",
+      inLanguage: "es",
+      medicalAudience: "Patient",
+      aspect: "Treatment",
+    },
+    {
+      "@type": "MedicalClinic",
+      name: "Tiffany Esthetic Group IPS",
+      image: "https://www.tiffanyesthetic.com/icon.svg",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Cra. 35 #5A-57, Barrio Granada",
+        addressLocality: "Cali",
+        addressRegion: "Valle del Cauca",
+        addressCountry: "CO",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 3.3811893,
+        longitude: -76.5357955,
+      },
+      telephone: "+57-602-XXX-XXXX",
+      medicalSpecialty: "PlasticSurgery",
+    },
+    {
+      "@type": "MedicalProcedure",
+      name: "Liposucción",
+      procedureType: "SurgicalProcedure",
+      bodyLocation: ["Abdomen", "Flanks", "Back", "Tighs", "Arms"],
+      description:
+        "Remoción quirúrgica de depósitos de grasa localizada en zonas específicas del cuerpo.",
+    },
+    {
+      "@type": "MedicalProcedure",
+      name: "Lipectomía o Abdominoplastia",
+      procedureType: "SurgicalProcedure",
+      bodyLocation: ["Abdomen"],
+      description:
+        "Procedimiento quirúrgico para retirar exceso de piel y tejido graso abdominal, y mejorar la firmeza de la pared abdominal.",
+    },
+    {
+      "@type": "MedicalProcedure",
+      name: "Transferencia de grasa autóloga",
+      procedureType: "SurgicalProcedure",
+      bodyLocation: ["Gluteal Region"],
+      description:
+        "Recolección, procesamiento y aplicación de grasa del propio paciente en áreas como la región glútea.",
+    },
+  ],
+};
 
 export const metadata: Metadata = {
   title:
     "Liposucción y Lipectomía en Cali | Tiffany Esthetic Group IPS SAS",
   description:
-    "Valoración médica para liposucción, lipectomía y transferencia de grasa autóloga en Cali. Institución habilitada, salas de cirugía, recuperación y personal calificado.",
+    "Valoración médica para liposucción, lipectomía y transferencia de grasa autóloga en Cali. IPS habilitada, salas de cirugía, recuperación y personal calificado. Agenda tu cita.",
+  robots: { index: true, follow: true },
   alternates: {
     canonical: "/liposuccion-lipectomia",
   },
-  keywords: [
-    "liposucción en Cali",
-    "lipectomía Cali",
-    "abdominoplastia Cali",
-    "transferencia de grasa glútea Cali",
-    "lipoinyección glútea Cali",
-    "moldeamiento corporal Valle del Cauca",
-    "Tiffany Esthetic Group IPS SAS",
-  ],
   openGraph: {
     title: "Liposucción y Lipectomía en Cali",
     description:
@@ -34,448 +86,567 @@ export const metadata: Metadata = {
   },
 };
 
-const benefits = [
-  "Mejora del contorno corporal en zonas con grasa localizada.",
-  "Retiro de exceso de piel y tejido graso abdominal cuando está indicado.",
-  "Redistribución de grasa autóloga en áreas como la región glútea.",
-  "Acompañamiento clínico durante valoración, cirugía y recuperación.",
+const procedures = [
+  {
+    title: "Liposucción",
+    desc: "Remueve depósitos de grasa localizada en zonas como abdomen, flancos, espalda, muslos o brazos mediante aspiración selectiva.",
+  },
+  {
+    title: "Transferencia de grasa",
+    desc: "Recolecta grasa del propio paciente, la procesa y la aplica en áreas como la región glútea para mejorar el contorno corporal.",
+  },
+  {
+    title: "Lipectomía o abdominoplastia",
+    desc: "Retira exceso de piel y tejido graso abdominal. En algunos casos mejora la firmeza de la pared abdominal y redefine la silueta.",
+  },
 ];
 
-const candidateItems = [
-  "Personas en condiciones de salud adecuadas para cirugía.",
-  "Pacientes con grasa localizada, flacidez o exceso de piel abdominal.",
-  "Personas con expectativas realistas sobre resultados y recuperación.",
-  "Pacientes que comprenden riesgos, beneficios y alternativas.",
+const benefits = [
+  "Mejora del contorno corporal en zonas con grasa localizada o exceso de piel.",
+  "Redistribución de grasa autóloga en áreas como la región glútea cuando está indicado.",
+  "Resultados duraderos si se mantienen hábitos saludables y controles médicos.",
+  "Acompañamiento clínico durante valoración, procedimiento y recuperación.",
 ];
 
 const safetySteps = [
-  "Valoración médica obligatoria para revisar antecedentes, objetivos y riesgos.",
-  "Explicación del procedimiento, alternativas y posibles complicaciones.",
-  "Firma de consentimiento informado antes del procedimiento.",
-  "Atención en instalaciones habilitadas y seguimiento de protocolos clínicos.",
-  "Controles posteriores y recomendaciones para la recuperación.",
+  "Valoración médica obligatoria para revisar antecedentes, objetivos y determinar la idoneidad del paciente.",
+  "Explicación detallada del procedimiento, alternativas disponibles y posibles complicaciones.",
+  "Firma de consentimiento informado antes de cualquier intervención quirúrgica.",
+  "Atención en instalaciones habilitadas con protocolos de bioseguridad vigentes.",
+  "Controles posteriores programados y recomendaciones personalizadas para la recuperación.",
+];
+
+const candidates = [
+  {
+    title: "Estado de salud adecuado",
+    desc: "Confirmado mediante exámenes de laboratorio y valoración preanestésica por el equipo médico.",
+  },
+  {
+    title: "Grasa localizada o exceso de piel",
+    desc: "Pacientes con depósitos adiposos resistentes a dieta y ejercicio, o piel abdominal sobrante.",
+  },
+  {
+    title: "Expectativas realistas",
+    desc: "Basadas en la anatomía individual del paciente y explicadas durante la consulta presencial.",
+  },
+  {
+    title: "Compromiso con el postoperatorio",
+    desc: "Disposición para cumplir reposo relativo, uso de prendas de compresión y controles médicos.",
+  },
+  {
+    title: "IMC en rangos seguros",
+    desc: "Índice de Masa Corporal compatible con procedimientos quirúrgicos, verificado en la valoración.",
+  },
+  {
+    title: "Comprensión de riesgos",
+    desc: "Pacientes que entienden los beneficios, riesgos y alternativas antes de decidir.",
+  },
+];
+
+const recoveryTimeline = [
+  {
+    period: "Primeras 24 a 48 horas",
+    desc: "Reposo moderado. Es normal presentar inflamación, drenaje de fluidos y molestias controlables con analgesia formulada.",
+  },
+  {
+    period: "Primera semana (días 1 a 7)",
+    desc: "Uso obligatorio de prendas de compresión. Se recomienda iniciar drenaje linfático suave según indicación médica.",
+  },
+  {
+    period: "Primer mes",
+    desc: "Restricción de esfuerzo físico. Retorno progresivo a actividades cotidianas sin carga. Controles médicos periódicos.",
+  },
+  {
+    period: "Retorno a actividades físicas",
+    desc: "Caminatas desde la primera semana. Ejercicio moderado a partir de la cuarta a sexta semana con autorización médica.",
+  },
 ];
 
 const faqs = [
   {
-    question: "¿La liposucción sirve para bajar de peso?",
-    answer:
-      "No. La liposucción es un procedimiento de contorno corporal, no un tratamiento para la obesidad ni una alternativa a hábitos saludables.",
+    q: "¿La liposucción sirve para bajar de peso?",
+    a: "No. Es un procedimiento de contorno corporal, no un tratamiento para la obesidad ni una alternativa a una alimentación balanceada y ejercicio regular.",
   },
   {
-    question: "¿La grasa transferida es permanente?",
-    answer:
-      "Una parte de la grasa transferida puede ser reabsorbida por el cuerpo. La permanencia depende de factores individuales, técnica médica y cuidados posteriores.",
+    q: "¿La grasa transferida es permanente?",
+    a: "Una parte de la grasa transferida puede ser reabsorbida por el cuerpo. La permanencia depende de factores individuales, técnica médica y cuidados posteriores. El cirujano planifica un volumen adicional para compensar este fenómeno.",
   },
   {
-    question: "¿Cuánto tiempo dura la incapacidad?",
-    answer:
-      "Depende del procedimiento, la extensión tratada y la evolución del paciente. El médico tratante indicará el tiempo adecuado durante la valoración y los controles.",
+    q: "¿Cuánto tiempo dura la incapacidad?",
+    a: "Depende del procedimiento, la extensión tratada y la evolución del paciente. El médico tratante indicará el tiempo adecuado durante la valoración y los controles posteriores.",
   },
   {
-    question: "¿Estos procedimientos son seguros?",
-    answer:
-      "Todo procedimiento quirúrgico implica riesgos. Realizarlos en instituciones habilitadas y con profesionales idóneos ayuda a minimizarlos, pero no elimina posibles complicaciones.",
+    q: "¿Qué diferencia hay entre liposucción y lipectomía?",
+    a: "La liposucción remueve grasa localizada mediante cánulas de aspiración. La lipectomía o abdominoplastia retira exceso de piel y tejido graso abdominal, y puede restaurar la firmeza de la pared muscular cuando está indicado.",
   },
   {
-    question: "¿Qué diferencia hay entre liposucción y lipectomía?",
-    answer:
-      "La liposucción remueve grasa localizada. La lipectomía o abdominoplastia busca retirar exceso de piel y tejido graso abdominal, y puede mejorar la firmeza de la pared abdominal cuando aplica.",
+    q: "¿Estos procedimientos son seguros?",
+    a: "Todo procedimiento quirúrgico implica riesgos. Realizarlos en instituciones habilitadas y por profesionales idóneos ayuda a minimizar complicaciones, pero no las elimina por completo. La valoración médica previa es obligatoria para determinar la relación riesgo-beneficio.",
+  },
+  {
+    q: "¿Qué exámenes médicos necesito antes de la cirugía?",
+    a: "Se requieren exámenes preoperatorios básicos: cuadro hemático, pruebas de coagulación, función renal, prueba de embarazo (si aplica) y valoración cardiológica con aprobación del anestesiólogo.",
   },
 ];
 
-const schema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "MedicalWebPage",
-      "@id": "https://www.tiffanyesthetic.com/liposuccion-lipectomia#webpage",
-      name: "Liposucción y Lipectomía en Cali",
-      description:
-        "Información médica sobre liposucción, lipectomía y transferencia de grasa autóloga en Tiffany Esthetic Group IPS SAS.",
-      about: [
-        { "@type": "MedicalProcedure", name: "Liposucción" },
-        { "@type": "MedicalProcedure", name: "Lipectomía" },
-        { "@type": "MedicalProcedure", name: "Transferencia de grasa autóloga" },
-      ],
-      mainEntity: {
-        "@type": "MedicalBusiness",
-        name: "Tiffany Esthetic Group IPS SAS",
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "Cali",
-          addressRegion: "Valle del Cauca",
-          addressCountry: "CO",
-        },
-      },
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://www.tiffanyesthetic.com/liposuccion-lipectomia#faq",
-      mainEntity: faqs.map((faq) => ({
-        "@type": "Question",
-        name: faq.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: faq.answer,
-        },
-      })),
-    },
-  ],
-};
-
-function CheckIcon() {
-  return (
-    <svg
-      className="mt-1 h-5 w-5 flex-none text-primary"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      aria-hidden="true"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
-      <circle cx="12" cy="12" r="9" />
-    </svg>
-  );
-}
-
-function SectionLabel({ children }: { children: React.ReactNode }) {
-  return (
-    <span className="text-primary font-body font-semibold text-sm tracking-widest uppercase">
-      {children}
-    </span>
-  );
-}
-
-function CtaLink({
-  href,
+function Section({
+  id,
+  className = "",
   children,
-  variant = "primary",
 }: {
-  href: string;
+  id?: string;
+  className?: string;
   children: React.ReactNode;
-  variant?: "primary" | "outline";
 }) {
-  const classes =
-    variant === "primary"
-      ? "bg-primary text-white hover:bg-primary-dark shadow-lg shadow-primary/20"
-      : "border-2 border-primary text-primary hover:bg-primary hover:text-white";
-
   return (
-    <a
-      href={href}
-      className={`${classes} inline-flex items-center justify-center rounded-full px-7 py-3 text-sm font-bold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary no-underline`}
-    >
-      {children}
-    </a>
+    <section id={id} className={`py-16 md:py-24 ${className}`}>
+      <Container>{children}</Container>
+    </section>
   );
 }
 
-export default function LiposuctionLipectomyPage() {
+function SectionHeader({
+  label,
+  title,
+  desc,
+}: {
+  label: string;
+  title: string;
+  desc?: string;
+}) {
+  return (
+    <div className="text-center mb-12 md:mb-16">
+      <span className="text-primary font-body font-semibold text-sm tracking-widest uppercase">
+        {label}
+      </span>
+      <Heading as="h2" className="mt-3">
+        {title}
+      </Heading>
+      {desc && (
+        <p className="mt-4 text-text-main/80 font-body max-w-3xl mx-auto leading-relaxed">
+          {desc}
+        </p>
+      )}
+    </div>
+  );
+}
+
+export default function LiposuccionLipectomiaPage() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <main className="bg-clinic-bg">
-        <section className="bg-white">
-          <div className="mx-auto grid min-h-[calc(100vh-4rem)] w-full max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 md:py-20 lg:grid-cols-[1.08fr_0.92fr] lg:px-8">
-            <div>
-              <nav
-                aria-label="Miga de pan"
-                className="mb-6 text-sm font-semibold text-text-main/60"
-              >
-                <Link href="/" className="hover:text-primary no-underline">
-                  Inicio
-                </Link>
-                <span aria-hidden="true" className="mx-2">
-                  /
-                </span>
-                <span>Liposucción y lipectomía</span>
-              </nav>
-
-              <SectionLabel>Moldeamiento corporal en Cali</SectionLabel>
-              <Heading as="h1" className="mt-4 max-w-3xl">
-                Liposucción y lipectomía con valoración médica
-              </Heading>
-              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-text-main/80 md:text-xl">
-                En Tiffany Esthetic Group IPS SAS ofrecemos liposucción,
-                lipectomía o abdominoplastia y transferencia de grasa autóloga
-                con enfoque en seguridad, bienestar y acompañamiento clínico.
+      <article>
+        <section className="relative bg-gradient-to-br from-[#0F4A44] via-[#1B6E66] to-[#2FA79C] pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+          <div
+            className="absolute inset-0 opacity-10"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 25% 50%, rgba(255,255,255,0.15) 0%, transparent 50%), radial-gradient(circle at 75% 50%, rgba(255,255,255,0.1) 0%, transparent 50%)",
+            }}
+            aria-hidden="true"
+          />
+          <Container>
+            <div className="relative max-w-3xl">
+              <span className="inline-block text-white/70 font-body font-semibold text-xs tracking-[0.2em] uppercase mb-4 border border-white/20 rounded-full px-4 py-1.5">
+                Cirugía Corporal
+              </span>
+              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight text-balance">
+                Liposucción y lipectomía en Cali
+              </h1>
+              <p className="mt-6 text-lg md:text-xl text-white/80 font-body leading-relaxed max-w-2xl">
+                Moldeamiento corporal con valoración médica, instalaciones
+                habilitadas y acompañamiento quirúrgico. Procedimientos
+                realizados por profesionales de la salud en IPS registrada.
               </p>
-
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <CtaLink href={whatsappUrl}>Agendar valoración médica</CtaLink>
-                <CtaLink href="#procedimientos" variant="outline">
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-[#0F4A44] font-body font-bold px-8 py-3.5 rounded-full hover:bg-white/90 transition-all duration-300 text-base shadow-lg shadow-black/20 no-underline"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                  </svg>
+                  Agendar valoración médica
+                </a>
+                <a
+                  href="#procedimientos"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-white/40 text-white font-body font-semibold px-8 py-3.5 rounded-full hover:bg-white/10 transition-all duration-300 text-base no-underline"
+                >
                   Ver procedimientos
-                </CtaLink>
+                </a>
               </div>
-
-              <p className="mt-5 max-w-2xl text-sm leading-relaxed text-text-main/65">
+              <p className="mt-6 text-sm text-white/60 font-body">
                 Todo procedimiento quirúrgico implica riesgos. La idoneidad del
                 paciente debe ser evaluada previamente mediante valoración
-                médica.
+                médica presencial.
               </p>
             </div>
-
-            <aside className="rounded-2xl border border-silver/20 bg-primary-soft p-6 shadow-sm md:p-8">
-              <h2 className="font-heading text-2xl font-bold text-text-dark">
-                Resumen rápido
-              </h2>
-              <dl className="mt-6 space-y-5">
-                <div>
-                  <dt className="font-bold text-text-dark">Ubicación</dt>
-                  <dd className="mt-1 text-sm text-text-main/75">
-                    Cali, Valle del Cauca
-                  </dd>
-                </div>
-                <div>
-                  <dt className="font-bold text-text-dark">Procedimientos</dt>
-                  <dd className="mt-1 text-sm text-text-main/75">
-                    Liposucción, lipectomía y transferencia de grasa autóloga.
-                  </dd>
-                </div>
-                <div>
-                  <dt className="font-bold text-text-dark">Enfoque</dt>
-                  <dd className="mt-1 text-sm text-text-main/75">
-                    Contorno corporal con valoración médica y protocolos
-                    clínicos.
-                  </dd>
-                </div>
-              </dl>
-              <div className="mt-7 rounded-xl bg-white p-4 text-sm leading-relaxed text-text-main/75">
-                Institución habilitada por la Secretaría de Salud, con salas de
-                cirugía, recuperación, farmacia y personal calificado.
-              </div>
-            </aside>
-          </div>
+          </Container>
         </section>
 
-        <section id="procedimientos" className="bg-clinic-bg py-16 md:py-24">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <SectionLabel>¿En qué consisten?</SectionLabel>
-              <Heading as="h2" className="mt-3">
-                Procedimientos de contorno corporal
-              </Heading>
-              <p className="mt-4 text-text-main/75">
-                La elección del procedimiento depende de la historia clínica,
-                anatomía, expectativas y criterio médico.
-              </p>
-            </div>
-
-            <div className="mt-10 grid gap-6 md:grid-cols-3">
-              {[
-                {
-                  title: "Liposucción",
-                  text: "Remueve depósitos de grasa localizada en zonas como abdomen, flancos, espalda, muslos o brazos.",
-                },
-                {
-                  title: "Transferencia de grasa",
-                  text: "Recolecta grasa del propio paciente, la procesa y la aplica en áreas como la región glútea para mejorar el contorno.",
-                },
-                {
-                  title: "Lipectomía",
-                  text: "Retira exceso de piel y tejido graso abdominal. En algunos casos mejora la firmeza de la pared abdominal.",
-                },
-              ].map((item) => (
-                <article
-                  key={item.title}
-                  className="rounded-2xl border border-silver/20 bg-white p-6 shadow-sm"
-                >
-                  <h3 className="font-heading text-2xl font-bold text-text-dark">
-                    {item.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-text-main/75">
-                    {item.text}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-white py-16 md:py-24">
-          <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+        <Section id="que-es" className="bg-white">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
             <div>
-              <SectionLabel>Beneficios posibles</SectionLabel>
-              <Heading as="h2" className="mt-3">
-                Qué puede mejorar el moldeamiento corporal
-              </Heading>
-              <p className="mt-4 text-text-main/75">
-                Los resultados varían según cada paciente, sus condiciones de
-                salud, hábitos y seguimiento médico.
-              </p>
+              <SectionHeader
+                label="¿Qué son?"
+                title="Liposucción, lipectomía y transferencia de grasa"
+              />
+              <div className="space-y-5 text-text-main/80 font-body leading-relaxed">
+                <p>
+                  La liposucción y la lipectomía son procedimientos quirúrgicos
+                  orientados al contorno corporal. Mientras la liposucción aspira
+                  depósitos de grasa localizada, la lipectomía (o abdominoplastia)
+                  retira exceso de piel y tejido graso abdominal, mejorando la
+                  firmeza de la pared muscular cuando está indicado.
+                </p>
+                <h3 className="font-heading font-bold text-text-dark text-lg">
+                  Diferencia entre liposucción y lipectomía
+                </h3>
+                <p>
+                  La liposucción se enfoca en la grasa profunda y superficial,
+                  remodelando el contorno mediante cánulas finas. La lipectomía
+                  aborda el exceso de piel —frecuente después de pérdidas
+                  significativas de peso o embarazos— y puede incluir la
+                  reparación de la pared abdominal (diástasis).
+                </p>
+                <h3 className="font-heading font-bold text-text-dark text-lg">
+                  Transferencia de grasa autóloga
+                </h3>
+                <p>
+                  La grasa extraída puede procesarse y reinyectarse en áreas como
+                  la región glútea para mejorar volumen y proyección, utilizando
+                  tejido vivo del propio paciente sin materiales sintéticos.
+                </p>
+              </div>
             </div>
-            <ul className="grid gap-4">
-              {benefits.map((item) => (
-                <li key={item} className="flex gap-3 rounded-xl bg-clinic-bg p-4">
-                  <CheckIcon />
-                  <span className="text-sm leading-relaxed text-text-main/80">
-                    {item}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        <section className="bg-primary-deep py-16 text-white md:py-24">
-          <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-            <div>
-              <span className="font-body text-sm font-semibold uppercase tracking-widest text-white/65">
-                Seguridad y confianza
-              </span>
-              <Heading as="h2" className="mt-3 !text-white">
-                Atención médica con protocolos establecidos
-              </Heading>
-              <p className="mt-4 text-white/75">
-                La seguridad se construye antes, durante y después del
-                procedimiento. Por eso el primer paso es siempre una valoración
-                médica.
-              </p>
-            </div>
-            <ol className="grid gap-4">
-              {safetySteps.map((step, index) => (
-                <li
-                  key={step}
-                  className="flex gap-4 rounded-xl border border-white/10 bg-white/5 p-4"
+            <div className="bg-[#FBFBF9] rounded-2xl p-8 border border-silver/20">
+              <div className="flex items-start gap-3 mb-4">
+                <svg
+                  className="w-6 h-6 text-primary shrink-0 mt-0.5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
                 >
-                  <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
-                    {index + 1}
-                  </span>
-                  <span className="text-sm leading-relaxed text-white/80">
-                    {step}
-                  </span>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
-
-        <section className="bg-white py-16 md:py-24">
-          <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-            <div>
-              <SectionLabel>Candidatos</SectionLabel>
-              <Heading as="h2" className="mt-3">
-                Quiénes pueden considerar estos procedimientos
-              </Heading>
-              <p className="mt-4 text-text-main/75">
-                La indicación final depende de la valoración médica. Esta guía
-                sirve como orientación inicial, no como diagnóstico.
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+                <h3 className="font-heading font-bold text-text-dark text-lg">
+                  Seguridad y habilitación
+                </h3>
+              </div>
+              <p className="text-sm text-text-main/80 font-body leading-relaxed">
+                Tiffany Esthetic Group IPS es una institución prestadora de
+                servicios de salud debidamente habilitada ante las autoridades
+                sanitarias de Colombia, con salas de cirugía, recuperación,
+                farmacia y personal calificado para procedimientos quirúrgicos.
               </p>
-              <div className="mt-8">
-                <CtaLink href={whatsappUrl}>Consultar si soy candidato</CtaLink>
-              </div>
-            </div>
-            <ul className="grid gap-4">
-              {candidateItems.map((item) => (
-                <li key={item} className="flex gap-3 rounded-xl bg-clinic-bg p-4">
-                  <CheckIcon />
-                  <span className="text-sm leading-relaxed text-text-main/80">
-                    {item}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        <section className="bg-clinic-bg py-16 md:py-24">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid gap-8 lg:grid-cols-3">
-              <div className="lg:col-span-1">
-                <SectionLabel>Riesgos y recuperación</SectionLabel>
-                <Heading as="h2" className="mt-3">
-                  Información importante antes de decidir
-                </Heading>
-              </div>
-              <div className="grid gap-6 md:grid-cols-2 lg:col-span-2">
-                <article className="rounded-2xl border border-silver/20 bg-white p-6 shadow-sm">
-                  <h3 className="font-heading text-2xl font-bold text-text-dark">
-                    Riesgos posibles
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-text-main/75">
-                    Pueden presentarse inflamación, dolor, hematomas,
-                    infección, irregularidades del contorno, reabsorción parcial
-                    de grasa y riesgos anestésicos.
-                  </p>
-                </article>
-                <article className="rounded-2xl border border-silver/20 bg-white p-6 shadow-sm">
-                  <h3 className="font-heading text-2xl font-bold text-text-dark">
-                    Recuperación
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-text-main/75">
-                    Puede requerir reposo relativo, uso de prendas de compresión
-                    y controles médicos posteriores según indicación del equipo
-                    tratante.
-                  </p>
-                </article>
+              <div className="mt-6 bg-primary/5 rounded-xl p-5 border border-primary/10">
+                <p className="text-sm font-body font-semibold text-primary-dark">
+                  Todo procedimiento requiere valoración médica presencial,
+                  exámenes preoperatorios y consentimiento informado.
+                </p>
               </div>
             </div>
           </div>
-        </section>
+        </Section>
 
-        <section className="bg-white py-16 md:py-24">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <SectionLabel>Preguntas frecuentes</SectionLabel>
-              <Heading as="h2" className="mt-3">
-                Respuestas directas sobre liposucción y lipectomía
-              </Heading>
-            </div>
-            <div className="mt-10 space-y-3">
-              {faqs.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl border border-silver/20 bg-white p-6 shadow-sm"
-                >
-                  <summary className="cursor-pointer list-none font-bold text-text-dark focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
-                    <span className="inline-flex w-full items-center justify-between gap-4">
-                      {faq.question}
-                      <span
-                        aria-hidden="true"
-                        className="text-primary transition-transform group-open:rotate-45"
-                      >
-                        +
-                      </span>
-                    </span>
-                  </summary>
-                  <p className="mt-4 text-sm leading-relaxed text-text-main/75">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-primary-soft py-16 md:py-24">
-          <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-            <SectionLabel>Valoración médica en Cali</SectionLabel>
-            <Heading as="h2" className="mt-3">
-              El primer paso es una evaluación personalizada
-            </Heading>
-            <p className="mx-auto mt-4 max-w-2xl text-text-main/75">
-              Este contenido tiene fines informativos y no sustituye la
-              valoración médica. Agenda una cita para recibir orientación según
-              tu caso, riesgos y alternativas.
-            </p>
-            <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-              <CtaLink href={whatsappUrl}>Agendar valoración médica</CtaLink>
-              <Link
-                href="/#servicios"
-                className="inline-flex items-center justify-center rounded-full border-2 border-primary px-7 py-3 text-sm font-bold text-primary transition-colors hover:bg-primary hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary no-underline"
+        <Section id="procedimientos" className="bg-[#FBFBF9]">
+          <SectionHeader
+            label="Procedimientos"
+            title="Opciones de contorno corporal"
+            desc="La elección del procedimiento depende de la historia clínica, anatomía, expectativas y criterio médico."
+          />
+          <div className="grid md:grid-cols-3 gap-6">
+            {procedures.map((item, i) => (
+              <article
+                key={item.title}
+                className="relative bg-white rounded-2xl p-8 border border-silver/20 shadow-sm"
               >
-                Ver otros servicios
-              </Link>
+                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-body font-bold text-sm mb-5">
+                  {String(i + 1).padStart(2, "0")}
+                </div>
+                <h3 className="font-heading font-bold text-text-dark text-lg mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-text-main/80 font-body leading-relaxed">
+                  {item.desc}
+                </p>
+              </article>
+            ))}
+          </div>
+        </Section>
+
+        <Section id="beneficios" className="bg-white">
+          <SectionHeader
+            label="Beneficios"
+            title="¿Qué puede mejorar el moldeamiento corporal?"
+            desc="Los resultados varían según cada paciente, sus condiciones de salud, hábitos y seguimiento médico."
+          />
+          <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {benefits.map((item) => (
+              <div
+                key={item}
+                className="bg-[#FBFBF9] rounded-xl p-6 border border-silver/20 flex gap-4 items-start"
+              >
+                <div className="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                  <svg
+                    className="w-4 h-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <span className="text-sm text-text-main/80 font-body leading-relaxed">
+                  {item}
+                </span>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        <section className="bg-primary-deep py-16 md:py-24 text-white">
+          <Container>
+            <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10">
+              <div>
+                <span className="font-body text-sm font-semibold uppercase tracking-widest text-white/65">
+                  Seguridad
+                </span>
+                <Heading as="h2" className="mt-3 !text-white">
+                  Atención médica con protocolos establecidos
+                </Heading>
+                <p className="mt-4 text-white/75 font-body">
+                  La seguridad se construye antes, durante y después del
+                  procedimiento. Por eso el primer paso es siempre una
+                  valoración médica presencial.
+                </p>
+              </div>
+              <ol className="grid gap-4">
+                {safetySteps.map((step, index) => (
+                  <li
+                    key={step}
+                    className="flex gap-4 rounded-xl border border-white/10 bg-white/5 p-4"
+                  >
+                    <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
+                      {index + 1}
+                    </span>
+                    <span className="text-sm leading-relaxed text-white/80 font-body">
+                      {step}
+                    </span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </Container>
+        </section>
+
+        <Section id="candidatos" className="bg-white">
+          <SectionHeader
+            label="Candidatos"
+            title="¿Quién puede considerar estos procedimientos?"
+            desc="La idoneidad del paciente se determina mediante evaluación clínica presencial obligatoria."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {candidates.map((item) => (
+              <div
+                key={item.title}
+                className="bg-[#FBFBF9] rounded-xl p-6 border border-silver/20"
+              >
+                <div className="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-4">
+                  <svg
+                    className="w-4 h-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <h3 className="font-heading font-bold text-text-dark text-base mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-text-main/80 font-body leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        <Section id="riesgos-recuperacion" className="bg-[#FBFBF9]">
+          <SectionHeader
+            label="Riesgos y recuperación"
+            title="Información importante antes de decidir"
+          />
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+            <div className="bg-white rounded-2xl p-8 border border-silver/20 shadow-sm">
+              <h3 className="font-heading font-bold text-text-dark text-lg mb-4">
+                Riesgos posibles
+              </h3>
+              <p className="text-sm text-text-main/80 font-body leading-relaxed">
+                Pueden presentarse inflamación, dolor, hematomas, infección,
+                irregularidades del contorno, reabsorción parcial de grasa
+                transferida, complicaciones anestésicas y, en casos poco
+                frecuentes, eventos tromboembólicos. El equipo médico explicará
+                estos riesgos en detalle durante la valoración.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 border border-silver/20 shadow-sm">
+              <h3 className="font-heading font-bold text-text-dark text-lg mb-4">
+                Recuperación general
+              </h3>
+              <p className="text-sm text-text-main/80 font-body leading-relaxed">
+                El tiempo de recuperación depende del tipo y extensión del
+                procedimiento. De forma general incluye reposo relativo inicial,
+                uso de prendas de compresión y controles médicos posteriores
+                obligatorios. El médico tratante indicará el plan según cada
+                caso.
+              </p>
             </div>
           </div>
+
+          <SectionHeader
+            label="Recuperación"
+            title="Postoperatorio y evolución"
+            desc="El proceso de recuperación es progresivo. Cada etapa requiere cuidados específicos."
+          />
+          <div className="max-w-3xl mx-auto space-y-6">
+            {recoveryTimeline.map((item) => (
+              <div
+                key={item.period}
+                className="relative pl-8 md:pl-12 border-l-2 border-primary/30"
+              >
+                <div className="absolute left-[-5px] top-1 w-2 h-2 rounded-full bg-primary" aria-hidden="true" />
+                <h3 className="font-heading font-bold text-text-dark text-lg">
+                  {item.period}
+                </h3>
+                <p className="mt-2 text-sm text-text-main/80 font-body leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        <Section id="faq" className="bg-white">
+          <SectionHeader
+            label="FAQ"
+            title="Preguntas frecuentes"
+          />
+          <div
+            className="max-w-3xl mx-auto divide-y divide-silver/20"
+            itemScope
+            itemType="https://schema.org/FAQPage"
+          >
+            {faqs.map((faq) => (
+              <details
+                key={faq.q}
+                className="group py-5"
+                itemScope
+                itemProp="mainEntity"
+                itemType="https://schema.org/Question"
+              >
+                <summary className="flex items-center justify-between gap-4 cursor-pointer list-none font-heading font-semibold text-text-dark text-base md:text-lg">
+                  <span itemProp="name">{faq.q}</span>
+                  <svg
+                    className="w-5 h-5 text-primary shrink-0 transition-transform duration-300 group-open:rotate-180"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </summary>
+                <div
+                  className="mt-4 text-sm text-text-main/80 font-body leading-relaxed"
+                  itemScope
+                  itemProp="acceptedAnswer"
+                  itemType="https://schema.org/Answer"
+                >
+                  <div itemProp="text">{faq.a}</div>
+                </div>
+              </details>
+            ))}
+          </div>
+        </Section>
+
+        <section className="bg-gradient-to-br from-[#0F4A44] via-[#1B6E66] to-[#2FA79C] py-20 md:py-28">
+          <Container>
+            <div className="text-center max-w-2xl mx-auto">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-white leading-tight">
+                Agenda tu valoración médica en Cali
+              </h2>
+              <p className="mt-4 text-white/80 font-body text-lg leading-relaxed">
+                El primer paso es una consulta presencial para evaluar tu caso,
+                resolver tus dudas y determinar el mejor tratamiento para ti.
+              </p>
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center justify-center gap-2 bg-white text-[#0F4A44] font-body font-bold px-10 py-4 rounded-full hover:bg-white/90 transition-all duration-300 text-lg shadow-xl shadow-black/20 no-underline"
+              >
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Agendar valoración médica
+              </a>
+              <p className="mt-6 text-sm text-white/60 font-body">
+                Tiffany Esthetic Group IPS — Institución Prestadora de Servicios
+                de Salud habilitada ante las autoridades sanitarias de Colombia.
+              </p>
+            </div>
+          </Container>
         </section>
-      </main>
+      </article>
+
+      <footer className="bg-[#223231] text-white/60 py-8">
+        <Container>
+          <p className="text-xs leading-relaxed text-center font-body">
+            Tiffany Esthetic Group IPS es una institución prestadora de servicios
+            de salud registrada y habilitada ante las autoridades sanitarias de
+            Colombia. Los resultados de los procedimientos quirúrgicos estéticos
+            pueden variar según las condiciones anatómicas, genéticas y los
+            hábitos de vida de cada paciente. La información contenida en este
+            sitio web es estrictamente educativa y no sustituye una consulta
+            médica formal.
+          </p>
+        </Container>
+      </footer>
 
       <WhatsAppButton />
     </>
