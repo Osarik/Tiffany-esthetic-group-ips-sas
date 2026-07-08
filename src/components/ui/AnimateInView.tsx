@@ -46,7 +46,7 @@ export default function AnimateInView({
   children,
   variant = "fadeUp",
   delay = 0,
-  duration = 0.6,
+  duration = 0.8,
   className,
   as = "div",
   id,
@@ -70,7 +70,7 @@ export default function AnimateInView({
 export function StaggerGrid({
   children,
   className,
-  staggerDelay = 0.08,
+  staggerDelay = 0.1,
 }: {
   children: React.ReactNode;
   className?: string;
@@ -103,7 +103,7 @@ export function StaggerItem({
     <motion.div
       variants={{
         hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] } },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] } },
       }}
       className={className}
     >
