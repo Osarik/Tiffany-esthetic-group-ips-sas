@@ -9,7 +9,7 @@ const whatsappUrl =
   "https://wa.me/573XXXXXXXXX?text=Hola%2C%20quiero%20agendar%20mi%20valoraci%C3%B3n%20m%C3%A9dica%20en%20Tiffany%20Esthetic%20Group.";
 
 const stats = [
-  { value: "3", label: "Salas de cirugía" },
+  { value: "3", label: "Salas de cirugía habilitadas" },
   { value: "1", label: "Área de recuperación" },
   { value: "1", label: "Farmacia habilitada" },
   { value: "8", label: "Procedimientos quirúrgicos" },
@@ -18,7 +18,7 @@ const stats = [
 const processSteps = [
   {
     number: "01",
-    title: "Valoración médica presencial",
+    title: "Valoración médica",
     desc: "Evaluación clínica obligatoria para conocer tu estado de salud, tus objetivos estéticos y determinar el procedimiento más adecuado para ti.",
   },
   {
@@ -78,36 +78,57 @@ const faqs = [
   },
 ];
 
-const categories = [
+const categoryMeta = [
   {
     name: "Cirugía Corporal",
     slug: "corporal",
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
-        <path d="M12 8v8" />
-        <path d="M8 12h8" />
-      </svg>
-    ),
+    desc: "Moldeamiento corporal, lipoescultura, liposucción y procedimientos para definir el contorno del cuerpo.",
+    img: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=400&fit=crop&crop=entropy&auto=format&q=80",
   },
   {
     name: "Cirugía Mamaria",
     slug: "mamaria",
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-      </svg>
-    ),
+    desc: "Elevación mamaria, pexia y técnicas quirúrgicas adaptadas a la anatomía de cada paciente.",
+    img: "https://images.unsplash.com/photo-1551076805-e1869033e561?w=600&h=400&fit=crop&crop=entropy&auto=format&q=80",
   },
   {
     name: "Cirugía Facial",
     slug: "facial",
+    desc: "Rinoplastia, blefaroplastia y lifting facial para rejuvenecer y armonizar los rasgos del rostro.",
+    img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&h=400&fit=crop&crop=entropy&auto=format&q=80",
+  },
+];
+
+const benefitsData = [
+  {
+    title: "IPS habilitada",
+    desc: "Institución habilitada por la Secretaría de Salud (Resolución 3100 de 2019) con sala de cirugía, recuperación y farmacia habilitada.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
-        <circle cx="9" cy="10" r="1" fill="currentColor" />
-        <circle cx="15" cy="10" r="1" fill="currentColor" />
-        <path d="M8 15c1.5 1.5 4.5 1.5 6 0" />
+        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+        <path d="M2 17l10 5 10-5" />
+        <path d="M2 12l10 5 10-5" />
+      </svg>
+    ),
+  },
+  {
+    title: "Equipo calificado",
+    desc: "Cirujanos plásticos miembros de la SCCP, anestesiólogos certificados, instrumentadores y enfermería especializada en recuperación quirúrgica.",
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M22 21v-2a4 4 0 00-3-3.87" />
+        <path d="M16 3.13a4 4 0 010 7.75" />
+      </svg>
+    ),
+  },
+  {
+    title: "Acompañamiento integral",
+    desc: "Desde la valoración inicial hasta el postoperatorio, te acompañamos con controles programados y recomendaciones personalizadas.",
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
   },
@@ -181,48 +202,6 @@ export const metadata: Metadata = {
   },
 };
 
-function Section({
-  id,
-  className = "",
-  children,
-}: {
-  id?: string;
-  className?: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <section id={id} className={`py-16 md:py-24 ${className}`}>
-      <Container>{children}</Container>
-    </section>
-  );
-}
-
-function SectionHeader({
-  label,
-  title,
-  desc,
-}: {
-  label: string;
-  title: string;
-  desc?: string;
-}) {
-  return (
-    <div className="text-center mb-12 md:mb-16">
-      <span className="text-primary font-body font-semibold text-sm tracking-widest uppercase">
-        {label}
-      </span>
-      <Heading as="h2" className="mt-3">
-        {title}
-      </Heading>
-      {desc && (
-        <p className="mt-4 text-text-main/80 font-body max-w-3xl mx-auto leading-relaxed">
-          {desc}
-        </p>
-      )}
-    </div>
-  );
-}
-
 function ServiceCard({
   title,
   description,
@@ -237,34 +216,37 @@ function ServiceCard({
   return (
     <Link
       href={href ?? "#"}
-      className="group relative block bg-white rounded-2xl p-6 border border-silver/20 hover:border-primary/30 shadow-sm hover:shadow-lg transition-all duration-300 no-underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+      className="group relative block bg-white rounded-2xl overflow-hidden border border-silver/20 hover:border-primary/30 shadow-sm hover:shadow-xl transition-all duration-500 no-underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
     >
-      {popular && (
-        <span className="absolute top-3 right-3 bg-accent text-white text-[10px] font-body font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
-          Popular
+      <div className="p-6 md:p-7">
+        {popular && (
+          <span className="inline-block mb-3 bg-accent/10 text-accent font-body font-bold text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider">
+            Más solicitado
+          </span>
+        )}
+        <h3 className="font-heading font-bold text-text-dark text-lg mb-2 group-hover:text-primary transition-colors duration-300">
+          {title}
+        </h3>
+        <p className="text-sm text-text-main/70 font-body leading-relaxed">
+          {description}
+        </p>
+        <span className="mt-4 inline-flex items-center text-sm font-body font-bold text-primary group-hover:text-primary-dark transition-colors">
+          Ver información médica
+          <svg
+            className="w-4 h-4 ml-1.5 transition-all duration-300 group-hover:translate-x-1"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
         </span>
-      )}
-      <h3 className="font-heading font-bold text-text-dark text-lg mb-2">
-        {title}
-      </h3>
-      <p className="text-sm text-text-main/80 font-body leading-relaxed">
-        {description}
-      </p>
-      <span className="mt-4 inline-flex text-sm font-body font-bold text-primary group-hover:text-primary-dark transition-colors">
-        Ver información médica
-        <svg
-          className="w-4 h-4 ml-1.5 transition-transform duration-300 group-hover:translate-x-1"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          aria-hidden="true"
-        >
-          <polyline points="9 18 15 12 9 6" />
-        </svg>
-      </span>
+      </div>
+      <div className="h-1 w-0 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-500" />
     </Link>
   );
 }
@@ -278,296 +260,436 @@ export default function ServiciosPage() {
       />
 
       <article>
-        <section className="relative bg-gradient-to-br from-[#0F4A44] via-[#1B6E66] to-[#2FA79C] pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
-          <div
-            className="absolute inset-0 opacity-10"
+        {/* ─── HERO ─────────────────────────────────────────────── */}
+        <section className="relative bg-gradient-to-br from-[#0F4A44] via-[#1B6E66] to-[#2FA79C] pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
+          <div className="absolute inset-0 opacity-[0.07]" aria-hidden="true"
             style={{
-              backgroundImage:
-                "radial-gradient(circle at 25% 50%, rgba(255,255,255,0.15) 0%, transparent 50%), radial-gradient(circle at 75% 50%, rgba(255,255,255,0.1) 0%, transparent 50%)",
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }} />
+          <div className="absolute inset-0 opacity-10"
+            style={{
+              backgroundImage: "radial-gradient(circle at 20% 40%, rgba(255,255,255,0.2) 0%, transparent 50%), radial-gradient(circle at 80% 60%, rgba(255,255,255,0.12) 0%, transparent 50%)",
             }}
-            aria-hidden="true"
-          />
+            aria-hidden="true" />
           <Container>
-            <div className="relative max-w-3xl">
-              <span className="inline-block text-white/70 font-body font-semibold text-xs tracking-[0.2em] uppercase mb-4 border border-white/20 rounded-full px-4 py-1.5">
-                IPS Habilitada · Resolución 3100 de 2019
-              </span>
-              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight text-balance">
-                Procedimientos quirúrgicos estéticos en Cali
-              </h1>
-              <p className="mt-6 text-lg md:text-xl text-white/80 font-body leading-relaxed max-w-2xl">
-                En Tiffany Esthetic Group IPS ofrecemos procedimientos de
-                cirugía corporal, mamaria y facial realizados en instalaciones
-                habilitadas, con personal calificado y acompañamiento
-                profesional en cada etapa del proceso.
-              </p>
-              <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <a
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-white text-[#0F4A44] font-body font-bold px-8 py-3.5 rounded-full hover:bg-white/90 transition-all duration-300 text-base shadow-lg shadow-black/20 no-underline"
-                >
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden="true"
+            <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+              <div className="relative z-10">
+                <div className="flex items-center gap-2 mb-5">
+                  <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                  <span className="text-white/70 font-body font-semibold text-xs tracking-[0.2em] uppercase">
+                    IPS Habilitada · Res 3100 de 2019
+                  </span>
+                </div>
+                <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] text-balance">
+                  Procedimientos quirúrgicos{" "}
+                  <span className="text-accent-light">estéticos en Cali</span>
+                </h1>
+                <p className="mt-6 text-base md:text-lg text-white/75 font-body leading-relaxed max-w-xl">
+                  En Tiffany Esthetic Group IPS ofrecemos cirugía corporal,
+                  mamaria y facial realizadas en instalaciones habilitadas,
+                  con equipo calificado y acompañamiento profesional en cada
+                  etapa.
+                </p>
+                <div className="mt-8 flex flex-col sm:flex-row gap-3">
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 bg-white text-[#0F4A44] font-body font-bold px-8 py-3.5 rounded-full hover:bg-white/90 hover:shadow-xl hover:shadow-black/25 transition-all duration-300 text-base shadow-lg shadow-black/20 no-underline"
                   >
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                  </svg>
-                  Agendar valoración médica
-                </a>
-                <a
-                  href="#servicios-lista"
-                  className="inline-flex items-center justify-center gap-2 border-2 border-white/40 text-white font-body font-semibold px-8 py-3.5 rounded-full hover:bg-white/10 transition-all duration-300 text-base no-underline"
-                >
-                  Explorar procedimientos
-                </a>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
+                    Agendar valoración médica
+                  </a>
+                  <a
+                    href="#servicios-lista"
+                    className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white font-body font-semibold px-8 py-3.5 rounded-full hover:bg-white/10 transition-all duration-300 text-base no-underline"
+                  >
+                    Explorar procedimientos
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                  </a>
+                </div>
+                <p className="mt-6 text-xs text-white/50 font-body max-w-md">
+                  Todo procedimiento quirúrgico requiere una valoración médica
+                  presencial obligatoria para determinar la idoneidad del paciente.
+                </p>
               </div>
-              <p className="mt-6 text-sm text-white/60 font-body">
-                De acuerdo con la normativa colombiana, todo procedimiento
-                quirúrgico requiere una valoración médica presencial previa para
-                determinar la idoneidad del paciente.
-              </p>
+
+              <div className="relative hidden lg:block">
+                <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-black/30">
+                  <img
+                    src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&h=900&fit=crop&crop=entropy&auto=format&q=80"
+                    alt="Instalaciones quirúrgicas de Tiffany Esthetic Group IPS en Cali"
+                    className="w-full h-[500px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F4A44]/40 via-transparent to-transparent" />
+                </div>
+                <div className="absolute -bottom-4 -right-4 w-36 h-36 rounded-2xl bg-accent/20 border border-white/10 backdrop-blur-sm flex items-center justify-center shadow-xl">
+                  <div className="text-center">
+                    <span className="block text-white font-heading font-bold text-3xl">+8</span>
+                    <span className="block text-white/70 font-body text-xs">Procedimientos</span>
+                  </div>
+                </div>
+                <div className="absolute -top-4 -left-4 w-24 h-24 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-sm flex items-center justify-center">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                    <path d="M2 17l10 5 10-5" />
+                    <path d="M2 12l10 5 10-5" />
+                  </svg>
+                </div>
+              </div>
             </div>
           </Container>
         </section>
 
-        <section className="bg-primary-deep py-14 md:py-18">
+        {/* ─── STATS ────────────────────────────────────────────── */}
+        <section className="relative bg-primary-deep py-14 md:py-18 overflow-hidden">
+          <div className="absolute inset-0 opacity-[0.04]" aria-hidden="true"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M20 0v40M0 20h40'/%3E%3C/g%3E%3C/svg%3E")`,
+            }} />
           <Container>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              {stats.map((stat) => (
-                <div key={stat.label}>
-                  <span className="text-4xl md:text-5xl font-heading font-bold text-white">
-                    {stat.value}
-                  </span>
-                  <p className="text-white/70 font-body text-sm md:text-base mt-2">
-                    {stat.label}
-                  </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+              {stats.map((stat, i) => (
+                <div key={stat.label} className="relative group">
+                  <div className="text-center p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm group-hover:bg-white/10 transition-all duration-300">
+                    <span className="block text-4xl md:text-5xl font-heading font-bold text-white mb-1">
+                      {stat.value}
+                    </span>
+                    <span className="w-8 h-0.5 bg-accent block mx-auto mb-3 rounded-full" />
+                    <p className="text-white/65 font-body text-sm leading-snug">
+                      {stat.label}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
           </Container>
         </section>
 
-        <Section id="servicios-lista" className="bg-white">
-          <SectionHeader
-            label="Procedimientos"
-            title="Todos nuestros servicios quirúrgicos"
-            desc="Cada procedimiento tiene indicaciones específicas, técnicas quirúrgicas adaptadas y un proceso de recuperación particular. Selecciona el tuyo para obtener información detallada."
-          />
-          <div className="space-y-16">
-            {categories.map((cat) => {
-              const catServices = services.filter(
-                (s) => s.category === cat.name
-              );
-              if (catServices.length === 0) return null;
-              return (
-                <div key={cat.slug}>
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
-                      {cat.icon}
-                    </div>
-                    <h2 className="font-heading font-bold text-2xl text-text-dark">
-                      {cat.name}
-                    </h2>
-                  </div>
-                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                    {catServices.map((service) => {
-                      const href =
-                        service.href ?? service.detailUrl ?? "#";
-                      return (
-                        <ServiceCard
-                          key={service.id}
-                          title={service.title}
-                          description={service.description}
-                          href={href}
-                          popular={service.popular}
-                        />
-                      );
-                    })}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-          <div className="mt-12 text-center">
-            <p className="text-sm text-text-main/60 font-body max-w-2xl mx-auto">
-              Si no encuentras el procedimiento que buscas o tienes dudas sobre
-              cuál es el más adecuado para ti, contáctanos. Te orientaremos
-              durante la valoración médica presencial.
-            </p>
-          </div>
-        </Section>
-
-        <Section id="beneficios" className="bg-[#FBFBF9]">
-          <SectionHeader
-            label="Beneficios"
-            title="¿Por qué elegir Tiffany Esthetic Group?"
-            desc="Más que una cirugía, ofrecemos un proceso integral con enfoque en la seguridad y el bienestar del paciente."
-          />
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                title: "IPS habilitada",
-                desc: "Institución habilitada por la Secretaría de Salud (Resolución 3100 de 2019) con sala de cirugía, recuperación y farmacia habilitada.",
-                icon: (
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                    <path d="M2 17l10 5 10-5" />
-                    <path d="M2 12l10 5 10-5" />
-                  </svg>
-                ),
-              },
-              {
-                title: "Equipo calificado",
-                desc: "Cirujanos plásticos miembros de la SCCP, anestesiólogos certificados, instrumentadores y enfermería especializada en recuperación quirúrgica.",
-                icon: (
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" />
-                    <circle cx="9" cy="7" r="4" />
-                    <path d="M22 21v-2a4 4 0 00-3-3.87" />
-                    <path d="M16 3.13a4 4 0 010 7.75" />
-                  </svg>
-                ),
-              },
-              {
-                title: "Acompañamiento integral",
-                desc: "Desde la valoración inicial hasta el postoperatorio, te acompañamos con controles programados y recomendaciones personalizadas para cada etapa.",
-                icon: (
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                  </svg>
-                ),
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="bg-white rounded-2xl p-8 border border-silver/20 shadow-sm"
-              >
-                <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-5">
-                  {item.icon}
-                </div>
-                <h3 className="font-heading font-bold text-text-dark text-xl mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-text-main/80 font-body leading-relaxed text-sm">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </Section>
-
-        <Section id="proceso" className="bg-white">
-          <SectionHeader
-            label="Proceso"
-            title="¿Cómo es el proceso quirúrgico?"
-            desc="Cinco etapas clave que describen el journey del paciente desde la primera consulta hasta los resultados."
-          />
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {processSteps.map((step) => (
-              <article
-                key={step.number}
-                className="relative bg-[#FBFBF9] rounded-2xl p-8 border border-silver/20 shadow-sm"
-              >
-                <span
-                  className="font-heading font-bold text-5xl text-primary/10 absolute top-4 right-6 select-none"
-                  aria-hidden="true"
-                >
-                  {step.number}
-                </span>
-                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-body font-bold text-sm mb-5 relative">
-                  {step.number}
-                </div>
-                <h3 className="font-heading font-bold text-text-dark text-lg mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-sm text-text-main/80 font-body leading-relaxed">
-                  {step.desc}
-                </p>
-              </article>
-            ))}
-          </div>
-        </Section>
-
-        <Section id="faq" className="bg-white">
-          <SectionHeader
-            label="FAQ"
-            title="Preguntas frecuentes sobre nuestros procedimientos"
-          />
-          <div
-            className="max-w-3xl mx-auto divide-y divide-silver/20"
-            itemScope
-            itemType="https://schema.org/FAQPage"
-          >
-            {faqs.map((faq) => (
-              <details
-                key={faq.q}
-                className="group py-5"
-                itemScope
-                itemProp="mainEntity"
-                itemType="https://schema.org/Question"
-              >
-                <summary className="flex items-center justify-between gap-4 cursor-pointer list-none font-heading font-semibold text-text-dark text-base md:text-lg">
-                  <span itemProp="name">{faq.q}</span>
-                  <svg
-                    className="w-5 h-5 text-primary shrink-0 transition-transform duration-300 group-open:rotate-180"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <polyline points="6 9 12 15 18 9" />
-                  </svg>
-                </summary>
-                <div
-                  className="mt-4 text-sm text-text-main/80 font-body leading-relaxed"
-                  itemScope
-                  itemProp="acceptedAnswer"
-                  itemType="https://schema.org/Answer"
-                >
-                  <div itemProp="text">{faq.a}</div>
-                </div>
-              </details>
-            ))}
-          </div>
-        </Section>
-
-        <section className="bg-gradient-to-br from-[#0F4A44] via-[#1B6E66] to-[#2FA79C] py-20 md:py-28">
+        {/* ─── SERVICIOS POR CATEGORÍA ─────────────────────────── */}
+        <section id="servicios-lista" className="bg-white py-20 md:py-28">
           <Container>
-            <div className="text-center max-w-2xl mx-auto">
-              <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-white leading-tight">
-                Agenda tu valoración médica en Cali
+            <div className="text-center mb-16">
+              <span className="inline-block text-primary font-body font-semibold text-xs tracking-[0.2em] uppercase mb-4 border border-primary/20 rounded-full px-4 py-1.5">
+                Nuestros procedimientos
+              </span>
+              <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-text-dark leading-tight text-balance max-w-3xl mx-auto">
+                Cirugía estética con estándares de{" "}
+                <span className="text-primary">seguridad y calidad</span>
               </h2>
-              <p className="mt-4 text-white/80 font-body text-lg leading-relaxed">
-                El primer paso es una consulta presencial con nuestros
-                especialistas para evaluar tu caso y determinar el procedimiento
-                más adecuado para ti.
+              <p className="mt-4 text-text-main/70 font-body text-base max-w-2xl mx-auto">
+                Cada procedimiento tiene indicaciones específicas, técnicas
+                quirúrgicas adaptadas y un proceso de recuperación particular.
               </p>
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 inline-flex items-center justify-center gap-2 bg-white text-[#0F4A44] font-body font-bold px-10 py-4 rounded-full hover:bg-white/90 transition-all duration-300 text-lg shadow-xl shadow-black/20 no-underline"
-              >
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
+            </div>
+
+            <div className="space-y-20">
+              {categoryMeta.map((cat) => {
+                const catServices = services.filter(
+                  (s) => s.category === cat.name
+                );
+                if (catServices.length === 0) return null;
+                return (
+                  <div key={cat.slug}>
+                    <div className="grid md:grid-cols-5 gap-8 mb-10 items-center">
+                      <div className="md:col-span-2 relative rounded-2xl overflow-hidden h-[240px] shadow-lg group">
+                        <img
+                          src={cat.img}
+                          alt={`${cat.name} en Tiffany Esthetic Group IPS`}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-r from-[#0F4A44]/70 to-transparent flex items-end p-6">
+                          <div>
+                            <div className="flex items-center gap-3 mb-2">
+                              <span className="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center backdrop-blur-sm">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
+                                  <path d="M12 8v8" />
+                                  <path d="M8 12h8" />
+                                </svg>
+                              </span>
+                              <h3 className="font-heading font-bold text-2xl text-white">
+                                {cat.name}
+                              </h3>
+                            </div>
+                            <p className="text-white/80 font-body text-sm max-w-xs">
+                              {cat.desc}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="md:col-span-3 grid sm:grid-cols-2 gap-4">
+                        {catServices.map((service) => {
+                          const href =
+                            service.href ?? service.detailUrl ?? "#";
+                          return (
+                            <ServiceCard
+                              key={service.id}
+                              title={service.title}
+                              description={service.description}
+                              href={href}
+                              popular={service.popular}
+                            />
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="mt-16 text-center max-w-xl mx-auto p-8 bg-[#FBFBF9] rounded-2xl border border-silver/20">
+              <p className="text-sm text-text-main/70 font-body">
+                ¿No encuentras lo que buscas?{" "}
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary font-semibold hover:text-primary-dark transition-colors"
                 >
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                </svg>
-                Agendar valoración médica
-              </a>
-              <p className="mt-6 text-sm text-white/60 font-body">
+                  Contáctanos
+                </a>
+                , te orientaremos durante la valoración médica presencial.
+              </p>
+            </div>
+          </Container>
+        </section>
+
+        {/* ─── BENEFICIOS ───────────────────────────────────────── */}
+        <section className="bg-[#FBFBF9] py-20 md:py-28 overflow-hidden">
+          <Container>
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <div className="relative">
+                <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                  <img
+                    src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=700&h=800&fit=crop&crop=entropy&auto=format&q=80"
+                    alt="Instalaciones quirúrgicas de Tiffany Esthetic Group IPS"
+                    className="w-full h-[400px] md:h-[500px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F4A44]/50 via-transparent to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+                      <p className="text-xs text-text-dark font-body font-semibold">
+                        "La seguridad del paciente es nuestra prioridad en cada
+                        etapa del proceso quirúrgico."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <span className="text-primary font-body font-semibold text-sm tracking-widest uppercase">
+                  ¿Por qué elegirnos?
+                </span>
+                <h2 className="font-heading font-bold text-3xl md:text-4xl text-text-dark leading-tight mt-3">
+                  Tu seguridad es{" "}
+                  <span className="text-primary">nuestra prioridad</span>
+                </h2>
+                <div className="mt-8 space-y-5">
+                  {benefitsData.map((item, i) => (
+                    <div
+                      key={item.title}
+                      className="flex gap-4 p-4 rounded-xl bg-white border border-silver/20 shadow-sm hover:shadow-md transition-all duration-300"
+                    >
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                        {item.icon}
+                      </div>
+                      <div>
+                        <h3 className="font-heading font-bold text-text-dark text-base">
+                          {item.title}
+                        </h3>
+                        <p className="text-sm text-text-main/70 font-body leading-relaxed mt-1">
+                          {item.desc}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </Container>
+        </section>
+
+        {/* ─── PROCESO ──────────────────────────────────────────── */}
+        <section className="bg-white py-20 md:py-28">
+          <Container>
+            <div className="text-center mb-16">
+              <span className="inline-block text-primary font-body font-semibold text-xs tracking-[0.2em] uppercase mb-4 border border-primary/20 rounded-full px-4 py-1.5">
+                Tu journey quirúrgico
+              </span>
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-text-dark leading-tight">
+                ¿Cómo es el proceso?
+              </h2>
+              <p className="mt-4 text-text-main/70 font-body text-base max-w-2xl mx-auto">
+                Cinco etapas clave desde la primera consulta hasta los
+                resultados.
+              </p>
+            </div>
+
+            <div className="relative max-w-4xl mx-auto">
+              <div className="absolute left-[23px] top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-primary/20 hidden md:block" aria-hidden="true" />
+              <div className="space-y-8 md:space-y-0">
+                {processSteps.map((step, i) => (
+                  <div
+                    key={step.number}
+                    className="relative md:grid md:grid-cols-[80px_1fr] md:gap-8 md:pb-8 items-start"
+                  >
+                    <div className="hidden md:flex flex-col items-center">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center font-heading font-bold text-sm shadow-lg shadow-primary/20 relative z-10">
+                        {step.number}
+                      </div>
+                    </div>
+                    <div className="md:hidden flex items-center gap-4 mb-3">
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center font-heading font-bold text-xs shrink-0">
+                        {step.number}
+                      </div>
+                      <h3 className="font-heading font-bold text-text-dark text-lg">
+                        {step.title}
+                      </h3>
+                    </div>
+                    <div className="bg-[#FBFBF9] rounded-2xl p-6 md:p-8 border border-silver/20 shadow-sm ml-14 md:ml-0 hover:shadow-md transition-shadow duration-300">
+                      <h3 className="hidden md:block font-heading font-bold text-text-dark text-xl mb-3">
+                        {step.title}
+                      </h3>
+                      <p className="text-sm text-text-main/75 font-body leading-relaxed">
+                        {step.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Container>
+        </section>
+
+        {/* ─── FAQ ──────────────────────────────────────────────── */}
+        <section className="bg-[#FBFBF9] py-20 md:py-28">
+          <Container>
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+              <div>
+                <span className="text-primary font-body font-semibold text-sm tracking-widest uppercase">
+                  FAQ
+                </span>
+                <h2 className="font-heading font-bold text-3xl md:text-4xl text-text-dark leading-tight mt-3">
+                  Preguntas frecuentes
+                </h2>
+                <p className="mt-4 text-text-main/70 font-body text-base">
+                  Resolvemos tus dudas sobre nuestros procedimientos
+                  quirúrgicos, la valoración médica y el proceso de atención.
+                </p>
+                <div className="mt-6 p-5 bg-primary/5 rounded-xl border border-primary/10">
+                  <p className="text-sm font-body text-primary-dark font-semibold">
+                    ¿Tienes más preguntas?{" "}
+                    <a
+                      href={whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:no-underline"
+                    >
+                      Escríbenos al WhatsApp
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div
+                className="divide-y divide-silver/20"
+                itemScope
+                itemType="https://schema.org/FAQPage"
+              >
+                {faqs.map((faq) => (
+                  <details
+                    key={faq.q}
+                    className="group py-4"
+                    itemScope
+                    itemProp="mainEntity"
+                    itemType="https://schema.org/Question"
+                  >
+                    <summary className="flex items-center justify-between gap-4 cursor-pointer list-none font-heading font-semibold text-text-dark text-sm md:text-base">
+                      <span itemProp="name">{faq.q}</span>
+                      <svg
+                        className="w-4 h-4 text-primary shrink-0 transition-transform duration-300 group-open:rotate-180"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </summary>
+                    <div
+                      className="mt-3 text-sm text-text-main/75 font-body leading-relaxed"
+                      itemScope
+                      itemProp="acceptedAnswer"
+                      itemType="https://schema.org/Answer"
+                    >
+                      <div itemProp="text">{faq.a}</div>
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </div>
+          </Container>
+        </section>
+
+        {/* ─── CTA FINAL ────────────────────────────────────────── */}
+        <section className="relative bg-gradient-to-br from-[#0F4A44] via-[#1B6E66] to-[#2FA79C] py-24 md:py-32 overflow-hidden">
+          <div className="absolute inset-0 opacity-[0.05]" aria-hidden="true"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }} />
+          <div className="absolute inset-0 opacity-10"
+            style={{
+              backgroundImage: "radial-gradient(circle at 30% 50%, rgba(255,255,255,0.15) 0%, transparent 50%)",
+            }}
+            aria-hidden="true" />
+          <Container>
+            <div className="relative text-center max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 mb-6 bg-white/10 border border-white/20 rounded-full px-5 py-2">
+                <span className="w-2 h-2 rounded-full bg-accent" />
+                <span className="text-white/80 font-body text-xs font-semibold tracking-wider uppercase">
+                  Comienza tu proceso hoy
+                </span>
+              </div>
+              <h2 className="font-heading font-bold text-3xl md:text-5xl text-white leading-tight">
+                Agenda tu valoración médica{" "}
+                <span className="text-accent-light">en Cali</span>
+              </h2>
+              <p className="mt-5 text-white/75 font-body text-lg max-w-2xl mx-auto leading-relaxed">
+                Da el primer paso: una consulta presencial con nuestros
+                especialistas para evaluar tu caso, resolver tus dudas y
+                encontrar el procedimiento ideal para ti.
+              </p>
+              <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-[#0F4A44] font-body font-bold px-10 py-4 rounded-full hover:bg-white/90 hover:shadow-2xl hover:shadow-black/25 transition-all duration-300 text-lg shadow-xl shadow-black/20 no-underline"
+                >
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                  </svg>
+                  Agendar valoración médica
+                </a>
+                <a
+                  href="https://wa.me/573XXXXXXXXX"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white font-body font-semibold px-10 py-4 rounded-full hover:bg-white/10 transition-all duration-300 text-lg no-underline"
+                >
+                  Resolver dudas
+                </a>
+              </div>
+              <p className="mt-8 text-xs text-white/50 font-body max-w-lg mx-auto">
                 Tiffany Esthetic Group IPS — Institución Prestadora de Servicios
                 de Salud habilitada ante las autoridades sanitarias de Colombia.
               </p>
