@@ -85,7 +85,8 @@ export default function RootLayout({
         <link rel="canonical" href="https://www.tiffanyesthetic.com" />
         <SchemaMarkup />
       </head>
-      <body className="min-h-screen flex flex-col font-body antialiased overflow-x-hidden">
+      <body className="min-h-screen flex flex-col font-body antialiased">
+      <div className="overflow-x-hidden">
         <SplashWrapper>
           <a
             href="#main-content"
@@ -246,6 +247,7 @@ export default function RootLayout({
           </footer>
           <WhatsAppButton />
         </SplashWrapper>
+      </div>
       </body>
     </html>
   );
