@@ -5,6 +5,7 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import Logo from "@/components/Logo";
 import SplashWrapper from "@/components/SplashWrapper";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import MobileNav from "@/components/MobileNav";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -103,6 +104,7 @@ export default function RootLayout({
                 <Link href="/" className="no-underline">
                   <Logo />
                 </Link>
+                <MobileNav />
                 <div className="hidden md:flex items-center gap-7">
                   <Link
                     href="/servicios"
