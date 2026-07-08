@@ -117,7 +117,7 @@ export default function RootLayout({
                     </svg>
                   </a>
                   <a
-                    href="tel:+573202703522"
+                    href="https://wa.me/573202703522?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20para%20un%20procedimiento%20quir%C3%BArgico." target="_blank" rel="noopener noreferrer"
                     className="w-8 h-8 rounded-full text-primary/60 hover:text-primary hover:bg-primary/10 flex items-center justify-center transition-all duration-300 hover:scale-110 no-underline"
                     aria-label="Teléfono de Tiffany Esthetic Group"
                   >
