@@ -299,12 +299,30 @@ export default function EquipoPage() {
                   <div className="group bg-white rounded-2xl overflow-hidden border border-silver/20 shadow-sm hover:shadow-xl transition-all duration-500">
                     <div className="relative h-56 bg-gradient-to-br from-primary/10 via-primary/5 to-secondary/10 overflow-hidden">
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-24 h-24 rounded-full bg-white/80 backdrop-blur-sm shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                          <svg className="w-12 h-12 text-primary/60" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                            <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" />
-                            <circle cx="9" cy="7" r="4" />
-                          </svg>
-                        </div>
+                        {i === 0 ? (
+                          <div className="w-28 h-28 rounded-full bg-white shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-500 p-3">
+                            <img
+                              src="https://www.appsheet.com/image/getimageurl?appName=SCCPAPP-696038429&tableName=Repositorio&fileName=Repositorio_Images/e2525752.Imagen.162954.png"
+                              alt="Logo Sociedad Colombiana de Cirugía Plástica"
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
+                        ) : i === 1 ? (
+                          <div className="w-28 h-28 rounded-full bg-white shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-500 p-3">
+                            <img
+                              src="https://scare.org.co/wp-content/uploads/sociedad-colombiana-de-anestesiologia-y-reanimacion-scare-logo-300x82.avif"
+                              alt="Logo Sociedad Colombiana de Anestesiología y Reanimación"
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
+                        ) : (
+                          <div className="w-24 h-24 rounded-full bg-white/80 backdrop-blur-sm shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                            <svg className="w-12 h-12 text-primary/60" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                              <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" />
+                              <circle cx="9" cy="7" r="4" />
+                            </svg>
+                          </div>
+                        )}
                       </div>
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
