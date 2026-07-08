@@ -109,12 +109,12 @@ export default function RootLayout({
                   >
                     Servicios
                   </Link>
-                  <a
-                    href="#instalaciones"
+                  <Link
+                    href="/instalaciones"
                     className="text-[0.85rem] font-body font-semibold text-text-main/75 hover:text-primary transition-colors no-underline"
                   >
                     Instalaciones
-                  </a>
+                  </Link>
                   <a
                     href="#equipo"
                     className="text-[0.85rem] font-body font-semibold text-text-main/75 hover:text-primary transition-colors no-underline"
@@ -163,12 +163,12 @@ export default function RootLayout({
                   >
                     Servicios
                   </Link>
-                  <a
-                    href="#instalaciones"
+                  <Link
+                    href="/instalaciones"
                     className="hover:text-primary transition-colors no-underline text-white/80"
                   >
                     Instalaciones
-                  </a>
+                  </Link>
                   <a
                     href="https://wa.me/573XXXXXXXXX"
                     target="_blank"
