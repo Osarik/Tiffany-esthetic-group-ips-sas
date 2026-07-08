@@ -304,69 +304,122 @@ export default function InstalacionesPage() {
           </Container>
         </section>
 
-        {/* ─── GALERÍA — Sticky scroll style ──────────────────── */}
-        <section className="bg-slate-950 py-28 md:py-36 overflow-hidden relative">
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" aria-hidden="true" />
+        {/* ─── GALERÍA — Sticky masonry con estilo brand ──────── */}
+        <section className="relative bg-gradient-to-b from-white via-[#FBFBF9] to-white py-20 md:py-28 overflow-hidden">
+          <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230F4A44' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }} />
           <Container>
             <AnimateInView variant="fadeUp">
-              <div className="text-center mb-16 relative z-10">
-                <span className="inline-block text-white/60 font-body font-semibold text-xs tracking-[0.2em] uppercase mb-4 border border-white/20 rounded-full px-4 py-1.5">
+              <div className="text-center mb-14">
+                <span className="inline-block text-primary font-body font-semibold text-xs tracking-[0.2em] uppercase mb-4 border border-primary/20 rounded-full px-4 py-1.5">
                   Galería
                 </span>
-                <h2 className="font-heading font-bold text-3xl md:text-5xl text-white leading-tight">
-                  Conoce nuestros{" "}
-                  <span className="text-accent-light">espacios</span>
+                <h2 className="font-heading font-bold text-3xl md:text-5xl text-text-dark leading-tight">
+                  Un recorrido por nuestras{" "}
+                  <span className="text-primary">instalaciones</span>
                 </h2>
-                <p className="mt-4 text-white/50 font-body text-base max-w-xl mx-auto">
-                  Un recorrido visual por nuestras instalaciones quirúrgicas,
-                  áreas de recuperación y farmacia habilitada.
+                <p className="mt-4 text-text-main/60 font-body text-base max-w-xl mx-auto">
+                  Imágenes reales de nuestros espacios quirúrgicos, áreas de
+                  recuperación y farmacia habilitada en Cali.
                 </p>
               </div>
             </AnimateInView>
 
-            <div className="grid grid-cols-12 gap-2 relative z-10">
-              <div className="grid gap-2 col-span-4">
-                {[gallery[0], gallery[1], gallery[2], gallery[3], gallery[4]].map((img) => (
-                  <figure key={img.label} className="w-full group">
-                    <img
-                      src={img.src}
-                      alt={img.label}
-                      loading="lazy"
-                      className="transition-all duration-500 w-full h-96 align-bottom object-cover rounded-md group-hover:scale-[1.02] group-hover:shadow-lg"
-                    />
+            <div className="grid grid-cols-12 gap-3">
+              <div className="grid gap-3 col-span-4">
+                <AnimateInView variant="fadeUp" delay={0}>
+                  <figure className="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500">
+                    <img src={gallery[0].src} alt={gallery[0].label} loading="lazy"
+                      className="w-full h-80 object-cover transition-all duration-700 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <span className="absolute bottom-3 left-3 text-white text-xs font-body font-semibold opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-1 group-hover:translate-y-0">
+                      {gallery[0].label}
+                    </span>
                   </figure>
-                ))}
+                </AnimateInView>
+                <AnimateInView variant="fadeUp" delay={0.1}>
+                  <figure className="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500">
+                    <img src={gallery[1].src} alt={gallery[1].label} loading="lazy"
+                      className="w-full h-72 object-cover transition-all duration-700 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <span className="absolute bottom-3 left-3 text-white text-xs font-body font-semibold opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-1 group-hover:translate-y-0">
+                      {gallery[1].label}
+                    </span>
+                  </figure>
+                </AnimateInView>
+                <AnimateInView variant="fadeUp" delay={0.2}>
+                  <figure className="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500">
+                    <img src={gallery[2].src} alt={gallery[2].label} loading="lazy"
+                      className="w-full h-96 object-cover transition-all duration-700 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <span className="absolute bottom-3 left-3 text-white text-xs font-body font-semibold opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-1 group-hover:translate-y-0">
+                      {gallery[2].label}
+                    </span>
+                  </figure>
+                </AnimateInView>
               </div>
-              <div className="sticky top-24 h-screen w-full col-span-4 gap-2 grid grid-rows-3">
-                {[gallery[5], gallery[0], gallery[1]].map((img) => (
-                  <figure key={img.label} className="w-full h-full group">
-                    <img
-                      src={img.src}
-                      alt={img.label}
-                      loading="lazy"
-                      className="transition-all duration-500 h-full w-full align-bottom object-cover rounded-md group-hover:scale-[1.02] group-hover:shadow-lg"
-                    />
-                  </figure>
-                ))}
+
+              <div className="col-span-4 sticky top-24 h-screen">
+                <div className="h-full grid gap-3">
+                  <AnimateInView variant="fadeUp" delay={0.15}>
+                    <figure className="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 h-full">
+                      <img src={gallery[3].src} alt={gallery[3].label} loading="lazy"
+                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-primary/80 to-transparent">
+                        <span className="text-white font-body text-sm font-semibold">
+                          {gallery[3].label}
+                        </span>
+                        <p className="text-white/70 text-xs font-body mt-0.5">
+                          Equipamiento de última generación
+                        </p>
+                      </div>
+                    </figure>
+                  </AnimateInView>
+                </div>
               </div>
-              <div className="grid gap-2 col-span-4">
-                {[gallery[2], gallery[3], gallery[4], gallery[5], gallery[0]].map((img) => (
-                  <figure key={`${img.label}-r`} className="w-full group">
-                    <img
-                      src={img.src}
-                      alt={img.label}
-                      loading="lazy"
-                      className="transition-all duration-500 w-full h-96 align-bottom object-cover rounded-md group-hover:scale-[1.02] group-hover:shadow-lg"
-                    />
+
+              <div className="grid gap-3 col-span-4">
+                <AnimateInView variant="fadeUp" delay={0.05}>
+                  <figure className="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500">
+                    <img src={gallery[4].src} alt={gallery[4].label} loading="lazy"
+                      className="w-full h-96 object-cover transition-all duration-700 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <span className="absolute bottom-3 left-3 text-white text-xs font-body font-semibold opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-1 group-hover:translate-y-0">
+                      {gallery[4].label}
+                    </span>
                   </figure>
-                ))}
+                </AnimateInView>
+                <AnimateInView variant="fadeUp" delay={0.15}>
+                  <figure className="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500">
+                    <img src={gallery[5].src} alt={gallery[5].label} loading="lazy"
+                      className="w-full h-72 object-cover transition-all duration-700 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <span className="absolute bottom-3 left-3 text-white text-xs font-body font-semibold opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-1 group-hover:translate-y-0">
+                      {gallery[5].label}
+                    </span>
+                  </figure>
+                </AnimateInView>
+                <AnimateInView variant="fadeUp" delay={0.25}>
+                  <figure className="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500">
+                    <img src={gallery[0].src} alt={gallery[0].label} loading="lazy"
+                      className="w-full h-72 object-cover transition-all duration-700 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <span className="absolute bottom-3 left-3 text-white text-xs font-body font-semibold opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-1 group-hover:translate-y-0">
+                      {gallery[0].label}
+                    </span>
+                  </figure>
+                </AnimateInView>
               </div>
             </div>
 
-            <AnimateInView variant="fadeUp" className="mt-16 relative z-10">
-              <h3 className="text-[12vw] md:text-[10vw] leading-[100%] uppercase font-heading font-bold text-center bg-gradient-to-r from-white/10 to-white/5 bg-clip-text text-transparent select-none">
+            <AnimateInView variant="fadeUp" className="mt-16 text-center">
+              <span className="text-[14vw] md:text-[10vw] leading-[0.85] uppercase font-heading font-bold bg-gradient-to-r from-primary/10 via-primary/5 to-transparent bg-clip-text text-transparent select-none block">
                 Instalaciones
-              </h3>
+              </span>
+              <div className="w-24 h-0.5 bg-gradient-to-r from-primary to-transparent mx-auto mt-4 rounded-full" />
             </AnimateInView>
           </Container>
         </section>
