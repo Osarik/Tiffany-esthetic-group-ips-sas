@@ -107,6 +107,12 @@ export default function RootLayout({
                 <MobileNav />
                 <div className="hidden md:flex items-center gap-7">
                   <Link
+                    href="/"
+                    className="text-[0.85rem] font-body font-semibold text-text-main/75 hover:text-primary transition-colors no-underline"
+                  >
+                    Inicio
+                  </Link>
+                  <Link
                     href="/servicios"
                     className="text-[0.85rem] font-body font-semibold text-text-main/75 hover:text-primary transition-colors no-underline"
                   >
