@@ -51,6 +51,7 @@ export const services: Service[] = [
     description:
       "Elevación mamaria con técnicas adaptadas a cada paciente, incluida la pexia periareolar.",
     category: "Cirugía Mamaria",
+    detailUrl: "/pexia-mamaria",
     popular: true,
   },
   {
