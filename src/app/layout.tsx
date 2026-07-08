@@ -85,7 +85,7 @@ export default function RootLayout({
         <link rel="canonical" href="https://www.tiffanyesthetic.com" />
         <SchemaMarkup />
       </head>
-      <body className="min-h-screen flex flex-col font-body antialiased">
+      <body className="min-h-screen flex flex-col font-body antialiased overflow-x-hidden">
         <SplashWrapper>
           <a
             href="#main-content"

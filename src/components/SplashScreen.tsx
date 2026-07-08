@@ -68,7 +68,7 @@ export default function SplashScreen({ onFinish }: { onFinish: () => void }) {
   ];
 
   return (
-    <div className="flex items-center justify-center bg-[#FBFBF9] w-screen h-dvh">
+    <div className="flex items-center justify-center bg-[#FBFBF9] w-full h-dvh">
       {phase < 3 && (
         <div className="flex flex-col items-center gap-6 md:gap-8">
           <div className="relative flex items-center justify-center w-20 h-20 md:w-[120px] md:h-[120px]">
