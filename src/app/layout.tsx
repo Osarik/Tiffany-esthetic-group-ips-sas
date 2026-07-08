@@ -104,7 +104,6 @@ export default function RootLayout({
                 <Link href="/" className="no-underline">
                   <Logo />
                 </Link>
-                <MobileNav />
                 <div className="hidden md:flex items-center gap-7">
                   <Link
                     href="/servicios"
@@ -198,6 +197,7 @@ export default function RootLayout({
           </footer>
           <WhatsAppButton />
         </SplashWrapper>
+        <MobileNav />
       </body>
     </html>
   );
