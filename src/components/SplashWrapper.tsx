@@ -28,14 +28,16 @@ export default function SplashWrapper({ children }: { children: ReactNode }) {
         )}
       </AnimatePresence>
 
-      <motion.div
-        key="content"
-        initial={{ x: "100%" }}
-        animate={{ x: showContent ? 0 : "100%" }}
-        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-      >
-        {children}
-      </motion.div>
+      {showContent && (
+        <motion.div
+          key="content"
+          initial={{ x: "100%" }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        >
+          {children}
+        </motion.div>
+      )}
     </>
   );
 }

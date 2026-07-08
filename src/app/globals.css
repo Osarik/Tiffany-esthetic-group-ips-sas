@@ -24,6 +24,7 @@
     font-family: var(--font-body), sans-serif;
     color: var(--color-text-main);
     background: var(--color-clinic-bg);
+    overflow-x: clip;
   }
 
   h1, h2, h3, h4 {
