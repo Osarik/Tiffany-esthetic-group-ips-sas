@@ -4,7 +4,7 @@ import Heading from "@/components/ui/Heading";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 const whatsappUrl =
-  "https://wa.me/573XXXXXXXXX?text=Hola%2C%20quiero%20agendar%20mi%20valoraci%C3%B3n%20para%20liposucci%C3%B3n%20con%20aumento%20mamario%20en%20Cali.";
+  "https://wa.me/573XXXXXXXXX?text=Hola%2C%20quiero%20agendar%20mi%20valoraci%C3%B3n%20para%20liposucci%C3%B3n%20con%20aumento%20de%20volumen%20en%20Cali.";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -13,9 +13,9 @@ const jsonLd = {
       "@type": "MedicalWebPage",
       "@id": "https://www.tiffanyesthetic.com/liposuccion-aumento#webpage",
       url: "https://www.tiffanyesthetic.com/liposuccion-aumento",
-      name: "Liposucción y Aumento Mamario en Cali",
+      name: "Liposucción y Aumento de Volumen en Cali",
       description:
-        "Plan quirúrgico integral que combina liposucción de contorno corporal con aumento mamario mediante implantes. IPS habilitada en Cali.",
+        "Plan quirúrgico integral que combina liposucción de contorno corporal con aumento de volumen mediante transferencia de grasa autóloga. IPS habilitada en Cali.",
       inLanguage: "es",
       medicalAudience: "Patient",
       aspect: "Treatment",
@@ -49,28 +49,28 @@ const jsonLd = {
     },
     {
       "@type": "MedicalProcedure",
-      name: "Aumento Mamario con Implantes",
+      name: "Transferencia de grasa autóloga",
       procedureType: "SurgicalProcedure",
-      bodyLocation: ["Breasts"],
+      bodyLocation: ["Gluteal Region", "Face", "Hands"],
       description:
-        "Procedimiento quirúrgico para aumentar el volumen mamario mediante la colocación de implantes aprobados por INVIMA.",
+        "Recolección, procesamiento y aplicación de grasa del propio paciente para aumentar el volumen en áreas específicas del cuerpo.",
     },
   ],
 };
 
 export const metadata: Metadata = {
   title:
-    "Liposucción y Aumento Mamario en Cali | Tiffany Esthetic Group IPS SAS",
+    "Liposucción y Aumento de Volumen en Cali | Tiffany Esthetic Group IPS SAS",
   description:
-    "Plan quirúrgico integral para definir el cuerpo con liposucción y complementar el volumen mamario con implantes aprobados. IPS habilitada en Cali. Agenda tu valoración.",
+    "Plan quirúrgico integral para definir el cuerpo con liposucción y complementar volumen con transferencia de grasa autóloga. IPS habilitada en Cali. Agenda tu valoración.",
   robots: { index: true, follow: true },
   alternates: {
     canonical: "/liposuccion-aumento",
   },
   openGraph: {
-    title: "Liposucción y Aumento Mamario en Cali",
+    title: "Liposucción y Aumento de Volumen en Cali",
     description:
-      "Plan quirúrgico integral: liposucción de contorno corporal y aumento mamario con implantes en una misma intervención.",
+      "Plan quirúrgico integral: liposucción de contorno corporal y aumento de volumen con grasa autóloga en una misma intervención.",
     url: "https://www.tiffanyesthetic.com/liposuccion-aumento",
     siteName: "Tiffany Esthetic Group IPS SAS",
     locale: "es_CO",
@@ -82,58 +82,58 @@ const procedureSteps = [
   {
     number: "01",
     title: "Valoración clínica y exámenes preoperatorios",
-    desc: "Evaluación del estado de salud general, antecedentes médicos, exámenes de laboratorio, ecografía mamaria y valoración por anestesiología para determinar la idoneidad del paciente.",
+    desc: "Evaluación del estado de salud general, antecedentes médicos, exámenes de laboratorio y valoración por anestesiología para determinar la idoneidad del paciente y las áreas a tratar.",
   },
   {
     number: "02",
-    title: "Marcación quirúrgica y selección del implante",
-    desc: "El cirujano define las zonas de liposucción, el tipo de implante (perfil, volumen, textura), la vía de acceso (axilar, submamaria o periareolar) y el plano de colocación (submuscular o subglandular).",
+    title: "Marcación quirúrgica y planificación",
+    desc: "El cirujano delimita las zonas donantes de grasa (con exceso) y las áreas receptoras (que requieren aumento de volumen), definiendo el plan quirúrgico personalizado.",
   },
   {
     number: "03",
-    title: "Liposucción de contorno corporal",
-    desc: "Aspiración selectiva de grasa en las zonas previamente marcadas (abdomen, flancos, espalda o muslos) para definir la silueta antes de la colocación de los implantes.",
+    title: "Liposucción y extracción de grasa",
+    desc: "Aspiración selectiva de tejido adiposo en las zonas donantes (abdomen, flancos, espalda o muslos) mediante cánulas de diámetro controlado, minimizando el trauma tisular.",
   },
   {
     number: "04",
-    title: "Colocación de implantes mamarios",
-    desc: "Inserción de los implantes aprobados por INVIMA en el plano quirúrgico definido. Verificación de simetría, posición y proyección antes del cierre.",
+    title: "Procesamiento de la grasa autóloga",
+    desc: "Centrifugación y filtrado de la grasa extraída bajo estrictos protocolos de bioseguridad para separar adipocitos viables, eliminando impurezas y aceite.",
   },
   {
     number: "05",
-    title: "Cierre quirúrgico y vendaje compresivo",
-    desc: "Sutura por planos, colocación de vendaje compresivo y sostén quirúrgico para estabilizar los tejidos durante la recuperación inicial.",
+    title: "Infiltración y modelado volumétrico",
+    desc: "Aplicación de la grasa purificada en las áreas receptoras mediante cánulas romas, distribuyendo el volumen de forma uniforme para lograr el contorno deseado.",
   },
 ];
 
 const benefits = [
-  "Armonización completa de la silueta al combinar definición corporal con aumento del volumen mamario en un solo procedimiento.",
-  "Mejora de la proporción corporal al reducir grasa localizada y complementar el contorno con proyección mamaria.",
+  "Armonización completa al reducir grasa en zonas con exceso y transferir volumen a áreas que lo requieren en un solo procedimiento.",
+  "Resultados naturales al utilizar tejido adiposo del propio paciente, eliminando riesgos de rechazo inmunológico.",
   "Una sola cirugía, una sola anestesia y una sola recuperación para ambos procedimientos.",
-  "Resultados más predecibles al planificar el contorno corporal y el volumen mamario de forma integral.",
+  "Beneficio dual: reducción de contorno en áreas donantes y aumento de volumen en zonas receptoras.",
 ];
 
 const safetySteps = [
-  "Valoración médica obligatoria para evaluar antecedentes, estado de salud, densidad mamaria y expectativas del paciente.",
-  "Explicación detallada del procedimiento combinado, tipo de implante, incisiones, alternativas y complicaciones potenciales.",
+  "Valoración médica obligatoria para evaluar antecedentes, estado de salud, anatomía y expectativas del paciente.",
+  "Explicación detallada del procedimiento combinado, áreas a tratar, alternativas y complicaciones potenciales.",
   "Firma de consentimiento informado antes de cualquier intervención quirúrgica.",
-  "Uso de implantes debidamente registrados ante INVIMA, la autoridad sanitaria colombiana.",
+  "Procesamiento de la grasa autóloga bajo protocolos de bioseguridad certificados.",
   "Atención en instalaciones habilitadas con protocolos de bioseguridad, equipos de emergencia y personal calificado.",
-  "Controles posteriores programados y recomendaciones para el seguimiento a largo plazo de los implantes.",
+  "Controles posteriores programados y recomendaciones personalizadas para la recuperación.",
 ];
 
 const candidates = [
   {
-    title: "Grasa localizada",
-    desc: "Pacientes con depósitos adiposos en abdomen, flancos u otras zonas que desean reducir para definir el contorno corporal.",
+    title: "Grasa localizada en zonas donantes",
+    desc: "Pacientes con depósitos adiposos en abdomen, flancos u otras zonas que pueden ser utilizados como fuente de grasa para el injerto.",
   },
   {
-    title: "Deseo de aumento mamario",
-    desc: "Mamas con volumen que la paciente desea aumentar para mejorar la proporción y armonía de su silueta.",
+    title: "Deseo de aumento de volumen",
+    desc: "Áreas del cuerpo que requieren mayor proyección o volumen, evaluadas durante la consulta presencial.",
   },
   {
     title: "Expectativas realistas",
-    desc: "Comprensión de que los implantes tienen una vida útil y pueden requerir reintervenciones futuras.",
+    desc: "Comprensión de que una parte de la grasa transferida puede ser reabsorbida por el cuerpo durante los primeros meses.",
   },
   {
     title: "Estado de salud estable",
@@ -145,35 +145,35 @@ const candidates = [
   },
   {
     title: "No fumador activo",
-    desc: "El tabaquismo afecta la cicatrización y aumenta significativamente el riesgo de complicaciones quirúrgicas.",
+    desc: "El tabaquismo afecta la oxigenación tisular y puede comprometer la viabilidad de la grasa transferida y la cicatrización.",
   },
 ];
 
 const areas = [
   {
-    area: "Abdomen y flancos",
-    desc: "Liposucción para reducir grasa y definir la cintura, creando una transición visual armoniosa hacia el nuevo volumen mamario.",
+    area: "Zonas donantes",
+    desc: "Abdomen, flancos, espalda y muslos con exceso de grasa localizada que puede ser extraída para definir el contorno corporal.",
     icon: (
       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
     ),
   },
   {
-    area: "Espalda y zona lumbar",
-    desc: "Eliminación de depósitos adiposos para estilizar el torso y realzar el contorno femenino.",
+    area: "Región glútea",
+    desc: "Aumento de volumen y proyección glútea mediante transferencia de grasa autóloga purificada para mejorar el contorno posterior.",
     icon: (
       <path d="M4 4h16v16H4z" />
     ),
   },
   {
-    area: "Mamas (aumento)",
-    desc: "Aumento del volumen mamario mediante implantes aprobados por INVIMA, mejorando proyección, forma y simetría.",
+    area: "Caderas y flancos receptores",
+    desc: "Volumen estratégico en caderas para mejorar la proporción cintura-cadera y crear una silueta más estilizada.",
     icon: (
       <path d="M6 4h4v16H6zM14 4h4v16h-4z" />
     ),
   },
   {
-    area: "Muslos",
-    desc: "Reducción de volumen en muslos internos o externos para estilizar las extremidades y complementar el contorno corporal.",
+    area: "Otras áreas según valoración",
+    desc: "El cirujano puede identificar otras zonas que se beneficien de aumento de volumen, evaluadas durante la consulta presencial.",
     icon: (
       <path d="M8 4h8v16H8z" />
     ),
@@ -183,50 +183,42 @@ const areas = [
 const recoveryTimeline = [
   {
     period: "Primeras 24 a 48 horas",
-    desc: "Reposo absoluto relativo. Inflamación, hematomas y molestias controlables con analgesia formulada. Uso de faja liposucción y sostén quirúrgico sin aro.",
+    desc: "Reposo absoluto relativo. Inflamación y hematomas en zonas donantes y receptoras controlables con analgesia formulada. Uso de prenda de compresión.",
   },
   {
     period: "Primera semana (días 1 a 7)",
-    desc: "Uso continuo de faja y sostén quirúrgico. Se recomienda drenaje linfático suave para reducir edema. Evitar elevación de brazos y esfuerzos.",
+    desc: "Uso continuo de faja liposucción. Se recomienda drenaje linfático suave para reducir edema. Evitar presión directa sobre las áreas receptoras de grasa.",
   },
   {
     period: "Primer mes",
-    desc: "Retorno progresivo a actividades cotidianas. Restricción de ejercicio físico intenso y movimientos bruscos con los brazos. Controles médicos para evaluar la evolución.",
+    desc: "Retorno progresivo a actividades cotidianas. Restricción de ejercicio físico intenso y presión prolongada sobre zonas injertadas. Controles médicos para evaluar la evolución.",
   },
   {
     period: "Retorno a actividades físicas",
-    desc: "Ejercicio moderado a partir de la cuarta a sexta semana con autorización médica. Los implantes continúan asentándose durante 3 a 6 meses.",
+    desc: "Ejercicio moderado a partir de la cuarta a sexta semana con autorización médica. La grasa transferida se estabiliza entre los 3 y 4 meses posteriores.",
   },
 ];
 
 const faqs = [
   {
-    q: "¿Qué tipo de implantes se utilizan?",
-    a: "En Tiffany Esthetic Group IPS utilizamos implantes mamarios debidamente registrados ante INVIMA (Instituto Nacional de Vigilancia de Medicamentos y Alimentos de Colombia). El cirujano recomendará el tipo, perfil, volumen y textura del implante según la anatomía y objetivos de cada paciente durante la valoración presencial.",
+    q: "¿La grasa transferida es permanente?",
+    a: "Una parte de la grasa transferida puede ser reabsorbida por el cuerpo durante los primeros meses. La permanencia definitiva depende de factores individuales, la técnica médica y los cuidados posteriores. El cirujano planifica un volumen adicional para compensar este fenómeno de reabsorción.",
   },
   {
-    q: "¿Los implantes mamarios son permanentes?",
-    a: "No. Los implantes mamarios tienen una vida útil que varía según el tipo, la técnica quirúrgica y factores individuales. Pueden requerir reemplazo o retiro en el futuro por complicaciones como contractura capsular, rotura o cambios en la preferencia de la paciente.",
+    q: "¿Cuánta grasa se reabsorbe?",
+    a: "Generalmente existe un porcentaje de reabsorción natural que oscila entre el 20% y el 40% del volumen inicialmente inyectado. Este porcentaje se contempla en la planificación quirúrgica para determinar el volumen óptimo a transferir.",
   },
   {
-    q: "¿Se pierde sensibilidad en el pezón?",
-    a: "Es posible que ocurran cambios temporales o permanentes en la sensibilidad del complejo areola-pezón. Algunas pacientes experimentan disminución y otras un aumento de la sensibilidad. El cirujano explicará estos riesgos durante la consulta preoperatoria.",
+    q: "¿Duele el procedimiento?",
+    a: "El procedimiento se realiza bajo anestesia general o regional, por lo que no hay dolor intraoperatorio. Durante el postoperatorio se presenta inflamación y sensibilidad similar a una molestia muscular intensa, controlable con la analgesia formulada.",
   },
   {
-    q: "¿Puedo amamantar después del aumento mamario?",
-    a: "Depende de la vía de acceso y la técnica quirúrgica utilizada. El acceso axilar o submamario generalmente preserva los conductos galactóforos. Si planea futuros embarazos, debe discutirlo con el cirujano durante la valoración para elegir la técnica más adecuada.",
+    q: "¿Se puede hacer aumento sin implantes?",
+    a: "Sí. La transferencia de grasa autóloga permite aumentar el volumen utilizando tejido del propio paciente, sin necesidad de implantes sintéticos. Esto elimina los riesgos asociados a cuerpos extraños y ofrece resultados de apariencia natural.",
   },
   {
-    q: "¿Qué es la contractura capsular?",
-    a: "Es la formación de tejido cicatricial alrededor del implante que puede endurecer la mama y deformar su contorno. Es la complicación más frecuente en aumento mamario y puede requerir reintervención. El riesgo varía según factores individuales y la técnica quirúrgica.",
-  },
-  {
-    q: "¿Los implantes interfieren con la mamografía?",
-    a: "Los implantes mamarios pueden dificultar la visualización del tejido mamario en una mamografía. Es necesario informar al radiólogo sobre la presencia de implantes y pueden requerirse proyecciones adicionales (técnica de Eklund). Se recomienda realizar controles mamográficos periódicos según la edad y factores de riesgo.",
-  },
-  {
-    q: "¿Existe riesgo de linfoma asociado a implantes?",
-    a: "El linfoma anaplásico de células grandes (BIA-ALCL) es una complicación poco frecuente asociada principalmente a implantes texturizados. Aunque el riesgo es bajo, debe ser informado durante la consulta preoperatoria. Tiffany Esthetic Group IPS entrega información completa sobre este riesgo como parte del consentimiento informado.",
+    q: "¿Cuándo puedo ver el resultado final?",
+    a: "La mejoría es visible desde el inicio, pero el resultado final se consolida entre los 3 y 6 meses, cuando la inflamación ha desaparecido y la grasa transferida se ha integrado completamente al tejido receptor.",
   },
   {
     q: "¿Es seguro combinar liposucción y aumento en una misma cirugía?",
@@ -234,7 +226,7 @@ const faqs = [
   },
   {
     q: "¿Qué exámenes médicos necesito antes de la cirugía?",
-    a: "Se requieren exámenes preoperatorios básicos: cuadro hemático completo, pruebas de coagulación (PT y PTT), función renal (creatinina), glicemia, prueba de embarazo (si aplica), electrocardiograma, ecografía mamaria o mamografía (según edad) y valoración por anestesiología.",
+    a: "Se requieren exámenes preoperatorios básicos: cuadro hemático completo, pruebas de coagulación (PT y PTT), función renal (creatinina), glicemia, prueba de embarazo (si aplica), electrocardiograma y valoración por anestesiología.",
   },
   {
     q: "¿Qué es una IPS habilitada y por qué es importante?",
@@ -308,12 +300,12 @@ export default function LiposuccionAumentoPage() {
                 Cirugía Corporal
               </span>
               <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight text-balance">
-                Liposucción y aumento mamario en Cali
+                Liposucción y aumento de volumen en Cali
               </h1>
               <p className="mt-6 text-lg md:text-xl text-white/80 font-body leading-relaxed max-w-2xl">
                 Plan quirúrgico integral para definir el cuerpo mediante
-                liposucción y complementar el volumen mamario con implantes
-                aprobados por INVIMA.
+                liposucción y complementar el volumen con transferencia de
+                grasa autóloga del propio paciente.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <a
@@ -354,37 +346,37 @@ export default function LiposuccionAumentoPage() {
             <div>
               <SectionHeader
                 label="¿Qué es?"
-                title="Liposucción con aumento mamario"
+                title="Liposucción con aumento de volumen"
               />
               <div className="space-y-5 text-text-main/80 font-body leading-relaxed">
                 <p>
-                  La liposucción con aumento mamario es un plan quirúrgico
+                  La liposucción con aumento de volumen es un plan quirúrgico
                   integral que combina dos procedimientos en una misma
-                  intervención: el contorno corporal mediante liposucción y el
-                  aumento del volumen mamario mediante implantes. Su objetivo es
-                  armonizar la silueta de forma global.
+                  intervención: la reducción de grasa localizada mediante
+                  liposucción y el aumento de volumen mediante transferencia
+                  de grasa autóloga (tejido del propio paciente). El objetivo
+                  es redistribuir el volumen corporal de forma armónica.
                 </p>
                 <h3 className="font-heading font-bold text-text-dark text-lg">
-                  ¿Qué es el aumento mamario?
+                  ¿Cómo funciona la transferencia de grasa?
                 </h3>
                 <p>
-                  El aumento mamario (mamoplastia de aumento) es el
-                  procedimiento quirúrgico que incrementa el volumen, mejora la
-                  forma y la proyección de las mamas mediante la colocación de
-                  implantes aprobados por INVIMA. Puede realizarse por diversas
-                  vías de acceso (axilar, submamaria o periareolar) y los
-                  implantes pueden colocarse en plano submuscular o subglandular,
-                  según la anatomía de la paciente.
+                  La grasa extraída durante la liposucción se procesa mediante
+                  centrifugación y filtrado para separar los adipocitos viables
+                  de impurezas y aceite. Luego, esa grasa purificada se infiltra
+                  en las áreas que requieren mayor volumen, utilizando cánulas
+                  romas que respetan los planos anatómicos.
                 </p>
                 <h3 className="font-heading font-bold text-text-dark text-lg">
-                  Diferencia con pexia mamaria
+                  Diferencia con implantes
                 </h3>
                 <p>
-                  Mientras la pexia eleva la mama sin aumentar su volumen, el
-                  aumento mamario incrementa el volumen sin corregir la caída
-                  significativa. En algunos casos, ambos procedimientos pueden
-                  combinarse (aumento con pexia) cuando se desea tanto volumen
-                  como elevación.
+                  A diferencia de los implantes sintéticos, la transferencia de
+                  grasa autóloga utiliza tejido vivo del propio paciente, lo que
+                  elimina el riesgo de rechazo inmunológico, no requiere
+                  incisiones para cuerpos extraños y ofrece una consistencia
+                  natural. El procedimiento está regulado bajo la normativa
+                  sanitaria colombiana.
                 </p>
               </div>
             </div>
@@ -409,15 +401,16 @@ export default function LiposuccionAumentoPage() {
               <p className="text-sm text-text-main/80 font-body leading-relaxed">
                 Tiffany Esthetic Group IPS es una institución prestadora de
                 servicios de salud debidamente habilitada (Resolución 3100 de
-                2019 del Ministerio de Salud). Todos los implantes utilizados
-                cuentan con registro sanitario INVIMA, la autoridad nacional
-                de vigilancia de dispositivos médicos.
+                2019 del Ministerio de Salud), con salas de cirugía,
+                recuperación, farmacia y personal calificado para
+                procedimientos quirúrgicos combinados.
               </p>
               <div className="mt-4 bg-primary/5 rounded-xl p-5 border border-primary/10">
                 <p className="text-sm font-body font-semibold text-primary-dark">
                   Todo procedimiento requiere valoración médica presencial,
-                  exámenes preoperatorios, consentimiento informado y uso de
-                  dispositivos médicos con registro INVIMA vigente.
+                  exámenes preoperatorios, consentimiento informado y
+                  cumplimiento de los protocolos de bioseguridad establecidos
+                  por la normativa colombiana.
                 </p>
               </div>
             </div>
@@ -459,8 +452,8 @@ export default function LiposuccionAumentoPage() {
         <Section id="areas" className="bg-white">
           <SectionHeader
             label="Áreas"
-            title="Zonas tratadas en el procedimiento combinado"
-            desc="La liposucción y el aumento mamario pueden abordar múltiples áreas en una misma intervención."
+            title="Zonas donantes y receptoras"
+            desc="La liposucción identifica zonas con exceso de grasa y las receptoras definen dónde se necesita mayor volumen."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {areas.map((item) => (
@@ -536,13 +529,12 @@ export default function LiposuccionAumentoPage() {
                   Seguridad
                 </span>
                 <Heading as="h2" className="mt-3 !text-white">
-                  Atención médica con dispositivos aprobados
+                  Atención médica con protocolos establecidos
                 </Heading>
                 <p className="mt-4 text-white/75 font-body">
-                  La seguridad del paciente es la prioridad. Utilizamos
-                  exclusivamente implantes con registro sanitario INVIMA y
-                  seguimos los protocolos clínicos establecidos por la
-                  normativa colombiana.
+                  La seguridad del paciente es la prioridad en cada etapa del
+                  proceso. Por eso el primer paso es siempre una valoración
+                  médica presencial obligatoria.
                 </p>
               </div>
               <ol className="grid gap-4">
@@ -610,14 +602,15 @@ export default function LiposuccionAumentoPage() {
           <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl p-8 border border-silver/20 shadow-sm">
               <h3 className="font-heading font-bold text-text-dark text-lg mb-4">
-                Resultado del aumento mamario
+                Integración de la grasa transferida
               </h3>
               <p className="text-sm text-text-main/80 font-body leading-relaxed">
-                El volumen y la proyección son visibles desde el postoperatorio
-                inmediato, aunque los implantes se ven inicialmente altos y la
-                piel requiere tiempo para adaptarse. El resultado final se
-                consolida entre los 3 y 6 meses, cuando los implantes descienden
-                a su posición natural y los tejidos se relajan.
+                Los adipocitos transferidos requieren neovascularización
+                (formación de nuevos vasos sanguíneos) para nutrirse en su
+                nueva ubicación. Una vez superado este proceso durante los
+                primeros 3 a 4 meses, el tejido se comporta como grasa
+                corporal natural. Un porcentaje de reabsorción entre el 20%
+                y el 40% del volumen inicial es esperado.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-8 border border-silver/20 shadow-sm">
@@ -627,8 +620,8 @@ export default function LiposuccionAumentoPage() {
               <p className="text-sm text-text-main/80 font-body leading-relaxed">
                 La reducción de contorno es visible desde las primeras semanas.
                 El resultado final se define entre los 3 y 6 meses, una vez que
-                la inflamación ha desaparecido. La combinación con el aumento
-                mamario crea una silueta proporcionada y armónica.
+                la inflamación ha desaparecido. La redistribución del volumen
+                crea una silueta proporcionada y armónica.
               </p>
             </div>
           </div>
