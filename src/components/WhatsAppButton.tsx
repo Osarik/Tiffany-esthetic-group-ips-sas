@@ -3,7 +3,7 @@
 export default function WhatsAppButton() {
   const phone = "573XXXXXXXXX";
   const message = encodeURIComponent(
-    "¡Hola! Quiero agendar una consulta gratuita en Tiffany Esthetic Group."
+    "Hola, quiero información sobre los procedimientos y servicios quirúrgicos de Tiffany Esthetic Group."
   );
 
   return (

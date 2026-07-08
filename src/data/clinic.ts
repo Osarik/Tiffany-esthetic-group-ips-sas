@@ -6,8 +6,8 @@ export const clinicData = {
   whatsapp: "573XXXXXXXXX",
   email: "info@tiffanyesthetic.com",
   hours: [
-    { day: "Lunes a Viernes", time: "8:00 AM – 6:00 PM" },
-    { day: "Sábados", time: "9:00 AM – 2:00 PM" },
+    { day: "Lunes a Viernes", time: "8:00 AM - 6:00 PM" },
+    { day: "Sábados", time: "9:00 AM - 2:00 PM" },
     { day: "Domingos", time: "Cerrado" },
   ],
   mapEmbedUrl:

@@ -5,38 +5,33 @@ export interface FAQ {
 
 export const faqs: FAQ[] = [
   {
-    question: "¿La consulta inicial tiene algún costo?",
+    question: "¿Qué procedimientos realizan?",
     answer:
-      "No. En Tiffany Esthetic Group la primera consulta es completamente gratuita. En ella evaluamos tus necesidades, te explicamos los procedimientos y resolvemos todas tus dudas sin compromiso.",
+      "Realizamos procedimientos como lipoescultura con lipoinyección glútea, liposucción, lipectomía, pexia mamaria, pexia periareolar, rinoplastia, blefaroplastia y lifting facial, siempre previa valoración médica.",
   },
   {
-    question: "¿Cuánto tiempo toma la recuperación de una cirugía?",
+    question: "¿La clínica está habilitada?",
     answer:
-      "Depende del procedimiento. Cirugías como liposucción HD requieren 1-2 semanas de reposo relativo, mientras que tratamientos con ácido hialurónico no requieren recuperación. Nuestro equipo te dará un plan detallado post-procedimiento.",
+      "Sí. Tiffany Esthetic Group IPS SAS es una institución habilitada por la Secretaría de Salud y cuenta con servicio de farmacia habilitado.",
   },
   {
-    question: "¿Los resultados de los tratamientos son permanentes?",
+    question: "¿Alquilan salas de cirugía a médicos?",
     answer:
-      "Algunos procedimientos quirúrgicos tienen resultados permanentes (rinoplastia, abdominoplastia), mientras que los tratamientos estéticos como toxina botulínica duran entre 4-6 meses y el ácido hialurónico entre 12-18 meses. Te asesoraremos sobre las expectativas realistas.",
+      "Sí. Contamos con tres salas de cirugía disponibles para médicos cirujanos plásticos. La clínica ofrece apoyo con anestesiólogos, circulante de cirugía e instrumentador quirúrgico.",
   },
   {
-    question: "¿Qué certificaciones tiene el equipo médico?",
+    question: "¿Cuentan con área de recuperación?",
     answer:
-      "Contamos con cirujanos plásticos certificados por la Sociedad Colombiana de Cirugía Plástica y especialistas en medicina estética con formación nacional e internacional. Todos nuestros profesionales tienen tarjeta profesional vigente.",
+      "Sí. Tenemos área de recuperación atendida por enfermeras recuperadoras y un jefe de planta encargado de la coordinación del servicio quirúrgico.",
   },
   {
-    question: "¿Cómo sé si soy candidato para un procedimiento?",
+    question: "¿Qué personal acompaña los procedimientos?",
     answer:
-      "La mejor forma es agendar una consulta gratuita. Evaluaremos tu estado de salud, expectativas y objetivos para recomendarte el tratamiento más adecuado y seguro para ti.",
+      "El servicio se apoya en cirujanos plásticos, anestesiólogos, instrumentador quirúrgico, circulante de cirugía, enfermería recuperadora y jefe de planta.",
   },
   {
-    question: "¿Ofrecen planes de financiamiento?",
+    question: "¿Los cirujanos y anestesiólogos están calificados?",
     answer:
-      "Sí. Trabajamos con múltiples opciones de pago y financiamiento para que puedas acceder a los tratamientos. Consulta con nuestro equipo las opciones disponibles sin ningún compromiso.",
-  },
-  {
-    question: "¿Duele el procedimiento?",
-    answer:
-      "Todos nuestros procedimientos se realizan con anestesia adecuada al tipo de tratamiento. Para cirugías usamos anestesia general o sedación, y para tratamientos estéticos aplicamos anestesia tópica para minimizar las molestias.",
+      "Contamos con cirujanos plásticos miembros de la Sociedad Colombiana de Cirugía Plástica y anestesiólogos miembros del Consejo de Anestesiología.",
   },
 ];

@@ -6,18 +6,21 @@ export interface TeamMember {
 
 export const team: TeamMember[] = [
   {
-    name: "Dr. Ricardo Mendoza",
-    title: "Cirujano Plástico",
-    description: "Especialista en cirugía facial y corporal con más de 15 años de experiencia.",
+    name: "Cirujanos plásticos",
+    title: "Sociedad Colombiana de Cirugía Plástica",
+    description:
+      "Profesionales calificados para procedimientos corporales, mamarios y faciales, según valoración médica.",
   },
   {
-    name: "Dra. Gabriela Torres",
-    title: "Médico Estético",
-    description: "Experta en tratamientos no invasivos y rejuvenecimiento facial avanzado.",
+    name: "Anestesiólogos",
+    title: "Consejo de Anestesiología",
+    description:
+      "Equipo de anestesia disponible para apoyar los procedimientos quirúrgicos realizados en la clínica.",
   },
   {
-    name: "Dr. Andrés Peláez",
-    title: "Cirujano Plástico",
-    description: "Subespecialista en liposucción HD y contorno corporal de alta definición.",
+    name: "Equipo quirúrgico y recuperación",
+    title: "Instrumentación, circulante y enfermería",
+    description:
+      "Contamos con instrumentador quirúrgico, circulante de cirugía, enfermeras recuperadoras y jefe de planta.",
   },
 ];

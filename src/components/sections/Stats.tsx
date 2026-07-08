@@ -2,13 +2,12 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import Section from "@/components/ui/Section";
 
 const stats = [
-  { value: 500, suffix: "+", label: "Procedimientos realizados" },
-  { value: 10, suffix: "+ años", label: "De experiencia" },
-  { value: 98, suffix: "%", label: "Satisfacción" },
-  { value: 2, suffix: " sedes", label: "A tu servicio" },
+  { value: 3, suffix: "", label: "Salas de cirugía" },
+  { value: 1, suffix: "", label: "Área de recuperación" },
+  { value: 1, suffix: "", label: "Farmacia habilitada" },
+  { value: 100, suffix: "%", label: "Personal calificado" },
 ];
 
 function AnimatedCounter({

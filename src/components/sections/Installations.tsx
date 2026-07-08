@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
 import { ZoomParallax } from '@/components/ui/zoom-parallax';
 import Section from '@/components/ui/Section';
 import Heading from '@/components/ui/Heading';
@@ -36,16 +35,6 @@ const images = [
   },
 ];
 
-const labels = [
-  'Sala de Espera',
-  'Consultorios',
-  ' quirófano',
-  'Equipos Especializados',
-  'Recuperación',
-  'Recepción',
-  'Tecnología de Punta',
-];
-
 export default function Installations() {
   return (
     <Section id="instalaciones">
@@ -54,11 +43,12 @@ export default function Installations() {
           Instalaciones
         </span>
         <Heading as="h2" className="mt-3">
-          Nuestras Instalaciones
+          Espacios para cirugía y recuperación
         </Heading>
-        <p className="mt-4 text-text-main/70 font-body max-w-2xl mx-auto text-sm md:text-base">
-          Un entorno diseñado para tu bienestar. Cada espacio está pensado para brindarte
-          la máxima comodidad, privacidad y los más altos estándares de calidad.
+        <p className="mt-4 text-text-main/70 font-body max-w-3xl mx-auto text-sm md:text-base">
+          Contamos con tres salas de cirugía disponibles para médicos cirujanos
+          plásticos, área de recuperación atendida por enfermería, farmacia
+          habilitada y coordinación permanente del servicio quirúrgico.
         </p>
       </div>
 

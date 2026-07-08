@@ -22,14 +22,9 @@ const categoryIcons: Record<string, React.ReactNode> = {
       <path d="M8 12h8" />
     </svg>
   ),
-  "Medicina Estética": (
+  "Cirugía Mamaria": (
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-    </svg>
-  ),
-  "Tratamientos Corporales": (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
     </svg>
   ),
 };
@@ -42,11 +37,11 @@ export default function Services() {
           Nuestros Servicios
         </span>
         <Heading as="h2" className="mt-3">
-          Procedimientos personalizados para ti
+          Procedimientos quirúrgicos personalizados
         </Heading>
         <p className="mt-4 text-text-main font-body max-w-2xl mx-auto">
-          Ofrecemos una amplia gama de procedimientos quirúrgicos y estéticos
-          diseñados para realzar tu belleza natural.
+          Ofrecemos procedimientos corporales, mamarios y faciales con
+          valoración médica, personal calificado y acompañamiento profesional.
         </p>
       </div>
 
@@ -66,7 +61,7 @@ export default function Services() {
               </span>
             )}
             <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-              {categoryIcons[service.category] || categoryIcons["Medicina Estética"]}
+              {categoryIcons[service.category] || categoryIcons["Cirugía Facial"]}
             </div>
             <span className="text-[11px] font-body font-semibold text-primary uppercase tracking-wider">
               {service.category}
@@ -86,12 +81,12 @@ export default function Services() {
           variant="primary"
           onClick={() =>
             window.open(
-              "https://wa.me/573XXXXXXXXX?text=¡Hola! Quiero información sobre los procedimientos.",
+              "https://wa.me/573XXXXXXXXX?text=Hola, quiero información sobre los procedimientos.",
               "_blank"
             )
           }
         >
-          Consulta gratis tu tratamiento ideal
+          Consulta tu procedimiento ideal
         </Button>
       </div>
     </Section>

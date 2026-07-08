@@ -13,11 +13,12 @@ export default function Team() {
           Nuestro Equipo
         </span>
         <Heading as="h2" className="mt-3">
-          Profesionales que transforman vidas
+          Profesionales al servicio de tu seguridad
         </Heading>
         <p className="mt-4 text-text-main font-body max-w-2xl mx-auto">
-          Cirujanos plásticos y especialistas en medicina estética con amplia
-          trayectoria y certificaciones internacionales.
+          La atención quirúrgica se apoya en cirujanos plásticos,
+          anestesiólogos, instrumentación, circulante de cirugía y enfermería
+          recuperadora.
         </p>
       </div>
 

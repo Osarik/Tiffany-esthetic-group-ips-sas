@@ -8,55 +8,63 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    id: "rinoplastia",
-    title: "Rinoplastia Estética",
-    description: "Armonización facial mediante cirugía nasal con técnicas mínimamente invasivas.",
-    category: "Cirugía Facial",
+    id: "lipoescultura",
+    title: "Lipoescultura con lipoinyección glútea",
+    description:
+      "Moldeamiento corporal con transferencia de grasa para mejorar el contorno y la proyección glútea.",
+    category: "Cirugía Corporal",
     popular: true,
+  },
+  {
+    id: "liposuccion-lipectomia",
+    title: "Liposucción y lipectomía",
+    description:
+      "Procedimientos para retirar grasa localizada, tratar exceso de piel y definir el contorno abdominal.",
+    category: "Cirugía Corporal",
+    popular: true,
+  },
+  {
+    id: "liposuccion-pexia-mamaria",
+    title: "Liposucción y pexia mamaria",
+    description:
+      "Combinación de contorno corporal y elevación mamaria para armonizar la silueta.",
+    category: "Cirugía Corporal",
+    popular: true,
+  },
+  {
+    id: "liposuccion-aumento",
+    title: "Liposucción y aumento",
+    description:
+      "Plan quirúrgico integral para definir el cuerpo y complementar volumen según la valoración médica.",
+    category: "Cirugía Corporal",
+  },
+  {
+    id: "pexia",
+    title: "Pexia y pexia periareolar",
+    description:
+      "Elevación mamaria con técnicas adaptadas a cada paciente, incluida la pexia periareolar.",
+    category: "Cirugía Mamaria",
+    popular: true,
+  },
+  {
+    id: "rinoplastia",
+    title: "Rinoplastia",
+    description:
+      "Cirugía nasal enfocada en la armonía facial y la función respiratoria cuando aplica.",
+    category: "Cirugía Facial",
   },
   {
     id: "blefaroplastia",
     title: "Blefaroplastia",
-    description: "Rejuvenecimiento de la mirada eliminando exceso de piel y bolsas palpebrales.",
+    description:
+      "Rejuvenecimiento de la mirada mediante manejo del exceso de piel y bolsas palpebrales.",
     category: "Cirugía Facial",
   },
   {
-    id: "liposuccion",
-    title: "Liposucción HD",
-    description: "Escultura corporal de alta definición para resultados naturales y artísticos.",
-    category: "Cirugía Corporal",
-    popular: true,
-  },
-  {
-    id: "abdominoplastia",
-    title: "Abdominoplastia",
-    description: "Definición del contorno abdominal eliminando piel sobrante y tensando músculos.",
-    category: "Cirugía Corporal",
-  },
-  {
-    id: "mamoplastia",
-    title: "Mamoplastia",
-    description: "Aumento, reducción o elevación mamaria con resultados personalizados.",
-    category: "Cirugía Corporal",
-    popular: true,
-  },
-  {
-    id: "toxina",
-    title: "Toxina Botulínica",
-    description: "Tratamiento antiarrugas no quirúrgico para un rostro más joven y fresco.",
-    category: "Medicina Estética",
-  },
-  {
-    id: "acido-hialuronico",
-    title: "Ácido Hialurónico",
-    description: "Rellenos dérmicos para restaurar volumen, labios y contorno facial.",
-    category: "Medicina Estética",
-    popular: true,
-  },
-  {
-    id: "laser",
-    title: "Depilación Láser",
-    description: "Eliminación definitiva del vello con tecnología láser de última generación.",
-    category: "Tratamientos Corporales",
+    id: "lifting-facial",
+    title: "Lifting facial",
+    description:
+      "Procedimiento de rejuvenecimiento facial para mejorar flacidez y contornos del rostro.",
+    category: "Cirugía Facial",
   },
 ];

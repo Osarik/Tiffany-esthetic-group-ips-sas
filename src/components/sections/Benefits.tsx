@@ -13,9 +13,9 @@ const benefits = [
         <path d="M2 12l10 5 10-5" />
       </svg>
     ),
-    title: "Tecnología de Punta",
+    title: "Institución habilitada",
     description:
-      "Utilizamos equipos de última generación certificados internacionalmente para garantizar procedimientos seguros y resultados precisos.",
+      "Somos una institución habilitada por la Secretaría de Salud, con farmacia habilitada y procesos orientados a la seguridad del paciente.",
   },
   {
     icon: (
@@ -26,9 +26,9 @@ const benefits = [
         <path d="M16 3.13a4 4 0 010 7.75" />
       </svg>
     ),
-    title: "Especialistas Certificados",
+    title: "Personal calificado",
     description:
-      "Nuestro equipo médico cuenta con certificaciones nacionales e internacionales en cirugía plástica y medicina estética.",
+      "Contamos con cirujanos plásticos miembros de la Sociedad Colombiana de Cirugía Plástica y anestesiólogos miembros del Consejo de Anestesiología.",
   },
   {
     icon: (
@@ -36,9 +36,9 @@ const benefits = [
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
-    title: "Resultados Naturales",
+    title: "Servicio quirúrgico integral",
     description:
-      "Creemos en realzar tu belleza natural. Cada procedimiento es personalizado para lograr resultados armónicos que respeten tu esencia.",
+      "Ofrecemos anestesiólogos, circulante de cirugía, instrumentador quirúrgico, enfermería recuperadora y jefe de planta para coordinar el servicio.",
   },
 ];
 
@@ -50,7 +50,7 @@ export default function Benefits() {
           ¿Por qué elegirnos?
         </span>
         <Heading as="h2" className="mt-3">
-          Tu confianza es nuestra prioridad
+          Tu seguridad es nuestra prioridad
         </Heading>
       </div>
       <div className="grid md:grid-cols-3 gap-8">
