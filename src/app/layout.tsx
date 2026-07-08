@@ -115,18 +115,18 @@ export default function RootLayout({
                   >
                     Instalaciones
                   </Link>
-                  <a
-                    href="#equipo"
+                  <Link
+                    href="/equipo"
                     className="text-[0.85rem] font-body font-semibold text-text-main/75 hover:text-primary transition-colors no-underline"
                   >
                     Equipo
-                  </a>
-                  <a
-                    href="#preguntas-frecuentes"
+                  </Link>
+                  <Link
+                    href="/preguntas-frecuentes"
                     className="text-[0.85rem] font-body font-semibold text-text-main/75 hover:text-primary transition-colors no-underline"
                   >
                     FAQ
-                  </a>
+                  </Link>
                   <a
                     href="https://wa.me/573XXXXXXXXX?text=Hola, quiero agendar una valoración."
                     target="_blank"
@@ -168,6 +168,18 @@ export default function RootLayout({
                     className="hover:text-primary transition-colors no-underline text-white/80"
                   >
                     Instalaciones
+                  </Link>
+                  <Link
+                    href="/equipo"
+                    className="hover:text-primary transition-colors no-underline text-white/80"
+                  >
+                    Equipo
+                  </Link>
+                  <Link
+                    href="/preguntas-frecuentes"
+                    className="hover:text-primary transition-colors no-underline text-white/80"
+                  >
+                    FAQ
                   </Link>
                   <a
                     href="https://wa.me/573XXXXXXXXX"
