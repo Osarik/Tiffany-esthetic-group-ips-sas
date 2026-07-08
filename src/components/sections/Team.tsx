@@ -34,15 +34,33 @@ export default function Team() {
           >
             <div className="relative w-48 h-48 mx-auto mb-6 rounded-2xl overflow-hidden bg-primary/10 shadow-lg">
               <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                <svg
-                  className="w-16 h-16 text-primary/40"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                </svg>
+                {i === 0 ? (
+                  <a href="https://cirugiaplastica.org.co/" target="_blank" rel="noopener noreferrer" className="w-full h-full flex items-center justify-center p-6 hover:scale-110 transition-transform duration-300">
+                    <img
+                      src="https://www.appsheet.com/image/getimageurl?appName=SCCPAPP-696038429&tableName=Repositorio&fileName=Repositorio_Images/e2525752.Imagen.162954.png"
+                      alt="Logo Sociedad Colombiana de Cirugía Plástica"
+                      className="w-full h-full object-contain"
+                    />
+                  </a>
+                ) : i === 1 ? (
+                  <a href="https://scare.org.co/" target="_blank" rel="noopener noreferrer" className="w-full h-full flex items-center justify-center p-6 hover:scale-110 transition-transform duration-300">
+                    <img
+                      src="https://scare.org.co/wp-content/uploads/sociedad-colombiana-de-anestesiologia-y-reanimacion-scare-logo-300x82.avif"
+                      alt="Logo Sociedad Colombiana de Anestesiología y Reanimación"
+                      className="w-full h-full object-contain"
+                    />
+                  </a>
+                ) : (
+                  <svg
+                    className="w-16 h-16 text-primary/40"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                  </svg>
+                )}
               </div>
             </div>
             <h3 className="text-xl font-heading font-bold text-text-dark">
