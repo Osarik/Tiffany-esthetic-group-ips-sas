@@ -60,6 +60,7 @@ export const services: Service[] = [
     description:
       "Cirugía nasal enfocada en la armonía facial y la función respiratoria cuando aplica.",
     category: "Cirugía Facial",
+    detailUrl: "/rinoplastia",
   },
   {
     id: "blefaroplastia",
