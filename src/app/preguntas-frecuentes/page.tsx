@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import AnimateInView, { StaggerGrid, StaggerItem } from "@/components/ui/AnimateInView";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import { faqs } from "@/data/faqs";
 
 const whatsappUrl =
@@ -328,7 +327,6 @@ export default function FAQsPage() {
         </Container>
       </footer>
 
-      <WhatsAppButton />
     </>
   );
 }

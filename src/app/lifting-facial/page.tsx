@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
-import WhatsAppButton from "@/components/WhatsAppButton";
 
 const whatsappUrl =
   "https://wa.me/573XXXXXXXXX?text=Hola%2C%20quiero%20agendar%20mi%20valoraci%C3%B3n%20para%20lifting%20facial%20en%20Cali.";
@@ -748,7 +747,6 @@ export default function LiftingFacialPage() {
         </Container>
       </footer>
 
-      <WhatsAppButton />
     </>
   );
 }

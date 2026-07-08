@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import AnimateInView, { StaggerGrid, StaggerItem } from "@/components/ui/AnimateInView";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import { team } from "@/data/team";
 
 const whatsappUrl =
@@ -563,7 +562,6 @@ export default function EquipoPage() {
         </Container>
       </footer>
 
-      <WhatsAppButton />
     </>
   );
 }

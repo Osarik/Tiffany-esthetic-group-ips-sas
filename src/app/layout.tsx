@@ -4,6 +4,7 @@ import { Fraunces, Manrope, Sacramento } from "next/font/google";
 import SchemaMarkup from "@/components/SchemaMarkup";
 import Logo from "@/components/Logo";
 import SplashWrapper from "@/components/SplashWrapper";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -193,6 +194,7 @@ export default function RootLayout({
               </div>
             </div>
           </footer>
+          <WhatsAppButton />
         </SplashWrapper>
       </body>
     </html>

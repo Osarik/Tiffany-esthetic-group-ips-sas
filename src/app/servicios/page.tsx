@@ -3,7 +3,6 @@ import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 import AnimateInView, { StaggerGrid, StaggerItem } from "@/components/ui/AnimateInView";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import { services } from "@/data/services";
 
 const whatsappUrl =
@@ -722,7 +721,6 @@ export default function ServiciosPage() {
         </Container>
       </footer>
 
-      <WhatsAppButton />
     </>
   );
 }

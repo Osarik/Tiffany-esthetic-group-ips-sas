@@ -3,7 +3,6 @@ import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 import AnimateInView, { StaggerGrid, StaggerItem } from "@/components/ui/AnimateInView";
 import ImageCarousel from "@/components/ui/ImageCarousel";
-import WhatsAppButton from "@/components/WhatsAppButton";
 
 const whatsappUrl =
   "https://wa.me/573XXXXXXXXX?text=Hola%2C%20quiero%20agendar%20una%20visita%20a%20sus%20instalaciones%20en%20Cali.";
@@ -578,7 +577,6 @@ export default function InstalacionesPage() {
         </Container>
       </footer>
 
-      <WhatsAppButton />
     </>
   );
 }

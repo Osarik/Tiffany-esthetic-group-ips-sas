@@ -1,28 +1,109 @@
 "use client";
 
+import { useState, useRef, useEffect } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { MessageCircle, X, ArrowRight } from "lucide-react";
+
+const PHONE = "573202703522";
+const WHATSAPP_URL = `https://wa.me/${PHONE}?text=${encodeURIComponent(
+  "Hola, me gustaría recibir asesoría para un procedimiento quirúrgico."
+)}`;
+
+const TIFFANY_AVATAR =
+  "https://res.cloudinary.com/dodfyfani/image/upload/v1783484056/Woman_doctor_inspire_trust_luxury_202607072313_icnd4a.jpg";
+
 export default function WhatsAppButton() {
-  const phone = "573XXXXXXXXX";
-  const message = encodeURIComponent(
-    "Hola, quiero información sobre los procedimientos y servicios quirúrgicos de Tiffany Esthetic Group."
-  );
+  const [isOpen, setIsOpen] = useState(false);
+  const popupRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (
+        popupRef.current &&
+        !popupRef.current.contains(e.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    }
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isOpen]);
 
   return (
-    <a
-      href={`https://wa.me/${phone}?text=${message}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary animate-bounce-subtle"
-      aria-label="Contactar por WhatsApp"
-    >
-      <svg
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        aria-hidden="true"
+    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            ref={popupRef}
+            initial={{ opacity: 0, y: 20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300, damping: 25 }}
+            className="w-[340px] md:w-[380px] bg-clinic-bg rounded-2xl shadow-2xl border border-primary/10 overflow-hidden origin-bottom-right"
+          >
+            <div className="bg-primary px-5 py-4 flex items-center gap-3">
+              <img
+                src={TIFFANY_AVATAR}
+                alt="Tiffany"
+                className="w-10 h-10 rounded-full object-cover border-2 border-white/30"
+              />
+              <div className="flex-1">
+                <h3 className="font-heading font-bold text-white text-sm">
+                  Tiffany Esthetic Group
+                </h3>
+                <p className="text-white/70 text-[11px] font-body">
+                  Asistente virtual
+                </p>
+              </div>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="text-white/70 hover:text-white transition-colors"
+                aria-label="Cerrar chat"
+              >
+                <X size={18} />
+              </button>
+            </div>
+
+            <div className="p-5">
+              <div className="flex items-start gap-3 mb-5">
+                <img
+                  src={TIFFANY_AVATAR}
+                  alt="Tiffany"
+                  className="w-8 h-8 rounded-full object-cover mt-1 flex-shrink-0"
+                />
+                <div className="bg-primary-soft rounded-2xl rounded-tl-sm px-4 py-3.5 text-sm font-body text-text-main leading-relaxed">
+                  Hola, mi nombre es Tiffany. ¿Deseas que asigne un asesor para
+                  tu procedimiento?
+                </div>
+              </div>
+
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 w-full bg-primary text-white font-body font-bold text-sm py-3.5 px-6 rounded-xl hover:bg-primary-dark active:scale-[0.98] transition-all duration-300 shadow-lg shadow-primary/25"
+              >
+                Sí, quiero asesoría
+                <ArrowRight size={18} />
+              </a>
+
+              <p className="text-[10px] text-silver text-center mt-3 font-body">
+                La asesoría se realizará vía WhatsApp
+              </p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-14 h-14 rounded-full bg-primary text-white shadow-xl hover:bg-primary-dark hover:shadow-2xl active:scale-95 transition-all duration-300 flex items-center justify-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary animate-bounce-subtle"
+        aria-label={isOpen ? "Cerrar chat" : "Abrir chat"}
       >
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-      </svg>
-    </a>
+        {isOpen ? <X size={24} /> : <MessageCircle size={24} />}
+      </button>
+    </div>
   );
 }
