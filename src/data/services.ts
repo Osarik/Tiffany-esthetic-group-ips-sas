@@ -4,6 +4,7 @@ export interface Service {
   description: string;
   category: string;
   popular?: boolean;
+  href?: string;
 }
 
 export const services: Service[] = [
@@ -14,6 +15,7 @@ export const services: Service[] = [
       "Moldeamiento corporal con transferencia de grasa para mejorar el contorno y la proyección glútea.",
     category: "Cirugía Corporal",
     popular: true,
+    href: "/lipoescultura-lipoinyeccion-glutea-cali",
   },
   {
     id: "liposuccion-lipectomia",

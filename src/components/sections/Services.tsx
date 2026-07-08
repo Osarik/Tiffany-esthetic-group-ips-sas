@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Section from "@/components/ui/Section";
 import Heading from "@/components/ui/Heading";
 import Button from "@/components/ui/Button";
-import { services } from "@/data/services";
+import { services, type Service } from "@/data/services";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   "Cirugía Facial": (
@@ -28,6 +28,31 @@ const categoryIcons: Record<string, React.ReactNode> = {
     </svg>
   ),
 };
+
+function CardContent({
+  service,
+  icons,
+}: {
+  service: Service;
+  icons: Record<string, React.ReactNode>;
+}) {
+  return (
+    <>
+      <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+        {icons[service.category] || icons["Cirugía Facial"]}
+      </div>
+      <span className="text-[11px] font-body font-semibold text-primary uppercase tracking-wider">
+        {service.category}
+      </span>
+      <h3 className="text-lg font-heading font-bold text-text-dark mt-1 mb-2">
+        {service.title}
+      </h3>
+      <p className="text-sm text-text-main font-body leading-relaxed">
+        {service.description}
+      </p>
+    </>
+  );
+}
 
 export default function Services() {
   return (
@@ -60,18 +85,13 @@ export default function Services() {
                 Popular
               </span>
             )}
-            <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-              {categoryIcons[service.category] || categoryIcons["Cirugía Facial"]}
-            </div>
-            <span className="text-[11px] font-body font-semibold text-primary uppercase tracking-wider">
-              {service.category}
-            </span>
-            <h3 className="text-lg font-heading font-bold text-text-dark mt-1 mb-2">
-              {service.title}
-            </h3>
-            <p className="text-sm text-text-main font-body leading-relaxed">
-              {service.description}
-            </p>
+            {service.href ? (
+              <a href={service.href} className="block no-underline" aria-label={`Más información sobre ${service.title}`}>
+                <CardContent service={service} icons={categoryIcons} />
+              </a>
+            ) : (
+              <CardContent service={service} icons={categoryIcons} />
+            )}
           </motion.article>
         ))}
       </div>
