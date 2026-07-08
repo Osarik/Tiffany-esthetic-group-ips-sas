@@ -313,7 +313,7 @@ export default function InstalacionesPage() {
           </Container>
         </section>
 
-        {/* ─── GALERÍA — Sticky masonry con directional entrance ── */}
+        {/* ─── GALERÍA — Bento asimétrico ────────────────────── */}
         <section className="relative bg-gradient-to-b from-white via-[#FBFBF9] to-white py-20 md:py-28 overflow-hidden">
           <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true"
             style={{
@@ -336,34 +336,47 @@ export default function InstalacionesPage() {
               </div>
             </AnimateInView>
 
-            <div className="grid grid-cols-12 gap-3">
-              {/* Left column — slide from left with stagger */}
-              <div className="grid gap-3 col-span-4">
-                <AnimateInView variant="fadeLeft" delay={0}>
-                  <figure className="group relative rounded-xl overflow-hidden shadow-sm hover:[transform:perspective(800px)_rotateY(-2deg)_scale(1.02)] hover:shadow-xl transition-all duration-700">
+            <div className="grid grid-cols-12 gap-3 auto-rows-[200px] md:auto-rows-[220px]">
+              {/* Hero image — big left */}
+              <div className="col-span-12 md:col-span-7 md:row-span-2">
+                <AnimateInView variant="fadeUp" delay={0}>
+                  <figure className="group relative rounded-2xl overflow-hidden shadow-md h-full min-h-[200px] md:min-h-0 hover:[transform:perspective(900px)_scale(1.015)] hover:shadow-2xl transition-all duration-700">
                     <img src={gallery[0].src} alt={gallery[0].label} loading="lazy"
-                      className="w-full h-80 object-cover transition-all duration-700 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <span className="absolute bottom-3 left-3 text-white text-xs font-body font-semibold opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-1 group-hover:translate-y-0">
-                      {gallery[0].label}
-                    </span>
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-primary/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      <span className="text-white font-body text-sm font-semibold">
+                        {gallery[0].label}
+                      </span>
+                      <p className="text-white/70 text-xs font-body mt-0.5">
+                        Equipamiento de última generación
+                      </p>
+                    </div>
                   </figure>
                 </AnimateInView>
-                <AnimateInView variant="fadeLeft" delay={0.08}>
-                  <figure className="group relative rounded-xl overflow-hidden shadow-sm hover:[transform:perspective(800px)_rotateY(-2deg)_scale(1.02)] hover:shadow-xl transition-all duration-700">
+              </div>
+
+              {/* Right top */}
+              <div className="col-span-12 md:col-span-5 md:row-span-1">
+                <AnimateInView variant="fadeRight" delay={0.06}>
+                  <figure className="group relative rounded-2xl overflow-hidden shadow-md h-full min-h-[200px] md:min-h-0 hover:[transform:perspective(900px)_rotateY(1.5deg)_scale(1.015)] hover:shadow-2xl transition-all duration-700">
                     <img src={gallery[1].src} alt={gallery[1].label} loading="lazy"
-                      className="w-full h-72 object-cover transition-all duration-700 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <span className="absolute bottom-3 left-3 text-white text-xs font-body font-semibold opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-1 group-hover:translate-y-0">
                       {gallery[1].label}
                     </span>
                   </figure>
                 </AnimateInView>
-                <AnimateInView variant="fadeLeft" delay={0.16}>
-                  <figure className="group relative rounded-xl overflow-hidden shadow-sm hover:[transform:perspective(800px)_rotateY(-2deg)_scale(1.02)] hover:shadow-xl transition-all duration-700">
+              </div>
+
+              {/* Right bottom — two small tiles */}
+              <div className="col-span-6 md:col-span-2 md:col-start-8 md:row-start-2">
+                <AnimateInView variant="fadeIn" delay={0.1}>
+                  <figure className="group relative rounded-2xl overflow-hidden shadow-md h-full min-h-[200px] md:min-h-0 hover:[transform:perspective(900px)_rotateY(-1.5deg)_scale(1.015)] hover:shadow-2xl transition-all duration-700">
                     <img src={gallery[2].src} alt={gallery[2].label} loading="lazy"
-                      className="w-full h-96 object-cover transition-all duration-700 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <span className="absolute bottom-3 left-3 text-white text-xs font-body font-semibold opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-1 group-hover:translate-y-0">
                       {gallery[2].label}
                     </span>
@@ -371,56 +384,14 @@ export default function InstalacionesPage() {
                 </AnimateInView>
               </div>
 
-              {/* Center column — sticky with scale entrance */}
-              <div className="col-span-4 sticky top-24 h-screen">
-                <div className="h-full grid gap-3">
-                  <AnimateInView variant="scaleIn" delay={0.12}>
-                    <figure className="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-700 h-full hover:[transform:perspective(800px)_scale(1.02)]">
-                      <img src={gallery[3].src} alt={gallery[3].label} loading="lazy"
-                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                      <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-primary/80 to-transparent group-hover:from-primary transition-colors duration-500">
-                        <span className="text-white font-body text-sm font-semibold">
-                          {gallery[3].label}
-                        </span>
-                        <p className="text-white/70 text-xs font-body mt-0.5">
-                          Equipamiento de última generación
-                        </p>
-                      </div>
-                    </figure>
-                  </AnimateInView>
-                </div>
-              </div>
-
-              {/* Right column — slide from right with stagger */}
-              <div className="grid gap-3 col-span-4">
-                <AnimateInView variant="fadeRight" delay={0.04}>
-                  <figure className="group relative rounded-xl overflow-hidden shadow-sm hover:[transform:perspective(800px)_rotateY(2deg)_scale(1.02)] hover:shadow-xl transition-all duration-700">
-                    <img src={gallery[4].src} alt={gallery[4].label} loading="lazy"
-                      className="w-full h-96 object-cover transition-all duration-700 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="col-span-6 md:col-span-3 md:col-start-10 md:row-start-2">
+                <AnimateInView variant="fadeRight" delay={0.14}>
+                  <figure className="group relative rounded-2xl overflow-hidden shadow-md h-full min-h-[200px] md:min-h-0 hover:[transform:perspective(900px)_rotateY(1.5deg)_scale(1.015)] hover:shadow-2xl transition-all duration-700">
+                    <img src={gallery[3].src} alt={gallery[3].label} loading="lazy"
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <span className="absolute bottom-3 left-3 text-white text-xs font-body font-semibold opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-1 group-hover:translate-y-0">
-                      {gallery[4].label}
-                    </span>
-                  </figure>
-                </AnimateInView>
-                <AnimateInView variant="fadeRight" delay={0.12}>
-                  <figure className="group relative rounded-xl overflow-hidden shadow-sm hover:[transform:perspective(800px)_rotateY(2deg)_scale(1.02)] hover:shadow-xl transition-all duration-700">
-                    <img src={gallery[5].src} alt={gallery[5].label} loading="lazy"
-                      className="w-full h-72 object-cover transition-all duration-700 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <span className="absolute bottom-3 left-3 text-white text-xs font-body font-semibold opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-1 group-hover:translate-y-0">
-                      {gallery[5].label}
-                    </span>
-                  </figure>
-                </AnimateInView>
-                <AnimateInView variant="fadeRight" delay={0.2}>
-                  <figure className="group relative rounded-xl overflow-hidden shadow-sm hover:[transform:perspective(800px)_rotateY(2deg)_scale(1.02)] hover:shadow-xl transition-all duration-700">
-                    <img src={gallery[0].src} alt={gallery[0].label} loading="lazy"
-                      className="w-full h-72 object-cover transition-all duration-700 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <span className="absolute bottom-3 left-3 text-white text-xs font-body font-semibold opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-1 group-hover:translate-y-0">
-                      {gallery[0].label}
+                      {gallery[3].label}
                     </span>
                   </figure>
                 </AnimateInView>
