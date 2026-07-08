@@ -4,7 +4,7 @@ import AnimateInView, { StaggerGrid, StaggerItem } from "@/components/ui/Animate
 import { faqs } from "@/data/faqs";
 
 const whatsappUrl =
-  "https://wa.me/573XXXXXXXXX?text=Hola%2C%20tengo%20una%20consulta%20sobre%20los%20procedimientos%20de%20Tiffany%20Esthetic%20Group.";
+  "https://wa.me/573202703522?text=Hola%2C%20tengo%20una%20consulta%20sobre%20los%20procedimientos%20de%20Tiffany%20Esthetic%20Group.";
 
 const categories = [
   {

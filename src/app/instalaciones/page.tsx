@@ -5,7 +5,7 @@ import AnimateInView, { StaggerGrid, StaggerItem } from "@/components/ui/Animate
 import ImageCarousel from "@/components/ui/ImageCarousel";
 
 const whatsappUrl =
-  "https://wa.me/573XXXXXXXXX?text=Hola%2C%20quiero%20agendar%20una%20visita%20a%20sus%20instalaciones%20en%20Cali.";
+  "https://wa.me/573202703522?text=Hola%2C%20quiero%20agendar%20una%20visita%20a%20sus%20instalaciones%20en%20Cali.";
 
 const stats = [
   { value: "3", label: "Salas de cirugía" },
@@ -109,7 +109,7 @@ const jsonLd = {
       image: "https://www.tiffanyesthetic.com/icon.svg",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Cra. 35 #5A-57, Barrio Granada",
+        streetAddress: "13a1-25, Cra 85c, Comuna 17",
         addressLocality: "Cali",
         addressRegion: "Valle del Cauca",
         addressCountry: "CO",
@@ -541,7 +541,7 @@ export default function InstalacionesPage() {
                     Agendar visita
                   </a>
                   <a
-                    href="https://wa.me/573XXXXXXXXX"
+                    href="https://wa.me/573202703522"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white font-body font-semibold px-10 py-4 rounded-full hover:bg-white/10 transition-all duration-300 text-lg no-underline"

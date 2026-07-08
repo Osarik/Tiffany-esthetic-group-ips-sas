@@ -45,7 +45,7 @@ export default function Hero() {
                 size="lg"
                 onClick={() =>
                   window.open(
-                    "https://wa.me/573XXXXXXXXX?text=Hola, quiero agendar una valoración.",
+                    "https://wa.me/573202703522?text=Hola, quiero agendar una valoración.",
                     "_blank"
                   )
                 }

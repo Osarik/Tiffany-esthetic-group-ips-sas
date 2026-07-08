@@ -3,7 +3,7 @@ import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 
 const whatsappUrl =
-  "https://wa.me/573XXXXXXXXX?text=Hola%2C%20quiero%20agendar%20mi%20valoraci%C3%B3n%20para%20lifting%20facial%20en%20Cali.";
+  "https://wa.me/573202703522?text=Hola%2C%20quiero%20agendar%20mi%20valoraci%C3%B3n%20para%20lifting%20facial%20en%20Cali.";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -25,7 +25,7 @@ const jsonLd = {
       image: "https://www.tiffanyesthetic.com/icon.svg",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Cra. 35 #5A-57, Barrio Granada",
+        streetAddress: "13a1-25, Cra 85c, Comuna 17",
         addressLocality: "Cali",
         addressRegion: "Valle del Cauca",
         addressCountry: "CO",

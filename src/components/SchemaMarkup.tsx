@@ -9,7 +9,7 @@ export default function SchemaMarkup() {
         description:
           "Institución habilitada por la Secretaría de Salud con salas de cirugía, área de recuperación, farmacia habilitada y personal calificado para procedimientos de cirugía plástica y estética.",
         url: "https://www.tiffanyesthetic.com",
-        telephone: "+57-XXX-XXX-XXXX",
+        telephone: "+57-3202703522",
         email: "info@tiffanyesthetic.com",
         medicalSpecialty: ["PlasticSurgery", "CosmeticSurgery"],
         priceRange: "$$$",
@@ -19,20 +19,20 @@ export default function SchemaMarkup() {
           addressLocality: "Cali",
           addressRegion: "Valle del Cauca",
           addressCountry: "CO",
-          streetAddress: "Cra. 35 #5A-57, Barrio Granada",
+          streetAddress: "13a1-25, Cra 85c, Comuna 17",
         },
         openingHoursSpecification: [
           {
             "@type": "OpeningHoursSpecification",
             dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
             opens: "08:00",
-            closes: "18:00",
+            closes: "17:00",
           },
           {
             "@type": "OpeningHoursSpecification",
             dayOfWeek: "Saturday",
-            opens: "09:00",
-            closes: "14:00",
+            opens: "08:00",
+            closes: "12:00",
           },
         ],
       },

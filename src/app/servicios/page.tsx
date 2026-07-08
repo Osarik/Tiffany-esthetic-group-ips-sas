@@ -6,7 +6,7 @@ import AnimateInView, { StaggerGrid, StaggerItem } from "@/components/ui/Animate
 import { services } from "@/data/services";
 
 const whatsappUrl =
-  "https://wa.me/573XXXXXXXXX?text=Hola%2C%20quiero%20agendar%20mi%20valoraci%C3%B3n%20m%C3%A9dica%20en%20Tiffany%20Esthetic%20Group.";
+  "https://wa.me/573202703522?text=Hola%2C%20quiero%20agendar%20mi%20valoraci%C3%B3n%20m%C3%A9dica%20en%20Tiffany%20Esthetic%20Group.";
 
 const stats = [
   { value: "3", label: "Salas de cirugía habilitadas" },
@@ -74,7 +74,7 @@ const faqs = [
   },
   {
     q: "¿Cómo agendo mi valoración médica?",
-    a: "Puedes agendar tu valoración médica escribiéndonos al WhatsApp, llamando a nuestras líneas de atención o visitando nuestras instalaciones en el Barrio Granada, Cali. Te atenderemos con la mayor brevedad posible.",
+    a: "Puedes agendar tu valoración médica escribiéndonos al WhatsApp, llamando a nuestras líneas de atención o visitando nuestras instalaciones en el Comuna 17, Cali. Te atenderemos con la mayor brevedad posible.",
   },
 ];
 
@@ -154,7 +154,7 @@ const jsonLd = {
       image: "https://www.tiffanyesthetic.com/icon.svg",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Cra. 35 #5A-57, Barrio Granada",
+        streetAddress: "13a1-25, Cra 85c, Comuna 17",
         addressLocality: "Cali",
         addressRegion: "Valle del Cauca",
         addressCountry: "CO",
@@ -687,7 +687,7 @@ export default function ServiciosPage() {
                   Agendar valoración médica
                 </a>
                 <a
-                  href="https://wa.me/573XXXXXXXXX"
+                  href="https://wa.me/573202703522"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white font-body font-semibold px-10 py-4 rounded-full hover:bg-white/10 transition-all duration-300 text-lg no-underline"

@@ -36,7 +36,7 @@ export default function FinalCTA() {
               size="lg"
               onClick={() =>
                 window.open(
-                  "https://wa.me/573XXXXXXXXX?text=Hola, quiero información sobre los servicios de Tiffany Esthetic Group.",
+                  "https://wa.me/573202703522?text=Hola, quiero información sobre los servicios de Tiffany Esthetic Group.",
                   "_blank"
                 )
               }
@@ -55,7 +55,7 @@ export default function FinalCTA() {
             <Button
               variant="outline"
               size="lg"
-              onClick={() => (window.location.href = "tel:+573XXXXXXXXX")}
+              onClick={() => (window.location.href = "tel:+573202703522")}
             >
               Llámanos ahora
             </Button>

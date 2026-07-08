@@ -22,7 +22,7 @@ const jsonLd = {
       image: "https://www.tiffanyesthetic.com/icon.svg",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Cra. 35 #5A-57, Barrio Granada",
+        streetAddress: "13a1-25, Cra 85c, Comuna 17",
         addressLocality: "Cali",
         addressRegion: "Valle del Cauca",
         addressCountry: "CO",
@@ -193,7 +193,7 @@ export default function LipoesculturaPage() {
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <a
-                  href="https://wa.me/573XXXXXXXXX?text=Hola%2C%20quiero%20agendar%20mi%20valoraci%C3%B3n%20para%20lipoescultura%20con%20lipoinyecci%C3%B3n%20gl%C3%BAtea."
+                  href="https://wa.me/573202703522?text=Hola%2C%20quiero%20agendar%20mi%20valoraci%C3%B3n%20para%20lipoescultura%20con%20lipoinyecci%C3%B3n%20gl%C3%BAtea."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-white text-[#0F4A44] font-body font-bold px-8 py-3.5 rounded-full hover:bg-white/90 transition-all duration-300 text-base shadow-lg shadow-black/20 no-underline"
@@ -594,7 +594,7 @@ export default function LipoesculturaPage() {
                 especialistas para evaluar tu caso de manera personalizada.
               </p>
               <a
-                href="https://wa.me/573XXXXXXXXX?text=Hola%2C%20quiero%20agendar%20mi%20valoraci%C3%B3n%20para%20lipoescultura%20con%20lipoinyecci%C3%B3n%20gl%C3%BAtea."
+                href="https://wa.me/573202703522?text=Hola%2C%20quiero%20agendar%20mi%20valoraci%C3%B3n%20para%20lipoescultura%20con%20lipoinyecci%C3%B3n%20gl%C3%BAtea."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center justify-center gap-2 bg-white text-[#0F4A44] font-body font-bold px-10 py-4 rounded-full hover:bg-white/90 transition-all duration-300 text-lg shadow-xl shadow-black/20 no-underline"

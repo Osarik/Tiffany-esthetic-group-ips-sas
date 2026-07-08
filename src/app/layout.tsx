@@ -129,7 +129,7 @@ export default function RootLayout({
                     FAQ
                   </Link>
                   <a
-                    href="https://wa.me/573XXXXXXXXX?text=Hola, quiero agendar una valoración."
+                    href="https://wa.me/573202703522?text=Hola, quiero agendar una valoración."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center border-2 border-primary text-primary-dark font-body font-bold text-[0.82rem] px-5 py-2 rounded-full hover:bg-primary hover:text-white transition-all duration-300 no-underline"
@@ -183,7 +183,7 @@ export default function RootLayout({
                     FAQ
                   </Link>
                   <a
-                    href="https://wa.me/573XXXXXXXXX"
+                    href="https://wa.me/573202703522"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-primary transition-colors no-underline text-white/80"

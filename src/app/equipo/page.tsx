@@ -4,7 +4,7 @@ import AnimateInView, { StaggerGrid, StaggerItem } from "@/components/ui/Animate
 import { team } from "@/data/team";
 
 const whatsappUrl =
-  "https://wa.me/573XXXXXXXXX?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n%20m%C3%A9dica%20en%20Tiffany%20Esthetic%20Group.";
+  "https://wa.me/573202703522?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n%20m%C3%A9dica%20en%20Tiffany%20Esthetic%20Group.";
 
 const stats = [
   { value: "3", label: "Salas de cirugía habilitadas" },
@@ -112,7 +112,7 @@ const jsonLd = {
       name: "Tiffany Esthetic Group IPS",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Cra. 35 #5A-57, Barrio Granada",
+        streetAddress: "13a1-25, Cra 85c, Comuna 17",
         addressLocality: "Cali",
         addressRegion: "Valle del Cauca",
         addressCountry: "CO",
