@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
+import AnimateInView, { StaggerGrid, StaggerItem } from "@/components/ui/AnimateInView";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { services } from "@/data/services";
 
@@ -346,15 +347,15 @@ export default function ServiciosPage() {
         </section>
 
         {/* ─── STATS ────────────────────────────────────────────── */}
-        <section className="relative bg-primary-deep py-14 md:py-18 overflow-hidden">
+        <AnimateInView variant="fadeUp" as="section" className="relative bg-primary-deep py-14 md:py-18 overflow-hidden">
           <div className="absolute inset-0 opacity-[0.04]" aria-hidden="true"
             style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M20 0v40M0 20h40'/%3E%3C/g%3E%3C/svg%3E")`,
             }} />
           <Container>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            <StaggerGrid className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8" staggerDelay={0.1}>
               {stats.map((stat, i) => (
-                <div key={stat.label} className="relative group">
+                <StaggerItem key={stat.label}><div className="relative group">
                   <div className="text-center p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm group-hover:bg-white/10 transition-all duration-300">
                     <span className="block text-4xl md:text-5xl font-heading font-bold text-white mb-1">
                       {stat.value}
@@ -364,14 +365,14 @@ export default function ServiciosPage() {
                       {stat.label}
                     </p>
                   </div>
-                </div>
+                </div></StaggerItem>
               ))}
-            </div>
+            </StaggerGrid>
           </Container>
-        </section>
+        </AnimateInView>
 
         {/* ─── SERVICIOS POR CATEGORÍA ─────────────────────────── */}
-        <section id="servicios-lista" className="bg-white py-20 md:py-28">
+        <AnimateInView as="section" id="servicios-lista" className="bg-white py-20 md:py-28">
           <Container>
             <div className="text-center mb-16">
               <span className="inline-block text-primary font-body font-semibold text-xs tracking-[0.2em] uppercase mb-4 border border-primary/20 rounded-full px-4 py-1.5">
@@ -422,20 +423,23 @@ export default function ServiciosPage() {
                           </div>
                         </div>
                       </div>
-                      <div className="md:col-span-3 grid sm:grid-cols-2 gap-4">
-                        {catServices.map((service) => {
-                          const href =
-                            service.href ?? service.detailUrl ?? "#";
-                          return (
-                            <ServiceCard
-                              key={service.id}
-                              title={service.title}
-                              description={service.description}
-                              href={href}
-                              popular={service.popular}
-                            />
-                          );
-                        })}
+                      <div className="md:col-span-3">
+                        <StaggerGrid className="grid sm:grid-cols-2 gap-4">
+                          {catServices.map((service) => {
+                            const href =
+                              service.href ?? service.detailUrl ?? "#";
+                            return (
+                              <StaggerItem key={service.id}>
+                                <ServiceCard
+                                  title={service.title}
+                                  description={service.description}
+                                  href={href}
+                                  popular={service.popular}
+                                />
+                              </StaggerItem>
+                            );
+                          })}
+                        </StaggerGrid>
                       </div>
                     </div>
                   </div>
@@ -458,13 +462,13 @@ export default function ServiciosPage() {
               </p>
             </div>
           </Container>
-        </section>
+        </AnimateInView>
 
         {/* ─── BENEFICIOS ───────────────────────────────────────── */}
-        <section className="bg-[#FBFBF9] py-20 md:py-28 overflow-hidden">
+        <AnimateInView as="section" variant="fadeUp" className="bg-[#FBFBF9] py-20 md:py-28 overflow-hidden">
           <Container>
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              <div className="relative">
+              <AnimateInView variant="fadeLeft" className="relative">
                 <div className="relative rounded-2xl overflow-hidden shadow-xl">
                   <img
                     src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=700&h=800&fit=crop&crop=entropy&auto=format&q=80"
@@ -481,9 +485,9 @@ export default function ServiciosPage() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </AnimateInView>
 
-              <div>
+              <AnimateInView variant="fadeRight">
                 <span className="text-primary font-body font-semibold text-sm tracking-widest uppercase">
                   ¿Por qué elegirnos?
                 </span>
@@ -511,13 +515,13 @@ export default function ServiciosPage() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </AnimateInView>
             </div>
           </Container>
-        </section>
+        </AnimateInView>
 
         {/* ─── PROCESO ──────────────────────────────────────────── */}
-        <section className="bg-white py-20 md:py-28">
+        <AnimateInView as="section" variant="fadeUp" className="bg-white py-20 md:py-28">
           <Container>
             <div className="text-center mb-16">
               <span className="inline-block text-primary font-body font-semibold text-xs tracking-[0.2em] uppercase mb-4 border border-primary/20 rounded-full px-4 py-1.5">
@@ -534,10 +538,10 @@ export default function ServiciosPage() {
 
             <div className="relative max-w-4xl mx-auto">
               <div className="absolute left-[23px] top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-primary/20 hidden md:block" aria-hidden="true" />
-              <div className="space-y-8 md:space-y-0">
+              <StaggerGrid className="space-y-8 md:space-y-0" staggerDelay={0.12}>
                 {processSteps.map((step, i) => (
-                  <div
-                    key={step.number}
+                  <StaggerItem key={step.number}
+                    ><div
                     className="relative md:grid md:grid-cols-[80px_1fr] md:gap-8 md:pb-8 items-start"
                   >
                     <div className="hidden md:flex flex-col items-center">
@@ -561,18 +565,18 @@ export default function ServiciosPage() {
                         {step.desc}
                       </p>
                     </div>
-                  </div>
+                  </div></StaggerItem>
                 ))}
-              </div>
+              </StaggerGrid>
             </div>
           </Container>
-        </section>
+        </AnimateInView>
 
         {/* ─── FAQ ──────────────────────────────────────────────── */}
-        <section className="bg-[#FBFBF9] py-20 md:py-28">
+        <AnimateInView as="section" variant="fadeUp" className="bg-[#FBFBF9] py-20 md:py-28">
           <Container>
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-              <div>
+              <AnimateInView variant="fadeLeft">
                 <span className="text-primary font-body font-semibold text-sm tracking-widest uppercase">
                   FAQ
                 </span>
@@ -596,12 +600,14 @@ export default function ServiciosPage() {
                     </a>
                   </p>
                 </div>
-              </div>
-              <div
+              </AnimateInView>
+              <AnimateInView variant="fadeRight"
                 className="divide-y divide-silver/20"
-                itemScope
-                itemType="https://schema.org/FAQPage"
               >
+                <div
+                  itemScope
+                  itemType="https://schema.org/FAQPage"
+                >
                 {faqs.map((faq) => (
                   <details
                     key={faq.q}
@@ -636,12 +642,13 @@ export default function ServiciosPage() {
                   </details>
                 ))}
               </div>
+              </AnimateInView>
             </div>
           </Container>
-        </section>
+        </AnimateInView>
 
         {/* ─── CTA FINAL ────────────────────────────────────────── */}
-        <section className="relative bg-gradient-to-br from-[#0F4A44] via-[#1B6E66] to-[#2FA79C] py-24 md:py-32 overflow-hidden">
+        <AnimateInView as="section" variant="fadeUp" className="relative bg-gradient-to-br from-[#0F4A44] via-[#1B6E66] to-[#2FA79C] py-24 md:py-32 overflow-hidden">
           <div className="absolute inset-0 opacity-[0.05]" aria-hidden="true"
             style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
@@ -695,7 +702,7 @@ export default function ServiciosPage() {
               </p>
             </div>
           </Container>
-        </section>
+        </AnimateInView>
       </article>
 
       <footer className="bg-[#223231] text-white/60 py-8">
