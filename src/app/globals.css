@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #2FA79C;
+  --color-primary-dark: #1B6E66;
+  --color-primary-deep: #0F4A44;
+  --color-primary-soft: #E6F4F2;
+  --color-silver: #9BA3A2;
+  --color-text-main: #223231;
+  --color-text-dark: #0F4A44;
+  --color-clinic-bg: #FBFBF9;
+  --color-accent: #1B6E66;
+  --font-heading: "Fraunces", serif;
+  --font-body: "Manrope", sans-serif;
+  --font-script: "Sacramento", cursive;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body), sans-serif;
+    color: var(--color-text-main);
+    background: var(--color-clinic-bg);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading), serif;
+    color: var(--color-text-dark);
+  }
+
+  .focus-visible:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-bounce-subtle {
+    animation: bounce-subtle 2s infinite;
+  }
+
+  @keyframes bounce-subtle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-bounce-subtle {
+      animation: none;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
