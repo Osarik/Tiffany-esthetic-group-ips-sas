@@ -10,7 +10,7 @@ const WHATSAPP_URL = `https://wa.me/${PHONE}?text=${encodeURIComponent(
 )}`;
 
 const TIFFANY_AVATAR =
-  "https://res.cloudinary.com/dodfyfani/image/upload/v1783484056/Woman_doctor_inspire_trust_luxury_202607072313_icnd4a.jpg";
+  "https://res.cloudinary.com/dodfyfani/image/upload/v1783484890/fee9d6af-d031-488a-8c4f-bb978a7fab63.png";
 
 export default function WhatsAppButton() {
   const [isOpen, setIsOpen] = useState(false);
