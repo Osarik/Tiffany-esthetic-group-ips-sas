@@ -14,7 +14,7 @@ export default function SplashWrapper({ children }: { children: ReactNode }) {
   };
 
   return (
-    <>
+    <div className="overflow-x-hidden max-w-[100vw]">
       <AnimatePresence>
         {showSplash && (
           <motion.div
@@ -36,6 +36,6 @@ export default function SplashWrapper({ children }: { children: ReactNode }) {
       >
         {children}
       </motion.div>
-    </>
+    </div>
   );
 }
