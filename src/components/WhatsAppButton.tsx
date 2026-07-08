@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { MessageCircle, X, ArrowRight } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const PHONE = "573202703522";
 const WHATSAPP_URL = `https://wa.me/${PHONE}?text=${encodeURIComponent(
@@ -14,7 +15,43 @@ const TIFFANY_AVATAR =
 
 export default function WhatsAppButton() {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasNotification, setHasNotification] = useState(false);
   const popupRef = useRef<HTMLDivElement>(null);
+  const notificationTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const autoOpenTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    notificationTimer.current = setTimeout(() => {
+      setHasNotification(true);
+    }, 15000);
+
+    autoOpenTimer.current = setTimeout(() => {
+      setHasNotification(false);
+      setIsOpen(true);
+    }, 20000);
+
+    return () => {
+      if (notificationTimer.current) clearTimeout(notificationTimer.current);
+      if (autoOpenTimer.current) clearTimeout(autoOpenTimer.current);
+    };
+  }, []);
+
+  const cancelTimers = () => {
+    if (notificationTimer.current) {
+      clearTimeout(notificationTimer.current);
+      notificationTimer.current = null;
+    }
+    if (autoOpenTimer.current) {
+      clearTimeout(autoOpenTimer.current);
+      autoOpenTimer.current = null;
+    }
+  };
+
+  const toggleChat = () => {
+    cancelTimers();
+    setHasNotification(false);
+    setIsOpen((prev) => !prev);
+  };
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -97,13 +134,26 @@ export default function WhatsAppButton() {
         )}
       </AnimatePresence>
 
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 rounded-full bg-primary text-white shadow-xl hover:bg-primary-dark hover:shadow-2xl active:scale-95 transition-all duration-300 flex items-center justify-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary animate-bounce-subtle"
-        aria-label={isOpen ? "Cerrar chat" : "Abrir chat"}
-      >
-        {isOpen ? <X size={24} /> : <MessageCircle size={24} />}
-      </button>
+      <div className="relative">
+        {hasNotification && (
+          <>
+            <span className="absolute -top-1 -right-1 z-10 w-5 h-5 rounded-full bg-red-500 text-white text-[11px] font-body font-bold flex items-center justify-center shadow-lg">
+              1
+            </span>
+            <span className="absolute inset-0 rounded-full bg-primary/30 animate-ping" />
+          </>
+        )}
+        <button
+          onClick={toggleChat}
+          className={cn(
+            "relative w-14 h-14 rounded-full bg-primary text-white shadow-xl hover:bg-primary-dark hover:shadow-2xl active:scale-95 transition-all duration-300 flex items-center justify-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+            hasNotification ? "animate-bounce-subtle scale-110" : "animate-bounce-subtle"
+          )}
+          aria-label={isOpen ? "Cerrar chat" : "Abrir chat"}
+        >
+          {isOpen ? <X size={24} /> : <MessageCircle size={24} />}
+        </button>
+      </div>
     </div>
   );
 }
