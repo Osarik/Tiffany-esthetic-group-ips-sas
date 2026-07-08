@@ -68,6 +68,7 @@ export const services: Service[] = [
     description:
       "Rejuvenecimiento de la mirada mediante manejo del exceso de piel y bolsas palpebrales.",
     category: "Cirugía Facial",
+    detailUrl: "/blefaroplastia",
   },
   {
     id: "lifting-facial",
@@ -75,5 +76,6 @@ export const services: Service[] = [
     description:
       "Procedimiento de rejuvenecimiento facial para mejorar flacidez y contornos del rostro.",
     category: "Cirugía Facial",
+    detailUrl: "/lifting-facial",
   },
 ];
