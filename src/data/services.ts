@@ -3,6 +3,7 @@ export interface Service {
   title: string;
   description: string;
   category: string;
+  detailUrl?: string;
   popular?: boolean;
   href?: string;
 }
@@ -23,6 +24,7 @@ export const services: Service[] = [
     description:
       "Procedimientos para retirar grasa localizada, tratar exceso de piel y definir el contorno abdominal.",
     category: "Cirugía Corporal",
+    detailUrl: "/liposuccion-lipectomia",
     popular: true,
   },
   {

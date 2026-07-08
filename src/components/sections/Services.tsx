@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import Section from "@/components/ui/Section";
 import Heading from "@/components/ui/Heading";
 import Button from "@/components/ui/Button";
@@ -50,6 +51,11 @@ function CardContent({
       <p className="text-sm text-text-main font-body leading-relaxed">
         {service.description}
       </p>
+      {(service.href || service.detailUrl) && (
+        <span className="mt-4 inline-flex text-sm font-body font-bold text-primary group-hover:text-primary-dark">
+          Ver información médica
+        </span>
+      )}
     </>
   );
 }
@@ -71,29 +77,37 @@ export default function Services() {
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {services.map((service, i) => (
-          <motion.article
-            key={service.id}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.4, delay: i * 0.05 }}
-            className="group relative bg-white rounded-2xl p-6 border border-silver/20 hover:border-primary/30 shadow-sm hover:shadow-lg transition-all duration-300"
-          >
-            {service.popular && (
-              <span className="absolute top-3 right-3 bg-accent text-white text-[10px] font-body font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
-                Popular
-              </span>
-            )}
-            {service.href ? (
-              <a href={service.href} className="block no-underline" aria-label={`Más información sobre ${service.title}`}>
+        {services.map((service, i) => {
+          const serviceHref = service.href ?? service.detailUrl;
+
+          return (
+            <motion.article
+              key={service.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
+              className="group relative bg-white rounded-2xl p-6 border border-silver/20 hover:border-primary/30 shadow-sm hover:shadow-lg transition-all duration-300"
+            >
+              {service.popular && (
+                <span className="absolute top-3 right-3 bg-accent text-white text-[10px] font-body font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                  Popular
+                </span>
+              )}
+              {serviceHref ? (
+                <Link
+                  href={serviceHref}
+                  className="block no-underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+                  aria-label={`Más información sobre ${service.title}`}
+                >
+                  <CardContent service={service} icons={categoryIcons} />
+                </Link>
+              ) : (
                 <CardContent service={service} icons={categoryIcons} />
-              </a>
-            ) : (
-              <CardContent service={service} icons={categoryIcons} />
-            )}
-          </motion.article>
-        ))}
+              )}
+            </motion.article>
+          );
+        })}
       </div>
 
       <div className="text-center mt-12">
