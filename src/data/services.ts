@@ -33,6 +33,7 @@ export const services: Service[] = [
     description:
       "Combinación de contorno corporal y elevación mamaria para armonizar la silueta.",
     category: "Cirugía Corporal",
+    detailUrl: "/liposuccion-pexia-mamaria",
     popular: true,
   },
   {
