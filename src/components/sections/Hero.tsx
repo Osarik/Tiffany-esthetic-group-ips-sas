@@ -92,24 +92,6 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
             className="relative"
           >
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-5 flex items-center gap-3">
-              <div className="flex -space-x-2">
-                {[1, 2, 3].map((i) => (
-                  <div
-                    key={i}
-                    className="w-8 h-8 rounded-full bg-primary/20 border-2 border-white"
-                  />
-                ))}
-              </div>
-              <div>
-                <p className="font-body font-semibold text-sm text-text-dark">
-                  Equipo quirúrgico
-                </p>
-                <div className="flex text-yellow-400 text-xs" aria-label="5 estrellas">
-                  {"★★★★★"}
-                </div>
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>
