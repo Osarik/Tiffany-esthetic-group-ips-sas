@@ -95,7 +95,7 @@ export default function RootLayout({
           </a>
 
           <nav
-            className="fixed top-0 left-0 right-0 z-40 bg-white/80 backdrop-blur-md border-b border-[rgba(34,50,49,0.08)]"
+            className="fixed top-0 left-0 right-0 z-40 bg-white/80 backdrop-blur-md border-b border-[rgba(34,50,49,0.08)] overflow-hidden"
             role="navigation"
             aria-label="Navegación principal"
           >
