@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { Fraunces, Manrope, Sacramento } from "next/font/google";
 import SchemaMarkup from "@/components/SchemaMarkup";
 import Logo from "@/components/Logo";
@@ -391,6 +392,26 @@ export default function RootLayout({
           </footer>
           <WhatsAppButton />
           <GoogleTranslate />
+          <div id="google_translate_element" className="hidden" />
+          <Script
+            id="google-translate-init"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                function googleTranslateElementInit() {
+                  new google.translate.TranslateElement({
+                    pageLanguage: 'es',
+                    includedLanguages: 'en,fr,pt,de,it,ja,zh-CN',
+                    autoDisplay: false
+                  }, 'google_translate_element');
+                }
+              `,
+            }}
+          />
+          <Script
+            src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+            strategy="afterInteractive"
+          />
         </SplashWrapper>
         </div>
       </body>
