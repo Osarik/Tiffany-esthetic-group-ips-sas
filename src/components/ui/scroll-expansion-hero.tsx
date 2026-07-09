@@ -55,7 +55,7 @@ const ScrollExpandMedia = ({
         e.preventDefault();
       } else if (!mediaFullyExpanded) {
         e.preventDefault();
-        const scrollDelta = e.deltaY * 0.0009;
+        const scrollDelta = e.deltaY * 0.003;
         const newProgress = Math.min(
           Math.max(scrollProgress + scrollDelta, 0),
           1
@@ -109,15 +109,10 @@ const ScrollExpandMedia = ({
       setTouchStartY(0);
     };
 
-    const handleScroll = (): void => {
-      if (!mediaFullyExpanded) {
-        window.scrollTo(0, 0);
-      }
-    };
-
     window.addEventListener('wheel', handleWheel as unknown as EventListener, {
       passive: false,
     });
+    const handleScroll = (): void => {};
     window.addEventListener('scroll', handleScroll as EventListener);
     window.addEventListener(
       'touchstart',
@@ -195,7 +190,7 @@ const ScrollExpandMedia = ({
               }}
               priority
             />
-            <div className='absolute inset-0 bg-black/10' />
+            <div className='absolute inset-0 bg-gradient-to-t from-[#0F4A44]/60 via-[#0F4A44]/30 to-[#0F4A44]/50' />
           </motion.div>
 
           <div className='container mx-auto flex flex-col items-center justify-start relative z-10'>
@@ -289,10 +284,10 @@ const ScrollExpandMedia = ({
                   </div>
                 )}
 
-                <div className='flex flex-col items-center text-center relative z-10 mt-4 transition-none'>
+                <div className='absolute bottom-4 left-0 right-0 flex flex-col items-center text-center z-10 transition-none'>
                   {date && (
                     <p
-                      className='text-2xl text-blue-200'
+                      className='text-xs text-white/60 font-body font-semibold tracking-wider uppercase'
                       style={{ transform: `translateX(-${textTranslateX}vw)` }}
                     >
                       {date}
@@ -300,7 +295,7 @@ const ScrollExpandMedia = ({
                   )}
                   {scrollToExpand && (
                     <p
-                      className='text-blue-200 font-medium text-center'
+                      className='text-xs text-white/40 font-body mt-1'
                       style={{ transform: `translateX(${textTranslateX}vw)` }}
                     >
                       {scrollToExpand}
@@ -309,19 +304,15 @@ const ScrollExpandMedia = ({
                 </div>
               </div>
 
-              <div
-                className={`flex items-center justify-center text-center gap-4 w-full relative z-10 transition-none flex-col ${
-                  textBlend ? 'mix-blend-difference' : 'mix-blend-normal'
-                }`}
-              >
+              <div className="flex items-center justify-center text-center gap-4 w-full relative z-10 transition-none flex-col">
                 <motion.h2
-                  className='text-4xl md:text-5xl lg:text-6xl font-bold text-blue-200 transition-none'
+                  className='text-4xl md:text-5xl lg:text-6xl font-bold text-white font-heading leading-tight drop-shadow-lg'
                   style={{ transform: `translateX(-${textTranslateX}vw)` }}
                 >
                   {firstWord}
                 </motion.h2>
                 <motion.h2
-                  className='text-4xl md:text-5xl lg:text-6xl font-bold text-center text-blue-200 transition-none'
+                  className='text-4xl md:text-5xl lg:text-6xl font-bold text-center text-accent-light font-heading leading-tight drop-shadow-lg'
                   style={{ transform: `translateX(${textTranslateX}vw)` }}
                 >
                   {restOfTitle}
