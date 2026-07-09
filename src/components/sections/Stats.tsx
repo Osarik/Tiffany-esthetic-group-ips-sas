@@ -23,8 +23,7 @@ function AnimatedCounter({
   return (
     <span
       ref={ref}
-      className="text-4xl md:text-5xl font-heading font-bold text-primary"
-      style={{ WebkitTextStroke: "1px white" }}
+      className="text-4xl md:text-5xl font-heading font-bold text-black"
     >
       {isInView ? value : 0}
       {suffix}
@@ -50,8 +49,7 @@ export default function Stats() {
             >
               <AnimatedCounter value={stat.value} suffix={stat.suffix} />
               <p
-                className="text-white/90 font-body text-sm md:text-base mt-2"
-                style={{ WebkitTextStroke: "0.5px #2FA79C" }}
+                className="text-black/80 font-body text-sm md:text-base mt-2"
               >
                 {stat.label}
               </p>
