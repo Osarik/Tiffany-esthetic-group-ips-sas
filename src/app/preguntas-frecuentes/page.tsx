@@ -281,7 +281,7 @@ export default function FAQsPage() {
                   rel={cat.href?.startsWith("http") ? "noopener noreferrer" : undefined}
                   className="group bg-white p-8 md:p-10 flex flex-col items-center text-center hover:bg-primary/[0.02] transition-all duration-300 no-underline"
                 >
-                  <div className="w-16 h-16 mb-5 text-primary/80 group-hover:text-primary transition-colors duration-300">
+                  <div className="w-16 h-16 mb-5 text-primary/80 group-hover:text-primary group-hover:scale-110 transition-all duration-300">
                     {cat.icon}
                   </div>
                   <h3 className="font-heading font-bold text-text-dark text-sm md:text-base group-hover:text-primary transition-colors duration-300">

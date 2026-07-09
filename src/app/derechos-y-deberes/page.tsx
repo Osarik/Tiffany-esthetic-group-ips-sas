@@ -53,6 +53,9 @@ export default function DerechosYDeberes() {
           Volver a Inicio
         </Link>
 
+        <div className="mb-6 p-4 rounded-xl bg-amber-50 border border-amber-200 text-xs font-body text-amber-800 leading-relaxed">
+          Este documento fue redactado originalmente en español. Las traducciones generadas automáticamente son solo para referencia y pueden contener imprecisiones. En caso de discrepancia, prevalece la versión en español.
+        </div>
         <h1 className="font-heading text-3xl md:text-4xl font-bold text-text-dark mb-12">
           Derechos y Deberes del Paciente
         </h1>

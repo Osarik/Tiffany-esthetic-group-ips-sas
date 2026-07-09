@@ -5,6 +5,7 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import Logo from "@/components/Logo";
 import SplashWrapper from "@/components/SplashWrapper";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import GoogleTranslate from "@/components/GoogleTranslate";
 import MobileNav from "@/components/MobileNav";
 import "./globals.css";
 
@@ -389,6 +390,7 @@ export default function RootLayout({
             </div>
           </footer>
           <WhatsAppButton />
+          <GoogleTranslate />
         </SplashWrapper>
         </div>
       </body>
