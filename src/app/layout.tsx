@@ -243,6 +243,39 @@ export default function RootLayout({
                   </a>
                 </div>
               </div>
+              <div className="border-t border-white/10 mt-8 pt-6 flex flex-col items-center gap-4">
+                <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center text-xs text-white/50">
+                  <Link
+                    href="/politica-de-privacidad"
+                    className="hover:text-primary transition-colors no-underline"
+                  >
+                    Política de Privacidad
+                  </Link>
+                  <Link
+                    href="/terminos-y-condiciones"
+                    className="hover:text-primary transition-colors no-underline"
+                  >
+                    Términos y Condiciones
+                  </Link>
+                  <Link
+                    href="/derechos-y-deberes"
+                    className="hover:text-primary transition-colors no-underline"
+                  >
+                    Derechos y Deberes del Paciente
+                  </Link>
+                </div>
+                <p className="text-[10px] text-white/30 text-center leading-relaxed">
+                  <a
+                    href="https://www.supersalud.gov.co"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors no-underline text-white/30"
+                  >
+                    Vigilado por la Superintendencia Nacional de Salud
+                  </a>
+                  {' · '}Tiffany Esthetic Group Ips SAS · NIT 901634870
+                </p>
+              </div>
             </div>
           </footer>
           <WhatsAppButton />
