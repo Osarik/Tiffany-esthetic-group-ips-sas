@@ -9,45 +9,112 @@ const whatsappUrl =
 const categories = [
   {
     name: "Procedimientos",
+    href: "/servicios",
     icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
-        <path d="M12 8v8" />
-        <path d="M8 12h8" />
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="w-full h-full">
+        <circle cx="24" cy="24" r="20" />
+        <path d="M24 12v24" />
+        <path d="M12 24h24" />
+        <path d="M18 18l6 6 6-6" />
+        <path d="M18 30l6-6 6 6" />
       </svg>
     ),
     desc: "Lipoescultura, liposucción, pexia mamaria, rinoplastia, blefaroplastia, lifting facial y más.",
   },
   {
-    name: "Habilitación y seguridad",
+    name: "Habilitación",
+    href: "/equipo",
     icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="w-full h-full">
+        <path d="M24 44s16-8 16-20V10l-16-6-16 6v14c0 12 16 20 16 20z" />
+        <path d="M20 28l4 4 8-8" />
       </svg>
     ),
-    desc: "IPS habilitada por la Secretaría de Salud con farmacia, salas de cirugía y área de recuperación.",
+    desc: "IPS habilitada por la Secretaría de Salud. Conoce nuestras credenciales y estándares de calidad.",
   },
   {
     name: "Proceso quirúrgico",
+    href: "#faq-lista",
     icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
-        <polyline points="14 2 14 8 20 8" />
-        <line x1="16" y1="13" x2="8" y2="13" />
-        <line x1="16" y1="17" x2="8" y2="17" />
-        <polyline points="10 9 9 9 8 9" />
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="w-full h-full">
+        <rect x="6" y="6" width="36" height="36" rx="4" />
+        <path d="M6 16h36" />
+        <path d="M16 6v8" />
+        <path d="M32 6v8" />
+        <circle cx="16" cy="28" r="2" />
+        <circle cx="24" cy="28" r="2" />
+        <circle cx="32" cy="28" r="2" />
       </svg>
     ),
     desc: "Valoración médica, exámenes preoperatorios, cirugía, recuperación y seguimiento postoperatorio.",
   },
   {
-    name: "Contacto y agenda",
+    name: "Valoración médica",
+    href: "https://wa.me/573202703522?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n%20m%C3%A9dica%20en%20Tiffany%20Esthetic%20Group.",
     icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="w-full h-full">
+        <path d="M42 8H6a2 2 0 00-2 2v28a2 2 0 002 2h36a2 2 0 002-2V10a2 2 0 00-2-2z" />
+        <path d="M32 12v8h8" />
+        <path d="M28 28l-8-8-8 8" />
+        <path d="M20 20v16" />
       </svg>
     ),
-    desc: "Agenda tu valoración médica presencial por WhatsApp, teléfono o visitando nuestras instalaciones en Cali.",
+    desc: "Agenda tu consulta presencial con nuestros especialistas para evaluar tu caso.",
+  },
+  {
+    name: "Instalaciones",
+    href: "/instalaciones",
+    icon: (
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="w-full h-full">
+        <rect x="8" y="6" width="32" height="36" rx="3" />
+        <path d="M8 18h32" />
+        <path d="M20 34h8" />
+        <path d="M20 28h8" />
+        <path d="M20 22h8" />
+      </svg>
+    ),
+    desc: "Tres quirófanos, área de recuperación, farmacia habilitada y consultorios en Cali.",
+  },
+  {
+    name: "Cuidados postoperatorios",
+    href: "#faq-lista",
+    icon: (
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="w-full h-full">
+        <path d="M24 6C14.06 6 6 14.06 6 24s8.06 18 18 18 18-8.06 18-18S33.94 6 24 6z" />
+        <path d="M24 14v10l6 6" />
+        <path d="M14 24h20" />
+      </svg>
+    ),
+    desc: "Recomendaciones para tu recuperación, cuidados de heridas, medicación y controles.",
+  },
+  {
+    name: "Nuestro equipo",
+    href: "/equipo",
+    icon: (
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="w-full h-full">
+        <circle cx="18" cy="16" r="5" />
+        <circle cx="30" cy="16" r="5" />
+        <path d="M6 40c0-8 5.373-12 12-12" />
+        <path d="M42 40c0-8-5.373-12-12-12" />
+        <path d="M18 28h12" />
+        <path d="M24 28v12" />
+      </svg>
+    ),
+    desc: "Cirujanos SCCP, anestesiólogos certificados, instrumentación y enfermería recuperadora.",
+  },
+  {
+    name: "Precios y formas de pago",
+    href: "https://wa.me/573202703522?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20precios%20y%20formas%20de%20pago%20en%20Tiffany%20Esthetic%20Group.",
+    icon: (
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="w-full h-full">
+        <rect x="6" y="10" width="36" height="28" rx="3" />
+        <line x1="6" y1="18" x2="42" y2="18" />
+        <circle cx="16" cy="26" r="2" />
+        <circle cx="24" cy="26" r="2" />
+        <circle cx="32" cy="26" r="2" />
+      </svg>
+    ),
+    desc: "Consulta precios, opciones de financiación y métodos de pago disponibles en nuestra IPS.",
   },
 ];
 
@@ -190,38 +257,42 @@ export default function FAQsPage() {
           </Container>
         </section>
 
-        {/* ─── CATEGORÍAS ────────────────────────────────────────── */}
-        <section className="bg-white py-16 md:py-20">
+        {/* ─── EXPLORA POR TEMA ─────────────────────────────────── */}
+        <section className="bg-white py-16 md:py-24">
           <Container>
             <AnimateInView variant="fadeUp">
-              <div className="text-center mb-12">
-                <span className="inline-block text-primary font-body font-semibold text-xs tracking-[0.2em] uppercase mb-4 border border-primary/20 rounded-full px-4 py-1.5">
-                  Categorías
-                </span>
+              <div className="text-center mb-12 md:mb-16">
                 <h2 className="font-heading font-bold text-3xl md:text-4xl text-text-dark leading-tight">
                   Explora por{" "}
                   <span className="text-primary">tema</span>
                 </h2>
+                <p className="mt-3 text-text-main/70 font-body text-base max-w-xl mx-auto">
+                  Encuentra respuestas rápidas seleccionando el tema de tu interés.
+                </p>
               </div>
             </AnimateInView>
 
-            <StaggerGrid className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5" staggerDelay={0.08}>
-              {categories.map((cat) => (
-                <StaggerItem key={cat.name}>
-                  <div className="group p-6 rounded-2xl bg-white border border-silver/20 shadow-sm hover:shadow-lg hover:border-primary/20 transition-all duration-400">
-                    <div className="w-11 h-11 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-all duration-400">
-                      {cat.icon}
-                    </div>
-                    <h3 className="font-heading font-bold text-text-dark text-sm mb-2">
-                      {cat.name}
-                    </h3>
-                    <p className="text-xs text-text-main/65 font-body leading-relaxed">
-                      {cat.desc}
-                    </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-silver/20 rounded-2xl overflow-hidden shadow-sm">
+              {categories.map((cat, i) => (
+                <a
+                  key={cat.name}
+                  href={cat.href}
+                  target={cat.href?.startsWith("http") ? "_blank" : undefined}
+                  rel={cat.href?.startsWith("http") ? "noopener noreferrer" : undefined}
+                  className="group bg-white p-8 md:p-10 flex flex-col items-center text-center hover:bg-primary/[0.02] transition-all duration-300 no-underline"
+                >
+                  <div className="w-16 h-16 mb-5 text-primary/80 group-hover:text-primary transition-colors duration-300">
+                    {cat.icon}
                   </div>
-                </StaggerItem>
+                  <h3 className="font-heading font-bold text-text-dark text-sm md:text-base group-hover:text-primary transition-colors duration-300">
+                    {cat.name}
+                  </h3>
+                  <p className="mt-2 text-xs text-text-main/60 font-body leading-relaxed max-w-[220px]">
+                    {cat.desc}
+                  </p>
+                </a>
               ))}
-            </StaggerGrid>
+            </div>
           </Container>
         </section>
 
