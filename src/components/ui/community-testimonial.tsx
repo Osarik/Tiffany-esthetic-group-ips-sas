@@ -122,7 +122,7 @@ function TestimonialCard({
   avatarUrl: string;
 }) {
   return (
-    <div className="flex flex-col items-start gap-4 p-6 bg-white rounded-2xl border border-primary/10 shadow-sm w-[340px] md:w-96 flex-shrink-0">
+    <div className="flex flex-col items-start gap-4 p-6 bg-white rounded-2xl border border-primary/10 shadow-sm w-[75vw] sm:w-[340px] md:w-96 flex-shrink-0">
       <div className="flex items-center gap-0.5">
         {Array.from({ length: 5 }).map((_, s) => (
           <svg

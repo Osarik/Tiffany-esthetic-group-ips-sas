@@ -92,6 +92,15 @@
     );
   }
 
+  @media (max-width: 640px) {
+    .animate-scroll-horizontal {
+      animation-duration: 20s !important;
+    }
+    .animate-scroll-horizontal-reverse {
+      animation-duration: 16s !important;
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .animate-bounce-subtle {
       animation: none;

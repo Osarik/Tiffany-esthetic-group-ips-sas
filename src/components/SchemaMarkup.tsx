@@ -3,7 +3,7 @@ export default function SchemaMarkup() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "MedicalBusiness",
+        "@type": ["MedicalOrganization", "LocalBusiness"],
         "@id": "https://www.tiffanyesthetic.com/#business",
         name: "Tiffany Esthetic Group Ips SAS",
         description:
@@ -119,7 +119,6 @@ export default function SchemaMarkup() {
         description:
           "Clínica boutique de cirugía plástica y estética en Cali, Colombia. Habilitada por la Secretaría de Salud. Especialistas en lipoescultura, rinoplastia, blefaroplastia y más.",
         about: { "@id": "https://www.tiffanyesthetic.com/#business" },
-        medicalSpecialty: ["PlasticSurgery", "CosmeticSurgery"],
       },
       {
         "@type": "FAQPage",

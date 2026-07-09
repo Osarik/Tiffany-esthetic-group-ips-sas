@@ -63,31 +63,6 @@ export default function Installations() {
       </div>
 
       <ZoomParallax images={images} />
-
-      <div className="relative min-h-[50vh] flex items-center justify-center px-4 py-20">
-        <div
-          aria-hidden="true"
-          className={cn(
-            'pointer-events-none absolute -bottom-1/2 left-1/2 h-[120vmin] w-[120vmin] -translate-x-1/2 rounded-full',
-            'bg-[radial-gradient(ellipse_at_center,rgba(47,167,156,0.08),transparent_50%)]',
-            'blur-[60px]',
-          )}
-        />
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto text-center">
-          <div>
-            <p className="text-4xl md:text-5xl font-heading font-bold text-primary">3</p>
-            <p className="text-sm font-body text-text-main/70 mt-2">Salas de cirugía</p>
-          </div>
-          <div>
-            <p className="text-4xl md:text-5xl font-heading font-bold text-primary">24/7</p>
-            <p className="text-sm font-body text-text-main/70 mt-2">Disponibilidad quirúrgica</p>
-          </div>
-          <div>
-            <p className="text-4xl md:text-5xl font-heading font-bold text-primary">100%</p>
-            <p className="text-sm font-body text-text-main/70 mt-2">Equipo calificado</p>
-          </div>
-        </div>
-      </div>
     </section>
   );
 }
