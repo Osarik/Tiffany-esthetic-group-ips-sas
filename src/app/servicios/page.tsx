@@ -297,6 +297,12 @@ export default function ServiciosPage() {
       <article>
         {/* ─── HERO ─────────────────────────────────────────────── */}
         <section className="relative bg-gradient-to-br from-[#0F4A44] via-[#1B6E66] to-[#2FA79C] pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
+          {/* Animated gradient orbs */}
+          <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+            <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-white/5 blur-3xl animate-[float_12s_ease-in-out_infinite]" />
+            <div className="absolute -bottom-40 -left-40 w-[400px] h-[400px] rounded-full bg-accent/10 blur-3xl animate-[float_15s_ease-in-out_infinite_reverse]" />
+            <div className="absolute top-1/3 left-1/2 w-[300px] h-[300px] rounded-full bg-white/5 blur-3xl animate-[float_10s_ease-in-out_infinite]" />
+          </div>
           <div className="absolute inset-0 opacity-[0.07]" aria-hidden="true"
             style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
@@ -353,27 +359,29 @@ export default function ServiciosPage() {
                 </p>
               </div>
 
-              <div className="relative hidden lg:block">
-                <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-black/30">
-                  <img
-                    src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&h=900&fit=crop&crop=entropy&auto=format&q=80"
-                    alt="Instalaciones quirúrgicas de Tiffany Esthetic Group IPS en Cali"
-                    className="w-full h-[500px] object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F4A44]/40 via-transparent to-transparent" />
-                </div>
-                <div className="absolute -bottom-4 -right-4 w-36 h-36 rounded-2xl bg-accent/20 border border-white/10 backdrop-blur-sm flex items-center justify-center shadow-xl">
-                  <div className="text-center">
-                    <span className="block text-white font-heading font-bold text-3xl">+8</span>
-                    <span className="block text-white/70 font-body text-xs">Procedimientos</span>
+              <div className="relative hidden lg:flex items-center justify-center">
+                {/* Floating logo animation */}
+                <div className="relative z-10 animate-[float_6s_ease-in-out_infinite]">
+                  <div className="w-64 h-64 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center shadow-2xl shadow-black/20">
+                    <svg viewBox="0 0 60 60" fill="none" className="w-40 h-40">
+                      <circle cx="9.5" cy="9.5" r="7.5" stroke="white" strokeWidth="3" fill="none" opacity="0.8" />
+                      <rect x="22.5" y="2" width="15" height="15" rx="3" stroke="white" strokeWidth="3" fill="none" opacity="0.8" />
+                      <circle cx="50.5" cy="9.5" r="7.5" stroke="white" strokeWidth="3" fill="none" opacity="0.8" />
+                      <rect x="2" y="22.5" width="15" height="15" rx="3" stroke="white" strokeWidth="3" fill="none" opacity="0.8" />
+                      <circle cx="30" cy="30" r="8.5" fill="white" opacity="0.9" />
+                      <rect x="43" y="22.5" width="15" height="15" rx="3" stroke="white" strokeWidth="3" fill="none" opacity="0.8" />
+                      <circle cx="9.5" cy="50.5" r="7.5" stroke="white" strokeWidth="3" fill="none" opacity="0.8" />
+                      <rect x="22.5" y="43" width="15" height="15" rx="3" stroke="white" strokeWidth="3" fill="none" opacity="0.8" />
+                      <circle cx="50.5" cy="50.5" r="7.5" stroke="white" strokeWidth="3" fill="none" opacity="0.8" />
+                    </svg>
                   </div>
                 </div>
-                <div className="absolute -top-4 -left-4 w-24 h-24 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-sm flex items-center justify-center">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                    <path d="M2 17l10 5 10-5" />
-                    <path d="M2 12l10 5 10-5" />
-                  </svg>
+                {/* Decorative floating pills */}
+                <div className="absolute top-8 right-8 w-28 h-10 rounded-full bg-white/10 border border-white/10 backdrop-blur-sm flex items-center justify-center animate-[float_8s_ease-in-out_infinite_reverse] shadow-lg">
+                  <span className="text-white/80 font-body text-xs font-semibold">IPS Habilitada</span>
+                </div>
+                <div className="absolute bottom-12 left-4 w-32 h-10 rounded-full bg-accent/15 border border-accent/20 backdrop-blur-sm flex items-center justify-center animate-[float_7s_ease-in-out_infinite] shadow-lg">
+                  <span className="text-white/80 font-body text-xs font-semibold">Res 3100 de 2019</span>
                 </div>
               </div>
             </div>
