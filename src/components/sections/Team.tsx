@@ -32,8 +32,8 @@ export default function Team() {
             transition={{ duration: 0.5, delay: i * 0.1 }}
             className="text-center group"
           >
-            <div className="relative w-48 h-48 mx-auto mb-6 rounded-2xl overflow-hidden bg-primary/10 shadow-lg">
-              <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+            <div className="relative w-48 h-48 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg">
+              <div className="w-full h-full flex items-center justify-center">
                 {i === 0 ? (
                   <a href="https://cirugiaplastica.org.co/" target="_blank" rel="noopener noreferrer" className="w-full h-full flex items-center justify-center p-6 animate-spin-3d">
                     <img
