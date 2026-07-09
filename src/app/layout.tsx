@@ -357,6 +357,11 @@ export default function RootLayout({
                           </Link>
                         </li>
                         <li>
+                          <Link href="/politica-de-cookies" className="text-sm font-body text-white/50 hover:text-primary transition-colors no-underline">
+                            Política de Cookies
+                          </Link>
+                        </li>
+                        <li>
                           <a
                     href="https://www.supersalud.gov.co/es-co/Paginas/Home.aspx"
                             target="_blank"
