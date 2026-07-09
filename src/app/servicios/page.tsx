@@ -202,38 +202,74 @@ export const metadata: Metadata = {
   },
 };
 
+const categoryIcons: Record<string, React.ReactNode> = {
+  corporal: (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <circle cx="12" cy="5" r="3" />
+      <path d="M12 8v6" />
+      <path d="M6 18c0-3 6-4 6-4s6 1 6 4" />
+    </svg>
+  ),
+  mamaria: (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M3 12c0-3 2-6 6-6s6 3 6 6" />
+      <path d="M9 12c0-3 2-6 6-6s6 3 6 6" />
+    </svg>
+  ),
+  facial: (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="9" cy="10" r="1" fill="currentColor" />
+      <circle cx="15" cy="10" r="1" fill="currentColor" />
+      <path d="M8 15c2 2 6 2 8 0" />
+    </svg>
+  ),
+};
+
 function ServiceCard({
   title,
   description,
   href,
   popular,
+  categorySlug,
 }: {
   title: string;
   description: string;
   href: string | undefined;
   popular?: boolean;
+  categorySlug?: string;
 }) {
   return (
     <Link
       href={href ?? "#"}
       className="group relative block bg-white rounded-2xl overflow-hidden border border-silver/20 hover:border-primary/30 shadow-sm hover:shadow-xl transition-all duration-500 no-underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
     >
-      <div className="p-6 md:p-7">
+      <div className="h-[3px] bg-gradient-to-r from-primary to-secondary" />
+      <div className="p-5 md:p-7">
         {popular && (
           <span className="inline-block mb-3 bg-accent/10 text-accent font-body font-bold text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider">
             Más solicitado
           </span>
         )}
-        <h3 className="font-heading font-bold text-text-dark text-lg mb-2 group-hover:text-primary transition-colors duration-300">
-          {title}
-        </h3>
-        <p className="text-sm text-text-main/70 font-body leading-relaxed">
-          {description}
-        </p>
-        <span className="mt-4 inline-flex items-center text-sm font-body font-bold text-primary group-hover:text-primary-dark transition-colors">
+        <div className="flex items-start gap-3">
+          {categorySlug && (
+            <div className="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+              {categoryIcons[categorySlug]}
+            </div>
+          )}
+          <div className="flex-1 min-w-0">
+            <h3 className="font-heading font-bold text-text-dark text-base md:text-lg group-hover:text-primary transition-colors duration-300">
+              {title}
+            </h3>
+            <p className="mt-1.5 text-sm text-text-main/70 font-body leading-relaxed">
+              {description}
+            </p>
+          </div>
+        </div>
+        <span className="mt-4 inline-flex items-center text-sm font-body font-bold text-primary gap-1.5 group-hover:gap-2.5 transition-all duration-300">
           Ver información médica
           <svg
-            className="w-4 h-4 ml-1.5 transition-all duration-300 group-hover:translate-x-1"
+            className="w-4 h-4 transition-all duration-300 group-hover:translate-x-0.5"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -246,7 +282,6 @@ function ServiceCard({
           </svg>
         </span>
       </div>
-      <div className="h-1 w-0 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-500" />
     </Link>
   );
 }
@@ -355,12 +390,12 @@ export default function ServiciosPage() {
             <StaggerGrid className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8" staggerDelay={0.1}>
               {stats.map((stat, i) => (
                 <StaggerItem key={stat.label}><div className="relative group">
-                  <div className="text-center p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm group-hover:bg-white/10 transition-all duration-300">
-                    <span className="block text-4xl md:text-5xl font-heading font-bold text-white mb-1">
+                  <div className="text-center p-5 md:p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm group-hover:bg-white/10 transition-all duration-300">
+                    <span className="block text-3xl md:text-5xl font-heading font-bold text-white mb-1">
                       {stat.value}
                     </span>
-                    <span className="w-8 h-0.5 bg-accent block mx-auto mb-3 rounded-full" />
-                    <p className="text-white/65 font-body text-sm leading-snug">
+                    <span className="w-6 md:w-8 h-[2px] md:h-0.5 bg-accent block mx-auto mb-2 md:mb-3 rounded-full" />
+                    <p className="text-white/65 font-body text-xs md:text-sm leading-snug">
                       {stat.label}
                     </p>
                   </div>
@@ -395,8 +430,9 @@ export default function ServiciosPage() {
                 if (catServices.length === 0) return null;
                 return (
                   <div key={cat.slug}>
-                    <div className="grid md:grid-cols-5 gap-8 mb-10 items-center">
-                      <div className="md:col-span-2 relative rounded-2xl overflow-hidden h-[240px] shadow-lg group">
+                    <div className="relative grid md:grid-cols-5 gap-6 md:gap-8 mb-6 md:mb-10 items-center">
+                      <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-silver/30 to-transparent md:hidden" aria-hidden="true" />
+                      <div className="md:col-span-2 relative rounded-xl md:rounded-2xl overflow-hidden h-[180px] md:h-[240px] shadow-lg group">
                         <img
                           src={cat.img}
                           alt={`${cat.name} en Tiffany Esthetic Group IPS`}
@@ -434,6 +470,7 @@ export default function ServiciosPage() {
                                   description={service.description}
                                   href={href}
                                   popular={service.popular}
+                                  categorySlug={cat.slug}
                                 />
                               </StaggerItem>
                             );
@@ -556,7 +593,8 @@ export default function ServiciosPage() {
                         {step.title}
                       </h3>
                     </div>
-                    <div className="bg-[#FBFBF9] rounded-2xl p-6 md:p-8 border border-silver/20 shadow-sm ml-14 md:ml-0 hover:shadow-md transition-shadow duration-300">
+                    <div className="bg-[#FBFBF9] rounded-2xl p-5 md:p-8 border border-silver/20 shadow-sm ml-12 md:ml-0 hover:shadow-md transition-shadow duration-300 relative">
+                      <div className="absolute left-0 top-4 bottom-4 w-[3px] bg-gradient-to-b from-primary to-secondary rounded-full hidden md:block" aria-hidden="true" />
                       <h3 className="hidden md:block font-heading font-bold text-text-dark text-xl mb-3">
                         {step.title}
                       </h3>
