@@ -101,14 +101,15 @@ export default function SplashScreen({ onFinish }: { onFinish: () => void }) {
                 className="w-full h-full"
               >
                 <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-                  <rect x="2" y="2" width="15" height="15" rx="3" stroke="#2FA79C" strokeWidth="4" />
-                  <rect x="22.5" y="2" width="15" height="15" rx="3" stroke="#2FA79C" strokeWidth="4" />
-                  <rect x="43" y="2" width="15" height="15" rx="3" stroke="#2FA79C" strokeWidth="4" />
-                  <rect x="2" y="22.5" width="15" height="15" rx="3" stroke="#2FA79C" strokeWidth="4" />
-                  <rect x="43" y="22.5" width="15" height="15" rx="3" stroke="#2FA79C" strokeWidth="4" />
-                  <rect x="2" y="43" width="15" height="15" rx="3" stroke="#2FA79C" strokeWidth="4" />
-                  <rect x="22.5" y="43" width="15" height="15" rx="3" stroke="#2FA79C" strokeWidth="4" />
-                  <rect x="43" y="43" width="15" height="15" rx="3" stroke="#2FA79C" strokeWidth="4" />
+                  <circle cx="9.5" cy="9.5" r="7.5" stroke="#2FA79C" strokeWidth="4" fill="none" />
+                  <rect x="22.5" y="2" width="15" height="15" rx="3" stroke="#2FA79C" strokeWidth="4" fill="none" />
+                  <circle cx="50.5" cy="9.5" r="7.5" stroke="#2FA79C" strokeWidth="4" fill="none" />
+                  <rect x="2" y="22.5" width="15" height="15" rx="3" stroke="#2FA79C" strokeWidth="4" fill="none" />
+                  <circle cx="30" cy="30" r="8.5" fill="#2FA79C" />
+                  <rect x="43" y="22.5" width="15" height="15" rx="3" stroke="#2FA79C" strokeWidth="4" fill="none" />
+                  <circle cx="9.5" cy="50.5" r="7.5" stroke="#2FA79C" strokeWidth="4" fill="none" />
+                  <rect x="22.5" y="43" width="15" height="15" rx="3" stroke="#2FA79C" strokeWidth="4" fill="none" />
+                  <circle cx="50.5" cy="50.5" r="7.5" stroke="#2FA79C" strokeWidth="4" fill="none" />
                 </svg>
               </motion.div>
             </motion.div>
