@@ -202,12 +202,13 @@ export default function RootLayout({
                     aria-label="Vigilado SuperSalud - Superintendencia Nacional de Salud"
                   >
                     Vigilado por la Superintendencia Nacional de Salud
+                    <br />
+                    <img
+                      src="https://www.supersalud.gov.co/Style%20Library/Images/Logo-Supersalud-2024.svg"
+                      alt="Superintendencia Nacional de Salud"
+                      className="mt-3 h-16 w-auto"
+                    />
                   </a>
-                  <img
-                    src="https://www.supersalud.gov.co/Style%20Library/Images/Logo-Supersalud-2024.svg"
-                    alt="Superintendencia Nacional de Salud"
-                    className="mt-3 h-16 w-auto"
-                  />
                 </div>
                 <div className="mt-12 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
                   <div className="md:grid md:grid-cols-2 md:gap-8">
@@ -357,7 +358,7 @@ export default function RootLayout({
                         </li>
                         <li>
                           <a
-                            href="https://www.supersalud.gov.co"
+                    href="https://www.supersalud.gov.co/es-co/Paginas/Home.aspx"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-sm font-body text-white/50 hover:text-primary transition-colors no-underline"
