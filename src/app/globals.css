@@ -110,6 +110,15 @@
     }
   }
 
+  @keyframes spin-3d {
+    0% { transform: perspective(800px) rotateY(0deg); }
+    100% { transform: perspective(800px) rotateY(360deg); }
+  }
+
+  .animate-spin-3d {
+    animation: spin-3d 10s linear infinite;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .animate-bounce-subtle {
       animation: none;

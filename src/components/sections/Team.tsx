@@ -35,9 +35,9 @@ export default function Team() {
             <div className="relative w-48 h-48 mx-auto mb-6 rounded-2xl overflow-hidden bg-primary/10 shadow-lg">
               <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
                 {i === 0 ? (
-                  <a href="https://cirugiaplastica.org.co/" target="_blank" rel="noopener noreferrer" className="w-full h-full flex items-center justify-center p-6 hover:scale-110 transition-transform duration-300">
+                  <a href="https://cirugiaplastica.org.co/" target="_blank" rel="noopener noreferrer" className="w-full h-full flex items-center justify-center p-6 animate-spin-3d">
                     <img
-                      src="https://www.appsheet.com/image/getimageurl?appName=SCCPAPP-696038429&tableName=Repositorio&fileName=Repositorio_Images/e2525752.Imagen.162954.png"
+                      src="https://cirugiaplastica.org.co/wp-content/uploads/2022/07/logo-sccp.png"
                       alt="Logo Sociedad Colombiana de Cirugía Plástica"
                       className="w-full h-full object-contain"
                     />
