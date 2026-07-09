@@ -11,20 +11,16 @@ export default function FAQs() {
 
   return (
     <Section id="preguntas-frecuentes" className="relative overflow-hidden">
-      <div className="absolute -right-32 top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-3xl bg-primary/[0.03] pointer-events-none hidden lg:block">
-        <div className="absolute inset-0 flex items-center justify-center text-primary/[0.06]">
-          <svg width="300" height="300" viewBox="0 0 60 60" fill="none" aria-hidden="true">
-            <rect x="2" y="2" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="4" />
-            <rect x="22.5" y="2" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="4" />
-            <rect x="43" y="2" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="4" />
-            <rect x="2" y="22.5" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="4" />
-            <circle cx="30" cy="30" r="8.5" fill="currentColor" />
-            <rect x="43" y="22.5" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="4" />
-            <rect x="2" y="43" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="4" />
-            <rect x="22.5" y="43" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="4" />
-            <rect x="43" y="43" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="4" />
-          </svg>
-        </div>
+      <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+        <svg className="absolute bottom-0 w-full h-48 md:h-72" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+          <path fill="#0F4A44" fillOpacity="0.6" d="M0,192 C320,320 640,64 960,192 C1280,320 1440,160 1440,160 L1440,320 L0,320 Z" />
+        </svg>
+        <svg className="absolute bottom-0 w-full h-48 md:h-72" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+          <path fill="#1B6E66" fillOpacity="0.35" d="M0,224 C240,96 480,288 720,160 C960,32 1200,224 1440,128 L1440,320 L0,320 Z" />
+        </svg>
+        <svg className="absolute bottom-0 w-full h-48 md:h-72" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+          <path fill="#2FA79C" fillOpacity="0.15" d="M0,256 C160,160 320,320 480,224 C640,128 800,288 960,192 C1120,96 1280,256 1440,192 L1440,320 L0,320 Z" />
+        </svg>
       </div>
       <div className="max-w-3xl mx-auto relative z-10">
         <div className="text-center mb-12">
