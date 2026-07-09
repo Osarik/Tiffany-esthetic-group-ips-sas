@@ -21,7 +21,11 @@ function AnimatedCounter({
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <span ref={ref} className="text-4xl md:text-5xl font-heading font-bold text-primary">
+    <span
+      ref={ref}
+      className="text-4xl md:text-5xl font-heading font-bold text-primary"
+      style={{ WebkitTextStroke: "1px white" }}
+    >
       {isInView ? value : 0}
       {suffix}
     </span>
@@ -30,7 +34,10 @@ function AnimatedCounter({
 
 export default function Stats() {
   return (
-    <div className="bg-gradient-to-r from-primary to-secondary py-16 md:py-20">
+    <div
+      className="bg-gradient-to-r from-primary to-secondary py-16 md:py-20 animate-wave"
+      style={{ backgroundSize: "200% 100%" }}
+    >
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {stats.map((stat, i) => (
@@ -42,7 +49,10 @@ export default function Stats() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
               <AnimatedCounter value={stat.value} suffix={stat.suffix} />
-              <p className="text-white/90 font-body text-sm md:text-base mt-2">
+              <p
+                className="text-white/90 font-body text-sm md:text-base mt-2"
+                style={{ WebkitTextStroke: "0.5px #2FA79C" }}
+              >
                 {stat.label}
               </p>
             </motion.div>
