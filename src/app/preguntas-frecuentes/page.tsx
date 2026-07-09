@@ -172,10 +172,28 @@ export default function FAQsPage() {
       <article>
         {/* ─── HERO ─────────────────────────────────────────────── */}
         <section className="relative bg-gradient-to-br from-[#0F4A44] via-[#1B6E66] to-[#2FA79C] pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
-          <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-            <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-white/5 blur-3xl animate-[float_12s_ease-in-out_infinite]" />
-            <div className="absolute -bottom-40 -left-40 w-[400px] h-[400px] rounded-full bg-accent/10 blur-3xl animate-[float_15s_ease-in-out_infinite_reverse]" />
-            <div className="absolute top-1/3 left-1/2 w-[300px] h-[300px] rounded-full bg-white/5 blur-3xl animate-[float_10s_ease-in-out_infinite]" />
+          <div className="absolute inset-0 overflow-hidden pointer-events-none select-none" aria-hidden="true">
+            {Array.from({ length: 20 }, (_, i) => {
+              const size = ['text-lg', 'text-2xl', 'text-3xl', 'text-4xl', 'text-5xl'][i % 5];
+              const left = `${(i * 5.2 + 2) % 100}%`;
+              const duration = `${12 + (i % 8) * 2}s`;
+              const delay = `${(i * 1.3) % 12}s`;
+              const opacity = 0.06 + (i % 4) * 0.02;
+              return (
+                <span
+                  key={i}
+                  className={`absolute font-heading font-bold text-white ${size}`}
+                  style={{
+                    left,
+                    top: -(10 + (i * 7) % 40),
+                    opacity,
+                    animation: `question-rain ${duration} linear ${delay} infinite`,
+                  }}
+                >
+                  ?
+                </span>
+              );
+            })}
           </div>
           <div className="absolute inset-0 opacity-[0.07]" aria-hidden="true"
             style={{
