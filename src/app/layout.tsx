@@ -325,7 +325,7 @@ export default function RootLayout({
                               <rect x="2" y="2" width="20" height="20" rx="4" />
                               <path d="M22 6l-10 7L2 6" />
                             </svg>
-                            tiffanyestheticgroup@gmail.com
+                            Correo
                           </a>
                         </li>
                       </ul>
