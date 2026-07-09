@@ -43,9 +43,9 @@ export default function Team() {
                     />
                   </a>
                 ) : i === 1 ? (
-                  <a href="https://scare.org.co/" target="_blank" rel="noopener noreferrer" className="w-full h-full flex items-center justify-center p-6 hover:scale-110 transition-transform duration-300">
+                  <a href="https://scare.org.co/" target="_blank" rel="noopener noreferrer" className="w-full h-full flex items-center justify-center p-6 animate-spin-3d">
                     <img
-                      src="https://scare.org.co/wp-content/uploads/sociedad-colombiana-de-anestesiologia-y-reanimacion-scare-logo-300x82.avif"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoFCeO86ByR6Xp9c02HTjR8tk7oSjy-m-Qko64JVRwsA&s=10"
                       alt="Logo Sociedad Colombiana de Anestesiología y Reanimación"
                       className="w-full h-full object-contain"
                     />
