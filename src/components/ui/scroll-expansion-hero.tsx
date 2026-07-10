@@ -55,7 +55,7 @@ const ScrollExpandMedia = ({
         e.preventDefault();
       } else if (!mediaFullyExpanded) {
         e.preventDefault();
-        const scrollDelta = e.deltaY * 0.003;
+        const scrollDelta = e.deltaY * 0.0015;
         const newProgress = Math.min(
           Math.max(scrollProgress + scrollDelta, 0),
           1
@@ -86,7 +86,7 @@ const ScrollExpandMedia = ({
         e.preventDefault();
       } else if (!mediaFullyExpanded) {
         e.preventDefault();
-        const scrollFactor = deltaY < 0 ? 0.008 : 0.005;
+        const scrollFactor = deltaY < 0 ? 0.004 : 0.0025;
         const scrollDelta = deltaY * scrollFactor;
         const newProgress = Math.min(
           Math.max(scrollProgress + scrollDelta, 0),
