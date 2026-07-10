@@ -160,6 +160,12 @@ export default function RootLayout({
                     Equipo
                   </Link>
                   <Link
+                    href="/resultados"
+                    className="text-[0.85rem] font-body font-semibold text-text-main/75 hover:text-primary transition-colors no-underline"
+                  >
+                    Resultados
+                  </Link>
+                  <Link
                     href="/preguntas-frecuentes"
                     className="text-[0.85rem] font-body font-semibold text-text-main/75 hover:text-primary transition-colors no-underline"
                   >

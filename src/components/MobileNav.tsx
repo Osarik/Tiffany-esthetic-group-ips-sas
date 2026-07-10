@@ -79,6 +79,13 @@ export default function MobileNav() {
                 Equipo
               </Link>
               <Link
+                href="/resultados"
+                onClick={() => setOpen(false)}
+                className="text-2xl font-body font-semibold text-text-main/75 hover:text-primary transition-colors no-underline"
+              >
+                Resultados
+              </Link>
+              <Link
                 href="/preguntas-frecuentes"
                 onClick={() => setOpen(false)}
                 className="text-2xl font-body font-semibold text-text-main/75 hover:text-primary transition-colors no-underline"
