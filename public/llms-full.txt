@@ -6,6 +6,20 @@
 
 Tiffany Esthetic Group Ips SAS es una institución prestadora de servicios de salud (IPS) especializada en cirugía plástica, estética y reconstructiva. Ubicada en el sur de Cali (Comuna 17), la clínica cuenta con tres salas de cirugía completamente equipadas, área de recuperación con monitorización permanente, farmacia habilitada y un equipo de cirujanos plásticos certificados por la Sociedad Colombiana de Cirugía Plástica. Todos los procedimientos se realizan bajo estrictos protocolos de seguridad y bioseguridad.
 
+## Mapa del sitio
+
+El sitio web cuenta con las siguientes secciones y sub-páginas:
+
+- `/` — Landing page principal con 10 secciones: Hero con video, Beneficios, Servicios (carrusel), Antes/Después (slider con clip-path), Instalaciones (zoom parallax con 7 imágenes), Estadísticas, Testimonios (scroll infinito 3 filas), Equipo, FAQs (3 capas SVG wave), CTA Final
+- `/resultados` — Galería interactiva de resultados reales con mouse trail, 20 imágenes médicas, 8 procedimientos linkeables, estadísticas, FAQ y CTA
+- `/equipo` — Equipo médico con scroll-expansion hero y ForceTopOnMount
+- `/preguntas-frecuentes` — FAQ con 8 categorías estilo Cleveland Clinic iconos 48×48, hero con lluvia de signos "?"
+- `/politica-de-privacidad` — Política de tratamiento de datos personales (Ley 1581/2012)
+- `/terminos-y-condiciones` — Términos y condiciones, descargo médico, jurisdicción Cali
+- `/derechos-y-deberes` — Derechos y deberes de pacientes (Res. 434/2012)
+- `/politica-de-cookies` — Tipos de cookies, base legal, gestión
+- 12 sub-páginas de servicios (server components estáticos): lipoescultura, liposucción, abdominoplastia, aumento mamario, pexia mamaria, lipectomía, rinoplastia, blefaroplastia, lifting facial, procedimientos combinados
+
 ## Servicios detallados
 
 ### Cirugía Facial
@@ -27,6 +41,16 @@ Tiffany Esthetic Group Ips SAS es una institución prestadora de servicios de sa
 
 - **Liposucción + Pexia Mamaria**: Corrección simultánea del contorno corporal y elevación mamaria en un solo tiempo quirúrgico.
 - **Liposucción + Aumento Mamario**: Liposucción corporal combinada con aumento mamario para un rejuvenecimiento integral.
+
+## Galería de resultados
+
+La página `/resultados` presenta una galería interactiva de resultados quirúrgicos con las siguientes características:
+
+- **Mouse trail interactivo**: 20 imágenes médicas que siguen el cursor del usuario en una cuadrícula dinámica, ofreciendo una experiencia de navegación visual única
+- **Grid de procedimientos**: 8 tarjetas linkeables para lipoescultura lipogym, mamoplastia, abdominoplastia, liposucción + pexia, rinoplastia, blefaroplastia, liposucción + aumento, lifting facial
+- **Estadísticas institucionales**: +200 cirugías realizadas, 98% tasa de éxito, +15 procedimientos al mes, +95% pacientes satisfechos
+- **FAQ de resultados**: Preguntas frecuentes sobre realismo de imágenes, proceso quirúrgico, recuperación y resultados esperados
+- **CTA**: Enlace a WhatsApp y sección de galería
 
 ## Instalaciones
 

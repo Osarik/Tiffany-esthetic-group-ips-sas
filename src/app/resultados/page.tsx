@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Container from "@/components/ui/Container";
 import ImageMouseTrail3 from "@/components/ui/image-mousetrail-without-component";
+import ResultadosGrid from "@/components/ui/resultados-grid";
 
 const whatsappUrl =
   "https://wa.me/573202703522?text=Hola%2C%20quiero%20conocer%20resultados%20de%20procedimientos%20en%20Tiffany%20Esthetic%20Group.";
@@ -60,34 +60,55 @@ export const metadata: Metadata = {
 };
 
 export default function ResultadosPage() {
+  const resultadosSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "@id": "https://www.tiffanyesthetic.com/resultados/#webpage",
+        url: "https://www.tiffanyesthetic.com/resultados",
+        name: "Resultados Reales de Cirugía Plástica | Tiffany Esthetic Group IPS",
+        description:
+          "Galería de resultados quirúrgicos reales en Cali, Colombia. Antes y después de lipoescultura, rinoplastia, blefaroplastia, abdominoplastia y más procedimientos estéticos.",
+        about: { "@id": "https://www.tiffanyesthetic.com/#business" },
+        mainContentOfPage: { "@type": "ImageGallery", about: { "@id": "https://www.tiffanyesthetic.com/#business" } },
+      },
+      {
+        "@type": "ImageGallery",
+        "@id": "https://www.tiffanyesthetic.com/resultados/#gallery",
+        url: "https://www.tiffanyesthetic.com/resultados",
+        about: { "@id": "https://www.tiffanyesthetic.com/#business" },
+      },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(resultadosSchema) }} />
       <article>
         {/* ─── HERO ─────────────────────────────────────────────── */}
-        <section className="relative bg-gradient-to-br from-[#0F4A44] via-[#1B6E66] to-[#2FA79C] pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
-          <div className="absolute inset-0 opacity-[0.07]" aria-hidden="true"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            }} />
+        <section className="relative h-[70vh] md:h-[80vh] min-h-[500px] md:min-h-[600px] flex items-center overflow-hidden">
+          <ImageMouseTrail3 background />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none z-10" />
           <Container>
-            <div className="max-w-3xl relative z-10">
-              <div className="flex items-center gap-2 mb-5">
+            <div className="max-w-3xl relative z-20 pointer-events-none">
+              <div className="flex items-center gap-2 mb-5 pointer-events-auto">
                 <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                <span className="text-white/70 font-body font-semibold text-xs tracking-[0.2em] uppercase">
+                <span className="text-white/70 font-body font-semibold text-xs tracking-[0.2em] uppercase mix-blend-difference">
                   Resultados reales · Pacientes reales
                 </span>
               </div>
-              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1]">
+              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] pointer-events-auto mix-blend-difference">
                 Resultados que{" "}
-                <span className="text-accent-light">hablan por sí solos</span>
+                <span className="text-white">hablan por sí solos</span>
               </h1>
-              <p className="mt-6 text-base md:text-lg text-white/75 font-body leading-relaxed max-w-xl">
+              <p className="mt-6 text-base md:text-lg text-white font-body leading-relaxed max-w-xl pointer-events-auto mix-blend-difference">
                 Cada procedimiento en Tiffany Esthetic Group es realizado por
                 cirujanos plásticos miembros de la SCCP en instalaciones
                 habilitadas por la Secretaría de Salud. Explora resultados
                 reales de nuestros pacientes.
               </p>
-              <div className="mt-8 flex flex-col sm:flex-row gap-3">
+              <div className="mt-8 flex flex-col sm:flex-row gap-3 pointer-events-auto">
                 <a
                   href={whatsappUrl}
                   target="_blank"
@@ -100,10 +121,10 @@ export default function ResultadosPage() {
                   Solicitar información
                 </a>
                 <a
-                  href="#galeria"
-                  className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white font-body font-semibold px-8 py-3.5 rounded-full hover:bg-white/10 transition-all duration-300 text-base no-underline"
+                  href="#procedimientos"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-white/80 text-white font-body font-semibold px-8 py-3.5 rounded-full hover:bg-white/15 hover:border-white transition-all duration-300 text-base no-underline"
                 >
-                  Ver galería
+                  Ver procedimientos
                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <polyline points="6 9 12 15 18 9" />
                   </svg>
@@ -132,51 +153,24 @@ export default function ResultadosPage() {
           </Container>
         </section>
 
-        {/* ─── GALERÍA INTERACTIVA ────────────────────────────── */}
-        <section id="galeria" className="bg-white py-16 md:py-24">
-          <Container>
-            <ImageMouseTrail3 />
-          </Container>
-        </section>
-
         {/* ─── RESULTADOS POR PROCEDIMIENTO ────────────────────── */}
-        <section className="bg-[#FBFBF9] py-20 md:py-28">
+        <section id="procedimientos" className="bg-[#FBFBF9] py-20 md:py-28">
           <Container>
             <div className="text-center mb-14">
               <span className="inline-block text-primary font-body font-semibold text-xs tracking-[0.2em] uppercase mb-4 border border-primary/20 rounded-full px-4 py-1.5">
                 Procedimientos
               </span>
               <h2 className="font-heading font-bold text-3xl md:text-4xl text-text-dark leading-tight">
-                Resultados por{" "}
-                <span className="text-primary">procedimiento</span>
+                Nuestros{" "}
+                <span className="text-primary">procedimientos</span>
               </h2>
               <p className="mt-3 text-text-main/70 font-body text-base max-w-xl mx-auto">
                 Explora los resultados de cada tipo de cirugía plástica que
-                realizamos en nuestra IPS habilitada en Cali.
+                realizamos en nuestra IPS habilitada en Cali. Haz clic en
+                cada imagen para ver la galería.
               </p>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {procedures.map((p) => (
-                <Link
-                  key={p.slug}
-                  href={`/${p.slug}#resultados`}
-                  className="group p-6 rounded-2xl bg-white border border-silver/20 shadow-sm hover:shadow-lg hover:border-primary/20 transition-all duration-300 no-underline"
-                >
-                  <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <polygon points="23 7 16 12 23 17 23 7" />
-                      <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
-                    </svg>
-                  </div>
-                  <h3 className="font-heading font-bold text-text-dark text-sm leading-snug mb-2">
-                    {p.name}
-                  </h3>
-                  <p className="text-xs text-text-main/65 font-body leading-relaxed">
-                    {p.desc}
-                  </p>
-                </Link>
-              ))}
-            </div>
+            <ResultadosGrid procedures={procedures} />
           </Container>
         </section>
 

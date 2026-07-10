@@ -65,12 +65,21 @@ export const metadata: Metadata = {
     siteName: "Tiffany Esthetic Group",
     locale: "es_CO",
     type: "website",
+    images: [
+      {
+        url: "https://www.tiffanyesthetic.com/icon.svg",
+        width: 512,
+        height: 512,
+        alt: "Tiffany Esthetic Group - Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Tiffany Esthetic Group Ips SAS",
     description:
       "Cirugía plástica, servicios quirúrgicos, recuperación y farmacia habilitada en Cali.",
+    images: ["https://www.tiffanyesthetic.com/icon.svg"],
   },
 };
 

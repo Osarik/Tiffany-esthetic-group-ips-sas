@@ -3,7 +3,11 @@
 import { items } from '@/components/ui/image-mousetrail-without-component-utils/constant';
 import React, { createRef, useRef } from 'react';
 
-export default function ImageMouseTrail3() {
+type Props = {
+  background?: boolean;
+};
+
+export default function ImageMouseTrail3({ background = false }: Props) {
   const containerRef = useRef(null);
   const refs = useRef(items.map(() => createRef<HTMLImageElement>()));
 
@@ -50,12 +54,20 @@ export default function ImageMouseTrail3() {
       onMouseMove={handleOnMove}
       onTouchMove={(e) => handleOnMove(e.touches[0])}
       ref={containerRef}
-      className='grid place-content-center h-[500px] md:h-[600px] w-full bg-[#e0dfdf] relative overflow-hidden rounded-2xl'
+      className={
+        background
+          ? 'absolute inset-0 w-full h-full bg-[#e0dfdf] overflow-hidden'
+          : 'grid place-content-center h-[500px] md:h-[600px] w-full bg-[#e0dfdf] relative overflow-hidden rounded-2xl'
+      }
     >
       {items.map((item, index) => (
         <img
           key={item.src}
-          className="object-cover z-10 w-36 h-44 md:w-40 md:h-48 scale-0 opacity-0 data-[status='active']:scale-100 data-[status='active']:opacity-100 transition-transform duration-500 data-[status='active']:ease-out-expo absolute -translate-y-1/2 -translate-x-1/2"
+          className={
+            background
+              ? 'object-cover z-10 w-36 h-44 md:w-40 md:h-48 scale-0 opacity-0 data-[status=\'active\']:scale-100 data-[status=\'active\']:opacity-100 transition-transform duration-500 data-[status=\'active\']:ease-out-expo absolute -translate-y-1/2 -translate-x-1/2'
+              : 'object-cover z-10 w-36 h-44 md:w-40 md:h-48 scale-0 opacity-0 data-[status=\'active\']:scale-100 data-[status=\'active\']:opacity-100 transition-transform duration-500 data-[status=\'active\']:ease-out-expo absolute -translate-y-1/2 -translate-x-1/2'
+          }
           data-index={index}
           data-status='inactive'
           src={item.url}
@@ -63,19 +75,21 @@ export default function ImageMouseTrail3() {
           ref={refs.current[index]}
         />
       ))}
-      <article className='relative z-20 max-w-xl mx-auto text-center px-6'>
-        <p className="text-sm font-body font-semibold text-primary-dark tracking-wider uppercase mb-3">
-          Galería interactiva
-        </p>
-        <h2 className="font-heading text-3xl md:text-4xl font-bold text-text-dark leading-tight">
-          Resultados reales de{' '}
-          <span className="text-primary">nuestros pacientes</span>
-        </h2>
-        <p className="mt-4 text-sm md:text-base font-body text-text-main/70 leading-relaxed">
-          Mueve el cursor sobre esta sección para explorar nuestra galería
-          de resultados quirúrgicos.
-        </p>
-      </article>
+      {!background && (
+        <article className='relative z-20 max-w-xl mx-auto text-center px-6'>
+          <p className="text-sm font-body font-semibold text-primary-dark tracking-wider uppercase mb-3">
+            Galería interactiva
+          </p>
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-text-dark leading-tight">
+            Resultados reales de{' '}
+            <span className="text-primary">nuestros pacientes</span>
+          </h2>
+          <p className="mt-4 text-sm md:text-base font-body text-text-main/70 leading-relaxed">
+            Mueve el cursor sobre esta sección para explorar nuestra galería
+            de resultados quirúrgicos.
+          </p>
+        </article>
+      )}
     </section>
   );
 }

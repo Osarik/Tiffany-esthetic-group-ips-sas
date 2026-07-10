@@ -1,19 +1,46 @@
 # Tiffany Esthetic Group Ips SAS
 
-> Clínica de cirugía plástica y estética boutique en Cali, Colombia. Habilitada por la Secretaría de Salud. Más de 10 años transformando vidas.
+> Clínica boutique de cirugía plástica y estética en Cali, Colombia. Habilitada por la Secretaría de Salud. Tres salas de cirugía, farmacia habilitada y coordinación quirúrgica 24 horas.
 
-## Servicios principales
+## Servicios
 
-- **Cirugía Facial**: Rinoplastia, Blefaroplastia, Lifting Facial
-- **Cirugía Corporal**: Liposucción, Lipoescultura con Lipoinyección Glútea, Abdominoplastia, Mamoplastia (aumento, elevación)
-- **Cirugía de Contorno**: Liposucción + Pexia Mamaria, Liposucción + Aumento
+- **Liposucción VASER HD** — Contorno corporal de alta definición
+- **Lipoescultura con Lipoinyección Glútea (LIPOGYM)** — Escultura corporal + proyección glútea
+- **Abdominoplastia** — Tensado abdominal y eliminación de piel sobrante
+- **Mamoplastia** — Aumento, reducción y elevación mamaria
+- **Rinoplastia** — Remodelación nasal estética y funcional
+- **Blefaroplastia** — Rejuvenecimiento de la mirada
+- **Lifting Facial** — Estiramiento facial profundo
+- **Lipectomía** — Eliminación de exceso de piel y grasa
+- **Procedimientos combinados** — Liposucción + pexia mamaria, liposucción + aumento
 
-## Preguntas frecuentes
+## Galería de resultados (/resultados)
+
+- Galería interactiva de resultados quirúrgicos antes y después
+- 20 imágenes médicas con seguimiento del cursor (mouse trail)
+- 8 procedimientos linkeables con información detallada
+- Estadísticas de la clínica: Nº cirugías, tasa de éxito, procedimientos por mes, pacientes satisfechos
+- FAQ específica de resultados
+
+## Páginas
+
+- `/` — Landing page principal
+- `/resultados` — Galería interactiva de resultados reales
+- `/equipo` — Conoce a nuestro equipo médico
+- `/preguntas-frecuentes` — FAQ con categorías y lluvia de preguntas
+- `/politica-de-privacidad` — Tratamiento de datos personales (Ley 1581/2012)
+- `/terminos-y-condiciones` — Términos legales y descargo médico
+- `/derechos-y-deberes` — Derechos y deberes de los pacientes (Res. 434/2012)
+- `/politica-de-cookies` — Gestión de cookies y base legal
+- 12 sub-páginas de procedimientos quirúrgicos
+
+## Preguntas frecuentes clave
 
 - **¿La consulta inicial tiene costo?** No, la primera consulta es gratuita.
 - **¿La clínica está habilitada?** Sí, por la Secretaría de Salud. Cuenta con farmacia habilitada.
 - **¿Alquilan salas de cirugía?** Sí, tres salas disponibles para cirujanos plásticos.
 - **¿Dónde están?** Cra 85c # 13a1-25, Comuna 17, Cali, Colombia.
+- **¿Cuánto toma la recuperación?** Liposucción 1-2 semanas, abdominoplastia 2-4 semanas, rinoplastia 1-2 semanas.
 
 ## Contacto
 
@@ -28,3 +55,10 @@
 - Cirujanos certificados por la Sociedad Colombiana de Cirugía Plástica
 - Especialistas con formación nacional e internacional
 - Coordinación quirúrgica 24 horas
+
+## Información legal
+
+- Razón social: Tiffany Esthetic Group Ips SAS — NIT 901634870
+- Tipo: IPS habilitada por Secretaría de Salud
+- Datos de contacto: tiffanyestheticgroup@gmail.com
+- Representante legal: Sandra Milena Gomez Vasquez

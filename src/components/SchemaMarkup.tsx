@@ -5,15 +5,16 @@ export default function SchemaMarkup() {
       {
         "@type": ["MedicalOrganization", "LocalBusiness"],
         "@id": "https://www.tiffanyesthetic.com/#business",
+        additionalType: "https://schema.org/MedicalClinic",
         name: "Tiffany Esthetic Group Ips SAS",
         description:
           "Institución habilitada por la Secretaría de Salud con salas de cirugía, área de recuperación, farmacia habilitada y personal calificado para procedimientos de cirugía plástica y estética en Cali, Colombia.",
         url: "https://www.tiffanyesthetic.com",
         telephone: "+57-3202703522",
-        email: "info@tiffanyesthetic.com",
+        email: "tiffanyestheticgroup@gmail.com",
         medicalSpecialty: ["PlasticSurgery", "CosmeticSurgery"],
         priceRange: "$$$",
-        image: "https://www.tiffanyesthetic.com/images/clinic-hero.jpg",
+        image: "https://www.tiffanyesthetic.com/icon.svg",
         address: {
           "@type": "PostalAddress",
           addressLocality: "Cali",
@@ -101,15 +102,36 @@ export default function SchemaMarkup() {
                 name: "Blefaroplastia",
               },
             },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Lifting Facial",
-              },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Lifting Facial",
             },
-          ],
-        },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Lipectomía",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Liposucción + Pexia Mamaria",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Liposucción + Aumento Mamario",
+            },
+          },
+        ],
+      },
       },
       {
         "@type": "MedicalWebPage",
@@ -119,6 +141,19 @@ export default function SchemaMarkup() {
         description:
           "Clínica boutique de cirugía plástica y estética en Cali, Colombia. Habilitada por la Secretaría de Salud. Especialistas en lipoescultura, rinoplastia, blefaroplastia y más.",
         about: { "@id": "https://www.tiffanyesthetic.com/#business" },
+      },
+      {
+        "@type": "MedicalWebPage",
+        "@id": "https://www.tiffanyesthetic.com/resultados/#webpage",
+        url: "https://www.tiffanyesthetic.com/resultados",
+        name: "Resultados Reales de Cirugía Plástica | Tiffany Esthetic Group IPS",
+        description:
+          "Galería de resultados quirúrgicos reales en Cali, Colombia. Antes y después de lipoescultura, rinoplastia, blefaroplastia, abdominoplastia y más procedimientos estéticos.",
+        about: { "@id": "https://www.tiffanyesthetic.com/#business" },
+        mainContentOfPage: {
+          "@type": "ImageGallery",
+          about: { "@id": "https://www.tiffanyesthetic.com/#business" },
+        },
       },
       {
         "@type": "FAQPage",
