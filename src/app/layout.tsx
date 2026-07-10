@@ -7,6 +7,7 @@ import Logo from "@/components/Logo";
 import SplashWrapper from "@/components/SplashWrapper";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import GoogleTranslate from "@/components/GoogleTranslate";
+import BackToTop from "@/components/BackToTop";
 import MobileNav from "@/components/MobileNav";
 import "./globals.css";
 
@@ -398,6 +399,7 @@ export default function RootLayout({
           </footer>
           <WhatsAppButton />
           <GoogleTranslate />
+          <BackToTop />
           <div id="google_translate_element" className="hidden" />
           <Script
             id="google-translate-init"

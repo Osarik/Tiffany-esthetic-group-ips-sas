@@ -3,6 +3,7 @@ import ScrollExpandMedia from "@/components/ui/scroll-expansion-hero";
 import Container from "@/components/ui/Container";
 import AnimateInView, { StaggerGrid, StaggerItem } from "@/components/ui/AnimateInView";
 import { team } from "@/data/team";
+import ForceTopOnMount from "@/components/ForceTopOnMount";
 
 const whatsappUrl =
   "https://wa.me/573202703522?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n%20m%C3%A9dica%20en%20Tiffany%20Esthetic%20Group.";
@@ -143,6 +144,7 @@ export const metadata: Metadata = {
 export default function EquipoPage() {
   return (
     <>
+      <ForceTopOnMount />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
