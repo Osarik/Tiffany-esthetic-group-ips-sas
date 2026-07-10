@@ -343,46 +343,50 @@ export default function EquipoPage() {
                     </div>
                   </div>
 
-                  <div className="flex gap-4 p-5 rounded-xl bg-[#FBFBF9] border border-silver/20 shadow-sm hover:shadow-md transition-all duration-300">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-                        <polyline points="22 4 12 14.01 9 11.01" />
-                      </svg>
+                  <a href="https://cirugiaplastica.org.co/" target="_blank" rel="noopener noreferrer" className="block no-underline">
+                    <div className="flex gap-4 p-5 rounded-xl bg-[#FBFBF9] border border-silver/20 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 cursor-pointer">
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                          <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                          <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 className="font-heading font-bold text-text-dark text-sm">
+                          SCCP — Sociedad Colombiana de Cirugía Plástica
+                        </h3>
+                        <p className="text-xs text-text-main/70 font-body mt-1 leading-relaxed">
+                          Nuestros cirujanos plásticos son miembros de número de la
+                          SCCP (fundada en 1956), lo que acredita su especialidad
+                          y su compromiso con la actualización científica y el
+                          código de ética de la Sociedad.
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-heading font-bold text-text-dark text-sm">
-                        SCCP — Sociedad Colombiana de Cirugía Plástica
-                      </h3>
-                      <p className="text-xs text-text-main/70 font-body mt-1 leading-relaxed">
-                        Nuestros cirujanos plásticos son miembros de número de la
-                        SCCP (fundada en 1956), lo que acredita su especialidad
-                        y su compromiso con la actualización científica y el
-                        código de ética de la Sociedad.
-                      </p>
-                    </div>
-                  </div>
+                  </a>
 
-                  <div className="flex gap-4 p-5 rounded-xl bg-[#FBFBF9] border border-silver/20 shadow-sm hover:shadow-md transition-all duration-300">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                        <line x1="8" y1="21" x2="16" y2="21" />
-                        <line x1="12" y1="17" x2="12" y2="21" />
-                      </svg>
+                  <a href="https://scare.org.co/" target="_blank" rel="noopener noreferrer" className="block no-underline">
+                    <div className="flex gap-4 p-5 rounded-xl bg-[#FBFBF9] border border-silver/20 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 cursor-pointer">
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                          <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                          <line x1="8" y1="21" x2="16" y2="21" />
+                          <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 className="font-heading font-bold text-text-dark text-sm">
+                          S.C.A.R.E. — Consejo de Anestesiología
+                        </h3>
+                        <p className="text-xs text-text-main/70 font-body mt-1 leading-relaxed">
+                          Anestesiólogos miembros de la Sociedad Colombiana de
+                          Anestesiología y Reanimación, con recertificación
+                          periódica según los estándares del C.A.M.E.C. (Consejo
+                          Colombiano de Acreditación y Recertificación Médica).
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-heading font-bold text-text-dark text-sm">
-                        S.C.A.R.E. — Consejo de Anestesiología
-                      </h3>
-                      <p className="text-xs text-text-main/70 font-body mt-1 leading-relaxed">
-                        Anestesiólogos miembros de la Sociedad Colombiana de
-                        Anestesiología y Reanimación, con recertificación
-                        periódica según los estándares del C.A.M.E.C. (Consejo
-                        Colombiano de Acreditación y Recertificación Médica).
-                      </p>
-                    </div>
-                  </div>
+                  </a>
 
                   <div className="flex gap-4 p-5 rounded-xl bg-[#FBFBF9] border border-silver/20 shadow-sm hover:shadow-md transition-all duration-300">
                     <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
