@@ -243,31 +243,41 @@ export default function EquipoPage() {
             </AnimateInView>
 
             <StaggerGrid className="grid md:grid-cols-3 gap-6 lg:gap-8" staggerDelay={0.12}>
-              {team.map((member, i) => (
+              {team.map((member, i) => {
+                const isLinked = i === 0 || i === 1;
+                const href = i === 0 ? "https://cirugiaplastica.org.co/" : "https://scare.org.co/";
+                const Wrapper = isLinked
+                  ? ({ children }: { children: React.ReactNode }) => (
+                      <a href={href} target="_blank" rel="noopener noreferrer" className="block group bg-white rounded-2xl overflow-hidden border border-silver/20 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-500 no-underline">
+                        {children}
+                      </a>
+                    )
+                  : ({ children }: { children: React.ReactNode }) => (
+                      <div className="group bg-white rounded-2xl overflow-hidden border border-silver/20 shadow-sm hover:shadow-xl transition-all duration-500">
+                        {children}
+                      </div>
+                    );
+                return (
                 <StaggerItem key={member.name}>
-                  <div className="group bg-white rounded-2xl overflow-hidden border border-silver/20 shadow-sm hover:shadow-xl transition-all duration-500">
+                  <Wrapper>
                     <div className="relative h-56 bg-gradient-to-br from-primary/10 via-primary/5 to-secondary/10 overflow-hidden">
                       <div className="absolute inset-0 flex items-center justify-center">
                         {i === 0 ? (
-                          <a href="https://cirugiaplastica.org.co/" target="_blank" rel="noopener noreferrer" className="block">
-                            <div className="w-28 h-28 rounded-full bg-white shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-500 p-3 animate-spin-3d">
-                              <img
-                                src="https://cirugiaplastica.org.co/wp-content/uploads/2022/07/logo-sccp.png"
-                                alt="Logo Sociedad Colombiana de Cirugía Plástica"
-                                className="w-full h-full object-contain"
-                              />
-                            </div>
-                          </a>
+                          <div className="w-28 h-28 rounded-full bg-white shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-500 p-3 animate-spin-3d">
+                            <img
+                              src="https://cirugiaplastica.org.co/wp-content/uploads/2022/07/logo-sccp.png"
+                              alt="Logo Sociedad Colombiana de Cirugía Plástica"
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
                         ) : i === 1 ? (
-                          <a href="https://scare.org.co/" target="_blank" rel="noopener noreferrer" className="block">
-                            <div className="w-28 h-28 rounded-full bg-white shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-500 p-3 animate-spin-3d">
-                              <img
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoFCeO86ByR6Xp9c02HTjR8tk7oSjy-m-Qko64JVRwsA&s=10"
-                                alt="Logo Sociedad Colombiana de Anestesiología y Reanimación"
-                                className="w-full h-full object-contain"
-                              />
-                            </div>
-                          </a>
+                          <div className="w-28 h-28 rounded-full bg-white shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-500 p-3 animate-spin-3d">
+                            <img
+                              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoFCeO86ByR6Xp9c02HTjR8tk7oSjy-m-Qko64JVRwsA&s=10"
+                              alt="Logo Sociedad Colombiana de Anestesiología y Reanimación"
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
                         ) : (
                           <div className="w-24 h-24 rounded-full bg-white/80 backdrop-blur-sm shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
                             <svg className="w-12 h-12 text-primary/60" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -283,27 +293,18 @@ export default function EquipoPage() {
                       <h3 className="font-heading font-bold text-text-dark text-lg">
                         {member.name}
                       </h3>
-                      {i === 0 ? (
-                        <a href="https://cirugiaplastica.org.co/" target="_blank" rel="noopener noreferrer" className="text-sm font-body font-semibold text-primary block mt-1.5 leading-snug hover:text-primary-dark transition-colors no-underline">
-                          {member.title}
-                        </a>
-                      ) : i === 1 ? (
-                        <a href="https://scare.org.co/" target="_blank" rel="noopener noreferrer" className="text-sm font-body font-semibold text-primary block mt-1.5 leading-snug hover:text-primary-dark transition-colors no-underline">
-                          {member.title}
-                        </a>
-                      ) : (
-                        <span className="text-sm font-body font-semibold text-primary block mt-1.5 leading-snug">
-                          {member.title}
-                        </span>
-                      )}
+                      <span className="text-sm font-body font-semibold text-primary block mt-1.5 leading-snug">
+                        {member.title}
+                      </span>
                       <div className="w-10 h-0.5 bg-primary/20 mx-auto my-4 rounded-full" />
                       <p className="text-sm text-text-main/70 font-body leading-relaxed">
                         {member.description}
                       </p>
                     </div>
-                  </div>
+                  </Wrapper>
                 </StaggerItem>
-              ))}
+                );
+              })}
             </StaggerGrid>
           </Container>
         </section>
