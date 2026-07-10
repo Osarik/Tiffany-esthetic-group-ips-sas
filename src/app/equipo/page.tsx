@@ -281,9 +281,19 @@ export default function EquipoPage() {
                       <h3 className="font-heading font-bold text-text-dark text-lg">
                         {member.name}
                       </h3>
-                      <span className="text-sm font-body font-semibold text-primary block mt-1.5 leading-snug">
-                        {member.title}
-                      </span>
+                      {i === 0 ? (
+                        <a href="https://cirugiaplastica.org.co/" target="_blank" rel="noopener noreferrer" className="text-sm font-body font-semibold text-primary block mt-1.5 leading-snug hover:text-primary-dark transition-colors no-underline">
+                          {member.title}
+                        </a>
+                      ) : i === 1 ? (
+                        <a href="https://scare.org.co/" target="_blank" rel="noopener noreferrer" className="text-sm font-body font-semibold text-primary block mt-1.5 leading-snug hover:text-primary-dark transition-colors no-underline">
+                          {member.title}
+                        </a>
+                      ) : (
+                        <span className="text-sm font-body font-semibold text-primary block mt-1.5 leading-snug">
+                          {member.title}
+                        </span>
+                      )}
                       <div className="w-10 h-0.5 bg-primary/20 mx-auto my-4 rounded-full" />
                       <p className="text-sm text-text-main/70 font-body leading-relaxed">
                         {member.description}
