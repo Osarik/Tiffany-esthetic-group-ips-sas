@@ -248,9 +248,9 @@ export default function EquipoPage() {
                       <div className="absolute inset-0 flex items-center justify-center">
                         {i === 0 ? (
                           <a href="https://cirugiaplastica.org.co/" target="_blank" rel="noopener noreferrer" className="block">
-                            <div className="w-28 h-28 rounded-full bg-white shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-500 p-3">
+                            <div className="w-28 h-28 rounded-full bg-white shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-500 p-3 animate-spin-3d">
                               <img
-                                src="https://www.appsheet.com/image/getimageurl?appName=SCCPAPP-696038429&tableName=Repositorio&fileName=Repositorio_Images/e2525752.Imagen.162954.png"
+                                src="https://cirugiaplastica.org.co/wp-content/uploads/2022/07/logo-sccp.png"
                                 alt="Logo Sociedad Colombiana de Cirugía Plástica"
                                 className="w-full h-full object-contain"
                               />
@@ -258,9 +258,9 @@ export default function EquipoPage() {
                           </a>
                         ) : i === 1 ? (
                           <a href="https://scare.org.co/" target="_blank" rel="noopener noreferrer" className="block">
-                            <div className="w-28 h-28 rounded-full bg-white shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-500 p-3">
+                            <div className="w-28 h-28 rounded-full bg-white shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-500 p-3 animate-spin-3d">
                               <img
-                                src="https://scare.org.co/wp-content/uploads/sociedad-colombiana-de-anestesiologia-y-reanimacion-scare-logo-300x82.avif"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoFCeO86ByR6Xp9c02HTjR8tk7oSjy-m-Qko64JVRwsA&s=10"
                                 alt="Logo Sociedad Colombiana de Anestesiología y Reanimación"
                                 className="w-full h-full object-contain"
                               />
