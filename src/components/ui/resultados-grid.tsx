@@ -98,7 +98,7 @@ export default function ResultadosGrid({ procedures }: Props) {
                     hidden: { opacity: 0, y: 30 },
                     visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
                   }}
-                  className="relative aspect-square w-full overflow-hidden group cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-none bg-white border-8 border-primary transition-all duration-300"
+                  className="relative aspect-square w-full overflow-hidden group cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-none bg-white border-[16px] border-primary transition-all duration-300"
                   style={item.shape === "circle" ? { borderRadius: "50%" } : { borderRadius: "14px" }}
                   aria-label={`Ver galería de ${proc.name}`}
                 >

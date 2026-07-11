@@ -56,7 +56,7 @@ export default function ImageMouseTrail3({ background = false }: Props) {
       ref={containerRef}
       className={
         background
-          ? 'absolute inset-0 w-full h-full bg-[#e0dfdf] overflow-hidden'
+          ? 'col-start-1 row-start-1 w-full h-full bg-[#e0dfdf] overflow-hidden'
           : 'grid place-content-center h-[500px] md:h-[600px] w-full bg-[#e0dfdf] relative overflow-hidden rounded-2xl'
       }
     >

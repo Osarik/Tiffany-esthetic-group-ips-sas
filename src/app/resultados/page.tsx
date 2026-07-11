@@ -87,22 +87,23 @@ export default function ResultadosPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(resultadosSchema) }} />
       <article>
         {/* ─── HERO ─────────────────────────────────────────────── */}
-        <section className="relative h-[70vh] md:h-[80vh] min-h-[500px] md:min-h-[600px] flex items-center overflow-hidden">
+        <section className="grid grid-cols-1 grid-rows-1 h-[70vh] md:h-[80vh] min-h-[500px] md:min-h-[600px] overflow-hidden">
           <ImageMouseTrail3 background />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none z-10" />
-          <Container>
-            <div className="max-w-3xl relative z-20 pointer-events-none">
-              <div className="flex items-center gap-2 mb-5 pointer-events-auto">
-                <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                <span className="text-white/70 font-body font-semibold text-xs tracking-[0.2em] uppercase mix-blend-difference">
-                  Resultados reales · Pacientes reales
-                </span>
-              </div>
-              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] pointer-events-auto mix-blend-difference">
-                Resultados que{" "}
-                <span className="text-white">hablan por sí solos</span>
-              </h1>
-              <p className="mt-6 text-base md:text-lg text-white font-body leading-relaxed max-w-xl pointer-events-auto mix-blend-difference">
+          <div className="col-start-1 row-start-1 z-10 flex items-center pointer-events-none">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none" />
+            <Container>
+              <div className="max-w-3xl">
+                <div className="flex items-center gap-2 mb-5">
+                  <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                  <span className="text-white/70 font-body font-semibold text-xs tracking-[0.2em] uppercase mix-blend-difference">
+                    Resultados reales · Pacientes reales
+                  </span>
+                </div>
+                <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mix-blend-difference">
+                  Resultados que{" "}
+                  <span className="text-white">hablan por sí solos</span>
+                </h1>
+                <p className="mt-6 text-base md:text-lg text-white font-body leading-relaxed max-w-xl mix-blend-difference">
                 Cada procedimiento en Tiffany Esthetic Group es realizado por
                 cirujanos plásticos miembros de la SCCP en instalaciones
                 habilitadas por la Secretaría de Salud. Explora resultados
@@ -132,6 +133,7 @@ export default function ResultadosPage() {
               </div>
             </div>
           </Container>
+          </div>
         </section>
 
         {/* ─── STATS ──────────────────────────────────────────── */}
