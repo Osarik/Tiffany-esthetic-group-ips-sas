@@ -21,11 +21,14 @@ export default function ImageMouseTrail3({ background = false }: Props) {
     image.style.left = `${relativeX}px`;
     image.style.top = `${relativeY}px`;
 
-    image.style.zIndex = (globalIndex % items.length) + 1;
-
+    image.style.zIndex = 50 + (globalIndex % items.length);
+    image.style.scale = '1';
+    image.style.opacity = '1';
     image.dataset.status = 'active';
     setTimeout(() => {
       image.dataset.status = 'inactive';
+      image.style.scale = '0';
+      image.style.opacity = '0';
     }, 1000);
     last = { x, y };
   };
@@ -37,7 +40,7 @@ export default function ImageMouseTrail3({ background = false }: Props) {
     image.dataset.status = 'inactive';
   };
   const handleOnMove = (e) => {
-    if (distanceFromLast(e.clientX, e.clientY) > window.innerWidth / 20) {
+    if (distanceFromLast(e.clientX, e.clientY) > window.innerWidth / 40) {
       const lead = refs.current[globalIndex % refs.current.length].current;
 
       const tail = refs.current[(globalIndex - 5) % refs.current.length]?.current;
@@ -56,7 +59,7 @@ export default function ImageMouseTrail3({ background = false }: Props) {
       ref={containerRef}
       className={
         background
-          ? 'col-start-1 row-start-1 w-full h-full bg-[#e0dfdf] overflow-hidden'
+          ? 'relative w-full h-full overflow-hidden'
           : 'grid place-content-center h-[500px] md:h-[600px] w-full bg-[#e0dfdf] relative overflow-hidden rounded-2xl'
       }
     >
@@ -65,7 +68,7 @@ export default function ImageMouseTrail3({ background = false }: Props) {
           key={item.src}
           className={
             background
-              ? 'object-cover z-10 w-36 h-44 md:w-40 md:h-48 scale-0 opacity-0 data-[status=\'active\']:scale-100 data-[status=\'active\']:opacity-100 transition-transform duration-500 data-[status=\'active\']:ease-out-expo absolute -translate-y-1/2 -translate-x-1/2'
+              ? 'object-cover w-36 h-44 md:w-40 md:h-48 scale-0 opacity-0 absolute -translate-y-1/2 -translate-x-1/2 pointer-events-none transition-all duration-500 shadow-2xl shadow-black/40'
               : 'object-cover z-10 w-36 h-44 md:w-40 md:h-48 scale-0 opacity-0 data-[status=\'active\']:scale-100 data-[status=\'active\']:opacity-100 transition-transform duration-500 data-[status=\'active\']:ease-out-expo absolute -translate-y-1/2 -translate-x-1/2'
           }
           data-index={index}

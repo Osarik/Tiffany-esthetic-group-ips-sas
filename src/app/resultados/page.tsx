@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import ImageMouseTrail3 from "@/components/ui/image-mousetrail-without-component";
 import ResultadosGrid from "@/components/ui/resultados-grid";
+import { HeroTextContainer, HeroTextChild } from "@/components/ui/hero-text-animated";
 
 const whatsappUrl =
   "https://wa.me/573202703522?text=Hola%2C%20quiero%20conocer%20resultados%20de%20procedimientos%20en%20Tiffany%20Esthetic%20Group.";
@@ -87,29 +88,43 @@ export default function ResultadosPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(resultadosSchema) }} />
       <article>
         {/* ─── HERO ─────────────────────────────────────────────── */}
-        <section className="grid grid-cols-1 grid-rows-1 h-[70vh] md:h-[80vh] min-h-[500px] md:min-h-[600px] overflow-hidden">
+        <section className="relative h-[70vh] md:h-[80vh] min-h-[500px] md:min-h-[600px] overflow-hidden">
+          <img
+            src="/images/Combine_with_logo_202607111802.jpeg"
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none z-[1]" />
           <ImageMouseTrail3 background />
-          <div className="col-start-1 row-start-1 z-10 flex items-center pointer-events-none">
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 flex items-center pointer-events-none z-40">
             <Container>
               <div className="max-w-3xl">
-                <div className="flex items-center gap-2 mb-5">
-                  <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                  <span className="text-white/70 font-body font-semibold text-xs tracking-[0.2em] uppercase mix-blend-difference">
-                    Resultados reales · Pacientes reales
-                  </span>
-                </div>
-                <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mix-blend-difference">
-                  Resultados que{" "}
-                  <span className="text-white">hablan por sí solos</span>
-                </h1>
-                <p className="mt-6 text-base md:text-lg text-white font-body leading-relaxed max-w-xl mix-blend-difference">
-                Cada procedimiento en Tiffany Esthetic Group es realizado por
-                cirujanos plásticos miembros de la SCCP en instalaciones
-                habilitadas por la Secretaría de Salud. Explora resultados
-                reales de nuestros pacientes.
-              </p>
-              <div className="mt-8 flex flex-col sm:flex-row gap-3 pointer-events-auto">
+                <HeroTextContainer>
+                  <HeroTextChild>
+                    <div className="flex items-center gap-2 mb-5">
+                      <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                      <span className="text-white/70 font-body font-semibold text-xs tracking-[0.2em] uppercase mix-blend-difference">
+                        Resultados reales · Pacientes reales
+                      </span>
+                    </div>
+                  </HeroTextChild>
+                  <HeroTextChild>
+                    <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mix-blend-difference">
+                      Resultados que{" "}
+                      <span className="text-white">hablan por sí solos</span>
+                    </h1>
+                  </HeroTextChild>
+                  <HeroTextChild>
+                    <p className="mt-6 text-base md:text-lg text-white font-body leading-relaxed max-w-xl mix-blend-difference">
+                    Cada procedimiento en Tiffany Esthetic Group es realizado por
+                    cirujanos plásticos miembros de la SCCP en instalaciones
+                    habilitadas por la Secretaría de Salud. Explora resultados
+                    reales de nuestros pacientes.
+                  </p>
+                  </HeroTextChild>
+                  <HeroTextChild>
+                    <div className="mt-8 flex flex-col sm:flex-row gap-3 pointer-events-auto">
                 <a
                   href={whatsappUrl}
                   target="_blank"
@@ -131,7 +146,9 @@ export default function ResultadosPage() {
                   </svg>
                 </a>
               </div>
-            </div>
+            </HeroTextChild>
+            </HeroTextContainer>
+          </div>
           </Container>
           </div>
         </section>

@@ -127,6 +127,11 @@
     100% { transform: perspective(800px) rotateY(360deg); }
   }
 
+  @keyframes navbarFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
   .animate-spin-3d {
     animation: spin-3d 10s linear infinite;
   }

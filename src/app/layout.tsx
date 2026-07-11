@@ -108,7 +108,8 @@ export default function RootLayout({
           </a>
 
           <nav
-            className="fixed top-0 left-0 right-0 z-40 bg-white/80 backdrop-blur-md border-b border-[rgba(34,50,49,0.08)]"
+            className="fixed top-0 left-0 right-0 z-[100] bg-white/80 backdrop-blur-md border-b border-[rgba(34,50,49,0.08)]"
+            style={{ animation: "navbarFadeIn 1s cubic-bezier(0.33, 1, 0.68, 1) 1.4s both" }}
             role="navigation"
             aria-label="Navegación principal"
           >
