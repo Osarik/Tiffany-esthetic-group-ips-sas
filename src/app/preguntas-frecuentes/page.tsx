@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import AnimateInView, { StaggerGrid, StaggerItem } from "@/components/ui/AnimateInView";
 import { faqs } from "@/data/faqs";
+import ComplaintForm from "@/components/ui/complaint-form";
 
 const whatsappUrl =
   "https://wa.me/573202703522?text=Hola%2C%20tengo%20una%20consulta%20sobre%20los%20procedimientos%20de%20Tiffany%20Esthetic%20Group.";
@@ -436,6 +437,86 @@ export default function FAQsPage() {
             </div>
           </Container>
         </AnimateInView>
+
+        {/* ─── QUEJAS Y RECLAMOS ─────────────────────────────── */}
+        <section className="bg-[#FBFBF9] py-20 md:py-28">
+          <Container>
+            <div className="max-w-4xl mx-auto">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 rounded-xl bg-[#2FA79C]/10 flex items-center justify-center shrink-0">
+                  <svg className="w-5 h-5 text-[#2FA79C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="16" y1="13" x2="8" y2="13" />
+                    <line x1="16" y1="17" x2="8" y2="17" />
+                    <polyline points="10 9 9 9 8 9" />
+                  </svg>
+                </div>
+                <span className="text-[#2FA79C] font-body font-semibold text-xs tracking-[0.2em] uppercase">
+                  Ley 1480 de 2011 · SuperSalud
+                </span>
+              </div>
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-[#223231] leading-tight mt-2">
+                Quejas, reclamos y sugerencias
+              </h2>
+              <p className="mt-3 text-[#223231]/60 font-body leading-relaxed max-w-2xl">
+                En Tiffany Esthetic Group IPS valoramos tu opinión. Este canal está
+                habilitado para recibir tus quejas, reclamos, sugerencias o
+                felicitaciones, dando cumplimiento a la Ley 1480 de 2011 y las
+                circulares de la Superintendencia Nacional de Salud.
+              </p>
+
+              <div className="mt-12 grid lg:grid-cols-3 gap-10">
+                <div className="lg:col-span-2">
+                  <ComplaintForm />
+                </div>
+
+                <aside className="space-y-6 text-sm font-body text-[#223231]/70">
+                  <div className="bg-white rounded-2xl p-6 border border-[#2FA79C]/10 shadow-sm">
+                    <h3 className="font-heading font-bold text-[#223231] text-base mb-3">Información de contacto</h3>
+                    <div className="space-y-4">
+                      <div>
+                        <p className="font-semibold text-[#223231] text-xs uppercase tracking-wider">Correo</p>
+                        <a href="mailto:tiffanyestheticgroup@gmail.com" className="text-[#2FA79C] hover:underline">
+                          tiffanyestheticgroup@gmail.com
+                        </a>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-[#223231] text-xs uppercase tracking-wider">Teléfono</p>
+                        <p>+57 320 270 3522</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-[#223231] text-xs uppercase tracking-wider">Dirección</p>
+                        <p>Cra 85c #13a1-25, Comuna 17<br />Cali, Valle del Cauca</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-[#223231] text-xs uppercase tracking-wider">Horario de atención</p>
+                        <p>Lun–Vie: 8:00 AM – 6:00 PM<br />Sáb: 8:00 AM – 1:00 PM</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-2xl p-6 border border-[#2FA79C]/10 shadow-sm">
+                    <h3 className="font-heading font-bold text-[#223231] text-base mb-2">Términos legales</h3>
+                    <p className="leading-relaxed">
+                      Daremos respuesta dentro de los 15 días hábiles siguientes a la
+                      recepción de tu queja o reclamo, conforme a la Ley 1480 de 2011
+                      (Estatuto del Consumidor) y las circulares externas de la
+                      Superintendencia Nacional de Salud.
+                    </p>
+                    <p className="mt-3 leading-relaxed">
+                      Tus datos personales serán tratados de acuerdo con nuestra{" "}
+                      <a href="/politica-de-privacidad" className="text-[#2FA79C] hover:underline">
+                        política de privacidad
+                      </a>{" "}
+                      y la Ley 1581 de 2012.
+                    </p>
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </Container>
+        </section>
       </article>
 
       <footer className="bg-[#223231] text-white/60 py-8">
