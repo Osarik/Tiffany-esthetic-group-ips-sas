@@ -267,15 +267,21 @@ export default function BlefaroplastiaPage() {
       />
 
       <article>
-        <section className="relative bg-gradient-to-br from-[#0F4A44] via-[#1B6E66] to-[#2FA79C] pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
-          <div
-            className="absolute inset-0 opacity-10"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 25% 50%, rgba(255,255,255,0.15) 0%, transparent 50%), radial-gradient(circle at 75% 50%, rgba(255,255,255,0.1) 0%, transparent 50%)",
-            }}
-            aria-hidden="true"
-          />
+        <section className="relative bg-[#0F4A44] pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+          <div className="absolute inset-0" aria-hidden="true">
+            <img
+              src="https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830679/ChatGPT_Image_11_jul_2026_11_26_18_p.m._cfhfki.png"
+              alt=""
+              className="w-full h-full object-cover"
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(to right, #0F4A44 0%, #0F4A44 25%, rgba(27,110,102,0.6) 50%, rgba(47,167,156,0.25) 70%, transparent 100%)",
+              }}
+            />
+          </div>
           <Container>
             <div className="relative max-w-3xl">
               <span className="inline-block text-white/70 font-body font-semibold text-xs tracking-[0.2em] uppercase mb-4 border border-white/20 rounded-full px-4 py-1.5">

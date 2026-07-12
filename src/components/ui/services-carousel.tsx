@@ -30,7 +30,7 @@ const serviceIcons: Record<string, React.ReactNode> = {
 
 const serviceImages: Record<string, string> = {
   lipoescultura:
-    "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&h=1000&fit=crop",
+    "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783832108/ChatGPT_Image_11_jul_2026_11_37_31_p.m._mwqeu8.png",
   "liposuccion-lipectomia":
     "https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=800&h=1000&fit=crop",
   "liposuccion-pexia-mamaria":
@@ -40,11 +40,11 @@ const serviceImages: Record<string, string> = {
   pexia:
     "https://images.unsplash.com/photo-1527613426441-4da17471b66d?q=80&w=800&h=1000&fit=crop",
   rinoplastia:
-    "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=800&h=1000&fit=crop",
+    "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830677/ChatGPT_Image_11_jul_2026_10_34_24_p.m._nagkar.png",
   blefaroplastia:
-    "https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=800&h=1000&fit=crop",
+    "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830679/ChatGPT_Image_11_jul_2026_11_26_18_p.m._cfhfki.png",
   "lifting-facial":
-    "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&h=1000&fit=crop",
+    "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830876/ChatGPT_Image_11_jul_2026_11_34_27_p.m._z2zube.png",
 };
 
 const AUTO_PLAY_INTERVAL = 5000;
