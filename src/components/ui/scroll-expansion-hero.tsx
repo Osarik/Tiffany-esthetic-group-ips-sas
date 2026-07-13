@@ -39,6 +39,9 @@ const ScrollExpandMedia = ({
   const [mediaFullyExpanded, setMediaFullyExpanded] = useState<boolean>(false);
   const [touchStartY, setTouchStartY] = useState<number>(0);
   const [isMobileState, setIsMobileState] = useState<boolean>(false);
+  const [isMuted, setIsMuted] = useState<boolean>(true);
+
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const sectionRef = useRef<HTMLDivElement | null>(null);
 
@@ -238,19 +241,32 @@ const ScrollExpandMedia = ({
                       />
                     </div>
                   ) : (
-                    <div className='relative w-full h-full pointer-events-none'>
+                    <div className='relative w-full h-full'>
                       <video
+                        ref={videoRef}
                         src={mediaSrc}
                         poster={posterSrc}
                         autoPlay
-                        muted
+                        muted={isMuted}
                         loop
                         playsInline
                         preload='auto'
-                        className='w-full h-full object-cover rounded-xl'
+                        className='w-full h-full object-cover rounded-xl cursor-pointer'
                         controls={false}
                         disablePictureInPicture
                         disableRemotePlayback
+                        onClick={() => {
+                          const vid = videoRef.current;
+                          if (vid) {
+                            if (vid.muted) {
+                              vid.muted = false;
+                              setIsMuted(false);
+                            } else {
+                              vid.muted = true;
+                              setIsMuted(true);
+                            }
+                          }
+                        }}
                       />
                       <div
                         className='absolute inset-0 z-10'
@@ -263,6 +279,29 @@ const ScrollExpandMedia = ({
                         animate={{ opacity: 0.5 - scrollProgress * 0.3 }}
                         transition={{ duration: 0.2 }}
                       />
+
+                      <button
+                        onClick={() => {
+                          const vid = videoRef.current;
+                          if (vid) {
+                            vid.muted = !vid.muted;
+                            setIsMuted(vid.muted);
+                          }
+                        }}
+                        className='absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/40 hover:bg-black/60 flex items-center justify-center transition-colors backdrop-blur-sm'
+                        aria-label={isMuted ? 'Activar sonido' : 'Silenciar'}
+                      >
+                        {isMuted ? (
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-5 h-5">
+                            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8.5v7a4.49 4.49 0 0 0 2.5-3.5zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                          </svg>
+                        ) : (
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-5 h-5">
+                            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8.5v7a4.49 4.49 0 0 0 2.5-3.5zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                            <line x1="3" y1="3" x2="21" y2="21" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                          </svg>
+                        )}
+                      </button>
                     </div>
                   )
                 ) : (
