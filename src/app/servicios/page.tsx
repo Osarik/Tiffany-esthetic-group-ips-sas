@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Container from "@/components/ui/Container";
-import Heading from "@/components/ui/Heading";
 import AnimateInView, { StaggerGrid, StaggerItem } from "@/components/ui/AnimateInView";
 import { services } from "@/data/services";
 
@@ -75,27 +73,6 @@ const faqs = [
   {
     q: "¿Cómo agendo mi valoración médica?",
     a: "Puedes agendar tu valoración médica escribiéndonos al WhatsApp, llamando a nuestras líneas de atención o visitando nuestras instalaciones en el Comuna 17, Cali. Te atenderemos con la mayor brevedad posible.",
-  },
-];
-
-const categoryMeta = [
-  {
-    name: "Cirugía Corporal",
-    slug: "corporal",
-    desc: "Moldeamiento corporal, lipoescultura, liposucción y procedimientos para definir el contorno del cuerpo.",
-    img: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=400&fit=crop&crop=entropy&auto=format&q=80",
-  },
-  {
-    name: "Cirugía Mamaria",
-    slug: "mamaria",
-    desc: "Elevación mamaria, pexia y técnicas quirúrgicas adaptadas a la anatomía de cada paciente.",
-    img: "https://images.unsplash.com/photo-1551076805-e1869033e561?w=600&h=400&fit=crop&crop=entropy&auto=format&q=80",
-  },
-  {
-    name: "Cirugía Facial",
-    slug: "facial",
-    desc: "Rinoplastia, blefaroplastia y lifting facial para rejuvenecer y armonizar los rasgos del rostro.",
-    img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&h=400&fit=crop&crop=entropy&auto=format&q=80",
   },
 ];
 
@@ -202,106 +179,7 @@ export const metadata: Metadata = {
   },
 };
 
-const categoryStyling: Record<string, { gradient: string; icon: React.ReactNode; lightBg: string }> = {
-  corporal: {
-    gradient: "from-[#0F4A44] to-[#2FA79C]",
-    lightBg: "from-[#0F4A44]/5 to-[#2FA79C]/5",
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <circle cx="12" cy="5" r="3" />
-        <path d="M12 8v6" />
-        <path d="M6 18c0-3 6-4 6-4s6 1 6 4" />
-        <path d="M4 20c1-2 4-3 8-3s7 1 8 3" opacity="0.4" />
-      </svg>
-    ),
-  },
-  mamaria: {
-    gradient: "from-[#B76E79] to-[#D48995]",
-    lightBg: "from-[#B76E79]/5 to-[#D48995]/5",
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M3 12c0-3 2-6 6-6s6 3 6 6" />
-        <path d="M9 12c0-3 2-6 6-6s6 3 6 6" />
-        <circle cx="6" cy="12" r="0.5" fill="currentColor" opacity="0.5" />
-        <circle cx="18" cy="12" r="0.5" fill="currentColor" opacity="0.5" />
-      </svg>
-    ),
-  },
-  facial: {
-    gradient: "from-[#4A8DB7] to-[#6DB3D9]",
-    lightBg: "from-[#4A8DB7]/5 to-[#6DB3D9]/5",
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <circle cx="12" cy="12" r="9" />
-        <circle cx="9" cy="10" r="1.2" fill="currentColor" />
-        <circle cx="15" cy="10" r="1.2" fill="currentColor" />
-        <path d="M8 14.5c1.5 2 4.5 2 6.5 1" strokeWidth="1.5" />
-        <path d="M20 12h2M2 12h2M12 2v2M12 20v2" opacity="0.3" strokeWidth="1" />
-      </svg>
-    ),
-  },
-};
-
-const categoryColors: Record<string, string> = {
-  corporal: "#0F4A44",
-  mamaria: "#B76E79",
-  facial: "#4A8DB7",
-};
-
-function ServiceCard({
-  title,
-  description,
-  href,
-  popular,
-  categorySlug,
-}: {
-  title: string;
-  description: string;
-  href: string | undefined;
-  popular?: boolean;
-  categorySlug?: string;
-}) {
-  const style = categorySlug ? categoryStyling[categorySlug] : categoryStyling.corporal;
-  return (
-    <Link
-      href={href ?? "#"}
-      className="group relative block bg-white rounded-2xl overflow-hidden border border-silver/20 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 no-underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
-    >
-      <div className={`bg-gradient-to-br ${style.gradient} h-28 md:h-32 flex items-center justify-center relative overflow-hidden`}>
-        <div className="absolute inset-0 opacity-[0.07]" aria-hidden="true"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.8'%3E%3Ccircle cx='24' cy='24' r='0.5'/%3E%3C/g%3E%3C/svg%3E")`,
-          }} />
-        <div className="absolute -top-6 -right-6 w-20 h-20 rounded-full bg-white/10 blur-xl" aria-hidden="true" />
-        <div className="absolute -bottom-6 -left-6 w-16 h-16 rounded-full bg-white/8 blur-lg" aria-hidden="true" />
-        <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white/15 backdrop-blur-sm text-white flex items-center justify-center group-hover:bg-white/25 group-hover:scale-110 group-hover:rotate-3 transition-all duration-400 shadow-lg shadow-black/10">
-          {style.icon}
-        </div>
-      </div>
-      <div className="p-5 md:p-6">
-        {popular && (
-          <span className="inline-block mb-3 bg-accent/10 text-accent font-body font-bold text-[10px] px-3 py-1 rounded-full uppercase tracking-wider">
-            Más solicitado
-          </span>
-        )}
-        <h3 className="font-heading font-bold text-text-dark text-base md:text-lg group-hover:text-primary transition-colors duration-300 leading-tight">
-          {title}
-        </h3>
-        <p className="mt-2 text-sm text-text-main/65 font-body leading-relaxed">
-          {description}
-        </p>
-        <span className="mt-4 inline-flex items-center text-sm font-body font-semibold gap-1.5 group-hover:gap-2.5 transition-all duration-300"
-          style={{ color: categoryColors[categorySlug ?? "corporal"] }}
-        >
-          Ver información
-          <svg className="w-4 h-4 transition-all duration-300 group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <polyline points="9 18 15 12 9 6" />
-          </svg>
-        </span>
-      </div>
-    </Link>
-  );
-}
+import ServiceTabs from "./ServiceTabs";
 
 export default function ServiciosPage() {
   return (
@@ -395,87 +273,7 @@ export default function ServiciosPage() {
           </Container>
         </AnimateInView>
 
-        {/* ─── SERVICIOS POR CATEGORÍA ─────────────────────────── */}
-        <AnimateInView as="section" id="servicios-lista" className="bg-white py-20 md:py-28 relative overflow-hidden">
-          <div className="absolute top-40 left-0 w-72 h-72 rounded-full bg-primary/[0.02] blur-3xl pointer-events-none" aria-hidden="true" />
-          <div className="absolute bottom-40 right-0 w-96 h-96 rounded-full bg-accent/[0.02] blur-3xl pointer-events-none" aria-hidden="true" />
-          <Container>
-            <div className="text-center mb-16">
-              <span className="inline-block text-primary font-body font-semibold text-xs tracking-[0.2em] uppercase mb-4 border border-primary/20 rounded-full px-4 py-1.5">
-                Nuestros procedimientos
-              </span>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-text-dark leading-tight text-balance max-w-3xl mx-auto">
-                Cirugía estética con estándares de{" "}
-                <span className="text-primary">seguridad y calidad</span>
-              </h2>
-              <p className="mt-4 text-text-main/70 font-body text-base max-w-2xl mx-auto">
-                Cada procedimiento tiene indicaciones específicas, técnicas
-                quirúrgicas adaptadas y un proceso de recuperación particular.
-              </p>
-            </div>
-
-            {categoryMeta.map((cat) => {
-              const catServices = services.filter(
-                (s) => s.category === cat.name
-              );
-              if (catServices.length === 0) return null;
-              const catStyle = categoryStyling[cat.slug];
-              return (
-                <div key={cat.slug} className="mb-16 md:mb-20 last:mb-0 relative">
-                  <div className="absolute -top-8 -right-8 w-48 h-48 rounded-full opacity-[0.03] pointer-events-none" aria-hidden="true"
-                    style={{
-                      background: `radial-gradient(circle, ${cat.slug === "corporal" ? "#0F4A44" : cat.slug === "mamaria" ? "#B76E79" : "#4A8DB7"} 0%, transparent 70%)`,
-                    }} />
-                  <div className="flex items-start gap-4 mb-8">
-                    <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${catStyle.gradient} text-white flex items-center justify-center shrink-0 shadow-lg`}
-                      style={{ boxShadow: `0 4px 14px ${cat.slug === "corporal" ? "#0F4A4433" : cat.slug === "mamaria" ? "#B76E7933" : "#4A8DB733"}` }}>
-                      {categoryStyling[cat.slug].icon}
-                    </div>
-                    <div>
-                      <h3 className="font-heading font-bold text-text-dark text-xl md:text-2xl">
-                        {cat.name}
-                      </h3>
-                      <p className="text-sm text-text-main/60 font-body mt-1">
-                        {cat.desc}
-                      </p>
-                    </div>
-                  </div>
-                  <StaggerGrid className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" staggerDelay={0.08}>
-                    {catServices.map((service) => {
-                      const href = service.href ?? service.detailUrl ?? "#";
-                      return (
-                        <StaggerItem key={service.id}>
-                          <ServiceCard
-                            title={service.title}
-                            description={service.description}
-                            href={href}
-                            popular={service.popular}
-                            categorySlug={cat.slug}
-                          />
-                        </StaggerItem>
-                      );
-                    })}
-                  </StaggerGrid>
-                </div>
-              );
-            })}
-
-            <div className="mt-16 text-center max-w-xl mx-auto p-8 bg-[#FBFBF9] rounded-2xl border border-silver/20">
-              <p className="text-sm text-text-main/70 font-body">
-                ¿No encuentras lo que buscas?{" "}
-                <a
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary font-semibold hover:text-primary-dark transition-colors"
-                >
-                  Contáctanos
-                </a>
-                , te orientaremos durante tu valoración médica.
-              </p>
-            </div>
-          </Container>
-        </AnimateInView>
+        <ServiceTabs whatsappUrl={whatsappUrl} />
 
         {/* ─── BENEFICIOS ───────────────────────────────────────── */}
         <AnimateInView as="section" variant="fadeUp" className="bg-[#FBFBF9] py-20 md:py-28 overflow-hidden">
