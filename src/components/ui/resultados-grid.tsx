@@ -2,6 +2,7 @@
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { items } from "@/components/ui/image-mousetrail-without-component-utils/constant";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 
 type Procedure = {
   name: string;
@@ -148,16 +149,14 @@ export default function ResultadosGrid({ procedures }: Props) {
 
             <div className="grid grid-cols-2 gap-3 md:gap-4">
               {galleryImages.map((url, i) => (
-                <div
+                <BeforeAfterSlider
                   key={i}
-                  className="relative aspect-square rounded-xl overflow-hidden bg-[#e0dfdf]"
-                >
-                  <img
-                    src={url}
-                    alt={`${selected?.name} - resultado ${i + 1}`}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
+                  beforeSrc={url}
+                  afterSrc={url.includes("?") ? `${url}&sat=-100` : `${url}?sat=-100`}
+                  beforeLabel="Antes"
+                  afterLabel="Después"
+                  alt={`${selected?.name} - resultado ${i + 1}`}
+                />
               ))}
             </div>
 
