@@ -10,34 +10,87 @@ const categoryStyling: Record<string, { gradient: string; icon: React.ReactNode 
   corporal: {
     gradient: "from-[#0F4A44] to-[#2FA79C]",
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <circle cx="12" cy="5" r="3" />
-        <path d="M12 8v6" />
-        <path d="M6 18c0-3 6-4 6-4s6 1 6 4" />
-        <path d="M4 20c1-2 4-3 8-3s7 1 8 3" opacity="0.4" />
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" className="w-full h-full">
+        <g fill="currentColor" opacity="0.9">
+          <path d="M50 5C38 5 28 12 22 22C16 32 14 44 16 55C18 63 22 70 28 76C34 82 42 88 50 95C58 88 66 82 72 76C78 70 82 63 84 55C86 44 84 32 78 22C72 12 62 5 50 5Z" />
+          <path d="M50 20C42 20 35 24 30 30C25 36 22 44 22 52C22 58 24 64 28 68C32 72 38 74 44 74C48 74 50 72 50 72C50 72 52 74 56 74C62 74 68 72 72 68C76 64 78 58 78 52C78 44 75 36 70 30C65 24 58 20 50 20Z" opacity="0.7" />
+          <circle cx="50" cy="38" r="6" opacity="0.5" />
+          <circle cx="50" cy="52" r="5" opacity="0.4" />
+        </g>
+        <g stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" fill="none" opacity="0.6">
+          <path d="M10 30 L18 30 M10 50 L18 50 M10 70 L18 70" />
+          <path d="M82 30 L90 30 M82 50 L90 50 M82 70 L90 70" />
+          <path d="M12 30 L15 27 L15 33 M12 50 L15 47 L15 53 M12 70 L15 67 L15 73" strokeWidth="0.8" />
+          <path d="M88 30 L85 27 L85 33 M88 50 L85 47 L85 53 M88 70 L85 67 L85 73" strokeWidth="0.8" />
+          <path d="M40 10 L60 10" strokeDasharray="2,2" />
+          <path d="M50 10 L50 15" />
+          <path d="M30 85 L70 85" strokeDasharray="2,2" />
+          <path d="M50 85 L50 88" />
+        </g>
       </svg>
     ),
   },
   mamaria: {
     gradient: "from-[#B76E79] to-[#D48995]",
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M3 12c0-3 2-6 6-6s6 3 6 6" />
-        <path d="M9 12c0-3 2-6 6-6s6 3 6 6" />
-        <circle cx="6" cy="12" r="0.5" fill="currentColor" opacity="0.5" />
-        <circle cx="18" cy="12" r="0.5" fill="currentColor" opacity="0.5" />
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" className="w-full h-full">
+        <g fill="currentColor" opacity="0.9">
+          <path d="M50 8C44 8 38 10 33 14C28 18 24 24 22 30C20 36 20 42 22 48C24 51 28 54 32 56C36 58 40 60 44 62C46 64 48 66 50 68C52 66 54 64 56 62C60 60 64 58 68 56C72 54 76 51 78 48C80 42 80 36 78 30C76 24 72 18 67 14C62 10 56 8 50 8Z" opacity="0.85" />
+          <ellipse cx="38" cy="38" rx="10" ry="14" opacity="0.5" />
+          <ellipse cx="62" cy="38" rx="10" ry="14" opacity="0.5" />
+          <circle cx="38" cy="38" r="3" opacity="0.3" />
+          <circle cx="62" cy="38" r="3" opacity="0.3" />
+        </g>
+        <g stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" fill="none" opacity="0.6">
+          <path d="M50 2 L50 20" strokeDasharray="2,2" />
+          <path d="M50 2 L50 2 M50 20 L50 22" />
+          <path d="M20 38 L30 38" />
+          <path d="M70 38 L80 38" />
+          <path d="M22 38 L25 35 L25 41" strokeWidth="0.8" />
+          <path d="M78 38 L75 35 L75 41" strokeWidth="0.8" />
+          <path d="M50 55 L50 95" strokeDasharray="3,3" opacity="0.4" />
+          <path d="M30 50 L35 48" strokeWidth="0.8" />
+          <path d="M70 50 L65 48" strokeWidth="0.8" />
+          <path d="M26 70 L30 68" strokeWidth="0.8" />
+          <path d="M74 70 L70 68" strokeWidth="0.8" />
+        </g>
+        <g fill="currentColor" opacity="0.4">
+          <circle cx="28" cy="60" r="1" />
+          <circle cx="72" cy="60" r="1" />
+          <circle cx="50" cy="55" r="1" />
+        </g>
       </svg>
     ),
   },
   facial: {
     gradient: "from-[#4A8DB7] to-[#6DB3D9]",
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <circle cx="12" cy="12" r="9" />
-        <circle cx="9" cy="10" r="1.2" fill="currentColor" />
-        <circle cx="15" cy="10" r="1.2" fill="currentColor" />
-        <path d="M8 14.5c1.5 2 4.5 2 6.5 1" strokeWidth="1.5" />
-        <path d="M20 12h2M2 12h2M12 2v2M12 20v2" opacity="0.3" strokeWidth="1" />
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" className="w-full h-full">
+        <g fill="currentColor" opacity="0.9">
+          <path d="M50 5C38 5 28 12 22 22C16 32 14 44 16 55C18 63 22 70 28 76L30 78C34 80 40 82 46 84L48 86C48 88 46 90 46 90L44 92C42 94 42 96 44 98C46 98 54 98 56 98C58 96 58 94 56 92L54 90C54 90 52 88 52 86L54 84C60 82 66 80 70 78L72 76C78 70 82 63 84 55C86 44 84 32 78 22C72 12 62 5 50 5Z" />
+          <ellipse cx="36" cy="36" rx="5" ry="4" opacity="0.5" />
+          <ellipse cx="64" cy="36" rx="5" ry="4" opacity="0.5" />
+          <path d="M36 50C38 54 44 56 50 56C56 56 62 54 64 50" stroke="currentColor" strokeWidth="1.5" fill="none" opacity="0.5" />
+          <ellipse cx="50" cy="60" rx="4" ry="2" opacity="0.3" />
+        </g>
+        <g stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" fill="none" opacity="0.6">
+          <path d="M2 36 L12 36" />
+          <path d="M88 36 L98 36" />
+          <path d="M4 36 L7 33 L7 39" strokeWidth="0.8" />
+          <path d="M96 36 L93 33 L93 39" strokeWidth="0.8" />
+          <path d="M12 55 L18 52" strokeWidth="0.8" />
+          <path d="M88 55 L82 52" strokeWidth="0.8" />
+          <path d="M50 2 L50 12" />
+          <path d="M50 68 L50 98" strokeDasharray="3,3" opacity="0.4" />
+          <path d="M12 70 L18 68" strokeWidth="0.8" />
+          <path d="M88 70 L82 68" strokeWidth="0.8" />
+        </g>
+        <g fill="currentColor" opacity="0.4">
+          <circle cx="18" cy="46" r="1" />
+          <circle cx="82" cy="46" r="1" />
+          <circle cx="8" cy="48" r="0.8" />
+          <circle cx="92" cy="48" r="0.8" />
+        </g>
       </svg>
     ),
   },
@@ -100,7 +153,7 @@ export default function ServiceTabs({ whatsappUrl }: { whatsappUrl: string }) {
                 }`}
               >
                 <div
-                  className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${
+                  className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300 ${
                     isActive
                       ? `bg-gradient-to-br ${catStyle.gradient} text-white shadow-md`
                       : "bg-silver/10 text-text-main/40"
