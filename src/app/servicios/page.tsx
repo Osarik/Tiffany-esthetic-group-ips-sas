@@ -202,28 +202,50 @@ export const metadata: Metadata = {
   },
 };
 
-const categoryIcons: Record<string, React.ReactNode> = {
-  corporal: (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <circle cx="12" cy="5" r="3" />
-      <path d="M12 8v6" />
-      <path d="M6 18c0-3 6-4 6-4s6 1 6 4" />
-    </svg>
-  ),
-  mamaria: (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M3 12c0-3 2-6 6-6s6 3 6 6" />
-      <path d="M9 12c0-3 2-6 6-6s6 3 6 6" />
-    </svg>
-  ),
-  facial: (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <circle cx="12" cy="12" r="9" />
-      <circle cx="9" cy="10" r="1" fill="currentColor" />
-      <circle cx="15" cy="10" r="1" fill="currentColor" />
-      <path d="M8 15c2 2 6 2 8 0" />
-    </svg>
-  ),
+const categoryStyling: Record<string, { gradient: string; icon: React.ReactNode; lightBg: string }> = {
+  corporal: {
+    gradient: "from-[#0F4A44] to-[#2FA79C]",
+    lightBg: "from-[#0F4A44]/5 to-[#2FA79C]/5",
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <circle cx="12" cy="5" r="3" />
+        <path d="M12 8v6" />
+        <path d="M6 18c0-3 6-4 6-4s6 1 6 4" />
+        <path d="M4 20c1-2 4-3 8-3s7 1 8 3" opacity="0.4" />
+      </svg>
+    ),
+  },
+  mamaria: {
+    gradient: "from-[#B76E79] to-[#D48995]",
+    lightBg: "from-[#B76E79]/5 to-[#D48995]/5",
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M3 12c0-3 2-6 6-6s6 3 6 6" />
+        <path d="M9 12c0-3 2-6 6-6s6 3 6 6" />
+        <circle cx="6" cy="12" r="0.5" fill="currentColor" opacity="0.5" />
+        <circle cx="18" cy="12" r="0.5" fill="currentColor" opacity="0.5" />
+      </svg>
+    ),
+  },
+  facial: {
+    gradient: "from-[#4A8DB7] to-[#6DB3D9]",
+    lightBg: "from-[#4A8DB7]/5 to-[#6DB3D9]/5",
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="9" />
+        <circle cx="9" cy="10" r="1.2" fill="currentColor" />
+        <circle cx="15" cy="10" r="1.2" fill="currentColor" />
+        <path d="M8 14.5c1.5 2 4.5 2 6.5 1" strokeWidth="1.5" />
+        <path d="M20 12h2M2 12h2M12 2v2M12 20v2" opacity="0.3" strokeWidth="1" />
+      </svg>
+    ),
+  },
+};
+
+const categoryColors: Record<string, string> = {
+  corporal: "#0F4A44",
+  mamaria: "#B76E79",
+  facial: "#4A8DB7",
 };
 
 function ServiceCard({
@@ -239,41 +261,40 @@ function ServiceCard({
   popular?: boolean;
   categorySlug?: string;
 }) {
+  const style = categorySlug ? categoryStyling[categorySlug] : categoryStyling.corporal;
   return (
     <Link
       href={href ?? "#"}
-      className="group relative block bg-white rounded-2xl overflow-hidden border border-silver/20 hover:border-primary/30 shadow-sm hover:shadow-lg transition-all duration-500 no-underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+      className="group relative block bg-white rounded-2xl overflow-hidden border border-silver/20 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 no-underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
     >
-      <div className="h-[3px] bg-gradient-to-r from-primary to-secondary" />
+      <div className={`bg-gradient-to-br ${style.gradient} h-28 md:h-32 flex items-center justify-center relative overflow-hidden`}>
+        <div className="absolute inset-0 opacity-[0.07]" aria-hidden="true"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.8'%3E%3Ccircle cx='24' cy='24' r='0.5'/%3E%3C/g%3E%3C/svg%3E")`,
+          }} />
+        <div className="absolute -top-6 -right-6 w-20 h-20 rounded-full bg-white/10 blur-xl" aria-hidden="true" />
+        <div className="absolute -bottom-6 -left-6 w-16 h-16 rounded-full bg-white/8 blur-lg" aria-hidden="true" />
+        <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white/15 backdrop-blur-sm text-white flex items-center justify-center group-hover:bg-white/25 group-hover:scale-110 group-hover:rotate-3 transition-all duration-400 shadow-lg shadow-black/10">
+          {style.icon}
+        </div>
+      </div>
       <div className="p-5 md:p-6">
         {popular && (
-          <span className="inline-block mb-3 bg-accent/10 text-accent font-body font-bold text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider">
+          <span className="inline-block mb-3 bg-accent/10 text-accent font-body font-bold text-[10px] px-3 py-1 rounded-full uppercase tracking-wider">
             Más solicitado
           </span>
         )}
-        {categorySlug && (
-          <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-all duration-400">
-            {categoryIcons[categorySlug]}
-          </div>
-        )}
-        <h3 className="font-heading font-bold text-text-dark text-base md:text-lg group-hover:text-primary transition-colors duration-300">
+        <h3 className="font-heading font-bold text-text-dark text-base md:text-lg group-hover:text-primary transition-colors duration-300 leading-tight">
           {title}
         </h3>
-        <p className="mt-2 text-sm text-text-main/70 font-body leading-relaxed">
+        <p className="mt-2 text-sm text-text-main/65 font-body leading-relaxed">
           {description}
         </p>
-        <span className="mt-4 inline-flex items-center text-sm font-body font-semibold text-primary gap-1.5 group-hover:gap-2.5 transition-all duration-300">
+        <span className="mt-4 inline-flex items-center text-sm font-body font-semibold gap-1.5 group-hover:gap-2.5 transition-all duration-300"
+          style={{ color: categoryColors[categorySlug ?? "corporal"] }}
+        >
           Ver información
-          <svg
-            className="w-4 h-4 transition-all duration-300 group-hover:translate-x-0.5"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-          >
+          <svg className="w-4 h-4 transition-all duration-300 group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <polyline points="9 18 15 12 9 6" />
           </svg>
         </span>
@@ -375,7 +396,9 @@ export default function ServiciosPage() {
         </AnimateInView>
 
         {/* ─── SERVICIOS POR CATEGORÍA ─────────────────────────── */}
-        <AnimateInView as="section" id="servicios-lista" className="bg-white py-20 md:py-28">
+        <AnimateInView as="section" id="servicios-lista" className="bg-white py-20 md:py-28 relative overflow-hidden">
+          <div className="absolute top-40 left-0 w-72 h-72 rounded-full bg-primary/[0.02] blur-3xl pointer-events-none" aria-hidden="true" />
+          <div className="absolute bottom-40 right-0 w-96 h-96 rounded-full bg-accent/[0.02] blur-3xl pointer-events-none" aria-hidden="true" />
           <Container>
             <div className="text-center mb-16">
               <span className="inline-block text-primary font-body font-semibold text-xs tracking-[0.2em] uppercase mb-4 border border-primary/20 rounded-full px-4 py-1.5">
@@ -396,26 +419,28 @@ export default function ServiciosPage() {
                 (s) => s.category === cat.name
               );
               if (catServices.length === 0) return null;
+              const catStyle = categoryStyling[cat.slug];
               return (
-                <div key={cat.slug} className="mb-16 md:mb-20 last:mb-0">
-                  <div className="flex items-center gap-4 mb-8">
-                    <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="M12 8v8" />
-                        <path d="M8 12h8" />
-                      </svg>
+                <div key={cat.slug} className="mb-16 md:mb-20 last:mb-0 relative">
+                  <div className="absolute -top-8 -right-8 w-48 h-48 rounded-full opacity-[0.03] pointer-events-none" aria-hidden="true"
+                    style={{
+                      background: `radial-gradient(circle, ${cat.slug === "corporal" ? "#0F4A44" : cat.slug === "mamaria" ? "#B76E79" : "#4A8DB7"} 0%, transparent 70%)`,
+                    }} />
+                  <div className="flex items-start gap-4 mb-8">
+                    <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${catStyle.gradient} text-white flex items-center justify-center shrink-0 shadow-lg`}
+                      style={{ boxShadow: `0 4px 14px ${cat.slug === "corporal" ? "#0F4A4433" : cat.slug === "mamaria" ? "#B76E7933" : "#4A8DB733"}` }}>
+                      {categoryStyling[cat.slug].icon}
                     </div>
                     <div>
-                      <h3 className="font-heading font-bold text-text-dark text-xl">
+                      <h3 className="font-heading font-bold text-text-dark text-xl md:text-2xl">
                         {cat.name}
                       </h3>
-                      <p className="text-sm text-text-main/60 font-body">
+                      <p className="text-sm text-text-main/60 font-body mt-1">
                         {cat.desc}
                       </p>
                     </div>
                   </div>
-                  <StaggerGrid className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4" staggerDelay={0.08}>
+                  <StaggerGrid className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" staggerDelay={0.08}>
                     {catServices.map((service) => {
                       const href = service.href ?? service.detailUrl ?? "#";
                       return (
