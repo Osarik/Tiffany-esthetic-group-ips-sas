@@ -242,32 +242,28 @@ function ServiceCard({
   return (
     <Link
       href={href ?? "#"}
-      className="group relative block bg-white rounded-2xl overflow-hidden border border-silver/20 hover:border-primary/30 shadow-sm hover:shadow-xl transition-all duration-500 no-underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+      className="group relative block bg-white rounded-2xl overflow-hidden border border-silver/20 hover:border-primary/30 shadow-sm hover:shadow-lg transition-all duration-500 no-underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
     >
       <div className="h-[3px] bg-gradient-to-r from-primary to-secondary" />
-      <div className="p-5 md:p-7">
+      <div className="p-5 md:p-6">
         {popular && (
           <span className="inline-block mb-3 bg-accent/10 text-accent font-body font-bold text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider">
             Más solicitado
           </span>
         )}
-        <div className="flex items-start gap-3">
-          {categorySlug && (
-            <div className="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
-              {categoryIcons[categorySlug]}
-            </div>
-          )}
-          <div className="flex-1 min-w-0">
-            <h3 className="font-heading font-bold text-text-dark text-base md:text-lg group-hover:text-primary transition-colors duration-300">
-              {title}
-            </h3>
-            <p className="mt-1.5 text-sm text-text-main/70 font-body leading-relaxed">
-              {description}
-            </p>
+        {categorySlug && (
+          <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-all duration-400">
+            {categoryIcons[categorySlug]}
           </div>
-        </div>
-        <span className="mt-4 inline-flex items-center text-sm font-body font-bold text-primary gap-1.5 group-hover:gap-2.5 transition-all duration-300">
-          Ver información médica
+        )}
+        <h3 className="font-heading font-bold text-text-dark text-base md:text-lg group-hover:text-primary transition-colors duration-300">
+          {title}
+        </h3>
+        <p className="mt-2 text-sm text-text-main/70 font-body leading-relaxed">
+          {description}
+        </p>
+        <span className="mt-4 inline-flex items-center text-sm font-body font-semibold text-primary gap-1.5 group-hover:gap-2.5 transition-all duration-300">
+          Ver información
           <svg
             className="w-4 h-4 transition-all duration-300 group-hover:translate-x-0.5"
             viewBox="0 0 24 24"
@@ -296,94 +292,59 @@ export default function ServiciosPage() {
 
       <article>
         {/* ─── HERO ─────────────────────────────────────────────── */}
-        <section className="relative bg-gradient-to-br from-[#0F4A44] via-[#1B6E66] to-[#2FA79C] pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
-          {/* Animated gradient orbs */}
+        <section className="relative bg-gradient-to-br from-[#0F4A44] via-[#1B6E66] to-[#2FA79C] pt-28 pb-16 md:pt-36 md:pb-28 overflow-hidden">
           <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-            <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-white/5 blur-3xl animate-[float_12s_ease-in-out_infinite]" />
-            <div className="absolute -bottom-40 -left-40 w-[400px] h-[400px] rounded-full bg-accent/10 blur-3xl animate-[float_15s_ease-in-out_infinite_reverse]" />
-            <div className="absolute top-1/3 left-1/2 w-[300px] h-[300px] rounded-full bg-white/5 blur-3xl animate-[float_10s_ease-in-out_infinite]" />
+            <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-white/5 blur-3xl animate-[float_12s_ease-in-out_infinite]" />
+            <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-accent/10 blur-3xl animate-[float_15s_ease-in-out_infinite_reverse]" />
+            <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-white/30 animate-[float_8s_ease-in-out_infinite]" />
+            <div className="absolute bottom-1/3 right-1/4 w-2 h-2 rounded-full bg-white/20 animate-[float_11s_ease-in-out_infinite_reverse]" />
+            <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 rounded-full bg-white/25 animate-[float_9s_ease-in-out_infinite]" />
           </div>
-          <div className="absolute inset-0 opacity-[0.07]" aria-hidden="true"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            }} />
-          <div className="absolute inset-0 opacity-10"
-            style={{
-              backgroundImage: "radial-gradient(circle at 20% 40%, rgba(255,255,255,0.2) 0%, transparent 50%), radial-gradient(circle at 80% 60%, rgba(255,255,255,0.12) 0%, transparent 50%)",
-            }}
-            aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0F4A44]/40 via-transparent to-[#0F4A44]/20" aria-hidden="true" />
           <Container>
-            <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-              <div className="relative z-10">
-                <div className="flex items-center gap-2 mb-5">
-                  <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                  <span className="text-white/70 font-body font-semibold text-xs tracking-[0.2em] uppercase">
-                    IPS Habilitada · Res 3100 de 2019
-                  </span>
-                </div>
-                <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] text-balance">
-                  Procedimientos quirúrgicos{" "}
-                  <span className="text-accent-light">estéticos en Cali</span>
-                </h1>
-                <p className="mt-6 text-base md:text-lg text-white/75 font-body leading-relaxed max-w-xl">
-                  En Tiffany Esthetic Group IPS ofrecemos cirugía corporal,
-                  mamaria y facial realizadas en instalaciones habilitadas,
-                  con equipo calificado y acompañamiento profesional en cada
-                  etapa.
-                </p>
-                <div className="mt-8 flex flex-col sm:flex-row gap-3">
-                  <a
-                    href={whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 bg-white text-[#0F4A44] font-body font-bold px-8 py-3.5 rounded-full hover:bg-white/90 hover:shadow-xl hover:shadow-black/25 transition-all duration-300 text-base shadow-lg shadow-black/20 no-underline"
-                  >
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                    </svg>
-                    Agendar valoración médica
-                  </a>
-                  <a
-                    href="#servicios-lista"
-                    className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white font-body font-semibold px-8 py-3.5 rounded-full hover:bg-white/10 transition-all duration-300 text-base no-underline"
-                  >
-                    Explorar procedimientos
-                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </a>
-                </div>
-                <p className="mt-6 text-xs text-white/50 font-body max-w-md">
-                  Todo procedimiento quirúrgico requiere una valoración médica
-                  presencial obligatoria para determinar la idoneidad del paciente.
-                </p>
+            <div className="max-w-3xl relative z-10">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+                <span className="text-white/60 font-body font-semibold text-xs tracking-[0.25em] uppercase">
+                  IPS Habilitada · Res 3100 de 2019
+                </span>
               </div>
-
-              <div className="relative hidden lg:flex items-center justify-center">
-                {/* Floating logo animation */}
-                <div className="relative z-10 animate-[float_6s_ease-in-out_infinite]">
-                  <div className="w-64 h-64 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center shadow-2xl shadow-black/20">
-                    <svg viewBox="0 0 60 60" fill="none" className="w-40 h-40">
-                      <circle cx="9.5" cy="9.5" r="7.5" stroke="white" strokeWidth="3" fill="none" opacity="0.8" />
-                      <rect x="22.5" y="2" width="15" height="15" rx="3" stroke="white" strokeWidth="3" fill="none" opacity="0.8" />
-                      <circle cx="50.5" cy="9.5" r="7.5" stroke="white" strokeWidth="3" fill="none" opacity="0.8" />
-                      <rect x="2" y="22.5" width="15" height="15" rx="3" stroke="white" strokeWidth="3" fill="none" opacity="0.8" />
-                      <circle cx="30" cy="30" r="8.5" fill="white" opacity="0.9" />
-                      <rect x="43" y="22.5" width="15" height="15" rx="3" stroke="white" strokeWidth="3" fill="none" opacity="0.8" />
-                      <circle cx="9.5" cy="50.5" r="7.5" stroke="white" strokeWidth="3" fill="none" opacity="0.8" />
-                      <rect x="22.5" y="43" width="15" height="15" rx="3" stroke="white" strokeWidth="3" fill="none" opacity="0.8" />
-                      <circle cx="50.5" cy="50.5" r="7.5" stroke="white" strokeWidth="3" fill="none" opacity="0.8" />
-                    </svg>
-                  </div>
-                </div>
-                {/* Decorative floating pills */}
-                <div className="absolute top-8 right-8 w-28 h-10 rounded-full bg-white/10 border border-white/10 backdrop-blur-sm flex items-center justify-center animate-[float_8s_ease-in-out_infinite_reverse] shadow-lg">
-                  <span className="text-white/80 font-body text-xs font-semibold">IPS Habilitada</span>
-                </div>
-                <div className="absolute bottom-12 left-4 w-32 h-10 rounded-full bg-accent/15 border border-accent/20 backdrop-blur-sm flex items-center justify-center animate-[float_7s_ease-in-out_infinite] shadow-lg">
-                  <span className="text-white/80 font-body text-xs font-semibold">Res 3100 de 2019</span>
-                </div>
+              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.08] text-balance">
+                Procedimientos{" "}
+                <span className="text-accent-light">estéticos</span>
+                <br />
+                con seguridad y calidad
+              </h1>
+              <p className="mt-5 text-base md:text-lg text-white/70 font-body leading-relaxed max-w-xl">
+                Cirugía corporal, mamaria y facial realizada en instalaciones
+                habilitadas, con equipo calificado y acompañamiento profesional
+                en cada etapa de tu proceso.
+              </p>
+              <div className="mt-8 flex flex-col sm:flex-row gap-3">
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-[#0F4A44] font-body font-bold px-8 py-3.5 rounded-full hover:bg-white/90 hover:shadow-xl hover:shadow-black/25 transition-all duration-300 text-base shadow-lg shadow-black/20 no-underline"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                  </svg>
+                  Agendar valoración
+                </a>
+                <a
+                  href="#servicios-lista"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-white/25 text-white font-body font-semibold px-8 py-3.5 rounded-full hover:bg-white/10 transition-all duration-300 text-base no-underline"
+                >
+                  Ver procedimientos
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </a>
               </div>
+              <p className="mt-6 text-xs text-white/40 font-body max-w-md">
+                Todo procedimiento requiere una valoración médica presencial obligatoria.
+              </p>
             </div>
           </Container>
         </section>
@@ -430,66 +391,49 @@ export default function ServiciosPage() {
               </p>
             </div>
 
-            <div className="space-y-20">
-              {categoryMeta.map((cat) => {
-                const catServices = services.filter(
-                  (s) => s.category === cat.name
-                );
-                if (catServices.length === 0) return null;
-                return (
-                  <div key={cat.slug}>
-                    <div className="relative grid md:grid-cols-5 gap-6 md:gap-8 mb-6 md:mb-10 items-center">
-                      <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-silver/30 to-transparent md:hidden" aria-hidden="true" />
-                      <div className="md:col-span-2 relative rounded-xl md:rounded-2xl overflow-hidden h-[180px] md:h-[240px] shadow-lg group">
-                        <img
-                          src={cat.img}
-                          alt={`${cat.name} en Tiffany Esthetic Group IPS`}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-r from-[#0F4A44]/70 to-transparent flex items-end p-6">
-                          <div>
-                            <div className="flex items-center gap-3 mb-2">
-                              <span className="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center backdrop-blur-sm">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
-                                  <path d="M12 8v8" />
-                                  <path d="M8 12h8" />
-                                </svg>
-                              </span>
-                              <h3 className="font-heading font-bold text-2xl text-white">
-                                {cat.name}
-                              </h3>
-                            </div>
-                            <p className="text-white/80 font-body text-sm max-w-xs">
-                              {cat.desc}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="md:col-span-3">
-                        <StaggerGrid className="grid sm:grid-cols-2 gap-4">
-                          {catServices.map((service) => {
-                            const href =
-                              service.href ?? service.detailUrl ?? "#";
-                            return (
-                              <StaggerItem key={service.id}>
-                                <ServiceCard
-                                  title={service.title}
-                                  description={service.description}
-                                  href={href}
-                                  popular={service.popular}
-                                  categorySlug={cat.slug}
-                                />
-                              </StaggerItem>
-                            );
-                          })}
-                        </StaggerGrid>
-                      </div>
+            {categoryMeta.map((cat) => {
+              const catServices = services.filter(
+                (s) => s.category === cat.name
+              );
+              if (catServices.length === 0) return null;
+              return (
+                <div key={cat.slug} className="mb-16 md:mb-20 last:mb-0">
+                  <div className="flex items-center gap-4 mb-8">
+                    <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 8v8" />
+                        <path d="M8 12h8" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="font-heading font-bold text-text-dark text-xl">
+                        {cat.name}
+                      </h3>
+                      <p className="text-sm text-text-main/60 font-body">
+                        {cat.desc}
+                      </p>
                     </div>
                   </div>
-                );
-              })}
-            </div>
+                  <StaggerGrid className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4" staggerDelay={0.08}>
+                    {catServices.map((service) => {
+                      const href = service.href ?? service.detailUrl ?? "#";
+                      return (
+                        <StaggerItem key={service.id}>
+                          <ServiceCard
+                            title={service.title}
+                            description={service.description}
+                            href={href}
+                            popular={service.popular}
+                            categorySlug={cat.slug}
+                          />
+                        </StaggerItem>
+                      );
+                    })}
+                  </StaggerGrid>
+                </div>
+              );
+            })}
 
             <div className="mt-16 text-center max-w-xl mx-auto p-8 bg-[#FBFBF9] rounded-2xl border border-silver/20">
               <p className="text-sm text-text-main/70 font-body">
@@ -502,7 +446,7 @@ export default function ServiciosPage() {
                 >
                   Contáctanos
                 </a>
-                , te orientaremos durante la valoración médica presencial.
+                , te orientaremos durante tu valoración médica.
               </p>
             </div>
           </Container>
@@ -565,55 +509,42 @@ export default function ServiciosPage() {
         </AnimateInView>
 
         {/* ─── PROCESO ──────────────────────────────────────────── */}
-        <AnimateInView as="section" variant="fadeUp" className="bg-white py-20 md:py-28">
+        <AnimateInView as="section" variant="fadeUp" className="bg-[#FBFBF9] py-20 md:py-28">
           <Container>
             <div className="text-center mb-16">
               <span className="inline-block text-primary font-body font-semibold text-xs tracking-[0.2em] uppercase mb-4 border border-primary/20 rounded-full px-4 py-1.5">
-                Tu journey quirúrgico
+                Tu proceso quirúrgico
               </span>
               <h2 className="font-heading font-bold text-3xl md:text-4xl text-text-dark leading-tight">
                 ¿Cómo es el proceso?
               </h2>
               <p className="mt-4 text-text-main/70 font-body text-base max-w-2xl mx-auto">
-                Cinco etapas clave desde la primera consulta hasta los
-                resultados.
+                Cinco etapas clave desde la primera consulta hasta tus resultados.
               </p>
             </div>
 
-            <div className="relative max-w-4xl mx-auto">
-              <div className="absolute left-[23px] top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-primary/20 hidden md:block" aria-hidden="true" />
-              <StaggerGrid className="space-y-8 md:space-y-0" staggerDelay={0.12}>
-                {processSteps.map((step, i) => (
-                  <StaggerItem key={step.number}
-                    ><div
-                    className="relative md:grid md:grid-cols-[80px_1fr] md:gap-8 md:pb-8 items-start"
-                  >
-                    <div className="hidden md:flex flex-col items-center">
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center font-heading font-bold text-sm shadow-lg shadow-primary/20 relative z-10">
-                        {step.number}
-                      </div>
+            <StaggerGrid className="grid md:grid-cols-5 gap-4 md:gap-6 max-w-5xl mx-auto" staggerDelay={0.1}>
+              {processSteps.map((step, i) => (
+                <StaggerItem key={step.number}>
+                  <div className="bg-white rounded-2xl p-6 border border-silver/15 shadow-sm hover:shadow-md transition-all duration-300 text-center h-full flex flex-col items-center">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center font-heading font-bold text-sm mb-4 shadow-lg shadow-primary/20">
+                      {step.number}
                     </div>
-                    <div className="md:hidden flex items-center gap-4 mb-3">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center font-heading font-bold text-xs shrink-0">
-                        {step.number}
-                      </div>
-                      <h3 className="font-heading font-bold text-text-dark text-lg">
-                        {step.title}
-                      </h3>
-                    </div>
-                    <div className="bg-[#FBFBF9] rounded-2xl p-5 md:p-8 border border-silver/20 shadow-sm ml-12 md:ml-0 hover:shadow-md transition-shadow duration-300 relative">
-                      <div className="absolute left-0 top-4 bottom-4 w-[3px] bg-gradient-to-b from-primary to-secondary rounded-full hidden md:block" aria-hidden="true" />
-                      <h3 className="hidden md:block font-heading font-bold text-text-dark text-xl mb-3">
-                        {step.title}
-                      </h3>
-                      <p className="text-sm text-text-main/75 font-body leading-relaxed">
-                        {step.desc}
-                      </p>
-                    </div>
-                  </div></StaggerItem>
-                ))}
-              </StaggerGrid>
-            </div>
+                    <h3 className="font-heading font-bold text-text-dark text-sm md:text-base mb-2">
+                      {step.title}
+                    </h3>
+                    <p className="text-xs text-text-main/65 font-body leading-relaxed flex-1">
+                      {step.desc}
+                    </p>
+                    {i < processSteps.length - 1 && (
+                      <svg className="w-5 h-5 text-primary/30 mt-3 hidden md:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <polyline points="9 18 15 12 9 6" />
+                      </svg>
+                    )}
+                  </div>
+                </StaggerItem>
+              ))}
+            </StaggerGrid>
           </Container>
         </AnimateInView>
 
