@@ -98,7 +98,13 @@ export function ServicesCarousel() {
 
   return (
     <section id="servicios" className="w-full py-16 md:py-24">
-      <div className="text-center mb-12 px-4">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-center mb-12 px-4"
+      >
         <span className="text-primary font-body font-semibold text-sm tracking-widest uppercase">
           Nuestros Servicios
         </span>
@@ -109,7 +115,7 @@ export function ServicesCarousel() {
           Ofrecemos procedimientos corporales, mamarios y faciales con
           valoración médica, personal calificado y acompañamiento profesional.
         </p>
-      </div>
+      </motion.div>
 
       <div className="w-full max-w-7xl mx-auto md:p-8">
         <div className="relative overflow-hidden rounded-[2.5rem] lg:rounded-[4rem] flex flex-col lg:flex-row min-h-[600px] lg:aspect-video border border-primary/20">
@@ -141,7 +147,7 @@ export function ServicesCarousel() {
                       type: "spring",
                       stiffness: 90,
                       damping: 22,
-                      mass: 1,
+                      mass: 2,
                     }}
                     className="absolute flex items-center justify-start"
                   >
@@ -150,7 +156,7 @@ export function ServicesCarousel() {
                       onMouseEnter={() => setIsPaused(true)}
                       onMouseLeave={() => setIsPaused(false)}
                       className={cn(
-                        "relative flex items-center gap-3 px-6 md:px-10 lg:px-8 py-3 md:py-3.5 lg:py-3 rounded-full transition-all duration-700 text-left group border",
+                        "relative flex items-center gap-3 px-6 md:px-10 lg:px-8 py-3 md:py-3.5 lg:py-3 rounded-full transition-all duration-[1400] text-left group border",
                         isActive
                           ? "bg-clinic-bg text-primary border-clinic-bg z-10 shadow-lg"
                           : "bg-transparent text-white/60 border-white/20 hover:border-white/40 hover:text-white"
@@ -158,8 +164,8 @@ export function ServicesCarousel() {
                     >
                       <div
                         className={cn(
-                          "flex items-center justify-center transition-colors duration-500",
-                          isActive ? "text-primary" : "text-white/40"
+"flex items-center justify-center transition-colors duration-[1000]",
+                        isActive ? "text-primary" : "text-white/40"
                         )}
                       >
                         {serviceIcons[service.id]}
@@ -186,7 +192,7 @@ export function ServicesCarousel() {
               onClick={() => { setIsPaused(true); prevStep(); setTimeout(() => setIsPaused(false), 5000); }}
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
-              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-50 w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/90 hover:bg-primary text-white flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 active:scale-95"
+              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-50 w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/90 hover:bg-primary text-white flex items-center justify-center shadow-lg transition-all duration-[600] hover:scale-110 active:scale-95"
               aria-label="Servicio anterior"
             >
               <ChevronLeft size={20} className="md:w-6 md:h-6" />
@@ -195,7 +201,7 @@ export function ServicesCarousel() {
               onClick={() => { setIsPaused(true); nextStep(); setTimeout(() => setIsPaused(false), 5000); }}
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
-              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-50 w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/90 hover:bg-primary text-white flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 active:scale-95"
+              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-50 w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/90 hover:bg-primary text-white flex items-center justify-center shadow-lg transition-all duration-[600] hover:scale-110 active:scale-95"
               aria-label="Siguiente servicio"
             >
               <ChevronRight size={20} className="md:w-6 md:h-6" />
@@ -226,7 +232,7 @@ export function ServicesCarousel() {
                       type: "spring",
                       stiffness: 260,
                       damping: 25,
-                      mass: 0.8,
+                      mass: 1.6,
                     }}
                     className="absolute inset-0 rounded-[2rem] md:rounded-[2.8rem] overflow-hidden border-4 md:border-8 border-clinic-bg bg-clinic-bg origin-center"
                   >
@@ -234,7 +240,7 @@ export function ServicesCarousel() {
                       src={serviceImages[service.id]}
                       alt={service.title}
                       className={cn(
-                        "w-full h-full object-cover transition-all duration-700",
+                        "w-full h-full object-cover transition-all duration-[1400]",
                         isActive
                           ? "grayscale-0 blur-0"
                           : "grayscale blur-[2px] brightness-75"
@@ -267,7 +273,7 @@ export function ServicesCarousel() {
                               Ver información médica
                               <ArrowRight
                                 size={16}
-                                className="transition-transform duration-300 group-hover/link:translate-x-1"
+                                className="transition-transform duration-[600] group-hover/link:translate-x-1"
                               />
                             </Link>
                           )}
@@ -277,7 +283,7 @@ export function ServicesCarousel() {
 
                     <div
                       className={cn(
-                        "absolute top-6 left-6 flex items-center gap-2 transition-opacity duration-300",
+                        "absolute top-6 left-6 flex items-center gap-2 transition-opacity duration-[600]",
                         isActive ? "opacity-100" : "opacity-0"
                       )}
                     >
@@ -293,7 +299,7 @@ export function ServicesCarousel() {
 
               <Link
                 href="/servicios"
-                className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-primary text-white font-body font-bold text-lg shadow-lg hover:bg-primary-dark hover:shadow-xl active:scale-95 transition-all duration-300 w-fit"
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-primary text-white font-body font-bold text-lg shadow-lg hover:bg-primary-dark hover:shadow-xl active:scale-95 transition-all duration-[600] w-fit"
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
               >

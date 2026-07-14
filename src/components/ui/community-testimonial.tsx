@@ -270,7 +270,7 @@ export default function TestimonialsSection() {
           className="font-heading text-4xl md:text-5xl font-bold text-[#223231] leading-tight"
           style={{
             opacity: 0,
-            animation: "fadeInUp 0.7s ease-out 0.2s forwards",
+            animation: "fadeInUp 1.4s ease-out 0.2s forwards",
           }}
         >
           Lo que dicen nuestros pacientes
@@ -279,7 +279,7 @@ export default function TestimonialsSection() {
           className="text-sm md:text-base text-[#223231]/60 font-body max-w-xl"
           style={{
             opacity: 0,
-            animation: "fadeInUp 0.7s ease-out 0.4s forwards",
+            animation: "fadeInUp 1.4s ease-out 0.4s forwards",
           }}
         >
           En Tiffany Esthetic Group, la satisfacción de nuestros pacientes es
@@ -288,13 +288,13 @@ export default function TestimonialsSection() {
       </div>
 
       <div className="flex flex-col gap-8 z-10 w-full max-w-6xl">
-        <HorizontalScroller speed="50s" direction="left">
+        <HorizontalScroller speed="100s" direction="left">
           <AICard />
           {reviews.slice(0, 5).map((review) => (
             <ReviewCard key={review.id} review={review} />
           ))}
         </HorizontalScroller>
-        <HorizontalScroller speed="40s" direction="right">
+        <HorizontalScroller speed="80s" direction="right">
           {reviews.slice(5).map((review) => (
             <ReviewCard key={review.id} review={review} />
           ))}

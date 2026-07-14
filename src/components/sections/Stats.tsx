@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 
 const stats = [
@@ -19,13 +19,32 @@ function AnimatedCounter({
 }) {
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!isInView) return;
+    const duration = 1000;
+    const steps = 30;
+    const increment = value / steps;
+    let current = 0;
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= value) {
+        setCount(value);
+        clearInterval(timer);
+      } else {
+        setCount(Math.round(current));
+      }
+    }, duration / steps);
+    return () => clearInterval(timer);
+  }, [isInView, value]);
 
   return (
     <span
       ref={ref}
       className="text-4xl md:text-5xl font-heading font-bold text-black"
     >
-      {isInView ? value : 0}
+      {count}
       {suffix}
     </span>
   );
@@ -45,7 +64,7 @@ export default function Stats() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              transition={{ duration: 1.0, delay: i * 0.1 }}
             >
               <AnimatedCounter value={stat.value} suffix={stat.suffix} />
               <p

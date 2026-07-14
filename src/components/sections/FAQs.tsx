@@ -23,7 +23,13 @@ export default function FAQs() {
         </svg>
       </div>
       <div className="max-w-3xl mx-auto relative z-10">
-        <div className="text-center mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
           <span className="text-primary font-body font-semibold text-sm tracking-widest uppercase">
             FAQ
           </span>
@@ -33,7 +39,7 @@ export default function FAQs() {
           <p className="mt-4 text-text-main font-body">
             Todo lo que necesitas saber antes de tu procedimiento.
           </p>
-        </div>
+        </motion.div>
 
         <dl className="space-y-3">
           {faqs.map((faq, i) => (
@@ -43,11 +49,11 @@ export default function FAQs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className={`rounded-2xl border transition-colors duration-300 ${
-                openIndex === i
-                  ? "border-primary/30 bg-primary/[0.03]"
-                  : "border-silver/20 bg-white"
-              }`}
+               className={`rounded-2xl border transition-colors duration-[600] ${
+                 openIndex === i
+                   ? "border-primary/30 bg-primary/[0.03]"
+                   : "border-silver/20 bg-white"
+               }`}
             >
               <dt>
                 <button
@@ -62,9 +68,9 @@ export default function FAQs() {
                     {faq.question}
                   </span>
                   <svg
-                    className={`w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300 ${
-                      openIndex === i ? "rotate-180" : ""
-                    }`}
+                     className={`w-5 h-5 text-primary flex-shrink-0 transition-transform duration-[600] ${
+                       openIndex === i ? "rotate-180" : ""
+                     }`}
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -83,7 +89,7 @@ export default function FAQs() {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    transition={{ duration: 0.6, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
                     <p className="px-6 pb-5 text-sm text-text-main font-body leading-relaxed border-t border-silver/10 pt-4">

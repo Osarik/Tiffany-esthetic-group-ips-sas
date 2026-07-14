@@ -8,7 +8,13 @@ import { team } from "@/data/team";
 export default function Team() {
   return (
     <Section dark id="equipo">
-      <div className="text-center mb-16">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-center mb-16"
+      >
         <span className="text-primary font-body font-semibold text-sm tracking-widest uppercase">
           Nuestro Equipo
         </span>
@@ -20,7 +26,7 @@ export default function Team() {
           anestesiólogos, instrumentación, circulante de cirugía y enfermería
           recuperadora.
         </p>
-      </div>
+      </motion.div>
 
       <div className="grid md:grid-cols-3 gap-8">
         {team.map((member, i) => (
@@ -29,7 +35,7 @@ export default function Team() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
+            transition={{ duration: 1.0, delay: i * 0.1 }}
             className="text-center group"
           >
             <div className="relative w-48 h-48 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg">

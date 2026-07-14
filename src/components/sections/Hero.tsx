@@ -25,7 +25,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
+            transition={{ duration: 1.4, ease: "easeOut" }}
           >
             <span className="inline-block text-white/70 font-body font-semibold text-sm tracking-widest uppercase mb-4">
               Cirugía Plástica & Servicios Quirúrgicos
@@ -89,7 +89,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+            transition={{ duration: 1.4, delay: 0.2, ease: "easeOut" }}
             className="relative"
           >
           </motion.div>

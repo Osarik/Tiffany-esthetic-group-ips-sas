@@ -14,7 +14,13 @@ const cases = [
 export default function BeforeAfter() {
   return (
     <Section dark id="resultados">
-      <div className="text-center mb-16">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-center mb-16"
+      >
         <span className="text-primary font-body font-semibold text-sm tracking-widest uppercase">
           Resultados Reales
         </span>
@@ -25,7 +31,7 @@ export default function BeforeAfter() {
           Resultados naturales y reales de pacientes reales. Desliza la barra
           para ver la transformación.
         </p>
-      </div>
+      </motion.div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {cases.map((c, i) => (
@@ -34,7 +40,7 @@ export default function BeforeAfter() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
+            transition={{ duration: 1.0, delay: i * 0.1 }}
           >
             <BeforeAfterSlider
               beforeLabel={c.beforeLabel}

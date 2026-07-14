@@ -16,6 +16,7 @@ export default function FinalCTA() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
           className="max-w-3xl mx-auto text-center"
         >
           <span className="inline-block text-primary font-body font-semibold text-sm tracking-widest uppercase mb-4">
@@ -67,7 +68,7 @@ export default function FinalCTA() {
                 <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
               </svg>
               <div>
-                <p className="font-body font-semibold text-text-dark text-sm group-hover:text-primary transition-colors">
+                <p className="font-body font-semibold text-text-dark text-sm group-hover:text-primary transition-colors duration-[300]">
                   WhatsApp
                 </p>
                 <p className="text-sm text-text-main/70 font-body">
@@ -80,7 +81,7 @@ export default function FinalCTA() {
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
               </svg>
               <div>
-                <p className="font-body font-semibold text-text-dark text-sm group-hover:text-primary transition-colors">
+                <p className="font-body font-semibold text-text-dark text-sm group-hover:text-primary transition-colors duration-[300]">
                   Teléfono
                 </p>
                 <p className="text-sm text-text-main/70 font-body">
@@ -94,7 +95,7 @@ export default function FinalCTA() {
                 <circle cx="12" cy="10" r="3" />
               </svg>
               <div>
-                <p className="font-body font-semibold text-text-dark text-sm group-hover:text-primary transition-colors">
+                <p className="font-body font-semibold text-text-dark text-sm group-hover:text-primary transition-colors duration-[300]">
                   Ubicación
                 </p>
                 <p className="text-sm text-text-main/70 font-body">
