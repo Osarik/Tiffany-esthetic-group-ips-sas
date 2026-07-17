@@ -288,13 +288,13 @@ export default function TestimonialsSection() {
       </div>
 
       <div className="flex flex-col gap-8 z-10 w-full max-w-6xl">
-        <HorizontalScroller speed="100s" direction="left">
+        <HorizontalScroller speed="50s" direction="left">
           <AICard />
           {reviews.slice(0, 5).map((review) => (
             <ReviewCard key={review.id} review={review} />
           ))}
         </HorizontalScroller>
-        <HorizontalScroller speed="80s" direction="right">
+        <HorizontalScroller speed="40s" direction="right">
           {reviews.slice(5).map((review) => (
             <ReviewCard key={review.id} review={review} />
           ))}

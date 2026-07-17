@@ -108,10 +108,10 @@
 
   @media (max-width: 640px) {
     .animate-scroll-horizontal {
-      animation-duration: 40s !important;
+      animation-duration: 20s !important;
     }
     .animate-scroll-horizontal-reverse {
-      animation-duration: 32s !important;
+      animation-duration: 16s !important;
     }
   }
 
