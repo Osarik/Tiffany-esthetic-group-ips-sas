@@ -1,5 +1,6 @@
 import Hero from "@/components/sections/Hero";
 import Benefits from "@/components/sections/Benefits";
+import Certifications from "@/components/sections/Certifications";
 import Services from "@/components/sections/Services";
 import BeforeAfter from "@/components/sections/BeforeAfter";
 import Installations from "@/components/sections/Installations";
@@ -15,6 +16,7 @@ export default function Home() {
     <>
       <Hero />
       <Benefits />
+      <Certifications />
       <Services />
       <BeforeAfter />
       <Installations />
