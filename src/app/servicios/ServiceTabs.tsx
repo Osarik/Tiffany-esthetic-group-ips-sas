@@ -13,6 +13,7 @@ import MamariaSvg from "@/components/icons/MamariaSvg";
 import FacialSvg from "@/components/icons/FacialSvg";
 import EyeSvg from "@/components/icons/EyeSvg";
 import CirugiaMamariaSvg from "@/components/icons/CirugiaMamariaSvg";
+import CorporalSvg from "@/components/icons/CorporalSvg";
 import RitidoplastiaSvg from "@/components/icons/RitidoplastiaSvg";
 import GinecomastiaSvg from "@/components/icons/GinecomastiaSvg";
 
@@ -38,14 +39,7 @@ const categoryConfig: Record<string, { gradient: string; label: string; iconBg: 
 };
 
 const categoryIcons: Record<string, React.ReactNode> = {
-  corporal: (
-    <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8" aria-hidden="true">
-      <path d="M24 4C19.4 4 15.5 6.5 13.5 10.5C11.5 14.5 11.5 19.5 13.5 24C14.5 26.2 16 28.2 17.5 30C18.5 31.2 19.5 32.5 20 34C20.5 35.5 20.5 37 20.5 38.5C20.5 40 20.5 42 20.5 44H27.5C27.5 42 27.5 40 27.5 38.5C27.5 37 27.5 35.5 28 34C28.5 32.5 29.5 31.2 30.5 30C32 28.2 33.5 26.2 34.5 24C36.5 19.5 36.5 14.5 34.5 10.5C32.5 6.5 28.6 4 24 4Z" fill="currentColor" opacity="0.28"/>
-      <path d="M24 10C21 10 18.5 11.8 17.5 14.5C16.5 17.2 16.5 20.5 17.5 23C18 24.2 18.8 25.3 19.5 26.5C20 27.3 20.3 28 20.3 29C20.3 30 20.3 31 20.3 32H27.7C27.7 31 27.7 30 27.7 29C27.7 28 28 27.3 28.5 26.5C29.2 25.3 30 24.2 30.5 23C31.5 20.5 31.5 17.2 30.5 14.5C29.5 11.8 27 10 24 10Z" fill="currentColor" opacity="0.15"/>
-      <circle cx="24" cy="38" r="6" fill="currentColor" opacity="0.2"/>
-      <path d="M14 16C14 16 17 20 24 20C31 20 34 16 34 16" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.35"/>
-    </svg>
-  ),
+  corporal: <CorporalSvg />,
   mamaria: <CirugiaMamariaSvg />,
   facial: <FacialSvg />,
 };
