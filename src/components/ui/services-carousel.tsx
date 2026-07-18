@@ -19,36 +19,67 @@ import {
 
 const serviceIcons: Record<string, React.ReactNode> = {
   lipoescultura: <Scissors size={18} />,
+  lipectomia: <Activity size={18} />,
   "lipo-lipectomia": <Activity size={18} />,
+  "lipo-lipectomia-senos": <Droplets size={18} />,
+  "lipo-lipectomia-pexia-periareolar": <Activity size={18} />,
+  "lipo-lipectomia-pexia": <Activity size={18} />,
+  hernia: <Scissors size={18} />,
+  "mamoplastia-aumento-rinoplastia": <Heart size={18} />,
+  "mamoplastia-aumento": <Heart size={18} />,
+  gigantomastia: <Heart size={18} />,
+  ginecomastia: <Scissors size={18} />,
+  "pexia-reconstructiva": <Heart size={18} />,
+  pexia: <Heart size={18} />,
+  "pexia-periareolar": <Heart size={18} />,
+  "lipo-pexia-periareolar": <Activity size={18} />,
   "lipo-pexia": <Activity size={18} />,
   "lipo-protesis-aumento": <Droplets size={18} />,
-  pexia: <Heart size={18} />,
-  rinoplastia: <Eye size={18} />,
-  "mamoplastia-aumento": <Heart size={18} />,
-  ginecomastia: <Scissors size={18} />,
+  "lipectomia-pexia": <Activity size={18} />,
   "ritidoplastia-completa": <Sparkles size={18} />,
   "ritidoplastia-tercio-medio": <Sparkles size={18} />,
   "ritidoplastia-tercio-inferior": <Sparkles size={18} />,
-  lipectomia: <Activity size={18} />,
+  rinoplastia: <Eye size={18} />,
+  "lipo-rinoplastia": <Eye size={18} />,
+  "blefaroplastia-otoplastia-lipectomia": <Eye size={18} />,
 };
 
+const IMG_BODY = "https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=800&h=1000&fit=crop";
+const IMG_MAMA = "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&h=1000&fit=crop";
+const IMG_PEXIA = "https://images.unsplash.com/photo-1527613426441-4da17471b66d?q=80&w=800&h=1000&fit=crop";
+const IMG_COMBO = "https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&h=1000&fit=crop";
+const IMG_CLINIC = "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=800&h=1000&fit=crop";
+const CLOUD_LIPO = "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783832108/ChatGPT_Image_11_jul_2026_11_37_31_p.m._mwqeu8.png";
+const CLOUD_NOSE = "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830677/ChatGPT_Image_11_jul_2026_10_34_24_p.m._nagkar.png";
+const CLOUD_EYES = "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830679/ChatGPT_Image_11_jul_2026_11_26_18_p.m._cfhfki.png";
+const CLOUD_FACE = "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830876/ChatGPT_Image_11_jul_2026_11_34_27_p.m._z2zube.png";
+const CLOUD_BREAST = "https://images.unsplash.com/photo-1612349317150-4136b6e5f5c0?q=80&w=800&h=1000&fit=crop";
+
 const serviceImages: Record<string, string> = {
-  lipoescultura:
-    "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783832108/ChatGPT_Image_11_jul_2026_11_37_31_p.m._mwqeu8.png",
-  "lipo-lipectomia":
-    "https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=800&h=1000&fit=crop",
-  "lipo-pexia":
-    "https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&h=1000&fit=crop",
-  "lipo-protesis-aumento":
-    "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&h=1000&fit=crop",
-  pexia:
-    "https://images.unsplash.com/photo-1527613426441-4da17471b66d?q=80&w=800&h=1000&fit=crop",
-  rinoplastia:
-    "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830677/ChatGPT_Image_11_jul_2026_10_34_24_p.m._nagkar.png",
-  "mamoplastia-aumento":
-    "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830679/ChatGPT_Image_11_jul_2026_11_26_18_p.m._cfhfki.png",
-  "ritidoplastia-completa":
-    "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830876/ChatGPT_Image_11_jul_2026_11_34_27_p.m._z2zube.png",
+  lipoescultura: CLOUD_LIPO,
+  lipectomia: IMG_BODY,
+  "lipo-lipectomia": IMG_BODY,
+  "lipo-lipectomia-senos": IMG_MAMA,
+  "lipo-lipectomia-pexia-periareolar": IMG_COMBO,
+  "lipo-lipectomia-pexia": IMG_COMBO,
+  hernia: IMG_CLINIC,
+  "mamoplastia-aumento-rinoplastia": IMG_MAMA,
+  "mamoplastia-aumento": CLOUD_BREAST,
+  gigantomastia: IMG_PEXIA,
+  ginecomastia: IMG_BODY,
+  "pexia-reconstructiva": IMG_PEXIA,
+  pexia: IMG_PEXIA,
+  "pexia-periareolar": IMG_PEXIA,
+  "lipo-pexia-periareolar": IMG_COMBO,
+  "lipo-pexia": IMG_COMBO,
+  "lipo-protesis-aumento": IMG_MAMA,
+  "lipectomia-pexia": IMG_COMBO,
+  "ritidoplastia-completa": CLOUD_FACE,
+  "ritidoplastia-tercio-medio": CLOUD_FACE,
+  "ritidoplastia-tercio-inferior": CLOUD_FACE,
+  rinoplastia: CLOUD_NOSE,
+  "lipo-rinoplastia": CLOUD_NOSE,
+  "blefaroplastia-otoplastia-lipectomia": CLOUD_EYES,
 };
 
 const AUTO_PLAY_INTERVAL = 5000;
