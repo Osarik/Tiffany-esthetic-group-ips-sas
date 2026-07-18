@@ -11,6 +11,7 @@ import MammaplastySvg from "@/components/icons/MammaplastySvg";
 import LipectomySvg from "@/components/icons/LipectomySvg";
 import MamariaSvg from "@/components/icons/MamariaSvg";
 import FacialSvg from "@/components/icons/FacialSvg";
+import EyeSvg from "@/components/icons/EyeSvg";
 import GinecomastiaSvg from "@/components/icons/GinecomastiaSvg";
 
 const categoryConfig: Record<string, { gradient: string; label: string; iconBg: string; border: string }> = {
@@ -145,7 +146,7 @@ const procedureIcons: Record<string, React.ReactNode> = {
       <path d="M42 38c-2 3-5 5.5-10 6.5" opacity="0.4" />
     </SvgIcon>
   ),
-  "blefaroplastia-otoplastia-lipectomia": <BodyContourSvg />,
+  "blefaroplastia-otoplastia-lipectomia": <EyeSvg />,
 };
 
 export default function ServiceTabs({ whatsappUrl }: { whatsappUrl: string }) {
