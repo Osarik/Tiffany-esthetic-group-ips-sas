@@ -7,6 +7,7 @@ import Installations from "@/components/sections/Installations";
 import Stats from "@/components/sections/Stats";
 import Testimonials from "@/components/sections/Testimonials";
 import Team from "@/components/sections/Team";
+import ReTHUS from "@/components/sections/ReTHUS";
 import FAQs from "@/components/sections/FAQs";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Map from "@/components/sections/Map";
@@ -23,6 +24,7 @@ export default function Home() {
       <Stats />
       <Testimonials />
       <Team />
+      <ReTHUS />
       <FAQs />
       <FinalCTA />
       <Map />
