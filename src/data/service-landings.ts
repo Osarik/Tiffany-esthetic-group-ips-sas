@@ -80,6 +80,18 @@ export const serviceLandings: Record<string, ServiceLanding> = {
     duration: "2 a 4 horas",
     anesthesia: "Anestesia general",
     hospitalization: "24 horas de observación",
+    contraindications: [
+      "Pacientes con índice de masa corporal superior a 30, ya que el riesgo quirúrgico se incrementa significativamente.",
+      "Personas con trastornos de coagulación no controlados o enfermedades autoinmunes activas.",
+      "Fumadores activos que no pueden suspender el tabaco durante el período perioperatorio.",
+      "Pacientes con expectativas irreales sobre la cantidad de grasa que puede extraerse de forma segura.",
+    ],
+    risks: [
+      "Seroma: acumulación de líquido seroso en las zonas intervenidas que puede requerir drenaje.",
+      "Irregularidades del contorno: ondas o depresiones en la piel por extracción desigual de grasa.",
+      "Necrosis grasa: áreas de tejido adiposo que no reciben suficiente irrigación sanguínea.",
+      "Hipocirculación cutánea temporal en las zonas de liposucción extensa.",
+    ],
     faqs: [
       { q: "¿Duele la lipoescultura?", a: "El procedimiento se realiza bajo anestesia, por lo que no hay dolor intraoperatorio. En el postoperatorio se presenta inflamación y sensibilidad controlable con analgesia." },
       { q: "¿Cuánto tiempo dura el resultado?", a: "La grasa que sobrevive al proceso de integración se mantiene de forma permanente, aunque el envejecimiento natural continúa." },
@@ -128,6 +140,18 @@ export const serviceLandings: Record<string, ServiceLanding> = {
     duration: "3 a 5 horas",
     anesthesia: "Anestesia general",
     hospitalization: "24 a 48 horas",
+    contraindications: [
+      "Pacientes con obesidad mórbida o IMC superior a 32 que no hayan completado un programa de pérdida de peso supervisado.",
+      "Fumadores activos que no puedan suspender el tabaco al menos cuatro semanas antes y durante la recuperación.",
+      "Mujeres con planes de embarazo futuro, ya que la distensión abdominal puede comprometer el resultado quirúrgico.",
+      "Pacientes con diabetes mellitus no controlada o enfermedad cardiovascular descompensada.",
+    ],
+    risks: [
+      "Necrosis del colgajo cutáneo: pérdida de viabilidad de la piel abdominal por compromiso de la irrigación.",
+      "Seroma: acumulación de líquido seroso bajo el colgajo que requiere drenaje percutáneo seriado.",
+      "Dehiscencia de la sutura: separación parcial de los bordes de la incisión por tensión excesiva.",
+      "Tromboembolismo pulmonar: riesgo aumentado por la resección extensa y el reposo postoperatorio prolongado.",
+    ],
     faqs: [
       { q: "¿La cicatriz es muy notoria?", a: "La incisión se realiza en la parte baja del abdomen y se ubica por debajo de la línea de la ropa interior. La cicatriz madura durante el primer año." },
       { q: "¿Puedo combinar lipectomía con otros procedimientos?", a: "Sí. Es frecuente combinarla con liposucción de flancos o con cirugía mamaria en el mismo tiempo quirúrgico." },
@@ -175,6 +199,18 @@ export const serviceLandings: Record<string, ServiceLanding> = {
     duration: "3 a 4 horas",
     anesthesia: "Anestesia general",
     hospitalization: "24 a 48 horas",
+    contraindications: [
+      "Pacientes con IMC superior a 30 que no han logrado estabilizar su peso en los últimos seis meses.",
+      "Fumadores activos que no pueden abandonar el tabaco en el período perioperatorio.",
+      "Personas con trastornos de la coagulación no corregidos o enfermedades del tejido conectivo.",
+      "Pacientes con insuficiencia renal o hepática que contraindiquen una cirugía de duración prolongada.",
+    ],
+    risks: [
+      "Necrosis cutánea: pérdida de viabilidad de la piel en el colgajo abdominal por compromiso vascular.",
+      "Seroma recurrente que puede requerir múltiples punciones de drenaje o colocación de drenajes prolongados.",
+      "Hematoma: colección sanguínea bajo el colgajo que puede necesitar reintervención quirúrgica para su evacuación.",
+      "Alteraciones de la sensibilidad abdominal: adormecimiento permanente en la zona de la incisión.",
+    ],
     faqs: [
       { q: "¿Es más riesgoso que hacerlos por separado?", a: "No. Al realizarse en el mismo tiempo quirúrgico, se reduce la exposición a anestesia y se consolida la recuperación en un solo período." },
       { q: "¿Duele más?", a: "El dolor postoperatorio es controlable con medicación. La molestia principal es la tensión abdominal al movimiento." },
@@ -220,6 +256,18 @@ export const serviceLandings: Record<string, ServiceLanding> = {
     duration: "4 a 6 horas",
     anesthesia: "Anestesia general",
     hospitalization: "24 a 48 horas",
+    contraindications: [
+      "Pacientes con IMC superior a 30 o pérdida de peso reciente no estabilizada en los últimos seis meses.",
+      "Fumadores activos que no puedan suspender el tabaco durante todo el proceso quirúrgico.",
+      "Mujeres con planes de embarazo a corto plazo, ya que los cambios corporales alterarían los resultados.",
+      "Pacientes con comorbilidades no controladas que incrementen el riesgo anestésico en cirugías prolongadas.",
+    ],
+    risks: [
+      "Complicaciones combinadas: mayor riesgo global por la extensión y duración del procedimiento (4-6 horas).",
+      "Necrosis de colgajos cutáneos abdominales o mamarios por compromiso de la perfusión sanguínea.",
+      "Asimetría o malposición de los implantes mamarios que puede requerir corrección secundaria.",
+      "Trombosis venosa profunda por el tiempo quirúrgico prolongado y la inmovilización postoperatoria.",
+    ],
     faqs: [
       { q: "¿Cuánto dura la cirugía completa?", a: "El tiempo quirúrgico varía entre 4 y 6 horas dependiendo de la complejidad de cada procedimiento." },
       { q: "¿La recuperación es muy difícil?", a: "Requiere paciencia, pero el manejo del dolor y las molestias está protocolizado. La mayoría de pacientes reporta satisfacción con los resultados." },
@@ -264,6 +312,18 @@ export const serviceLandings: Record<string, ServiceLanding> = {
     duration: "4 a 6 horas",
     anesthesia: "Anestesia general",
     hospitalization: "24 a 48 horas",
+    contraindications: [
+      "Pacientes con ptosis mamaria severa que requieran técnicas de elevación con incisiones verticales o en ancla.",
+      "Fumadores activos que no puedan suspender el tabaco, ya que la irrigación de los colgajos mamarios es crítica.",
+      "Mujeres con antecedente de cirugía mamaria previa que comprometa la vascularización del complejo areola-pezón.",
+      "Pacientes con enfermedades autoinmunes o vasculares que afecten la cicatrización de tejidos blandos.",
+    ],
+    risks: [
+      "Necrosis del complejo areola-pezón: la complicación más temida en cirugía mamaria combinada.",
+      "Malposición o distorsión de la areola por tensión asimétrica en la sutura concéntrica periareolar.",
+      "Pérdida de sensibilidad del pezón, que puede ser temporal o permanente según la técnica empleada.",
+      "Recidiva temprana de la ptosis si la fijación interna del tejido glandular no es adecuada.",
+    ],
     faqs: [
       { q: "¿La cicatriz periareolar se nota mucho?", a: "La incisión se realiza en el borde de la areola y tiende a camuflarse muy bien. La maduración de la cicatriz toma hasta un año." },
       { q: "¿Cuánto tiempo debo usar la faja y el sujetador quirúrgico?", a: "La faja abdominal se usa de forma permanente durante el primer mes y luego nocturna el segundo mes. El sujetador quirúrgico las 24 horas durante 4 a 6 semanas." },
@@ -306,6 +366,18 @@ export const serviceLandings: Record<string, ServiceLanding> = {
     duration: "4 a 6 horas",
     anesthesia: "Anestesia general",
     hospitalization: "24 a 48 horas",
+    contraindications: [
+      "Pacientes con IMC superior a 30 o pérdida de peso reciente no estabilizada que comprometa el resultado.",
+      "Fumadores activos: el tabaco aumenta drásticamente el riesgo de necrosis en los colgajos abdominal y mamario.",
+      "Personas con hipertensión arterial no controlada o cardiopatía que contraindique tiempos quirúrgicos prolongados.",
+      "Mujeres con embarazo planeado a corto plazo, ya que la distensión abdominal y los cambios mamarios afectarían el resultado.",
+    ],
+    risks: [
+      "Necrosis de colgajo abdominal o mamario por la extensión combinada de las resecciones quirúrgicas.",
+      "Tromboembolismo venoso: el riesgo se incrementa con la duración del procedimiento y la inmovilización posterior.",
+      "Seroma y hematoma en ambas zonas intervenidas, con posible necesidad de drenaje o reintervención.",
+      "Asimetría postoperatoria entre abdomen y busto que puede requerir retoques secundarios.",
+    ],
     faqs: [
       { q: "¿Cuánto tiempo debo tomarme del trabajo?", a: "Depende de la actividad laboral. Para trabajos sedentarios, entre 2 y 3 semanas. Para actividades físicas, de 4 a 6 semanas." },
       { q: "¿Cuánto tiempo debo usar las prendas de compresión?", a: "La faja abdominal se usa las 24 horas durante el primer mes y luego 12 horas el segundo mes. El sujetador quirúrgico se mantiene de 4 a 6 semanas continuas." },
@@ -349,6 +421,18 @@ export const serviceLandings: Record<string, ServiceLanding> = {
     duration: "1 a 2 horas (solo hernia), 2 a 4 horas (combinada)",
     anesthesia: "Anestesia general o regional",
     hospitalization: "24 horas",
+    contraindications: [
+      "Pacientes con hernia encarcelada o estrangulada que requieren cirugía de urgencia no programable.",
+      "Personas con infección activa en la zona quirúrgica o peritonitis establecida.",
+      "Pacientes con ascitis no controlada o hipertensión portal que aumentan el riesgo de recurrencia.",
+      "Individuos con coagulopatía no corregible que impidan una hemostasia segura durante la reparación.",
+    ],
+    risks: [
+      "Recurrencia herniaria: nueva protrusión a través del mismo sitio por fallo en la reparación o infección.",
+      "Infección de la malla protésica: complicación grave que puede requerir retiro del material y reconstrucción diferida.",
+      "Seroma en el sitio quirúrgico, especialmente frecuente en reparaciones con malla de gran tamaño.",
+      "Lesión de estructuras vecinas: vísceras, vasos epigástricos o nervios durante la disección del saco herniario.",
+    ],
     faqs: [
       { q: "¿Necesito malla para la reparación?", a: "Depende del tamaño y la ubicación de la hernia. El cirujano determinará si es necesario colocar una malla de refuerzo." },
       { q: "¿Puedo combinar la reparación con cirugía estética?", a: "Sí. Es frecuente realizar liposucción o lipectomía en el mismo tiempo quirúrgico, previa evaluación de seguridad." },
@@ -393,6 +477,18 @@ export const serviceLandings: Record<string, ServiceLanding> = {
     duration: "4 a 6 horas",
     anesthesia: "Anestesia general",
     hospitalization: "24 horas",
+    contraindications: [
+      "Pacientes con deformidades nasales complejas o insuficiencia respiratoria severa que requieran cirugía nasal reconstructiva.",
+      "Fumadores activos: el tabaco compromete la cicatrización nasal y la perfusión de los colgajos mamarios.",
+      "Pacientes con hipoplasia mamaria severa que requieran técnicas de expansión tisular previa.",
+      "Personas con infección activa en la vía aérea superior o sinusitis crónica no tratada.",
+    ],
+    risks: [
+      "Complicación combinada: mayor tiempo quirúrgico (4-6 horas) incrementa el riesgo de trombosis y complicaciones anestésicas.",
+      "Resultado nasal insatisfactorio que puede requerir rinoplastia secundaria de revisión.",
+      "Malposición, contractura capsular o rotura del implante mamario a mediano o largo plazo.",
+      "Edema y equimosis facial prolongada que puede retrasar el retorno a actividades sociales.",
+    ],
     faqs: [
       { q: "¿Es seguro hacer dos cirugías al mismo tiempo?", a: "Sí, cuando el paciente está en buenas condiciones de salud y el equipo médico tiene experiencia en procedimientos combinados." },
       { q: "¿La recuperación nasal afecta la recuperación mamaria?", a: "No. Los cuidados son independientes para cada zona. La única recomendación común es evitar esfuerzos físicos durante las primeras semanas." },
@@ -438,6 +534,18 @@ export const serviceLandings: Record<string, ServiceLanding> = {
     duration: "1.5 a 2.5 horas",
     anesthesia: "Anestesia general",
     hospitalization: "12 a 24 horas",
+    contraindications: [
+      "Pacientes con tejido mamario insuficiente para cubrir adecuadamente el implante seleccionado.",
+      "Mujeres con enfermedades autoinmunes o trastornos del tejido conectivo que afecten la cicatrización.",
+      "Pacientes con antecedente de carcinoma mamario o mutaciones genéticas de alto riesgo sin evaluación oncológica previa.",
+      "Madres lactantes o con planes de lactancia en los próximos seis meses.",
+    ],
+    risks: [
+      "Contractura capsular: endurecimiento del tejido cicatricial alrededor del implante que puede deformar el seno.",
+      "Rotura o fuga del implante: puede ocurrir por traumatismo, envejecimiento del material o fallo estructural.",
+      "Malposición del implante: descentramiento, rotación o descenso por debajo del surco submamario.",
+      "Alteración de la sensibilidad mamaria, especialmente del complejo areola-pezón, que puede ser permanente.",
+    ],
     faqs: [
       { q: "¿Qué tipo de implante es mejor?", a: "No hay un implante universalmente mejor. La elección depende de la anatomía, preferencias y recomendación del cirujano." },
       { q: "¿Los implantes interfieren con la lactancia?", a: "Depende de la vía de abordaje. La incisión submamaria generalmente preserva la capacidad de lactar." },
@@ -484,6 +592,18 @@ export const serviceLandings: Record<string, ServiceLanding> = {
     duration: "3 a 5 horas",
     anesthesia: "Anestesia general",
     hospitalization: "24 a 48 horas",
+    contraindications: [
+      "Mujeres que desean mantener la capacidad de lactancia futura, ya que la resección glandular la afecta significativamente.",
+      "Fumadoras activas que no puedan suspender el tabaco, por el alto riesgo de necrosis del complejo areola-pezón.",
+      "Pacientes con trastornos de la coagulación o hipertensión arterial no controlada.",
+      "Mujeres con expectativas irreales sobre el tamaño postquirúrgico o la posición de las cicatrices.",
+    ],
+    risks: [
+      "Necrosis del complejo areola-pezón: la complicación más grave, que puede requerir reconstructión diferida.",
+      "Pérdida permanente de la sensibilidad del pezón por la resección de los pedículos nerviosos.",
+      "Cicatrices hipertróficas o queloides, especialmente en la incisión vertical y el surco submamario.",
+      "Asimetría mamaria residual o deformidad en forma de 'cuadrado inferior' por resección insuficiente.",
+    ],
     faqs: [
       { q: "¿La cirugía afecta la sensibilidad del pezón?", a: "Puede haber cambios temporales o permanentes en la sensibilidad, aunque se realizan esfuerzos por preservar las estructuras nerviosas." },
       { q: "¿Puedo amamantar después de la cirugía?", a: "La capacidad de lactancia puede reducirse dependiendo de la técnica utilizada y la cantidad de tejido resecado." },
@@ -529,6 +649,18 @@ export const serviceLandings: Record<string, ServiceLanding> = {
     duration: "1.5 a 2.5 horas",
     anesthesia: "Anestesia general o sedación",
     hospitalization: "12 horas",
+    contraindications: [
+      "Hombres con ginecomastia fisiológica puberal en etapa de resolución espontánea (menos de 2 años de evolución).",
+      "Pacientes con causas secundarias reversibles no tratadas: tumores testiculares, hipogonadismo o fármacos causantes.",
+      "Individuos con IMC superior a 30 que no han completado un programa de pérdida de peso y ejercicio pectoral.",
+      "Pacientes con trastornos de la coagulación o anticoagulación terapéutica no interrumpible.",
+    ],
+    risks: [
+      "Resección insuficiente: tejido glandular residual que causa asimetría o deformidad residual del contorno.",
+      "Resección excesiva: depresión o 'hueco' en la región pectoral por extracción de tejido más allá del necesario.",
+      "Hematoma: acumulación de sangre bajo la piel que puede requerir drenaje quirúrgico precoz.",
+      "Alteración de la sensibilidad del pezón: adormecimiento o hipersensibilidad que suele ser temporal.",
+    ],
     faqs: [
       { q: "¿La ginecomastia puede volver a aparecer?", a: "La cirugía remove el tejido de forma permanente, pero cambios hormonales o aumento de peso pueden causar recurrencia parcial." },
       { q: "¿Duele la cirugía?", a: "El procedimiento se realiza bajo anestesia. Las molestias postoperatorias son leves y controlables con analgesia." },
@@ -573,6 +705,18 @@ export const serviceLandings: Record<string, ServiceLanding> = {
     duration: "2 a 3 horas",
     anesthesia: "Anestesia general",
     hospitalization: "12 a 24 horas",
+    contraindications: [
+      "Pacientes con ptosis mamaria severa (grado III) que requieren técnicas de incisión vertical o en ancla para una elevación adecuada.",
+      "Mujeres con tejido mamario insuficiente que también necesitan aumento de volumen y no solo reposicionamiento.",
+      "Fumadoras activas que no pueden suspender el tabaco durante el período perioperatorio.",
+      "Pacientes con antecedente de cirugía mamaria previa que haya comprometido la vascularización del tejido glandular.",
+    ],
+    risks: [
+      "Recidiva de la ptosis: caída progresiva del busto por falta de fijación interna adecuada o envejecimiento tisular.",
+      "Asimetría areolar: diferencias en la posición, forma o tamaño de las areolas después de la elevación.",
+      "Pérdida de la proyección del cono mamario tras la redistribución del tejido glandular.",
+      "Alteraciones de la sensibilidad del complejo areola-pezón durante la movilización del colgajo.",
+    ],
     faqs: [
       { q: "¿La pexia reconstructiva dura para siempre?", a: "Los resultados son duraderos, pero el envejecimiento, la gravedad y los cambios de peso pueden afectar la posición del busto con el tiempo." },
       { q: "¿Qué diferencia hay con una pexia con implantes?", a: "La pexia reconstructiva solo reposiciona el tejido existente sin añadir volumen. Si se desea aumentar el tamaño, se combina con implantes." },
@@ -617,6 +761,18 @@ export const serviceLandings: Record<string, ServiceLanding> = {
     duration: "2 a 4 horas",
     anesthesia: "Anestesia general",
     hospitalization: "12 a 24 horas",
+    contraindications: [
+      "Pacientes con ptosis mamaria leve que puede corregirse con técnicas menos invasivas como pexia periareolar.",
+      "Mujeres que planean un embarazo futuro, ya que los cambios hormonales pueden revertir la elevación obtenida.",
+      "Fumadoras activas que no puedan suspender el tabaco al menos tres semanas antes de la cirugía.",
+      "Pacientes con enfermedades autoinmunes o trastornos de cicatrización que afecten la viabilidad de los colgajos.",
+    ],
+    risks: [
+      "Necrosis del colgajo cutáneo o del complejo areola-pezón por compromiso de la irrigación sanguínea.",
+      "Cicatriz hipertrófica o quelóide en las incisiones verticales o periareolares.",
+      "Pérdida de la elevación con el tiempo por efecto de la gravedad y el envejecimiento natural.",
+      "Asimetría mamaria postoperatoria que puede requerir corrección secundaria.",
+    ],
     faqs: [
       { q: "¿Qué tipo de cicatriz queda?", a: "La incisión puede ser periareolar, en vertical o en ancla, dependiendo del grado de elevación necesario." },
       { q: "¿Puedo combinar pexia con implantes?", a: "Sí. Cuando además de elevación se desea aumentar el volumen, se colocan implantes en el mismo procedimiento." },
@@ -658,6 +814,18 @@ export const serviceLandings: Record<string, ServiceLanding> = {
     duration: "1.5 a 2 horas",
     anesthesia: "Anestesia general o sedación",
     hospitalization: "12 horas",
+    contraindications: [
+      "Pacientes con ptosis mamaria moderada a severa que requieren incisiones verticales o en ancla para una elevación adecuada.",
+      "Mujeres con mala elasticidad cutánea o piel muy fina que no garantice una retracción adecuada alrededor de la areola.",
+      "Fumadoras activas que no puedan suspender el tabaco durante el proceso quirúrgico.",
+      "Pacientes que desean un aumento significativo del volumen mamario además de la elevación.",
+    ],
+    risks: [
+      "Distorsión del complejo areola-pezón: agrandamiento, asimetría o forma irregular de la areola.",
+      "Cicatriz periareolar visible o hipertrófica en pacientes con tendencia a queloides.",
+      "Elevación insuficiente si el grado de ptosis subestimado requiere una técnica más extensa.",
+      "Pérdida parcial de la sensibilidad del pezón por la disección circumareolar.",
+    ],
     faqs: [
       { q: "¿La cicatriz periareolar se nota?", a: "La incisión se realiza en la unión de la areola con la piel, por lo que tiende a camuflarse muy bien una vez madura." },
       { q: "¿Puedo combinar esta técnica con implantes?", a: "Sí. La pexia periareolar puede combinarse con aumento mamario cuando se desea elevación y volumen simultáneamente." },
@@ -698,6 +866,18 @@ export const serviceLandings: Record<string, ServiceLanding> = {
     duration: "2 a 3 horas",
     anesthesia: "Anestesia general",
     hospitalization: "12 a 24 horas",
+    contraindications: [
+      "Pacientes con ptosis mamaria moderada a severa que no puede corregirse solo con técnica periareolar.",
+      "Fumadores activos que no puedan suspender el tabaco, afectando la cicatrización de la liposucción y la pexia.",
+      "Personas con flacidez cutánea severa en las áreas de liposucción que requieran resección de piel.",
+      "Pacientes con comorbilidades no controladas que incrementen el riesgo de una cirugía combinada.",
+    ],
+    risks: [
+      "Irregularidades del contorno corporal por liposucción desigual en las zonas tratadas.",
+      "Distorsión o asimetría del complejo areola-pezón por la sutura concéntrica periareolar.",
+      "Seroma: acumulación de líquido en las zonas de liposucción que puede requerir drenaje.",
+      "Resultado insuficiente en la elevación mamaria si la ptosis era mayor a la evaluada inicialmente.",
+    ],
     faqs: [
       { q: "¿Cuánto dura la cirugía combinada?", a: "Aproximadamente 2 a 3 horas, dependiendo de las áreas de liposucción." },
       { q: "¿Cuándo puedo retomar el ejercicio?", a: "Caminatas desde la primera semana. Ejercicio completo después de la cuarta semana con autorización médica." },
@@ -736,6 +916,18 @@ export const serviceLandings: Record<string, ServiceLanding> = {
     duration: "2.5 a 4 horas",
     anesthesia: "Anestesia general",
     hospitalization: "12 a 24 horas",
+    contraindications: [
+      "Pacientes con ptosis mamaria severa que requieren técnicas de elevación más complejas que la pexia convencional.",
+      "Fumadores activos que no puedan suspender el tabaco al menos tres semanas antes de la cirugía.",
+      "Personas con flacidez abdominal significativa que necesiten lipectomía además de liposucción para obtener un resultado óptimo.",
+      "Pacientes con enfermedad cardiovascular o pulmonar que contraindiquen tiempos quirúrgicos superiores a 3 horas.",
+    ],
+    risks: [
+      "Necrosis grasa en las áreas de liposucción extensa por compromiso de la irrigación sanguínea.",
+      "Asimetría mamaria postoperatoria o pérdida de la elevación obtenida durante la pexia.",
+      "Seroma en las zonas de liposucción que puede requerir múltiples drenajes percutáneos.",
+      "Alteraciones de la sensibilidad del complejo areola-pezón por la movilización del tejido glandular.",
+    ],
     faqs: [
       { q: "¿Puedo añadir implantes mamarios?", a: "Sí. Si además se desea aumentar el volumen, se pueden colocar implantes en el mismo procedimiento." },
       { q: "¿Cuándo puedo retomar el ejercicio completo?", a: "Después de la sexta semana, cuando ambas zonas hayan cicatrizado adecuadamente." },
@@ -776,6 +968,18 @@ export const serviceLandings: Record<string, ServiceLanding> = {
     duration: "3 a 5 horas",
     anesthesia: "Anestesia general",
     hospitalization: "24 horas",
+    contraindications: [
+      "Pacientes con IMC superior a 30 o pérdida de peso reciente no estabilizada que afecte el resultado de la liposucción.",
+      "Fumadores activos que no puedan suspender el tabaco, comprometiendo la viabilidad de los implantes y la cicatrización.",
+      "Mujeres con tejido mamario insuficiente para cubrir el implante o con ptosis significativa no corregida.",
+      "Personas con enfermedades crónicas descompensadas que incrementen el riesgo anestésico en cirugías de 3 a 5 horas.",
+    ],
+    risks: [
+      "Contractura capsular: endurecimiento del tejido alrededor del implante que puede requerir cirugía de revisión.",
+      "Irregularidades del contorno corporal por extracción desigual de grasa durante la liposucción.",
+      "Malposición del implante mamario asociada a cambios en el contorno corporal post-liposucción.",
+      "Trombosis venosa profunda por el tiempo quirúrgico prolongado y la inmovilización postoperatoria.",
+    ],
     faqs: [
       { q: "¿Se puede combinar con otros procedimientos?", a: "Sí. Dependiendo de las necesidades, puede añadirse lipectomía o pexia mamaria." },
       { q: "¿Cuándo se ven los resultados definitivos?", a: "Aunque el cambio es visible desde el inicio, el resultado final se consolida entre el cuarto y sexto mes postoperatorio." },
@@ -815,6 +1019,18 @@ export const serviceLandings: Record<string, ServiceLanding> = {
     duration: "3 a 5 horas",
     anesthesia: "Anestesia general",
     hospitalization: "24 a 48 horas",
+    contraindications: [
+      "Pacientes con pérdida de peso masiva reciente (menos de 6 meses de estabilidad ponderal) que comprometa la cicatrización.",
+      "Fumadores activos: el tabaco aumenta drásticamente el riesgo de necrosis del colgajo abdominal y mamario.",
+      "Mujeres con planes de embarazo futuro, ya que la distensión afectaría tanto el abdomen como el busto intervenido.",
+      "Personas con desnutrición o déficits vitamínicos que retrasen la cicatrización de las heridas quirúrgicas.",
+    ],
+    risks: [
+      "Necrosis combinada de colgajos: compromiso vascular simultáneo del abdomen y el busto por resecciones extensas.",
+      "Dehiscencia de sutura abdominal por tensión excesiva al incorporarse o realizar esfuerzos precoces.",
+      "Asimetría entre el resultado abdominal y mamario que requiera procedimientos de retoque.",
+      "Seroma y hematoma en ambas zonas intervenidas con posible necesidad de drenaje quirúrgico.",
+    ],
     faqs: [
       { q: "¿Cuánto tiempo debo esperar para retomar el ejercicio?", a: "Se recomienda esperar de 6 a 8 semanas para ejercicio intenso, especialmente actividades que involucren el abdomen y el pecho." },
       { q: "¿Puedo combinar este plan con implantes mamarios?", a: "Sí. Si además de elevar se desea aumentar el volumen, se pueden colocar implantes en el mismo procedimiento." },
@@ -859,6 +1075,18 @@ export const serviceLandings: Record<string, ServiceLanding> = {
     duration: "4 a 6 horas",
     anesthesia: "Anestesia general",
     hospitalization: "24 horas",
+    contraindications: [
+      "Pacientes con enfermedades cardiovasculares severas o hipertensión arterial no controlada que aumenten el riesgo hemorrágico.",
+      "Fumadores activos: el tabaco compromete gravemente la cicatrización de los colgajos faciales y puede producir necrosis.",
+      "Personas con trastornos de la coagulación o anticoagulación terapéutica que no pueda suspenderse.",
+      "Pacientes con expectativas irreales sobre el grado de rejuvenecimiento o la desaparición total de arrugas finas.",
+    ],
+    risks: [
+      "Hematoma: la complicación más frecuente del lifting facial, puede requerir drenaje quirúrgico de urgencia.",
+      "Lesión del nervio facial: parálisis temporal o permanente de ramas motoras que afectan la expresión facial.",
+      "Necrosis cutánea del colgajo facial por compromiso de la irrigación, especialmente en fumadores.",
+      "Alopecia o mala cicatrización en las incisiones de la línea del cabello y región retroauricular.",
+    ],
     faqs: [
       { q: "¿A qué edad se recomienda el lifting facial?", a: "Generalmente a partir de los 40-50 años, cuando la flacidez facial es evidente. La edad ideal se determina en la valoración médica." },
       { q: "¿Cuánto dura el resultado del lifting?", a: "Los resultados suelen durar entre 7 y 10 años, aunque el envejecimiento natural continúa." },
@@ -900,6 +1128,18 @@ export const serviceLandings: Record<string, ServiceLanding> = {
     duration: "2 a 3 horas",
     anesthesia: "Anestesia general o sedación",
     hospitalization: "12 horas",
+    contraindications: [
+      "Pacientes con flacidez severa del tercio inferior y cuello que requieren un lifting facial completo para un resultado armónico.",
+      "Fumadores activos que no puedan suspender el tabaco, afectando la viabilidad del colgajo del tercio medio.",
+      "Personas con infección activa en la zona de tratamiento o herpes facial recurrente no controlado.",
+      "Pacientes con enfermedades autoinmunes que afecten la cicatrización o con antecedente de queloides faciales.",
+    ],
+    risks: [
+      "Edema y equimosis prolongada en la región periorbitaria que puede tardar varias semanas en resolverse.",
+      "Asimetría en la elevación de los pómulos o en la corrección de los surcos nasogenianos.",
+      "Lesión temporaria de las ramas del nervio facial que inervan el músculo orbicular del ojo.",
+      "Resultado insuficiente si la ptosis del tercio medio era más severa de lo evaluado inicialmente.",
+    ],
     faqs: [
       { q: "¿Se nota mucho el cambio?", a: "El resultado es natural. El objetivo es rejuvenecer sin que se note una intervención quirúrgica evidente." },
       { q: "¿Cuándo puedo retocar el maquillaje?", a: "Se recomienda esperar al menos dos semanas antes de aplicar maquillaje sobre las incisiones." },
@@ -940,6 +1180,18 @@ export const serviceLandings: Record<string, ServiceLanding> = {
     duration: "2 a 3 horas",
     anesthesia: "Anestesia general o sedación",
     hospitalization: "12 horas",
+    contraindications: [
+      "Pacientes con flacidez significativa del tercio medio facial que requieren un abordaje combinado para un resultado natural.",
+      "Fumadores activos: el tabaco compromete la irrigación de los colgajos cutáneos del cuello y la mandíbula.",
+      "Personas con obesidad o sobrepeso significativo que presenten acumulación grasa difusa no tratable solo con lifting.",
+      "Pacientes con trastornos de la movilidad cervical o enfermedad degenerativa que dificulten la posición intraoperatoria.",
+    ],
+    risks: [
+      "Hematoma cervical: acumulación de sangre en el cuello que puede comprometer la vía aérea si no se evacúa a tiempo.",
+      "Lesión del nervio marginal mandibular: parálisis temporal o permanente del músculo depresor del labio inferior.",
+      "Cicatriz hipertrófica en la región retroauricular o submentoniana que requiera tratamiento con corticoides.",
+      "Resultado insatisfactorio en la definición mandibular por laxitud residual del platisma no corregida.",
+    ],
     faqs: [
       { q: "¿Duele la recuperación?", a: "Las molestias son leves y controlables. La mayoría de pacientes retoma sus actividades en dos semanas." },
       { q: "¿Qué cuidados requiere la cicatriz submentoniana?", a: "La incisión bajo la barbilla es pequeña y se camufla en el pliegue natural. Debe mantenerse limpia y protegida del sol durante los primeros meses." },
@@ -985,6 +1237,18 @@ export const serviceLandings: Record<string, ServiceLanding> = {
     duration: "2 a 3 horas (estética), 3 a 4 horas (con corrección funcional)",
     anesthesia: "Anestesia general",
     hospitalization: "12 a 24 horas",
+    contraindications: [
+      "Pacientes menores de 16-18 años (mujeres) o 18-20 años (hombres) con desarrollo nasal incompleto.",
+      "Personas con rinitis alérgica severa, sinusitis crónica no controlada o infección activa de la vía aérea superior.",
+      "Pacientes con trastornos de la coagulación o vasculitis que afecten la irrigación de los tejidos nasales.",
+      "Fumadores activos que no puedan suspender el tabaco, ya que compromete la cicatrización osteocartilaginosa.",
+    ],
+    risks: [
+      "Insuficiencia respiratoria nasal por colapso del valvular interno o externo después de la remodelación.",
+      "Asimetría o deformidad residual del dorso o la punta nasal que requiera rinoplastia secundaria.",
+      "Perforación del tabique nasal por disección excesiva o compromiso vascular de la mucosa.",
+      "Resultado estético insatisfactorio por cambios en la proyección, rotación o ancho de la punta nasal.",
+    ],
     faqs: [
       { q: "¿Duele la rinoplastia?", a: "No hay dolor intraoperatorio. En el postoperatorio hay congestión e inflamación controlable con analgesia." },
       { q: "¿Cuándo puedo usar gafas?", a: "Se recomienda evitar el apoyo en el puente nasal durante 4 a 6 semanas." },
@@ -1025,6 +1289,18 @@ export const serviceLandings: Record<string, ServiceLanding> = {
     duration: "3 a 5 horas",
     anesthesia: "Anestesia general",
     hospitalization: "24 horas",
+    contraindications: [
+      "Pacientes con IMC superior a 30 y depósitos de grasa generalizada no localizada que no respondan a liposucción.",
+      "Fumadores activos que no puedan suspender el tabaco, comprometiendo la cicatrización corporal y nasal.",
+      "Personas con infección activa de la vía aérea superior o sinusitis crónica que contraindique la rinoplastia.",
+      "Pacientes con comorbilidades no controladas que incrementen el riesgo de una cirugía combinada de 3 a 5 horas.",
+    ],
+    risks: [
+      "Complicaciones combinadas: mayor riesgo anestésico y trombótico por la duración del procedimiento.",
+      "Insuficiencia respiratoria nasal postoperatoria por edema o colapso de la válvula nasal.",
+      "Irregularidades del contorno corporal en las áreas de liposucción que requieran retoque.",
+      "Edema facial prolongado que puede retrasar la visualización del resultado nasal definitivo.",
+    ],
     faqs: [
       { q: "¿Es seguro combinar ambos procedimientos?", a: "Sí, siempre que el paciente esté en buenas condiciones de salud y el equipo médico tenga experiencia en cirugías combinadas." },
       { q: "¿La recuperación nasal afecta la recuperación de la liposucción?", a: "No. Los cuidados son independientes para cada zona. La única precaución común es evitar esfuerzos físicos durante las primeras semanas." },
@@ -1065,6 +1341,18 @@ export const serviceLandings: Record<string, ServiceLanding> = {
     duration: "4 a 6 horas",
     anesthesia: "Anestesia general",
     hospitalization: "24 a 48 horas",
+    contraindications: [
+      "Pacientes con sequedad ocular severa, glaucoma o enfermedades oftalmológicas que contraindiquen la blefaroplastia.",
+      "Fumadores activos que no puedan suspender el tabaco, ya que la cicatrización de tres áreas simultáneas se ve muy comprometida.",
+      "Personas con queloides o cicatrices hipertróficas conocidas, por la multiplicidad de incisiones quirúrgicas.",
+      "Pacientes con comorbilidades múltiples no controladas que incrementen el riesgo de una cirugía triple prolongada.",
+    ],
+    risks: [
+      "Complicación triple: mayor riesgo global por la extensión y duración del procedimiento combinado (4-6 horas).",
+      "Necrosis del colgajo abdominal por la lipectomía, con posible dehiscencia de la sutura.",
+      "Asimetría en la posición de las orejas o recidiva de la deformidad auricular por mala fijación del cartílago.",
+      "Retracción palpebral, ectropión o lagoftalmos por resección excesiva de piel en la blefaroplastia.",
+    ],
     faqs: [
       { q: "¿Cuánto dura la cirugía completa?", a: "El tiempo quirúrgico varía entre 4 y 6 horas dependiendo de la complejidad de cada procedimiento." },
       { q: "¿La blefaroplastia deja cicatrices visibles?", a: "Las incisiones se realizan en los pliegues naturales de los párpados, por lo que las cicatrices son prácticamente imperceptibles." },

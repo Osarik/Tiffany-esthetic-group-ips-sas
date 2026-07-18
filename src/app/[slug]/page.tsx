@@ -117,20 +117,54 @@ export default async function ServiceLandingPage({ params }: Props) {
               <div className="absolute inset-0" style={{ background: `linear-gradient(to right, ${gradientFrom} 0%, ${gradientFrom}dd 25%, ${gradientFrom}99 50%, ${gradientFrom}55 70%, transparent 100%)` }} />
             </div>
           )}
+          <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+            <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-white/[0.04] blur-3xl animate-[float_12s_ease-in-out_infinite]" />
+            <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-white/[0.03] blur-3xl animate-[float_15s_ease-in-out_infinite_reverse]" />
+            <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-white/20 animate-[float_8s_ease-in-out_infinite]" />
+            <div className="absolute bottom-1/3 right-1/4 w-2 h-2 rounded-full bg-white/15 animate-[float_11s_ease-in-out_infinite_reverse]" />
+            <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 rounded-full bg-white/20 animate-[float_9s_ease-in-out_infinite]" />
+          </div>
+          <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }} />
+          <div className="absolute inset-0" style={{ background: `radial-gradient(ellipse 100% 60% at 30% 50%, ${gradientTo}22 0%, transparent 70%)` }} aria-hidden="true" />
           <Container>
             <div className="relative max-w-3xl">
-              <span className="inline-block text-white/70 font-body font-semibold text-xs tracking-[0.2em] uppercase mb-4 border border-white/20 rounded-full px-4 py-1.5">
+              <span className="inline-block text-white/70 font-body font-semibold text-xs tracking-[0.2em] uppercase mb-4 border border-white/20 rounded-full px-4 py-1.5 backdrop-blur-sm">
                 {service.category}
               </span>
-              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight text-balance">
+              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight text-balance drop-shadow-sm">
                 {service.title} en Cali
               </h1>
-              <p className="mt-6 text-lg md:text-xl text-white/80 font-body leading-relaxed max-w-2xl">
+              <p className="mt-6 text-lg md:text-xl text-white/80 font-body leading-relaxed max-w-2xl drop-shadow-sm">
                 {service.description}
               </p>
+              {landing.duration && (
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {landing.duration && (
+                    <span className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-3.5 py-1.5 text-xs text-white/80 font-body">
+                      <svg className="w-3.5 h-3.5 text-white/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                      {landing.duration}
+                    </span>
+                  )}
+                  {landing.anesthesia && (
+                    <span className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-3.5 py-1.5 text-xs text-white/80 font-body">
+                      <svg className="w-3.5 h-3.5 text-white/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                      {landing.anesthesia}
+                    </span>
+                  )}
+                  {landing.hospitalization && (
+                    <span className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-3.5 py-1.5 text-xs text-white/80 font-body">
+                      <svg className="w-3.5 h-3.5 text-white/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                      {landing.hospitalization}
+                    </span>
+                  )}
+                </div>
+              )}
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <a href={waLink} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-white text-[#0F4A44] font-body font-bold px-8 py-3.5 rounded-full hover:bg-white/90 transition-all duration-300 text-base shadow-lg shadow-black/20 no-underline">
+                  className="inline-flex items-center justify-center gap-2 bg-white text-[#0F4A44] font-body font-bold px-8 py-3.5 rounded-full hover:bg-white/90 hover:shadow-xl hover:shadow-black/25 transition-all duration-300 text-base shadow-lg shadow-black/20 no-underline">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                   </svg>
@@ -276,6 +310,25 @@ export default async function ServiceLandingPage({ params }: Props) {
           </Section>
         )}
 
+        {landing.contraindications && landing.contraindications.length > 0 && (
+          <Section id="contraindicaciones" className="bg-[#FBFBF9]">
+            <SectionHeader label="Contraindicaciones" title="¿Quién no es candidato?"
+              desc="Existen condiciones que pueden contraindicar temporal o permanentemente el procedimiento." />
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              {landing.contraindications.map((item, i) => (
+                <div key={i} className="bg-white rounded-xl p-6 border border-silver/20 flex gap-4 items-start shadow-sm">
+                  <div className="w-8 h-8 rounded-full bg-red-50 text-red-400 flex items-center justify-center shrink-0 mt-0.5">
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                  </div>
+                  <p className="text-sm text-text-main/80 font-body leading-relaxed">{item}</p>
+                </div>
+              ))}
+            </div>
+          </Section>
+        )}
+
         <Section id="recuperacion" className="bg-white">
           <SectionHeader label="Recuperación" title="Postoperatorio y evolución"
             desc="El proceso de recuperación es progresivo. Cada etapa requiere cuidados específicos." />
@@ -303,28 +356,33 @@ export default async function ServiceLandingPage({ params }: Props) {
                 </div>
                 <div>
                   <p className="text-text-main/80 font-body leading-relaxed">{landing.resultsDescription}</p>
-                  {landing.duration && (
-                    <div className="mt-6 grid sm:grid-cols-3 gap-4">
-                      {landing.duration && (
-                        <div className="bg-[#FBFBF9] rounded-xl p-4 border border-silver/20 text-center">
-                          <p className="text-xs text-text-main/60 font-body uppercase tracking-wider mb-1">Duración</p>
-                          <p className="font-heading font-bold text-text-dark">{landing.duration}</p>
-                        </div>
-                      )}
-                      {landing.anesthesia && (
-                        <div className="bg-[#FBFBF9] rounded-xl p-4 border border-silver/20 text-center">
-                          <p className="text-xs text-text-main/60 font-body uppercase tracking-wider mb-1">Anestesia</p>
-                          <p className="font-heading font-bold text-text-dark">{landing.anesthesia}</p>
-                        </div>
-                      )}
-                      {landing.hospitalization && (
-                        <div className="bg-[#FBFBF9] rounded-xl p-4 border border-silver/20 text-center">
-                          <p className="text-xs text-text-main/60 font-body uppercase tracking-wider mb-1">Hospitalización</p>
-                          <p className="font-heading font-bold text-text-dark">{landing.hospitalization}</p>
-                        </div>
-                      )}
-                    </div>
-                  )}
+                </div>
+              </div>
+            </div>
+          </Section>
+        )}
+
+        {landing.risks && landing.risks.length > 0 && (
+          <Section id="riesgos" className="bg-white">
+            <SectionHeader label="Riesgos" title="Riesgos y consideraciones"
+              desc="Todo procedimiento quirúrgico conlleva riesgos potenciales que deben ser conocidos por el paciente." />
+            <div className="max-w-3xl mx-auto bg-[#FBFBF9] rounded-2xl p-8 md:p-10 border border-silver/20">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-amber-50 text-amber-500 flex items-center justify-center shrink-0">
+                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" /><line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="17" x2="12.01" y2="17" />
+                  </svg>
+                </div>
+                <div className="space-y-3">
+                  {landing.risks.map((item, i) => (
+                    <p key={i} className="text-sm text-text-main/80 font-body leading-relaxed flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0 mt-2" />
+                      {item}
+                    </p>
+                  ))}
+                  <p className="text-xs text-text-main/50 font-body mt-4 pt-4 border-t border-silver/20">
+                    Esta lista no es exhaustiva. Los riesgos específicos de cada caso se discuten en detalle durante la valoración médica presencial y se documentan en el consentimiento informado.
+                  </p>
                 </div>
               </div>
             </div>
