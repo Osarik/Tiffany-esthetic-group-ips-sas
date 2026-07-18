@@ -192,14 +192,22 @@ export default function ServiciosPage() {
       <article>
         {/* ─── HERO ─────────────────────────────────────────────── */}
         <section className="relative bg-gradient-to-br from-[#0F4A44] via-[#1B6E66] to-[#2FA79C] pt-28 pb-16 md:pt-36 md:pb-28 overflow-hidden">
-          <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-            <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-white/5 blur-3xl animate-[float_12s_ease-in-out_infinite]" />
-            <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-accent/10 blur-3xl animate-[float_15s_ease-in-out_infinite_reverse]" />
-            <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-white/30 animate-[float_8s_ease-in-out_infinite]" />
-            <div className="absolute bottom-1/3 right-1/4 w-2 h-2 rounded-full bg-white/20 animate-[float_11s_ease-in-out_infinite_reverse]" />
-            <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 rounded-full bg-white/25 animate-[float_9s_ease-in-out_infinite]" />
+          <div className="absolute inset-0" aria-hidden="true">
+            <img
+              src="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=1920&h=1080&fit=crop"
+              alt=""
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#0F4A44]/85 via-[#0F4A44]/70 to-[#0F4A44]/60" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0F4A44]/60 via-transparent to-[#0F4A44]/30" />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0F4A44]/40 via-transparent to-[#0F4A44]/20" aria-hidden="true" />
+          <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+            <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-white/[0.04] blur-3xl animate-[float_12s_ease-in-out_infinite]" />
+            <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-accent/[0.06] blur-3xl animate-[float_15s_ease-in-out_infinite_reverse]" />
+            <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-white/20 animate-[float_8s_ease-in-out_infinite]" />
+            <div className="absolute bottom-1/3 right-1/4 w-2 h-2 rounded-full bg-white/15 animate-[float_11s_ease-in-out_infinite_reverse]" />
+            <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 rounded-full bg-white/20 animate-[float_9s_ease-in-out_infinite]" />
+          </div>
           <Container>
             <div className="max-w-3xl relative z-10">
               <div className="flex items-center gap-3 mb-6">

@@ -257,6 +257,25 @@ export default async function ServiceLandingPage({ params }: Props) {
           </Section>
         )}
 
+        {landing.preparation && landing.preparation.length > 0 && (
+          <Section id="preparacion" className="bg-white">
+            <SectionHeader label="Preparación" title="Preparación preoperatoria"
+              desc="Una adecuada preparación es fundamental para el éxito del procedimiento y la seguridad del paciente." />
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              {landing.preparation.map((item, i) => (
+                <div key={i} className="bg-[#FBFBF9] rounded-xl p-6 border border-silver/20 flex gap-4 items-start">
+                  <div className="w-8 h-8 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center shrink-0 mt-0.5">
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                    </svg>
+                  </div>
+                  <p className="text-sm text-text-main/80 font-body leading-relaxed">{item}</p>
+                </div>
+              ))}
+            </div>
+          </Section>
+        )}
+
         <Section id="recuperacion" className="bg-white">
           <SectionHeader label="Recuperación" title="Postoperatorio y evolución"
             desc="El proceso de recuperación es progresivo. Cada etapa requiere cuidados específicos." />
@@ -270,6 +289,47 @@ export default async function ServiceLandingPage({ params }: Props) {
             ))}
           </div>
         </Section>
+
+        {landing.resultsDescription && (
+          <Section id="resultados" className="bg-[#FBFBF9]">
+            <SectionHeader label="Resultados" title="Resultados esperados"
+              desc="Los resultados son progresivos y dependen de la respuesta biológica de cada paciente." />
+            <div className="max-w-3xl mx-auto bg-white rounded-2xl p-8 md:p-10 border border-silver/20 shadow-sm">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M12 20V10" /><path d="M18 20V4" /><path d="M6 20v-4" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-text-main/80 font-body leading-relaxed">{landing.resultsDescription}</p>
+                  {landing.duration && (
+                    <div className="mt-6 grid sm:grid-cols-3 gap-4">
+                      {landing.duration && (
+                        <div className="bg-[#FBFBF9] rounded-xl p-4 border border-silver/20 text-center">
+                          <p className="text-xs text-text-main/60 font-body uppercase tracking-wider mb-1">Duración</p>
+                          <p className="font-heading font-bold text-text-dark">{landing.duration}</p>
+                        </div>
+                      )}
+                      {landing.anesthesia && (
+                        <div className="bg-[#FBFBF9] rounded-xl p-4 border border-silver/20 text-center">
+                          <p className="text-xs text-text-main/60 font-body uppercase tracking-wider mb-1">Anestesia</p>
+                          <p className="font-heading font-bold text-text-dark">{landing.anesthesia}</p>
+                        </div>
+                      )}
+                      {landing.hospitalization && (
+                        <div className="bg-[#FBFBF9] rounded-xl p-4 border border-silver/20 text-center">
+                          <p className="text-xs text-text-main/60 font-body uppercase tracking-wider mb-1">Hospitalización</p>
+                          <p className="font-heading font-bold text-text-dark">{landing.hospitalization}</p>
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </Section>
+        )}
 
         <Section id="faq" className="bg-[#FBFBF9]">
           <SectionHeader label="FAQ" title="Preguntas frecuentes" />

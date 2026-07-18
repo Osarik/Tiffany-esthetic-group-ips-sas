@@ -44,59 +44,7 @@ const serviceIcons: Record<string, React.ReactNode> = {
   "blefaroplastia-otoplastia-lipectomia": <Eye size={18} />,
 };
 
-const AI = "https://image.pollinations.ai/prompt";
-const SZ = "width=800&height=1000";
-
-const serviceImages: Record<string, string> = {
-  lipoescultura:
-    `${AI}/professional%20medical%20illustration%20liposculpture%20body%20contouring%20surgery%20waist%20silhouette%20definition%20aesthetic%20clinic%20photorealistic%20lighting?${SZ}`,
-  lipectomia:
-    `${AI}/professional%20medical%20illustration%20abdominoplasty%20tummy%20tuck%20surgery%20excess%20skin%20removal%20abdominal%20contouring%20photorealistic%20clinical?${SZ}`,
-  "lipo-lipectomia":
-    `${AI}/professional%20medical%20illustration%20liposuction%20combined%20with%20abdominoplasty%20body%20sculpting%20surgery%20photorealistic%20clinical%20studio?${SZ}`,
-  "lipo-lipectomia-senos":
-    `${AI}/professional%20medical%20illustration%20combined%20liposuction%20tummy%20tuck%20and%20breast%20augmentation%20surgery%20photorealistic%20clinical?${SZ}`,
-  "lipo-lipectomia-pexia-periareolar":
-    `${AI}/professional%20medical%20illustration%20liposuction%20abdominoplasty%20and%20periareolar%20breast%20lift%20combined%20surgery%20photorealistic?${SZ}`,
-  "lipo-lipectomia-pexia":
-    `${AI}/professional%20medical%20illustration%20liposuction%20tummy%20tuck%20and%20mastopexy%20breast%20lift%20combined%20surgery%20photorealistic?${SZ}`,
-  hernia:
-    `${AI}/professional%20medical%20illustration%20hernia%20repair%20surgery%20abdominal%20wall%20mesh%20reconstruction%20clinical%20photorealistic?${SZ}`,
-  "mamoplastia-aumento-rinoplastia":
-    `${AI}/professional%20medical%20illustration%20breast%20augmentation%20and%20rhinoplasty%20combined%20facial%20and%20body%20surgery%20photorealistic?${SZ}`,
-  "mamoplastia-aumento":
-    `${AI}/professional%20medical%20illustration%20breast%20augmentation%20surgery%20implant%20placement%20mammoplasty%20aesthetic%20clinic%20photorealistic?${SZ}`,
-  gigantomastia:
-    `${AI}/professional%20medical%20illustration%20breast%20reduction%20surgery%20gigantomastia%20macromastia%20correction%20photorealistic%20clinical?${SZ}`,
-  ginecomastia:
-    `${AI}/professional%20medical%20illustration%20gynecomastia%20surgery%20male%20breast%20reduction%20chest%20contouring%20photorealistic%20clinical?${SZ}`,
-  "pexia-reconstructiva":
-    `${AI}/professional%20medical%20illustration%20mastopexy%20breast%20lift%20reconstructive%20surgery%20without%20implants%20photorealistic%20clinical?${SZ}`,
-  pexia:
-    `${AI}/professional%20medical%20illustration%20mastopexy%20breast%20lift%20surgery%20breast%20reshaping%20aesthetic%20clinic%20photorealistic%20studio?${SZ}`,
-  "pexia-periareolar":
-    `${AI}/professional%20medical%20illustration%20periareolar%20breast%20lift%20surgery%20minimal%20scar%20mastopexy%20photorealistic%20clinical?${SZ}`,
-  "lipo-pexia-periareolar":
-    `${AI}/professional%20medical%20illustration%20liposuction%20combined%20with%20periareolar%20breast%20lift%20body%20contouring%20photorealistic?${SZ}`,
-  "lipo-pexia":
-    `${AI}/professional%20medical%20illustration%20liposuction%20combined%20with%20mastopexy%20breast%20lift%20body%20sculpting%20photorealistic?${SZ}`,
-  "lipo-protesis-aumento":
-    `${AI}/professional%20medical%20illustration%20liposuction%20combined%20with%20breast%20implants%20augmentation%20body%20contouring%20photorealistic?${SZ}`,
-  "lipectomia-pexia":
-    `${AI}/professional%20medical%20illustration%20abdominoplasty%20combined%20with%20mastopexy%20tummy%20tuck%20and%20breast%20lift%20photorealistic?${SZ}`,
-  "ritidoplastia-completa":
-    `${AI}/professional%20medical%20illustration%20full%20facelift%20surgery%20rhytidoplasty%20facial%20rejuvenation%20neck%20lift%20photorealistic%20clinical?${SZ}`,
-  "ritidoplastia-tercio-medio":
-    `${AI}/professional%20medical%20illustration%20midface%20lift%20surgery%20cheek%20lift%20nasolabial%20folds%20rejuvenation%20photorealistic%20clinical?${SZ}`,
-  "ritidoplastia-tercio-inferior":
-    `${AI}/professional%20medical%20illustration%20lower%20face%20lift%20surgery%20jawline%20neck%20lift%20submental%20fat%20photorealistic%20clinical?${SZ}`,
-  rinoplastia:
-    `${AI}/professional%20medical%20illustration%20rhinoplasty%20nose%20surgery%20facial%20harmony%20nasal%20reshaping%20photorealistic%20clinical%20studio?${SZ}`,
-  "lipo-rinoplastia":
-    `${AI}/professional%20medical%20illustration%20liposuction%20combined%20with%20rhinoplasty%20body%20and%20facial%20surgery%20photorealistic?${SZ}`,
-  "blefaroplastia-otoplastia-lipectomia":
-    `${AI}/professional%20medical%20illustration%20blepharoplasty%20otoplasty%20and%20abdominoplasty%20combined%20triple%20surgery%20photorealistic?${SZ}`,
-};
+const serviceImages: Record<string, string> = {};
 
 const AUTO_PLAY_INTERVAL = 5000;
 const ITEM_HEIGHT = 70;
@@ -287,16 +235,13 @@ export function ServicesCarousel() {
                     }}
                     className="absolute inset-0 rounded-[2rem] md:rounded-[2.8rem] overflow-hidden border-4 md:border-8 border-clinic-bg bg-clinic-bg origin-center"
                   >
-                    <img
-                      src={serviceImages[service.id]}
-                      alt={service.title}
-                      className={cn(
-                        "w-full h-full object-cover transition-all duration-[1400]",
-                        isActive
-                          ? "grayscale-0 blur-0"
-                          : "grayscale blur-[2px] brightness-75"
-                      )}
-                    />
+                    <div className="w-full h-full bg-gradient-to-br from-primary-deep/80 via-primary/60 to-primary-dark/80 transition-all duration-[1400] flex items-center justify-center">
+                      <div className="w-20 h-20 rounded-full border-2 border-white/20 flex items-center justify-center">
+                        <svg className="w-8 h-8 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                    </div>
 
                     <AnimatePresence>
                       {isActive && (

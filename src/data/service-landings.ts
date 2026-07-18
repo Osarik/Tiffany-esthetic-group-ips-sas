@@ -30,6 +30,13 @@ export interface ServiceLanding {
   recovery: LandingRecovery[];
   steps: LandingStep[];
   faqs: LandingFAQ[];
+  preparation: string[];
+  resultsDescription: string;
+  risks?: string[];
+  contraindications?: string[];
+  anesthesia?: string;
+  duration?: string;
+  hospitalization?: string;
 }
 
 export const serviceLandings: Record<string, ServiceLanding> = {
@@ -63,16 +70,28 @@ export const serviceLandings: Record<string, ServiceLanding> = {
       { number: "04", title: "Transferencia o moldeamiento", desc: "Infiltración de la grasa purificada o definición final del contorno corporal según el plan establecido." },
       { number: "05", title: "Compresión postquirúrgica", desc: "Colocación de faja de compresión para estabilizar los tejidos, reducir el edema y favorecer la recuperación." },
     ],
+    preparation: [
+      "Suspender el consumo de tabaco y alcohol al menos dos semanas antes de la cirugía para favorecer la cicatrización.",
+      "Realizar exámenes preoperatorios completos: hemograma, perfil de coagulación, química sanguínea y valoración cardiológica.",
+      "Ayuno absoluto de 8 horas previo al procedimiento. La tarde anterior, ducharse con jabón antiséptico indicado por el cirujano.",
+      "Organizar el hogar con antelación: tener a disposición la faja de compresión, alimentos ligeros y una persona de apoyo durante las primeras 48 horas.",
+    ],
+    resultsDescription: "La grasa que logra integrarse tras la lipoescultura permanece de forma estable a largo plazo. El contorno corporal se redefine progresivamente: a la cuarta semana ya se observa una mejora notable, pero la silueta definitiva se consolida entre el tercer y sexto mes postoperatorio. La calidad de la piel, el peso corporal y los hábitos de vida influyen directamente en la durabilidad del resultado.",
+    duration: "2 a 4 horas",
+    anesthesia: "Anestesia general",
+    hospitalization: "24 horas de observación",
     faqs: [
       { q: "¿Duele la lipoescultura?", a: "El procedimiento se realiza bajo anestesia, por lo que no hay dolor intraoperatorio. En el postoperatorio se presenta inflamación y sensibilidad controlable con analgesia." },
       { q: "¿Cuánto tiempo dura el resultado?", a: "La grasa que sobrevive al proceso de integración se mantiene de forma permanente, aunque el envejecimiento natural continúa." },
       { q: "¿Cuándo se ve el resultado final?", a: "El resultado inicial es visible al mes, pero la definición final del contorno se consolida entre los 3 y 6 meses." },
       { q: "¿Es lo mismo que liposucción?", a: "No. La liposucción solo extrae grasa, mientras que la lipoescultura utiliza esa grasa para moldear y proyectar otras áreas." },
+      { q: "¿Qué porcentaje de grasa se reabsorbe?", a: "Entre el 30 % y 50 % de la grasa transferida puede reabsorberse durante los primeros meses. El cirujano compensa este porcentaje en el procedimiento inicial." },
+      { q: "¿Cuándo puedo retomar el ejercicio?", a: "Las caminatas desde la primera semana. Ejercicio cardiovascular a partir de la cuarta semana y entrenamiento de fuerza después de la sexta semana, siempre con autorización médica." },
     ],
   },
 
   lipectomia: {
-    heroImage: "https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=800&h=1000&fit=crop",
+    heroImage: "",
     descriptionLong:
       "La lipectomía es un procedimiento quirúrgico que reseca el exceso de piel y grasa abdominal, generalmente en pacientes que han perdido peso significativo o presentan flacidez cutánea después de embarazos. Se diferencia de la liposucción en que elimina piel sobrante, no solo grasa, logrando un contorno abdominal firme y definido.",
     benefits: [
@@ -99,15 +118,27 @@ export const serviceLandings: Record<string, ServiceLanding> = {
       { number: "03", title: "Reparación muscular", desc: "Cuando existe diástasis de rectos, se reconstruye la pared abdominal para restaurar la firmeza." },
       { number: "04", title: "Cierre y modelado", desc: "Sutura por planos, reposición del ombligo y colocación de drenajes según el caso." },
     ],
+    preparation: [
+      "Dejar de fumar al menos cuatro semanas antes de la cirugía. El tabaco retrasa la cicatrización y aumenta el riesgo de necrosis cutánea.",
+      "Mantener un peso estable durante los seis meses previos. No se recomienda la cirugía si hay planes de pérdida de peso significativa.",
+      "Suspender anticonceptivos orales y terapia hormonal dos semanas antes para reducir el riesgo trombótico, bajo indicación médica.",
+      "Adquirir la faja abdominal postquirúrgica con anticipación y preparar el hogar para permanecer en reposo los primeros días.",
+    ],
+    resultsDescription: "El abdomen luce más plano y firme desde el momento de la cirugía, aunque el resultado estético completo se aprecia después de tres meses, cuando el edema cede por completo. La cicatriz madura durante el primer año y tiende a ubicarse por debajo de la línea de la ropa interior. Mantener un peso corporal estable es clave para conservar el resultado a largo plazo.",
+    duration: "3 a 5 horas",
+    anesthesia: "Anestesia general",
+    hospitalization: "24 a 48 horas",
     faqs: [
       { q: "¿La cicatriz es muy notoria?", a: "La incisión se realiza en la parte baja del abdomen y se ubica por debajo de la línea de la ropa interior. La cicatriz madura durante el primer año." },
       { q: "¿Puedo combinar lipectomía con otros procedimientos?", a: "Sí. Es frecuente combinarla con liposucción de flancos o con cirugía mamaria en el mismo tiempo quirúrgico." },
       { q: "¿Cuándo puedo retomar el ejercicio?", a: "Las caminatas suaves desde la primera semana. El ejercicio abdominal intenso se reanuda entre la sexta y octava semana." },
+      { q: "¿Afecta la sensibilidad del abdomen?", a: "Es normal presentar adormecimiento temporal en la zona intervenida. La sensibilidad suele recuperarse progresivamente durante los primeros meses." },
+      { q: "¿Puedo quedar embarazada después?", a: "Sí, pero se recomienda completar la etapa reproductiva antes de la cirugía, ya que un embarazo posterior puede distender la pared abdominal nuevamente." },
     ],
   },
 
   "lipo-lipectomia": {
-    heroImage: "https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=800&h=1000&fit=crop",
+    heroImage: "",
     descriptionLong:
       "La combinación de liposucción y lipectomía permite abordar simultáneamente el exceso de grasa y la piel sobrante en el abdomen y flancos. Mientras la liposucción elimina depósitos adiposos localizados, la lipectomía reseca la piel que ha perdido elasticidad. Este abordaje integral ofrece un contorno abdominal completo en una sola intervención.",
     benefits: [
@@ -134,15 +165,26 @@ export const serviceLandings: Record<string, ServiceLanding> = {
       { number: "03", title: "Lipectomía y resección", desc: "Incisión baja y retiro del exceso de piel. Reparación de la diástasis abdominal si existe." },
       { number: "04", title: "Cierre y recuperación", desc: "Sutura por planos, colocación de drenajes y vendaje compresivo para protección." },
     ],
+    preparation: [
+      "Suspender el consumo de tabaco y alcohol al menos tres semanas antes para optimizar la oxigenación tisular y la cicatrización.",
+      "Realizar exámenes preoperatorios completos con énfasis en perfil de coagulación y ecografía abdominal de pared.",
+      "Ayuno absoluto de 8 horas. La noche previa, ducharse con jabón de clorhexidina indicado por el cirujano.",
+      "Adquirir faja abdominal de compresión de alta densidad y preparar el hogar para permanecer en posición semincorporada los primeros días.",
+    ],
+    resultsDescription: "Al combinar liposucción y lipectomía, el contorno abdominal muestra una mejora inmediata que se refina durante los meses siguientes. El resultado definitivo se consolida entre el tercer y sexto mes, cuando la inflamación residual desaparece por completo. La diástasis abdominal corregida proporciona además una mejoría funcional significativa en el core.",
+    duration: "3 a 4 horas",
+    anesthesia: "Anestesia general",
+    hospitalization: "24 a 48 horas",
     faqs: [
       { q: "¿Es más riesgoso que hacerlos por separado?", a: "No. Al realizarse en el mismo tiempo quirúrgico, se reduce la exposición a anestesia y se consolida la recuperación en un solo período." },
       { q: "¿Duele más?", a: "El dolor postoperatorio es controlable con medicación. La molestia principal es la tensión abdominal al movimiento." },
       { q: "¿Cuánto tiempo dura la cirugía?", a: "El procedimiento combinado tiene una duración aproximada de 3 a 4 horas, dependiendo de la complejidad." },
+      { q: "¿Cuándo puedo ver el ombligo después de la cirugía?", a: "El ombligo se reposiciona durante el procedimiento. En las primeras semanas puede verse edematoso; su aspecto definitivo se aprecia alrededor del tercer mes." },
     ],
   },
 
   "lipo-lipectomia-senos": {
-    heroImage: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&h=1000&fit=crop",
+    heroImage: "",
     descriptionLong:
       "Este plan quirúrgico integral combina liposucción, lipectomía abdominal y aumento mamario en un solo tiempo quirúrgico. Está diseñado para pacientes que desean una transformación completa de su silueta corporal, abordando simultáneamente el contorno abdominal y el volumen del busto. La coordinación de los tres procedimientos permite resultados armónicos con una sola recuperación.",
     benefits: [
@@ -168,14 +210,26 @@ export const serviceLandings: Record<string, ServiceLanding> = {
       { number: "03", title: "Aumento mamario", desc: "Inserción de implantes mamarios por vía submamaria o axilar." },
       { number: "04", title: "Cierre y vendajes", desc: "Sutura por planos, colocación de drenajes y vendajes compresivos." },
     ],
+    preparation: [
+      "Suspender tabaco y alcohol al menos tres semanas antes. El tabaco afecta directamente la viabilidad de los colgajos cutáneos.",
+      "Exámenes preoperatorios completos más ecografía abdominal y mamaria para planificar ambos procedimientos.",
+      "Ayuno de 8 horas. Ducha prequirúrgica con jabón antiséptico la noche anterior y la mañana de la cirugía.",
+      "Adquirir faja abdominal y sujetador quirúrgico sin aro con anticipación. Organizar apoyo familiar para la primera semana.",
+    ],
+    resultsDescription: "La transformación corporal es evidente desde el postoperatorio inmediato, aunque el resultado final se consolida entre el cuarto y sexto mes. Los implantes mamarios descienden a su posición natural alrededor del tercer mes, mientras que el abdomen muestra su contorno definitivo una vez que el edema cede por completo. La combinación de procedimientos ofrece un resultado armónico difícil de lograr con cirugías separadas.",
+    duration: "4 a 6 horas",
+    anesthesia: "Anestesia general",
+    hospitalization: "24 a 48 horas",
     faqs: [
       { q: "¿Cuánto dura la cirugía completa?", a: "El tiempo quirúrgico varía entre 4 y 6 horas dependiendo de la complejidad de cada procedimiento." },
       { q: "¿La recuperación es muy difícil?", a: "Requiere paciencia, pero el manejo del dolor y las molestias está protocolizado. La mayoría de pacientes reporta satisfacción con los resultados." },
+      { q: "¿Se pueden elegir los implantes el mismo día?", a: "No. La selección del tipo, perfil y tamaño de los implantes se realiza durante la consulta prequirúrgica con suficiente anticipación." },
+      { q: "¿El resultado del abdomen puede afectar el de los senos?", a: "Ambos procedimientos se planifican de forma coordinada para que el resultado sea proporcionado y armónico en su conjunto." },
     ],
   },
 
   "lipo-lipectomia-pexia-periareolar": {
-    heroImage: "https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&h=1000&fit=crop",
+    heroImage: "",
     descriptionLong:
       "Este procedimiento tridimensional combina liposucción corporal, lipectomía abdominal y pexia mamaria periareolar. Está orientado a pacientes que necesitan reducir grasa, eliminar exceso de piel abdominal y elevar el busto mediante una incisión alrededor de la areola. Es una solución completa para quienes buscan rejuvenecer y armonizar su silueta en un solo acto quirúrgico.",
     benefits: [
@@ -200,13 +254,25 @@ export const serviceLandings: Record<string, ServiceLanding> = {
       { number: "03", title: "Pexia periareolar", desc: "Incisión alrededor de la areola para reposicionar el tejido mamario." },
       { number: "04", title: "Cierre y apósitos", desc: "Sutura cuidadosa, drenajes y vendajes compresivos diferenciados." },
     ],
+    preparation: [
+      "Suspender tabaco y alcohol tres semanas antes. La nicotina compromete la irrigación de los colgajos cutáneos y mamarios.",
+      "Exámenes preoperatorios completos más ecografía de abdomen y mama. Evaluación cardiológica si la paciente es mayor de 45 años.",
+      "Ayuno de 8 horas. Ducha con jabón antiséptico la noche anterior y la mañana del procedimiento.",
+      "Adquirir faja abdominal y sujetador quirúrgico sin aro. Preparar el hogar con almohadas extras para mantener una posición semincorporada.",
+    ],
+    resultsDescription: "El contorno corporal rejuvenecido y la elevación mamaria son visibles desde las primeras semanas, aunque el resultado estético completo se consolida entre el cuarto y sexto mes. La cicatriz periareolar se integra naturalmente en el borde de la areola y se atenúa progresivamente durante el primer año. La armonía entre el abdomen esculpido y el busto elevado proporciona una silueta equilibrada.",
+    duration: "4 a 6 horas",
+    anesthesia: "Anestesia general",
+    hospitalization: "24 a 48 horas",
     faqs: [
       { q: "¿La cicatriz periareolar se nota mucho?", a: "La incisión se realiza en el borde de la areola y tiende a camuflarse muy bien. La maduración de la cicatriz toma hasta un año." },
+      { q: "¿Cuánto tiempo debo usar la faja y el sujetador quirúrgico?", a: "La faja abdominal se usa de forma permanente durante el primer mes y luego nocturna el segundo mes. El sujetador quirúrgico las 24 horas durante 4 a 6 semanas." },
+      { q: "¿Puedo combinar este plan con implantes mamarios?", a: "Sí. Si además de elevar se desea aumentar el volumen mamario, pueden colocarse implantes en el mismo procedimiento. Esto se define durante la consulta prequirúrgica." },
     ],
   },
 
   "lipo-lipectomia-pexia": {
-    heroImage: "https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&h=1000&fit=crop",
+    heroImage: "",
     descriptionLong:
       "Procedimiento integral que combina liposucción, lipectomía y pexia mamaria para pacientes que desean una transformación corporal completa. La liposucción elimina la grasa localizada, la lipectomía retira el exceso de piel abdominal y la pexia eleva y rejuvenece el busto. Es una de las combinaciones más completas en cirugía estética.",
     benefits: [
@@ -230,13 +296,25 @@ export const serviceLandings: Record<string, ServiceLanding> = {
       { number: "03", title: "Lipectomía", desc: "Resección del exceso de piel abdominal y reparación muscular." },
       { number: "04", title: "Pexia mamaria", desc: "Elevación y repositionamiento del tejido mamario." },
     ],
+    preparation: [
+      "Suspender tabaco y alcohol al menos tres semanas antes para garantizar una adecuada cicatrización de los colgajos cutáneos.",
+      "Exámenes preoperatorios completos con énfasis en perfil de coagulación, ecografía abdominal y mamaria.",
+      "Ayuno absoluto de 8 horas. Ducha prequirúrgica con clorhexidina la noche anterior.",
+      "Adquirir faja abdominal de compresión y sujetador quirúrgico sin aro. Preparar el hogar con apoyo familiar los primeros 3 días.",
+    ],
+    resultsDescription: "La transformación corporal completa se aprecia progresivamente: el abdomen luce firme y esculpido, mientras que el busto recupera una posición elevada y juvenil. El resultado definitivo se consolida entre el cuarto y sexto mes postoperatorio. La combinación de los tres procedimientos en un solo acto quirúrgico permite una armonía estética integral difícil de lograr con cirugías por separado.",
+    duration: "4 a 6 horas",
+    anesthesia: "Anestesia general",
+    hospitalization: "24 a 48 horas",
     faqs: [
       { q: "¿Cuánto tiempo debo tomarme del trabajo?", a: "Depende de la actividad laboral. Para trabajos sedentarios, entre 2 y 3 semanas. Para actividades físicas, de 4 a 6 semanas." },
+      { q: "¿Cuánto tiempo debo usar las prendas de compresión?", a: "La faja abdominal se usa las 24 horas durante el primer mes y luego 12 horas el segundo mes. El sujetador quirúrgico se mantiene de 4 a 6 semanas continuas." },
+      { q: "¿El resultado de la pexia se afecta si no uso implantes?", a: "No. La pexia utiliza los tejidos propios del seno para reposicionarlos. Si además se desea volumen, se añaden implantes en el mismo procedimiento." },
     ],
   },
 
   hernia: {
-    heroImage: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&h=1000&fit=crop",
+    heroImage: "",
     descriptionLong:
       "La reparación de hernia abdominal o umbilical es un procedimiento quirúrgico que corrige la protrusión de órganos o tejidos a través de una debilidad en la pared muscular. En nuestra IPS, este procedimiento puede combinarse con técnicas estéticas de contorno corporal para restaurar tanto la función como la apariencia del abdomen.",
     benefits: [
@@ -261,14 +339,26 @@ export const serviceLandings: Record<string, ServiceLanding> = {
       { number: "03", title: "Reparación de la pared", desc: "Cierre del defecto muscular con o sin malla de refuerzo." },
       { number: "04", title: "Cierre y recuperación", desc: "Sutura por planos y vendaje compresivo. Indicaciones postoperatorias." },
     ],
+    preparation: [
+      "Suspender anticoagulantes y antiinflamatorios una semana antes según indicación del cirujano y el médico tratante.",
+      "Realizar ecografía de pared abdominal y exámenes preoperatorios de rutina para confirmar el diagnóstico y planificar la reparación.",
+      "Ayuno de 8 horas. Si se combina con cirugía estética, seguir las indicaciones combinadas del equipo quirúrgico.",
+      "Gestionar el tiempo de incapacidad laboral: para trabajos de oficina, aproximadamente una semana; para trabajos físicos, de 4 a 6 semanas.",
+    ],
+    resultsDescription: "La corrección de la hernia es definitiva y permanente en la mayoría de los casos. El dolor y las molestias asociadas a la protrusión desaparecen inmediatamente después de la cirugía. Cuando se coloca malla de refuerzo, el tiempo de integración del material protésico es de aproximadamente 3 meses. Combinar la reparación con liposucción o lipectomía permite además mejorar el contorno abdominal en el mismo procedimiento.",
+    duration: "1 a 2 horas (solo hernia), 2 a 4 horas (combinada)",
+    anesthesia: "Anestesia general o regional",
+    hospitalization: "24 horas",
     faqs: [
       { q: "¿Necesito malla para la reparación?", a: "Depende del tamaño y la ubicación de la hernia. El cirujano determinará si es necesario colocar una malla de refuerzo." },
       { q: "¿Puedo combinar la reparación con cirugía estética?", a: "Sí. Es frecuente realizar liposucción o lipectomía en el mismo tiempo quirúrgico, previa evaluación de seguridad." },
+      { q: "¿La hernia puede reaparecer después de la cirugía?", a: "El riesgo de recurrencia es bajo cuando se realiza una reparación adecuada. El uso de malla reduce significativamente este riesgo." },
+      { q: "¿Cuándo puedo conducir después de la cirugía?", a: "Generalmente después de la primera semana, siempre que no se requieran analgésicos que afecten la capacidad de reacción." },
     ],
   },
 
   "mamoplastia-aumento-rinoplastia": {
-    heroImage: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&h=1000&fit=crop",
+    heroImage: "",
     descriptionLong:
       "Procedimiento combinado que realiza simultáneamente aumento mamario con implantes y rinoplastia estética. Está diseñado para pacientes que desean armonizar el rostro y el busto en un solo tiempo quirúrgico, optimizando la recuperación y reduciendo los tiempos de inactividad total.",
     benefits: [
@@ -293,13 +383,25 @@ export const serviceLandings: Record<string, ServiceLanding> = {
       { number: "03", title: "Aumento mamario", desc: "Inserción de implantes por vía submamaria o axilar." },
       { number: "04", title: "Cierre y apósitos", desc: "Férula nasal, vendajes mamarios y drenajes si están indicados." },
     ],
+    preparation: [
+      "Suspender tabaco y alcohol al menos tres semanas antes. El tabaco compromete la cicatrización nasal y la viabilidad de los tejidos mamarios.",
+      "Exámenes preoperatorios completos más evaluación facial y mamaria. Radiografía o tomografía nasal si es necesaria.",
+      "Ayuno de 8 horas. No usar cremas, maquillaje ni joyería el día de la cirugía.",
+      "Adquirir sujetador quirúrgico sin aro con anticipación. Preparar el hogar para mantener reposo con la cabeza elevada los primeros días.",
+    ],
+    resultsDescription: "La combinación de ambos procedimientos ofrece una transformación facial y corporal simultánea. La nariz muestra su estructura definitiva entre los 6 y 12 meses, mientras que los implantes mamarios descienden a su posición natural alrededor del tercer mes. La ventaja principal es una sola fase de recuperación para obtener resultados en dos áreas distintas.",
+    duration: "4 a 6 horas",
+    anesthesia: "Anestesia general",
+    hospitalization: "24 horas",
     faqs: [
       { q: "¿Es seguro hacer dos cirugías al mismo tiempo?", a: "Sí, cuando el paciente está en buenas condiciones de salud y el equipo médico tiene experiencia en procedimientos combinados." },
+      { q: "¿La recuperación nasal afecta la recuperación mamaria?", a: "No. Los cuidados son independientes para cada zona. La única recomendación común es evitar esfuerzos físicos durante las primeras semanas." },
+      { q: "¿Cuándo puedo usar gafas después de la rinoplastia?", a: "Se recomienda evitar el apoyo en el puente nasal durante 4 a 6 semanas. Pueden usarse lentes de contacto mientras tanto." },
     ],
   },
 
   "mamoplastia-aumento": {
-    heroImage: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&h=1000&fit=crop",
+    heroImage: "",
     descriptionLong:
       "La mamoplastia de aumento es un procedimiento quirúrgico que incrementa el volumen mamario mediante la inserción de implantes. El objetivo es mejorar la proyección, forma y simetría del busto, adaptándose a la anatomía y preferencias de cada paciente. Los implantes pueden colocarse en posición submuscular o subglandular, con incisiones submamaria, periareolar o axilar.",
     benefits: [
@@ -326,15 +428,27 @@ export const serviceLandings: Record<string, ServiceLanding> = {
       { number: "03", title: "Inserción del implante", desc: "Colocación en posición submuscular o subglandular con técnica precisa." },
       { number: "04", title: "Cierre y vendaje", desc: "Sutura por planos, vendaje compresivo y sujetador quirúrgico." },
     ],
+    preparation: [
+      "Suspender tabaco y alcohol al menos dos semanas antes. El tabaco afecta la cicatrización y la perfusión de los tejidos mamarios.",
+      "Exámenes preoperatorios: hemograma, perfil de coagulación, química sanguínea y ecografía mamaria.",
+      "Ayuno de 8 horas previo al procedimiento. Ducha con jabón antiséptico la noche anterior.",
+      "Adquirir sujetador quirúrgico sin aro de la talla recomendada. Organizar el hogar para evitar levantar los brazos los primeros días.",
+    ],
+    resultsDescription: "El volumen y la proyección mamaria son visibles inmediatamente después de la cirugía, aunque el resultado estético completo se consolida entre el tercer y sexto mes, cuando los implantes descienden a su posición natural y los tejidos se adaptan. La cicatriz madura durante el primer año. La satisfacción de las pacientes con el aumento mamario es consistentemente alta en los estudios de seguimiento.",
+    duration: "1.5 a 2.5 horas",
+    anesthesia: "Anestesia general",
+    hospitalization: "12 a 24 horas",
     faqs: [
       { q: "¿Qué tipo de implante es mejor?", a: "No hay un implante universalmente mejor. La elección depende de la anatomía, preferencias y recomendación del cirujano." },
       { q: "¿Los implantes interfieren con la lactancia?", a: "Depende de la vía de abordaje. La incisión submamaria generalmente preserva la capacidad de lactar." },
       { q: "¿Cuánto duran los implantes?", a: "Los implantes actuales tienen una larga duración, pero pueden requerir reemplazo después de 10 a 15 años." },
+      { q: "¿Se sienten diferentes los implantes al tacto?", a: "Los implantes modernos tienen una consistencia similar al tejido mamario natural. La sensación depende de la posición y la cobertura tisular." },
+      { q: "¿Puedo volar después del aumento mamario?", a: "Se recomienda esperar al menos dos semanas antes de volar, y solo después de la autorización del cirujano." },
     ],
   },
 
   gigantomastia: {
-    heroImage: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?q=80&w=800&h=1000&fit=crop",
+    heroImage: "",
     descriptionLong:
       "La gigantomastia es una condición caracterizada por el crecimiento excesivo del tejido mamario, que puede causar dolor de espalda, problemas posturales, irritación cutánea y limitaciones funcionales. La cirugía de reducción mamaria reduce el volumen, peso y tamaño de los senos, aliviando los síntomas y mejorando la calidad de vida.",
     benefits: [
@@ -360,14 +474,26 @@ export const serviceLandings: Record<string, ServiceLanding> = {
       { number: "03", title: "Resección del tejido", desc: "Extracción del exceso de glándula, grasa y piel." },
       { number: "04", title: "Reconstrucción y cierre", desc: "Remodelación del cono mamario, reposición del complejo areola-pezón y sutura." },
     ],
+    preparation: [
+      "Suspender tabaco y alcohol al menos tres semanas antes. El tabaco aumenta significativamente el riesgo de necrosis del complejo areola-pezón.",
+      "Exámenes preoperatorios completos más ecografía mamaria y evaluación postural por fisioterapia si está indicado.",
+      "Ayuno de 8 horas. Ducha con jabón antiséptico la noche anterior y la mañana de la cirugía.",
+      "Adquirir sujetador quirúrgico sin aro de la talla postquirúrgica estimada. Preparar el hogar con apoyo familiar para la primera semana.",
+    ],
+    resultsDescription: "La reducción mamaria ofrece un alivio inmediato del dolor de espalda y cuello al disminuir el peso que los senos ejercen sobre el torso. El resultado estético es visible desde el postoperatorio, aunque la forma definitiva del seno se consolida entre el tercer y sexto mes. Las cicatrices maduran durante el primer año y tienden a desvanecerse significativamente. La mayoría de pacientes reporta una mejora sustancial en su calidad de vida.",
+    duration: "3 a 5 horas",
+    anesthesia: "Anestesia general",
+    hospitalization: "24 a 48 horas",
     faqs: [
       { q: "¿La cirugía afecta la sensibilidad del pezón?", a: "Puede haber cambios temporales o permanentes en la sensibilidad, aunque se realizan esfuerzos por preservar las estructuras nerviosas." },
       { q: "¿Puedo amamantar después de la cirugía?", a: "La capacidad de lactancia puede reducirse dependiendo de la técnica utilizada y la cantidad de tejido resecado." },
+      { q: "¿El tamaño de los senos puede volver a crecer?", a: "El tejido resecado no vuelve a crecer, pero el aumento de peso puede incrementar el volumen graso del seno remanente." },
+      { q: "¿La reducción mamaria está cubierta por el sistema de salud?", a: "En muchos casos, cuando la gigantomastia causa síntomas funcionales documentados, la cirugía puede tener cobertura parcial. Consulte con su aseguradora." },
     ],
   },
 
   ginecomastia: {
-    heroImage: "https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=800&h=1000&fit=crop",
+    heroImage: "",
     descriptionLong:
       "La ginecomastia es el aumento del tejido mamario en hombres, causado por un desequilibrio hormonal, efectos secundarios de medicamentos u otras condiciones. La cirugía corrige esta condición mediante liposucción y/o resección directa del tejido glandular, restaurando un contorno pectoral masculino natural.",
     benefits: [
@@ -393,14 +519,26 @@ export const serviceLandings: Record<string, ServiceLanding> = {
       { number: "03", title: "Resección glandular", desc: "Extracción del tejido mamario firme mediante incisión periareolar." },
       { number: "04", title: "Cierre y compresión", desc: "Sutura cuidadosa y colocación de vendaje compresivo." },
     ],
+    preparation: [
+      "Evaluación hormonal completa para descartar causas secundarias reversibles antes de la cirugía.",
+      "Suspender tabaco y alcohol dos semanas antes. Evitar el consumo de esteroides anabólicos o suplementos hormonales.",
+      "Ayuno de 8 horas. Exámenes preoperatorios de rutina más ecografía mamaria para diferenciar grasa de tejido glandular.",
+      "Adquirir chaleco o sujetador de compresión masculino con anticipación. Organizar el hogar para los primeros días de reposo.",
+    ],
+    resultsDescription: "El contorno pectoral masculino mejora notablemente desde el postoperatorio inmediato. La inflamación residual cede durante las primeras semanas y el resultado definitivo se consolida entre el tercer y cuarto mes. La cicatriz periareolar es mínima y se camufla en el borde de la areola. La satisfacción con el resultado estético y funcional es muy alta.",
+    duration: "1.5 a 2.5 horas",
+    anesthesia: "Anestesia general o sedación",
+    hospitalization: "12 horas",
     faqs: [
       { q: "¿La ginecomastia puede volver a aparecer?", a: "La cirugía remove el tejido de forma permanente, pero cambios hormonales o aumento de peso pueden causar recurrencia parcial." },
       { q: "¿Duele la cirugía?", a: "El procedimiento se realiza bajo anestesia. Las molestias postoperatorias son leves y controlables con analgesia." },
+      { q: "¿Cuándo puedo retomar el gimnasio?", a: "Ejercicio cardiovascular ligero a partir de la tercera semana. Press de banca y ejercicios de pecho después de la sexta semana." },
+      { q: "¿Es necesario el análisis hormonal antes de la cirugía?", a: "Sí. Es importante descartar causas tratables como tumores, hipogonadismo o efectos de medicamentos antes de indicar la cirugía." },
     ],
   },
 
   "pexia-reconstructiva": {
-    heroImage: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?q=80&w=800&h=1000&fit=crop",
+    heroImage: "",
     descriptionLong:
       "La pexia reconstructiva sin implantes es un procedimiento que reposiciona y eleva el tejido mamario utilizando solo los propios tejidos de la paciente. Está indicada para mujeres con ptosis (caída) mamaria que desean recuperar una posición más juvenil del busto sin la colocación de prótesis. La técnica reconstructiva redistribuye y fija el tejido glandular en una posición anatómica más elevada.",
     benefits: [
@@ -425,13 +563,25 @@ export const serviceLandings: Record<string, ServiceLanding> = {
       { number: "03", title: "Fijación interna", desc: "Sutura del tejido a la fascia pectoral para mantener la nueva posición." },
       { number: "04", title: "Cierre y modelado", desc: "Reducción de la piel sobrante y sutura cuidadosa de las incisiones." },
     ],
+    preparation: [
+      "Suspender tabaco y alcohol al menos dos semanas antes para asegurar una cicatrización óptima de los tejidos.",
+      "Exámenes preoperatorios de rutina más ecografía mamaria para evaluar la densidad del tejido glandular.",
+      "Ayuno de 8 horas. Ducha con jabón antiséptico la noche anterior.",
+      "Adquirir sujetador quirúrgico sin aro con anticipación. No se requieren implantes, por lo que la preparación es más sencilla que en otras cirugías mamarias.",
+    ],
+    resultsDescription: "El busto recupera una posición elevada y juvenil sin la necesidad de cuerpos extraños. El resultado es visible inmediatamente, aunque la forma definitiva se consolida entre el tercer y cuarto mes cuando el edema cede por completo. Al utilizar tejido propio, la textura y la sensación del seno son completamente naturales. La paciente puede reanudar la mayoría de sus actividades en cuatro semanas.",
+    duration: "2 a 3 horas",
+    anesthesia: "Anestesia general",
+    hospitalization: "12 a 24 horas",
     faqs: [
       { q: "¿La pexia reconstructiva dura para siempre?", a: "Los resultados son duraderos, pero el envejecimiento, la gravedad y los cambios de peso pueden afectar la posición del busto con el tiempo." },
+      { q: "¿Qué diferencia hay con una pexia con implantes?", a: "La pexia reconstructiva solo reposiciona el tejido existente sin añadir volumen. Si se desea aumentar el tamaño, se combina con implantes." },
+      { q: "¿Cuánto pesa el tejido que se remueve?", a: "Varía según cada caso, pero generalmente se eliminan entre 100 y 300 gramos de tejido por seno, dependiendo del grado de ptosis." },
     ],
   },
 
   pexia: {
-    heroImage: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?q=80&w=800&h=1000&fit=crop",
+    heroImage: "",
     descriptionLong:
       "La pexia mamaria o mastopexia es un procedimiento quirúrgico que eleva y remodela los senos caídos, reposicionando el tejido glandular y la areola en una posición más juvenil. Se elimina el exceso de piel y se redefine el contorno del busto, con o sin colocación de implantes según las necesidades de cada paciente.",
     benefits: [
@@ -457,14 +607,25 @@ export const serviceLandings: Record<string, ServiceLanding> = {
       { number: "03", title: "Resección cutánea", desc: "Eliminación del exceso de piel para mantener la nueva posición." },
       { number: "04", title: "Cierre y resultado", desc: "Sutura por planos y vendaje compresivo postquirúrgico." },
     ],
+    preparation: [
+      "Suspender tabaco y alcohol dos semanas antes. El tabaco es especialmente riesgoso para la viabilidad de los colgajos cutáneos mamarios.",
+      "Exámenes preoperatorios de rutina más ecografía mamaria para evaluar la composición del tejido.",
+      "Ayuno de 8 horas. Ducha con jabón antiséptico la noche anterior.",
+      "Adquirir sujetador quirúrgico sin aro. Si se planea colocar implantes, la selección debe realizarse con antelación en la consulta prequirúrgica.",
+    ],
+    resultsDescription: "El busto recupera una posición elevada y una forma más juvenil desde el postoperatorio inmediato. El resultado final se consolida entre el tercer y sexto mes, cuando el edema desaparece y las cicatrices comienzan a madurar. La satisfacción de las pacientes con la pexia mamaria es alta, especialmente cuando se combina con la colocación de implantes si se desea aumentar el volumen.",
+    duration: "2 a 4 horas",
+    anesthesia: "Anestesia general",
+    hospitalization: "12 a 24 horas",
     faqs: [
       { q: "¿Qué tipo de cicatriz queda?", a: "La incisión puede ser periareolar, en vertical o en ancla, dependiendo del grado de elevación necesario." },
       { q: "¿Puedo combinar pexia con implantes?", a: "Sí. Cuando además de elevación se desea aumentar el volumen, se colocan implantes en el mismo procedimiento." },
+      { q: "¿Cuánto dura el efecto de la pexia?", a: "Los resultados son duraderos, pero el envejecimiento natural y la gravedad continúan actuando. Un estilo de vida saludable ayuda a mantenerlos por más tiempo." },
     ],
   },
 
   "pexia-periareolar": {
-    heroImage: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?q=80&w=800&h=1000&fit=crop",
+    heroImage: "",
     descriptionLong:
       "La pexia periareolar es una técnica de elevación mamaria que realiza la incisión exclusivamente alrededor de la areola. Está indicada para casos de ptosis leve a moderada donde solo se requiere un reposicionamiento mínimo del complejo areola-pezón. La cicatriz se camufla en la transición entre la areola y la piel del seno.",
     benefits: [
@@ -487,13 +648,25 @@ export const serviceLandings: Record<string, ServiceLanding> = {
       { number: "02", title: "Incisión circumareolar", desc: "Corte alrededor de la areola para acceder al tejido mamario." },
       { number: "03", title: "Reposición y sutura", desc: "Elevación del complejo areola-pezón y cierre concéntrico." },
     ],
+    preparation: [
+      "Suspender tabaco y alcohol al menos dos semanas antes. Una buena circulación es esencial para la cicatrización periareolar.",
+      "Exámenes preoperatorios de rutina. La ecografía mamaria ayuda a confirmar que la técnica periareolar es la adecuada.",
+      "Ayuno de 8 horas. Ducha antiséptica la noche anterior.",
+      "Adquirir sujetador quirúrgico sin aro. La recuperación es más rápida que en la pexia tradicional, pero requiere los mismos cuidados iniciales.",
+    ],
+    resultsDescription: "La elevación mamaria es sutil pero efectiva, con una cicatriz que se camufla en el borde areolar. El resultado es visible desde la primera semana y se consolida alrededor del tercer mes. Esta técnica ofrece una recuperación más rápida que la pexia con incisiones verticales o en ancla, siendo ideal para pacientes con ptosis inicial.",
+    duration: "1.5 a 2 horas",
+    anesthesia: "Anestesia general o sedación",
+    hospitalization: "12 horas",
     faqs: [
       { q: "¿La cicatriz periareolar se nota?", a: "La incisión se realiza en la unión de la areola con la piel, por lo que tiende a camuflarse muy bien una vez madura." },
+      { q: "¿Puedo combinar esta técnica con implantes?", a: "Sí. La pexia periareolar puede combinarse con aumento mamario cuando se desea elevación y volumen simultáneamente." },
+      { q: "¿Cuándo puedo usar sujetador normal?", a: "Después de 4 a 6 semanas, cuando el cirujano autorice el cambio de sujetador quirúrgico a uno convencional sin aro." },
     ],
   },
 
   "lipo-pexia-periareolar": {
-    heroImage: "https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&h=1000&fit=crop",
+    heroImage: "",
     descriptionLong:
       "Procedimiento combinado que integra liposucción corporal con pexia periareolar. La liposucción reduce la grasa localizada en áreas como abdomen, flancos o muslos, mientras que la pexia periareolar eleva el busto con una cicatriz mínima alrededor de la areola. Es ideal para pacientes que buscan mejorar su silueta general con una recuperación moderada.",
     benefits: [
@@ -515,13 +688,24 @@ export const serviceLandings: Record<string, ServiceLanding> = {
       { number: "02", title: "Liposucción", desc: "Aspiración de grasa en áreas seleccionadas." },
       { number: "03", title: "Pexia periareolar", desc: "Elevación mamaria con incisión circumareolar." },
     ],
+    preparation: [
+      "Suspender tabaco y alcohol tres semanas antes para garantizar una cicatrización adecuada en ambas zonas.",
+      "Exámenes preoperatorios completos más ecografía de las áreas a liposuccionar.",
+      "Ayuno de 8 horas. Ducha antiséptica la noche anterior.",
+      "Adquirir faja de compresión y sujetador quirúrgico sin aro con anticipación.",
+    ],
+    resultsDescription: "La combinación de liposucción y pexia periareolar permite obtener un contorno corporal más definido y un busto elevado con cicatrices mínimas. El resultado se consolida entre el tercer y cuarto mes. Es una opción ideal para pacientes que desean una mejoría integral sin someterse a procedimientos mayores por separado.",
+    duration: "2 a 3 horas",
+    anesthesia: "Anestesia general",
+    hospitalization: "12 a 24 horas",
     faqs: [
       { q: "¿Cuánto dura la cirugía combinada?", a: "Aproximadamente 2 a 3 horas, dependiendo de las áreas de liposucción." },
+      { q: "¿Cuándo puedo retomar el ejercicio?", a: "Caminatas desde la primera semana. Ejercicio completo después de la cuarta semana con autorización médica." },
     ],
   },
 
   "lipo-pexia": {
-    heroImage: "https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&h=1000&fit=crop",
+    heroImage: "",
     descriptionLong:
       "Procedimiento que integra liposucción corporal y pexia mamaria para pacientes que desean mejorar tanto el contorno corporal como la posición del busto. La liposucción esculpe las áreas con grasa localizada, mientras que la pexia eleva y rejuvenece los senos. Es una de las combinaciones más solicitadas en cirugía estética integral.",
     benefits: [
@@ -542,13 +726,24 @@ export const serviceLandings: Record<string, ServiceLanding> = {
       { number: "02", title: "Liposucción", desc: "Extracción de grasa localizada." },
       { number: "03", title: "Pexia mamaria", desc: "Elevación y reposición del tejido mamario." },
     ],
+    preparation: [
+      "Suspender tabaco y alcohol tres semanas antes para optimizar la cicatrización en ambas zonas quirúrgicas.",
+      "Exámenes preoperatorios completos. Evaluación de las áreas a liposuccionar y mamaria.",
+      "Ayuno de 8 horas. Ducha antiséptica la noche anterior.",
+      "Adquirir faja de compresión y sujetador quirúrgico sin aro. Preparar el hogar con apoyo familiar los primeros días.",
+    ],
+    resultsDescription: "La silueta corporal mejora notablemente con la reducción de grasa localizada, mientras que el busto recupera una posición elevada y juvenil. El resultado completo se consolida entre el tercer y cuarto mes. La combinación permite obtener una transformación estética integral con una sola fase de recuperación.",
+    duration: "2.5 a 4 horas",
+    anesthesia: "Anestesia general",
+    hospitalization: "12 a 24 horas",
     faqs: [
       { q: "¿Puedo añadir implantes mamarios?", a: "Sí. Si además se desea aumentar el volumen, se pueden colocar implantes en el mismo procedimiento." },
+      { q: "¿Cuándo puedo retomar el ejercicio completo?", a: "Después de la sexta semana, cuando ambas zonas hayan cicatrizado adecuadamente." },
     ],
   },
 
   "lipo-protesis-aumento": {
-    heroImage: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&h=1000&fit=crop",
+    heroImage: "",
     descriptionLong:
       "Cirugía combinada de liposucción corporal y aumento mamario con prótesis. La liposucción esculpe el contorno corporal eliminando grasa localizada, mientras que la mamoplastia de aumento incrementa el volumen del busto. Esta combinación ofrece una transformación estética integral para pacientes que desean mejorar simultáneamente su silueta y el volumen de sus senos.",
     benefits: [
@@ -571,13 +766,25 @@ export const serviceLandings: Record<string, ServiceLanding> = {
       { number: "03", title: "Aumento mamario", desc: "Inserción de implantes por vía submamaria." },
       { number: "04", title: "Cierre y apósitos", desc: "Vendajes compresivos y sujetador quirúrgico." },
     ],
+    preparation: [
+      "Suspender tabaco y alcohol tres semanas antes. El tabaco afecta la cicatrización de las incisiones de liposucción y la viabilidad de los implantes.",
+      "Exámenes preoperatorios completos más ecografía de las áreas a tratar. Selección anticipada de los implantes mamarios.",
+      "Ayuno de 8 horas. Ducha antiséptica la noche anterior y la mañana de la cirugía.",
+      "Adquirir faja de compresión y sujetador quirúrgico sin aro. Organizar el hogar con anticipación para las primeras semanas de cuidado.",
+    ],
+    resultsDescription: "La silueta corporal se redefine con la reducción de grasa localizada, mientras que el busto adquiere mayor volumen y proyección. El resultado final se consolida entre el cuarto y sexto mes, cuando los implantes descienden a su posición natural y la inflamación cede por completo. La transformación es integral y armónica.",
+    duration: "3 a 5 horas",
+    anesthesia: "Anestesia general",
+    hospitalization: "24 horas",
     faqs: [
       { q: "¿Se puede combinar con otros procedimientos?", a: "Sí. Dependiendo de las necesidades, puede añadirse lipectomía o pexia mamaria." },
+      { q: "¿Cuándo se ven los resultados definitivos?", a: "Aunque el cambio es visible desde el inicio, el resultado final se consolida entre el cuarto y sexto mes postoperatorio." },
+      { q: "¿Los implantes afectan la sensación de la liposucción?", a: "No. Son procedimientos independientes en zonas diferentes del cuerpo. La recuperación de cada área sigue su propio curso." },
     ],
   },
 
   "lipectomia-pexia": {
-    heroImage: "https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&h=1000&fit=crop",
+    heroImage: "",
     descriptionLong:
       "Plan quirúrgico que combina lipectomía abdominal con pexia mamaria. La lipectomía reseca el exceso de piel y grasa abdominal, mientras que la pexia eleva y rejuvenece el busto. Es una opción integral para pacientes que han experimentado cambios significativos en su cuerpo debido a pérdida de peso, embarazos o envejecimiento.",
     benefits: [
@@ -598,13 +805,25 @@ export const serviceLandings: Record<string, ServiceLanding> = {
       { number: "02", title: "Lipectomía", desc: "Resección del exceso de piel y grasa abdominal." },
       { number: "03", title: "Pexia mamaria", desc: "Elevación y reposición del tejido mamario." },
     ],
+    preparation: [
+      "Suspender tabaco y alcohol tres semanas antes. El tabaco compromete gravemente la cicatrización de la lipectomía.",
+      "Exámenes preoperatorios completos más ecografía abdominal y mamaria. Evaluación cardiológica si está indicada.",
+      "Ayuno de 8 horas. Ducha antiséptica la noche anterior.",
+      "Adquirir faja abdominal de compresión y sujetador quirúrgico sin aro. Preparar el hogar para permanecer en reposo en posición semincorporada.",
+    ],
+    resultsDescription: "El abdomen luce firme y la silueta se redefine gracias a la lipectomía, mientras que el busto recupera una posición elevada y juvenil. El resultado completo se consolida entre el cuarto y sexto mes. Esta combinación es especialmente popular entre pacientes post-pérdida de peso que desean corregir las secuelas del adelgazamiento significativo.",
+    duration: "3 a 5 horas",
+    anesthesia: "Anestesia general",
+    hospitalization: "24 a 48 horas",
     faqs: [
       { q: "¿Cuánto tiempo debo esperar para retomar el ejercicio?", a: "Se recomienda esperar de 6 a 8 semanas para ejercicio intenso, especialmente actividades que involucren el abdomen y el pecho." },
+      { q: "¿Puedo combinar este plan con implantes mamarios?", a: "Sí. Si además de elevar se desea aumentar el volumen, se pueden colocar implantes en el mismo procedimiento." },
+      { q: "¿La cicatriz de la lipectomía es la misma que en una abdominoplastia?", a: "Sí. La incisión se realiza en la parte baja del abdomen, por debajo de la línea de la ropa interior, y madura durante el primer año." },
     ],
   },
 
   "ritidoplastia-completa": {
-    heroImage: "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830876/ChatGPT_Image_11_jul_2026_11_34_27_p.m._z2zube.png",
+    heroImage: "",
     descriptionLong:
       "La ritidoplastia completa o lifting facial integral es un procedimiento quirúrgico que rejuvenece el rostro y el cuello mediante la reposición de los tejidos faciales profundos y la eliminación del exceso de piel. Aborda la flacidez de las mejillas, la mandíbula, el cuello y la papada, restaurando los contornos faciales juveniles de manera natural.",
     benefits: [
@@ -630,14 +849,26 @@ export const serviceLandings: Record<string, ServiceLanding> = {
       { number: "03", title: "Reposición de tejidos profundos", desc: "Elevación del SMAS y reposición de los tejidos faciales en su posición anatómica." },
       { number: "04", title: "Resección cutánea y cierre", desc: "Eliminación del exceso de piel y sutura cuidadosa de las incisiones." },
     ],
+    preparation: [
+      "Suspender tabaco y alcohol al menos cuatro semanas antes. El tabaco compromete gravemente la cicatrización facial.",
+      "Exámenes preoperatorios completos más evaluación cardiológica y análisis facial fotográfico.",
+      "Ayuno de 8 horas. No usar cremas faciales, maquillaje ni joyería el día de la cirugía.",
+      "Adquirir los insumos postoperatorios: vendas, gasas, soluciones antisépticas y almohadas para mantener la cabeza elevada.",
+    ],
+    resultsDescription: "El lifting facial completo ofrece un rejuvenecimiento integral que abarca desde la frente hasta el cuello. El edema facial cede significativamente después de la segunda semana, permitiendo retomar actividades sociales. El resultado definitivo se consolida entre el tercer y sexto mes, cuando los tejidos se asientan en su nueva posición. La duración del resultado es de 7 a 10 años.",
+    duration: "4 a 6 horas",
+    anesthesia: "Anestesia general",
+    hospitalization: "24 horas",
     faqs: [
       { q: "¿A qué edad se recomienda el lifting facial?", a: "Generalmente a partir de los 40-50 años, cuando la flacidez facial es evidente. La edad ideal se determina en la valoración médica." },
       { q: "¿Cuánto dura el resultado del lifting?", a: "Los resultados suelen durar entre 7 y 10 años, aunque el envejecimiento natural continúa." },
+      { q: "¿Las cicatrices del lifting son visibles?", a: "Las incisiones se realizan en la línea del cabello y los pliegues naturales de la oreja, por lo que son prácticamente imperceptibles una vez maduras." },
+      { q: "¿Puedo combinar el lifting con otros procedimientos faciales?", a: "Sí. Es frecuente combinarlo con blefaroplastia, rinoplastia o tratamientos con láser para un rejuvenecimiento facial completo." },
     ],
   },
 
   "ritidoplastia-tercio-medio": {
-    heroImage: "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830876/ChatGPT_Image_11_jul_2026_11_34_27_p.m._z2zube.png",
+    heroImage: "",
     descriptionLong:
       "El lifting del tercio medio facial rejuvenece la región central del rostro, que incluye los pómulos, las mejillas y los surcos nasogenianos. Este procedimiento reposiciona los tejidos descendidos para restaurar el volumen y la elevación de la zona media del rostro, mejorando significativamente la apariencia de fatiga y envejecimiento.",
     benefits: [
@@ -659,13 +890,25 @@ export const serviceLandings: Record<string, ServiceLanding> = {
       { number: "02", title: "Acceso temporal o transconjuntival", desc: "Incisiones mínimas en zonas estratégicas." },
       { number: "03", title: "Reposición del tejido", desc: "Elevación y fijación del tejido graso y muscular." },
     ],
+    preparation: [
+      "Suspender tabaco y alcohol tres semanas antes para garantizar una cicatrización adecuada de los tejidos faciales.",
+      "Exámenes preoperatorios de rutina. Evaluación fotográfica detallada del tercio medio facial.",
+      "Ayuno de 8 horas. No usar maquillaje, cremas ni lentes de contacto el día de la cirugía.",
+      "Preparar el hogar con almohadas extras para mantener la cabeza elevada los primeros días.",
+    ],
+    resultsDescription: "El tercio medio facial recupera volumen y elevación, suavizando los surcos nasogenianos y mejorando la proyección de los pómulos. El resultado es sutil y natural, evitando la apariencia de tirantez. El edema cede en dos semanas y el resultado definitivo se consolida entre el segundo y tercer mes.",
+    duration: "2 a 3 horas",
+    anesthesia: "Anestesia general o sedación",
+    hospitalization: "12 horas",
     faqs: [
       { q: "¿Se nota mucho el cambio?", a: "El resultado es natural. El objetivo es rejuvenecer sin que se note una intervención quirúrgica evidente." },
+      { q: "¿Cuándo puedo retocar el maquillaje?", a: "Se recomienda esperar al menos dos semanas antes de aplicar maquillaje sobre las incisiones." },
+      { q: "¿Este procedimiento se combina con rellenos faciales?", a: "Sí. En muchos casos se complementa con ácido hialurónico o grasa autóloga para restaurar el volumen perdido." },
     ],
   },
 
   "ritidoplastia-tercio-inferior": {
-    heroImage: "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830876/ChatGPT_Image_11_jul_2026_11_34_27_p.m._z2zube.png",
+    heroImage: "",
     descriptionLong:
       "El lifting del tercio inferior facial se enfoca en rejuvenecer la mandíbula, la línea de la barbilla, la papada y la parte superior del cuello. Corrige la flacidez del tercio inferior del rostro, redefine el ángulo mandibular y elimina el exceso de piel y grasa que causa la papada, restaurando un contorno facial juvenil.",
     benefits: [
@@ -687,13 +930,25 @@ export const serviceLandings: Record<string, ServiceLanding> = {
       { number: "02", title: "Incisiones preauriculares y submentonianas", desc: "Acceso quirúrgico en pliegues naturales." },
       { number: "03", title: "Liposucción y reposición", desc: "Eliminación de grasa submentoniana y reposición de tejidos." },
     ],
+    preparation: [
+      "Suspender tabaco y alcohol tres semanas antes. El tabaco afecta directamente la cicatrización de la piel del cuello y la mandíbula.",
+      "Exámenes preoperatorios de rutina. Evaluación fotográfica del perfil facial y la papada.",
+      "Ayuno de 8 horas. Evitar usar cremas, maquillaje o joyería en el cuello y rostro.",
+      "Preparar el hogar con almohadas cervicales para mantener una posición cómoda con la cabeza elevada.",
+    ],
+    resultsDescription: "La mandíbula recupera su definición, la papada desaparece y el cuello luce más firme y estilizado. El resultado es visible desde la primera semana, aunque el edema residual puede tomar hasta tres semanas en ceder por completo. El perfil facial rejuvenecido se mantiene por varios años, especialmente si se combina con un estilo de vida saludable.",
+    duration: "2 a 3 horas",
+    anesthesia: "Anestesia general o sedación",
+    hospitalization: "12 horas",
     faqs: [
       { q: "¿Duele la recuperación?", a: "Las molestias son leves y controlables. La mayoría de pacientes retoma sus actividades en dos semanas." },
+      { q: "¿Qué cuidados requiere la cicatriz submentoniana?", a: "La incisión bajo la barbilla es pequeña y se camufla en el pliegue natural. Debe mantenerse limpia y protegida del sol durante los primeros meses." },
+      { q: "¿Puedo combinar este procedimiento con un lifting completo?", a: "Sí. El lifting del tercio inferior puede realizarse como parte de un lifting facial completo o como procedimiento independiente si la flacidez es exclusivamente mandibular y cervical." },
     ],
   },
 
   rinoplastia: {
-    heroImage: "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830677/ChatGPT_Image_11_jul_2026_10_34_24_p.m._nagkar.png",
+    heroImage: "",
     descriptionLong:
       "La rinoplastia es una cirugía nasal enfocada en la armonía facial y, cuando aplica, la función respiratoria. Puede realizarse mediante técnica abierta (con incisión externa en la columela) o cerrada (todas las incisiones internas). El cirujano remodela el hueso y el cartílago nasal para lograr una nariz proporcionada al rostro del paciente.",
     benefits: [
@@ -720,14 +975,26 @@ export const serviceLandings: Record<string, ServiceLanding> = {
       { number: "04", title: "Corrección funcional", desc: "Cuando existe obstrucción, se corrigen desviaciones del tabique y cornetes." },
       { number: "05", title: "Cierre y férula", desc: "Sutura de incisiones y colocación de férula nasal externa." },
     ],
+    preparation: [
+      "Suspender tabaco y alcohol al menos tres semanas antes. El tabaco afecta la cicatrización de los tejidos nasales.",
+      "Exámenes preoperatorios de rutina más radiografía o tomografía nasal si está indicada para evaluar el tabique y los cornetes.",
+      "Ayuno de 8 horas. No usar cremas, maquillaje ni joyería. Evitar lentes de contacto el día del procedimiento.",
+      "Adquirir insumos postoperatorios: gasas, solución salina, analgésicos prescritos y almohadas para mantener la cabeza elevada.",
+    ],
+    resultsDescription: "La nariz muestra una mejora inmediata en su forma, aunque el resultado final se consolida entre los 6 y 12 meses debido a la lenta resolución del edema nasal. La corrección funcional de la respiración es perceptible desde la primera semana tras retirar el taponamiento. La cicatriz de la rinoplastia abierta (en la columela) es mínima y se desvanece con el tiempo.",
+    duration: "2 a 3 horas (estética), 3 a 4 horas (con corrección funcional)",
+    anesthesia: "Anestesia general",
+    hospitalization: "12 a 24 horas",
     faqs: [
       { q: "¿Duele la rinoplastia?", a: "No hay dolor intraoperatorio. En el postoperatorio hay congestión e inflamación controlable con analgesia." },
       { q: "¿Cuándo puedo usar gafas?", a: "Se recomienda evitar el apoyo en el puente nasal durante 4 a 6 semanas." },
+      { q: "¿Puedo sonarme la nariz después de la cirugía?", a: "No debe sonarse la nariz durante al menos dos semanas para evitar desplazar los tejidos recién remodelados." },
+      { q: "¿La rinoplastia afecta la voz?", a: "Temporalmente puede haber un cambio leve en la resonancia nasal debido al edema, pero la voz retorna a su tono habitual al desaparecer la inflamación." },
     ],
   },
 
   "lipo-rinoplastia": {
-    heroImage: "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830677/ChatGPT_Image_11_jul_2026_10_34_24_p.m._nagkar.png",
+    heroImage: "",
     descriptionLong:
       "Combinación de liposucción corporal y rinoplastia facial en un solo procedimiento. La liposucción esculpe el contorno corporal eliminando grasa localizada, mientras que la rinoplastia remodela la nariz para armonizar el rostro. Es una opción para pacientes que desean mejorar tanto su silueta como su perfil facial en una sola intervención.",
     benefits: [
@@ -748,13 +1015,25 @@ export const serviceLandings: Record<string, ServiceLanding> = {
       { number: "02", title: "Liposucción", desc: "Aspiración de grasa en áreas seleccionadas." },
       { number: "03", title: "Rinoplastia", desc: "Remodelación nasal según el plan quirúrgico." },
     ],
+    preparation: [
+      "Suspender tabaco y alcohol tres semanas antes. El tabaco afecta tanto la cicatrización corporal como la nasal.",
+      "Exámenes preoperatorios completos más evaluación facial y de las áreas a liposuccionar.",
+      "Ayuno de 8 horas. Ducha antiséptica. No usar maquillaje, cremas ni joyería.",
+      "Adquirir faja de compresión y preparar el hogar para el reposo con la cabeza elevada. Organizar apoyo familiar.",
+    ],
+    resultsDescription: "La combinación ofrece una transformación corporal y facial simultánea. El contorno corporal mejora desde las primeras semanas, mientras que la nariz requiere de 6 a 12 meses para mostrar su resultado definitivo. La ventaja principal es realizar ambos procedimientos con una sola recuperación, optimizando el tiempo del paciente.",
+    duration: "3 a 5 horas",
+    anesthesia: "Anestesia general",
+    hospitalization: "24 horas",
     faqs: [
       { q: "¿Es seguro combinar ambos procedimientos?", a: "Sí, siempre que el paciente esté en buenas condiciones de salud y el equipo médico tenga experiencia en cirugías combinadas." },
+      { q: "¿La recuperación nasal afecta la recuperación de la liposucción?", a: "No. Los cuidados son independientes para cada zona. La única precaución común es evitar esfuerzos físicos durante las primeras semanas." },
+      { q: "¿Puedo dormir de lado después de la cirugía?", a: "Se recomienda dormir boca arriba con la cabeza elevada durante las primeras dos semanas para proteger tanto la nariz como las zonas de liposucción." },
     ],
   },
 
   "blefaroplastia-otoplastia-lipectomia": {
-    heroImage: "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830679/ChatGPT_Image_11_jul_2026_11_26_18_p.m._cfhfki.png",
+    heroImage: "",
     descriptionLong:
       "Procedimiento integral que combina blefaroplastia (cirugía de párpados), otoplastia (corrección de orejas) y lipectomía (resección de piel abdominal). Está diseñado para pacientes que desean rejuvenecer la mirada, corregir la posición de las orejas y mejorar el contorno abdominal en un solo plan quirúrgico.",
     benefits: [
@@ -776,8 +1055,20 @@ export const serviceLandings: Record<string, ServiceLanding> = {
       { number: "03", title: "Otoplastia", desc: "Corrección de la posición de las orejas." },
       { number: "04", title: "Lipectomía", desc: "Resección de exceso de piel abdominal." },
     ],
+    preparation: [
+      "Suspender tabaco y alcohol tres semanas antes. El tabaco compromete la cicatrización de los tres procedimientos simultáneamente.",
+      "Exámenes preoperatorios completos más evaluación oftalmológica si está indicada y ecografía abdominal.",
+      "Ayuno de 8 horas. Ducha antiséptica. No usar maquillaje, cremas, lentes de contacto ni joyería.",
+      "Adquirir faja abdominal y preparar el hogar con almohadas extras. Organizar apoyo familiar para los primeros días, ya que la recuperación involucra múltiples zonas.",
+    ],
+    resultsDescription: "La mirada rejuvenecida, las orejas en posición anatómica correcta y el abdomen firme se logran en un solo procedimiento. La blefaroplastia muestra resultados visibles en dos semanas cuando el edema cede. La otoplastia es permanente desde el postoperatorio. La lipectomía requiere de 3 a 6 meses para su consolidación definitiva. Esta combinación triple ofrece una transformación integral con una sola fase de recuperación.",
+    duration: "4 a 6 horas",
+    anesthesia: "Anestesia general",
+    hospitalization: "24 a 48 horas",
     faqs: [
       { q: "¿Cuánto dura la cirugía completa?", a: "El tiempo quirúrgico varía entre 4 y 6 horas dependiendo de la complejidad de cada procedimiento." },
+      { q: "¿La blefaroplastia deja cicatrices visibles?", a: "Las incisiones se realizan en los pliegues naturales de los párpados, por lo que las cicatrices son prácticamente imperceptibles." },
+      { q: "¿A qué edad se recomienda la otoplastia?", a: "La otoplastia puede realizarse a cualquier edad, aunque se recomienda a partir de los 6-7 años cuando el cartílago auricular ha alcanzado su desarrollo." },
     ],
   },
 };
