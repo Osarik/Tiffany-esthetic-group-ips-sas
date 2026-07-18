@@ -8,14 +8,18 @@ const whatsappUrl =
   "https://wa.me/573202703522?text=Hola%2C%20quiero%20conocer%20resultados%20de%20procedimientos%20en%20Tiffany%20Esthetic%20Group.";
 
 const procedures = [
-  { name: "Lipoescultura + Lipoinyección Glútea", slug: "lipoescultura-lipoinyeccion-glutea-cali", desc: "Contorno corporal y aumento glúteo con grasa autóloga." },
-  { name: "Liposucción + Aumento Mamario", slug: "liposuccion-aumento", desc: "Liposucción simultánea con aumento de senos." },
-  { name: "Liposucción + Lipectomía", slug: "liposuccion-lipectomia", desc: "Liposucción con resección de piel abdominal." },
-  { name: "Liposucción + Pexia Mamaria", slug: "liposuccion-pexia-mamaria", desc: "Liposucción y levantamiento de senos combinados." },
-  { name: "Pexia Mamaria", slug: "pexia-mamaria", desc: "Levantamiento de senos sin implantes." },
+  { name: "Lipoescultura", slug: "lipoescultura", desc: "Contorno corporal y aumento glúteo con grasa autóloga." },
+  { name: "Lipectomía", slug: "lipectomia", desc: "Resección de exceso de piel y grasa abdominal." },
+  { name: "Lipo + Lipectomía", slug: "lipo-lipectomia", desc: "Liposucción con resección de piel abdominal." },
+  { name: "Lipo + Prótesis de aumento", slug: "lipo-protesis-aumento", desc: "Liposucción simultánea con aumento de senos." },
+  { name: "Mamoplastia de aumento", slug: "mamoplastia-aumento", desc: "Aumento mamario con implantes." },
+  { name: "Ginecomastia", slug: "ginecomastia", desc: "Corrección de aumento mamario en hombres." },
+  { name: "Pexia mamaria", slug: "pexia-mamaria", desc: "Levantamiento de senos sin implantes." },
+  { name: "Pexia periareolar", slug: "pexia-periareolar", desc: "Elevación mamaria con incisión periareolar." },
   { name: "Rinoplastia", slug: "rinoplastia", desc: "Cirugía estética y funcional de nariz." },
-  { name: "Blefaroplastia", slug: "blefaroplastia", desc: "Cirugía de párpados superiores e inferiores." },
-  { name: "Lifting Facial", slug: "lifting-facial", desc: "Rejuvenecimiento facial quirúrgico." },
+  { name: "Ritidoplastia completa", slug: "ritidoplastia-completa", desc: "Rejuvenecimiento facial integral." },
+  { name: "Ritidoplastia 1/3 medio", slug: "ritidoplastia-tercio-medio", desc: "Lifting de tercio medio facial." },
+  { name: "Ritidoplastia 1/3 inferior", slug: "ritidoplastia-tercio-inferior", desc: "Lifting de tercio inferior facial." },
 ];
 
 const faqs = [
@@ -38,7 +42,7 @@ const faqs = [
 ];
 
 const stats = [
-  { value: "8", label: "Procedimientos quirúrgicos" },
+  { value: "24", label: "Procedimientos quirúrgicos" },
   { value: "3", label: "Salas de cirugía habilitadas" },
   { value: "1", label: "Farmacia habilitada" },
   { value: "100%", label: "Compromiso de confidencialidad" },

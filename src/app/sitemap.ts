@@ -1,18 +1,30 @@
 import type { MetadataRoute } from "next";
 
 const procedures = [
-  "lipoescultura-con-lipoinyeccion-glutea-cali",
-  "liposuccion",
-  "abdominoplastia",
-  "aumento-mamario",
-  "pexia-mamaria",
+  "lipoescultura",
   "lipectomia",
-  "liposuccion-lipectomia",
+  "lipo-lipectomia",
+  "lipo-lipectomia-senos",
+  "lipo-lipectomia-pexia-periareolar",
+  "lipo-lipectomia-pexia",
+  "hernia",
+  "mamoplastia-aumento-rinoplastia",
+  "mamoplastia-aumento",
+  "gigantomastia",
+  "ginecomastia",
+  "pexia-reconstructiva",
+  "pexia-mamaria",
+  "pexia-periareolar",
+  "lipo-pexia-periareolar",
+  "lipo-pexia",
+  "lipo-protesis-aumento",
+  "lipectomia-pexia",
+  "ritidoplastia-completa",
+  "ritidoplastia-tercio-medio",
+  "ritidoplastia-tercio-inferior",
   "rinoplastia",
-  "blefaroplastia",
-  "lifting-facial",
-  "liposuccion-pexia-mamaria",
-  "liposuccion-aumento",
+  "lipo-rinoplastia",
+  "blefaroplastia-otoplastia-lipectomia",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -38,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const procedureEntries: MetadataRoute.Sitemap = procedures.map((slug) => ({
-    url: `${baseUrl}/servicios/${slug}`,
+    url: `${baseUrl}/${slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly",
     priority: 0.6,

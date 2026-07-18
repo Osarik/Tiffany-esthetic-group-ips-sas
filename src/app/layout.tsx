@@ -269,13 +269,23 @@ export default function RootLayout({
                       </p>
                       <ul className="mt-5 space-y-3">
                         <li>
-                          <Link href="/lipoescultura-lipoinyeccion-glutea-cali" className="text-sm font-body text-white/50 hover:text-primary transition-colors no-underline">
-                            Lipoescultura + Glúteos
+                          <Link href="/servicios" className="text-sm font-body text-white/50 hover:text-primary transition-colors no-underline">
+                            Todos los servicios
                           </Link>
                         </li>
                         <li>
-                          <Link href="/liposuccion-lipectomia" className="text-sm font-body text-white/50 hover:text-primary transition-colors no-underline">
-                            Liposucción
+                          <Link href="/lipoescultura" className="text-sm font-body text-white/50 hover:text-primary transition-colors no-underline">
+                            Lipoescultura
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/mamoplastia-aumento" className="text-sm font-body text-white/50 hover:text-primary transition-colors no-underline">
+                            Mamoplastia de aumento
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/pexia-mamaria" className="text-sm font-body text-white/50 hover:text-primary transition-colors no-underline">
+                            Pexia mamaria
                           </Link>
                         </li>
                         <li>
@@ -284,13 +294,8 @@ export default function RootLayout({
                           </Link>
                         </li>
                         <li>
-                          <Link href="/blefaroplastia" className="text-sm font-body text-white/50 hover:text-primary transition-colors no-underline">
-                            Blefaroplastia
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/lifting-facial" className="text-sm font-body text-white/50 hover:text-primary transition-colors no-underline">
-                            Lifting Facial
+                          <Link href="/ginecomastia" className="text-sm font-body text-white/50 hover:text-primary transition-colors no-underline">
+                            Ginecomastia
                           </Link>
                         </li>
                       </ul>

@@ -10,7 +10,7 @@ const stats = [
   { value: "3", label: "Salas de cirugía habilitadas" },
   { value: "1", label: "Área de recuperación" },
   { value: "1", label: "Farmacia habilitada" },
-  { value: "8", label: "Procedimientos quirúrgicos" },
+  { value: "24", label: "Procedimientos quirúrgicos" },
 ];
 
 const processSteps = [

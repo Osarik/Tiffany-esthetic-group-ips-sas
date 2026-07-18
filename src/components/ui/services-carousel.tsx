@@ -19,31 +19,35 @@ import {
 
 const serviceIcons: Record<string, React.ReactNode> = {
   lipoescultura: <Scissors size={18} />,
-  "liposuccion-lipectomia": <Activity size={18} />,
-  "liposuccion-pexia-mamaria": <Activity size={18} />,
-  "liposuccion-aumento": <Droplets size={18} />,
+  "lipo-lipectomia": <Activity size={18} />,
+  "lipo-pexia": <Activity size={18} />,
+  "lipo-protesis-aumento": <Droplets size={18} />,
   pexia: <Heart size={18} />,
   rinoplastia: <Eye size={18} />,
-  blefaroplastia: <Eye size={18} />,
-  "lifting-facial": <Sparkles size={18} />,
+  "mamoplastia-aumento": <Heart size={18} />,
+  ginecomastia: <Scissors size={18} />,
+  "ritidoplastia-completa": <Sparkles size={18} />,
+  "ritidoplastia-tercio-medio": <Sparkles size={18} />,
+  "ritidoplastia-tercio-inferior": <Sparkles size={18} />,
+  lipectomia: <Activity size={18} />,
 };
 
 const serviceImages: Record<string, string> = {
   lipoescultura:
     "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783832108/ChatGPT_Image_11_jul_2026_11_37_31_p.m._mwqeu8.png",
-  "liposuccion-lipectomia":
+  "lipo-lipectomia":
     "https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=800&h=1000&fit=crop",
-  "liposuccion-pexia-mamaria":
+  "lipo-pexia":
     "https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&h=1000&fit=crop",
-  "liposuccion-aumento":
+  "lipo-protesis-aumento":
     "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&h=1000&fit=crop",
   pexia:
     "https://images.unsplash.com/photo-1527613426441-4da17471b66d?q=80&w=800&h=1000&fit=crop",
   rinoplastia:
     "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830677/ChatGPT_Image_11_jul_2026_10_34_24_p.m._nagkar.png",
-  blefaroplastia:
+  "mamoplastia-aumento":
     "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830679/ChatGPT_Image_11_jul_2026_11_26_18_p.m._cfhfki.png",
-  "lifting-facial":
+  "ritidoplastia-completa":
     "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830876/ChatGPT_Image_11_jul_2026_11_34_27_p.m._z2zube.png",
 };
 
