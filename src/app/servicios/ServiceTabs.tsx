@@ -12,6 +12,7 @@ import LipectomySvg from "@/components/icons/LipectomySvg";
 import MamariaSvg from "@/components/icons/MamariaSvg";
 import FacialSvg from "@/components/icons/FacialSvg";
 import EyeSvg from "@/components/icons/EyeSvg";
+import RitidoplastiaSvg from "@/components/icons/RitidoplastiaSvg";
 import GinecomastiaSvg from "@/components/icons/GinecomastiaSvg";
 
 const categoryConfig: Record<string, { gradient: string; label: string; iconBg: string; border: string }> = {
@@ -85,45 +86,9 @@ const procedureIcons: Record<string, React.ReactNode> = {
   "lipo-pexia": <MammaplastySvg />,
   "lipo-protesis-aumento": <MamariaSvg />,
   "lipectomia-pexia": <MammaplastySvg />,
-  "ritidoplastia-completa": (
-    <SvgIcon>
-      <ellipse cx="32" cy="34" rx="16" ry="18" opacity="0.2" />
-      <path d="M16 22c-.5-3 1-6 3-8" opacity="0.5" />
-      <path d="M48 22c.5-3-1-6-3-8" opacity="0.5" />
-      <path d="M20 26c2 3 5.5 5 10 5.5" />
-      <path d="M44 26c-2 3-5.5 5-10 5.5" />
-      <path d="M22 30l-8-2" />
-      <path d="M42 30l8-2" />
-      <circle cx="24" cy="28" r="2.5" />
-      <circle cx="40" cy="28" r="2.5" />
-      <path d="M22 42c3 4 6 6 10 6s7-2 10-6" />
-    </SvgIcon>
-  ),
-  "ritidoplastia-tercio-medio": (
-    <SvgIcon>
-      <ellipse cx="32" cy="34" rx="16" ry="18" opacity="0.2" />
-      <path d="M16 22c-.5-3 1-6 3-8" opacity="0.35" />
-      <path d="M48 22c.5-3-1-6-3-8" opacity="0.35" />
-      <path d="M20 28c2 2.5 5.5 4 10 4.5" />
-      <path d="M44 28c-2 2.5-5.5 4-10 4.5" />
-      <circle cx="24" cy="28" r="2.5" />
-      <circle cx="40" cy="28" r="2.5" />
-      <path d="M22 34l-6-1.5" opacity="0.5" />
-      <path d="M42 34l6-1.5" opacity="0.5" />
-    </SvgIcon>
-  ),
-  "ritidoplastia-tercio-inferior": (
-    <SvgIcon>
-      <ellipse cx="32" cy="34" rx="16" ry="18" opacity="0.2" />
-      <path d="M20 26c2 3 5.5 5 10 5.5" />
-      <path d="M44 26c-2 3-5.5 5-10 5.5" />
-      <circle cx="24" cy="28" r="2.5" />
-      <circle cx="40" cy="28" r="2.5" />
-      <path d="M22 42c3 4 6 6 10 6s7-2 10-6" />
-      <path d="M16 46l4-3" opacity="0.5" />
-      <path d="M48 46l-4-3" opacity="0.5" />
-    </SvgIcon>
-  ),
+  "ritidoplastia-completa": <RitidoplastiaSvg />,
+  "ritidoplastia-tercio-medio": <RitidoplastiaSvg />,
+  "ritidoplastia-tercio-inferior": <RitidoplastiaSvg />,
   rinoplastia: (
     <SvgIcon>
       <ellipse cx="32" cy="34" rx="16" ry="18" opacity="0.2" />
