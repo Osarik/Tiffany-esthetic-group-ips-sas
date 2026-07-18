@@ -10,6 +10,7 @@ import HerniaSvg from "@/components/icons/HerniaSvg";
 import MammaplastySvg from "@/components/icons/MammaplastySvg";
 import LipectomySvg from "@/components/icons/LipectomySvg";
 import MamariaSvg from "@/components/icons/MamariaSvg";
+import GinecomastiaSvg from "@/components/icons/GinecomastiaSvg";
 
 const categoryConfig: Record<string, { gradient: string; label: string; iconBg: string; border: string }> = {
   corporal: {
@@ -83,14 +84,7 @@ const procedureIcons: Record<string, React.ReactNode> = {
   "mamoplastia-aumento-rinoplastia": <MamariaSvg />,
   "mamoplastia-aumento": <MamariaSvg />,
   gigantomastia: <MamariaSvg />,
-  ginecomastia: (
-    <SvgIcon>
-      <rect x="14" y="14" width="36" height="22" rx="6" />
-      <path d="M24 25c0-2.5 2-4.5 8-4.5s8 2 8 4.5" />
-      <path d="M14 36h36v6" opacity="0.3" />
-      <path d="M20 47c4 4 8 6 12 6s8-2 12-6" />
-    </SvgIcon>
-  ),
+  ginecomastia: <GinecomastiaSvg />,
   "pexia-reconstructiva": <MammaplastySvg />,
   pexia: <MammaplastySvg />,
   "pexia-periareolar": <MammaplastySvg />,
