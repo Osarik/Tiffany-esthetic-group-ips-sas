@@ -44,42 +44,58 @@ const serviceIcons: Record<string, React.ReactNode> = {
   "blefaroplastia-otoplastia-lipectomia": <Eye size={18} />,
 };
 
-const IMG_BODY = "https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=800&h=1000&fit=crop";
-const IMG_MAMA = "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&h=1000&fit=crop";
-const IMG_PEXIA = "https://images.unsplash.com/photo-1527613426441-4da17471b66d?q=80&w=800&h=1000&fit=crop";
-const IMG_COMBO = "https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&h=1000&fit=crop";
-const IMG_CLINIC = "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=800&h=1000&fit=crop";
-const CLOUD_LIPO = "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783832108/ChatGPT_Image_11_jul_2026_11_37_31_p.m._mwqeu8.png";
-const CLOUD_NOSE = "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830677/ChatGPT_Image_11_jul_2026_10_34_24_p.m._nagkar.png";
-const CLOUD_EYES = "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830679/ChatGPT_Image_11_jul_2026_11_26_18_p.m._cfhfki.png";
-const CLOUD_FACE = "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830876/ChatGPT_Image_11_jul_2026_11_34_27_p.m._z2zube.png";
-const CLOUD_BREAST = "https://images.unsplash.com/photo-1612349317150-4136b6e5f5c0?q=80&w=800&h=1000&fit=crop";
+const AI = "https://image.pollinations.ai/prompt";
+const SZ = "width=800&height=1000";
 
 const serviceImages: Record<string, string> = {
-  lipoescultura: CLOUD_LIPO,
-  lipectomia: IMG_BODY,
-  "lipo-lipectomia": IMG_BODY,
-  "lipo-lipectomia-senos": IMG_MAMA,
-  "lipo-lipectomia-pexia-periareolar": IMG_COMBO,
-  "lipo-lipectomia-pexia": IMG_COMBO,
-  hernia: IMG_CLINIC,
-  "mamoplastia-aumento-rinoplastia": IMG_MAMA,
-  "mamoplastia-aumento": CLOUD_BREAST,
-  gigantomastia: IMG_PEXIA,
-  ginecomastia: IMG_BODY,
-  "pexia-reconstructiva": IMG_PEXIA,
-  pexia: IMG_PEXIA,
-  "pexia-periareolar": IMG_PEXIA,
-  "lipo-pexia-periareolar": IMG_COMBO,
-  "lipo-pexia": IMG_COMBO,
-  "lipo-protesis-aumento": IMG_MAMA,
-  "lipectomia-pexia": IMG_COMBO,
-  "ritidoplastia-completa": CLOUD_FACE,
-  "ritidoplastia-tercio-medio": CLOUD_FACE,
-  "ritidoplastia-tercio-inferior": CLOUD_FACE,
-  rinoplastia: CLOUD_NOSE,
-  "lipo-rinoplastia": CLOUD_NOSE,
-  "blefaroplastia-otoplastia-lipectomia": CLOUD_EYES,
+  lipoescultura:
+    `${AI}/professional%20medical%20illustration%20liposculpture%20body%20contouring%20surgery%20waist%20silhouette%20definition%20aesthetic%20clinic%20photorealistic%20lighting?${SZ}`,
+  lipectomia:
+    `${AI}/professional%20medical%20illustration%20abdominoplasty%20tummy%20tuck%20surgery%20excess%20skin%20removal%20abdominal%20contouring%20photorealistic%20clinical?${SZ}`,
+  "lipo-lipectomia":
+    `${AI}/professional%20medical%20illustration%20liposuction%20combined%20with%20abdominoplasty%20body%20sculpting%20surgery%20photorealistic%20clinical%20studio?${SZ}`,
+  "lipo-lipectomia-senos":
+    `${AI}/professional%20medical%20illustration%20combined%20liposuction%20tummy%20tuck%20and%20breast%20augmentation%20surgery%20photorealistic%20clinical?${SZ}`,
+  "lipo-lipectomia-pexia-periareolar":
+    `${AI}/professional%20medical%20illustration%20liposuction%20abdominoplasty%20and%20periareolar%20breast%20lift%20combined%20surgery%20photorealistic?${SZ}`,
+  "lipo-lipectomia-pexia":
+    `${AI}/professional%20medical%20illustration%20liposuction%20tummy%20tuck%20and%20mastopexy%20breast%20lift%20combined%20surgery%20photorealistic?${SZ}`,
+  hernia:
+    `${AI}/professional%20medical%20illustration%20hernia%20repair%20surgery%20abdominal%20wall%20mesh%20reconstruction%20clinical%20photorealistic?${SZ}`,
+  "mamoplastia-aumento-rinoplastia":
+    `${AI}/professional%20medical%20illustration%20breast%20augmentation%20and%20rhinoplasty%20combined%20facial%20and%20body%20surgery%20photorealistic?${SZ}`,
+  "mamoplastia-aumento":
+    `${AI}/professional%20medical%20illustration%20breast%20augmentation%20surgery%20implant%20placement%20mammoplasty%20aesthetic%20clinic%20photorealistic?${SZ}`,
+  gigantomastia:
+    `${AI}/professional%20medical%20illustration%20breast%20reduction%20surgery%20gigantomastia%20macromastia%20correction%20photorealistic%20clinical?${SZ}`,
+  ginecomastia:
+    `${AI}/professional%20medical%20illustration%20gynecomastia%20surgery%20male%20breast%20reduction%20chest%20contouring%20photorealistic%20clinical?${SZ}`,
+  "pexia-reconstructiva":
+    `${AI}/professional%20medical%20illustration%20mastopexy%20breast%20lift%20reconstructive%20surgery%20without%20implants%20photorealistic%20clinical?${SZ}`,
+  pexia:
+    `${AI}/professional%20medical%20illustration%20mastopexy%20breast%20lift%20surgery%20breast%20reshaping%20aesthetic%20clinic%20photorealistic%20studio?${SZ}`,
+  "pexia-periareolar":
+    `${AI}/professional%20medical%20illustration%20periareolar%20breast%20lift%20surgery%20minimal%20scar%20mastopexy%20photorealistic%20clinical?${SZ}`,
+  "lipo-pexia-periareolar":
+    `${AI}/professional%20medical%20illustration%20liposuction%20combined%20with%20periareolar%20breast%20lift%20body%20contouring%20photorealistic?${SZ}`,
+  "lipo-pexia":
+    `${AI}/professional%20medical%20illustration%20liposuction%20combined%20with%20mastopexy%20breast%20lift%20body%20sculpting%20photorealistic?${SZ}`,
+  "lipo-protesis-aumento":
+    `${AI}/professional%20medical%20illustration%20liposuction%20combined%20with%20breast%20implants%20augmentation%20body%20contouring%20photorealistic?${SZ}`,
+  "lipectomia-pexia":
+    `${AI}/professional%20medical%20illustration%20abdominoplasty%20combined%20with%20mastopexy%20tummy%20tuck%20and%20breast%20lift%20photorealistic?${SZ}`,
+  "ritidoplastia-completa":
+    `${AI}/professional%20medical%20illustration%20full%20facelift%20surgery%20rhytidoplasty%20facial%20rejuvenation%20neck%20lift%20photorealistic%20clinical?${SZ}`,
+  "ritidoplastia-tercio-medio":
+    `${AI}/professional%20medical%20illustration%20midface%20lift%20surgery%20cheek%20lift%20nasolabial%20folds%20rejuvenation%20photorealistic%20clinical?${SZ}`,
+  "ritidoplastia-tercio-inferior":
+    `${AI}/professional%20medical%20illustration%20lower%20face%20lift%20surgery%20jawline%20neck%20lift%20submental%20fat%20photorealistic%20clinical?${SZ}`,
+  rinoplastia:
+    `${AI}/professional%20medical%20illustration%20rhinoplasty%20nose%20surgery%20facial%20harmony%20nasal%20reshaping%20photorealistic%20clinical%20studio?${SZ}`,
+  "lipo-rinoplastia":
+    `${AI}/professional%20medical%20illustration%20liposuction%20combined%20with%20rhinoplasty%20body%20and%20facial%20surgery%20photorealistic?${SZ}`,
+  "blefaroplastia-otoplastia-lipectomia":
+    `${AI}/professional%20medical%20illustration%20blepharoplasty%20otoplasty%20and%20abdominoplasty%20combined%20triple%20surgery%20photorealistic?${SZ}`,
 };
 
 const AUTO_PLAY_INTERVAL = 5000;
