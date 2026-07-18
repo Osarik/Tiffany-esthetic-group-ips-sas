@@ -30,23 +30,27 @@ const categoryConfig: Record<string, { gradient: string; label: string; iconBg: 
 const categoryIcons: Record<string, React.ReactNode> = {
   corporal: (
     <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8" aria-hidden="true">
-      <path d="M24 4C16 4 10 10 8 18C6 26 8 34 14 40C18 44 22 46 24 48C26 46 30 44 34 40C40 34 42 26 40 18C38 10 32 4 24 4Z" fill="currentColor" opacity="0.3"/>
-      <path d="M24 14C19 14 15 18 13 23C11 28 12 33 15 36C17 38 20 39 22 40C22 40 24 38 24 38C24 38 26 40 26 40C28 39 31 38 33 36C36 33 37 28 35 23C33 18 29 14 24 14Z" fill="currentColor" opacity="0.2"/>
+      <path d="M24 4C19.4 4 15.5 6.5 13.5 10.5C11.5 14.5 11.5 19.5 13.5 24C14.5 26.2 16 28.2 17.5 30C18.5 31.2 19.5 32.5 20 34C20.5 35.5 20.5 37 20.5 38.5C20.5 40 20.5 42 20.5 44H27.5C27.5 42 27.5 40 27.5 38.5C27.5 37 27.5 35.5 28 34C28.5 32.5 29.5 31.2 30.5 30C32 28.2 33.5 26.2 34.5 24C36.5 19.5 36.5 14.5 34.5 10.5C32.5 6.5 28.6 4 24 4Z" fill="currentColor" opacity="0.28"/>
+      <path d="M24 10C21 10 18.5 11.8 17.5 14.5C16.5 17.2 16.5 20.5 17.5 23C18 24.2 18.8 25.3 19.5 26.5C20 27.3 20.3 28 20.3 29C20.3 30 20.3 31 20.3 32H27.7C27.7 31 27.7 30 27.7 29C27.7 28 28 27.3 28.5 26.5C29.2 25.3 30 24.2 30.5 23C31.5 20.5 31.5 17.2 30.5 14.5C29.5 11.8 27 10 24 10Z" fill="currentColor" opacity="0.15"/>
+      <circle cx="24" cy="38" r="6" fill="currentColor" opacity="0.2"/>
+      <path d="M14 16C14 16 17 20 24 20C31 20 34 16 34 16" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.35"/>
     </svg>
   ),
   mamaria: (
     <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8" aria-hidden="true">
-      <path d="M24 8C20 8 16 10 13 14C10 18 9 22 10 26C11 28 13 30 16 31C18 32 20 33 22 34C23 35 24 36 24 38C24 36 25 35 26 34C28 33 30 32 32 31C35 30 37 28 38 26C39 22 38 18 35 14C32 10 28 8 24 8Z" fill="currentColor" opacity="0.3"/>
-      <ellipse cx="18" cy="22" rx="5" ry="7" fill="currentColor" opacity="0.15"/>
-      <ellipse cx="30" cy="22" rx="5" ry="7" fill="currentColor" opacity="0.15"/>
+      <path d="M16 10C12 10 8 13 7 17C6 21 7 25 9 27.5C11 30 14 31 16 31.5C17 31.7 18 31.8 19 31.5C20 31.2 21 30.5 22 29.5C23 28.5 24 27 24 26C24 27 25 28.5 26 29.5C27 30.5 28 31.2 29 31.5C30 31.8 31 31.7 32 31.5C34 31 37 30 39 27.5C41 25 42 21 41 17C40 13 36 10 32 10" fill="currentColor" opacity="0.28"/>
+      <path d="M12 14C10.5 16 10 19 11 21.5C12 24 14 25.5 16 26C17 26.3 18 26.3 18.5 25.5C19 24.7 19 23 18.5 21.5C18 20 17 18.5 16 17.5C15 16.5 14 16 13 17C12 18 12 19.5 12 21C12 22.5 12.5 24 13.5 25" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.4"/>
+      <path d="M36 14C37.5 16 38 19 37 21.5C36 24 34 25.5 32 26C31 26.3 30 26.3 29.5 25.5C29 24.7 29 23 29.5 21.5C30 20 31 18.5 32 17.5C33 16.5 34 16 35 17C36 18 36 19.5 36 21C36 22.5 35.5 24 34.5 25" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.4"/>
     </svg>
   ),
   facial: (
     <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8" aria-hidden="true">
-      <path d="M24 6C16 6 10 12 8 20C6 28 8 36 12 40C14 42 18 44 22 45C22 46 22 47 22 47L24 46L26 47C26 46 26 45 26 45C30 44 34 42 36 40C40 36 42 28 40 20C38 12 32 6 24 6Z" fill="currentColor" opacity="0.3"/>
-      <ellipse cx="18" cy="20" rx="3" ry="2.5" fill="currentColor" opacity="0.2"/>
-      <ellipse cx="30" cy="20" rx="3" ry="2.5" fill="currentColor" opacity="0.2"/>
-      <path d="M18 28C20 31 22 32 24 32C26 32 28 31 30 28" stroke="currentColor" strokeWidth="1.5" fill="none" opacity="0.3"/>
+      <path d="M24 6C17 6 11 10 9 16C7 22 7 28 9 32C11 36 14 39 18 41C19 41.5 20 42 20.5 43C21 44 21 45 21 46L24 44L27 46C27 45 27 44 27.5 43C28 42 29 41.5 30 41C34 39 37 36 39 32C41 28 41 22 39 16C37 10 31 6 24 6Z" fill="currentColor" opacity="0.28"/>
+      <ellipse cx="17.5" cy="20" rx="3" ry="3" fill="currentColor" opacity="0.18"/>
+      <ellipse cx="30.5" cy="20" rx="3" ry="3" fill="currentColor" opacity="0.18"/>
+      <path d="M31 28C29 31.5 26.5 33 24 33C21.5 33 19 31.5 17 28" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.4"/>
+      <path d="M12 16C12 16 13 11 17 9" stroke="currentColor" strokeWidth="1" strokeLinecap="round" opacity="0.2"/>
+      <path d="M36 16C36 16 35 11 31 9" stroke="currentColor" strokeWidth="1" strokeLinecap="round" opacity="0.2"/>
     </svg>
   ),
 };
