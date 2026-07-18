@@ -9,6 +9,7 @@ import BodyContourSvg from "@/components/icons/BodyContourSvg";
 import HerniaSvg from "@/components/icons/HerniaSvg";
 import MammaplastySvg from "@/components/icons/MammaplastySvg";
 import LipectomySvg from "@/components/icons/LipectomySvg";
+import MamariaSvg from "@/components/icons/MamariaSvg";
 
 const categoryConfig: Record<string, { gradient: string; label: string; iconBg: string; border: string }> = {
   corporal: {
@@ -79,30 +80,9 @@ const procedureIcons: Record<string, React.ReactNode> = {
   "lipo-lipectomia-pexia-periareolar": <MammaplastySvg />,
   "lipo-lipectomia-pexia": <MammaplastySvg />,
   hernia: <HerniaSvg />,
-  "mamoplastia-aumento-rinoplastia": (
-    <SvgIcon>
-      <path d="M18 26c0-8 6-12 14-12" />
-      <ellipse cx="40" cy="30" rx="7" ry="6" />
-      <path d="M36 30h8" />
-      <path d="M40 26v8" />
-      <path d="M14 44c4 5.5 10.5 8 18 8" />
-    </SvgIcon>
-  ),
-  "mamoplastia-aumento": (
-    <SvgIcon>
-      <path d="M22 26c0-10 4.5-14 10-14s10 4 10 14c0 6-4 11-10 14-6-3-10-8-10-14z" />
-      <path d="M32 12v10" />
-      <path d="M27 17h10" />
-    </SvgIcon>
-  ),
-  gigantomastia: (
-    <SvgIcon>
-      <path d="M20 27c0-9 4.5-13 10-13s10 4 10 13c0 7-4 11.5-10 14.5-6-3-10-7.5-10-14.5z" />
-      <path d="M26 32l12-10" />
-      <circle cx="26" cy="32" r="2.5" />
-      <circle cx="38" cy="22" r="2.5" />
-    </SvgIcon>
-  ),
+  "mamoplastia-aumento-rinoplastia": <MamariaSvg />,
+  "mamoplastia-aumento": <MamariaSvg />,
+  gigantomastia: <MamariaSvg />,
   ginecomastia: (
     <SvgIcon>
       <rect x="14" y="14" width="36" height="22" rx="6" />
