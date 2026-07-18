@@ -5,6 +5,10 @@ import Link from "next/link";
 import Container from "@/components/ui/Container";
 import AnimateInView from "@/components/ui/AnimateInView";
 import { services } from "@/data/services";
+import BodyContourSvg from "@/components/icons/BodyContourSvg";
+import HerniaSvg from "@/components/icons/HerniaSvg";
+import MammaplastySvg from "@/components/icons/MammaplastySvg";
+import LipectomySvg from "@/components/icons/LipectomySvg";
 
 const categoryConfig: Record<string, { gradient: string; label: string; iconBg: string; border: string }> = {
   corporal: {
@@ -30,9 +34,10 @@ const categoryConfig: Record<string, { gradient: string; label: string; iconBg: 
 const categoryIcons: Record<string, React.ReactNode> = {
   corporal: (
     <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8" aria-hidden="true">
-      <path d="M24 8C20 8 16.5 10 14 13.5C11.5 17 10.5 21 11 25.5C11.5 28.5 12.5 31 14 33C15 34.5 16 36 16.5 38C17 40 17 42 17 44H31C31 42 31 40 31.5 38C32 36 33 34.5 34 33C35.5 31 36.5 28.5 37 25.5C37.5 21 36.5 17 34 13.5C31.5 10 28 8 24 8Z" fill="currentColor" opacity="0.25"/>
-      <path d="M24 14C21.5 14 19 15.5 17.5 18.5C16 21.5 15.5 25 16 28.5C16.5 31 17.5 33 19 34.5C20 35.5 20.5 37 20.5 39C20.5 40.5 20.5 42 20.5 44H27.5C27.5 42 27.5 40.5 27.5 39C27.5 37 28 35.5 29 34.5C30.5 33 31.5 31 32 28.5C32.5 25 32 21.5 30.5 18.5C29 15.5 26.5 14 24 14Z" fill="currentColor" opacity="0.15"/>
-      <path d="M20 44C20 44 20 38 24 38C28 38 28 44 28 44" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.3"/>
+      <path d="M24 4C19.4 4 15.5 6.5 13.5 10.5C11.5 14.5 11.5 19.5 13.5 24C14.5 26.2 16 28.2 17.5 30C18.5 31.2 19.5 32.5 20 34C20.5 35.5 20.5 37 20.5 38.5C20.5 40 20.5 42 20.5 44H27.5C27.5 42 27.5 40 27.5 38.5C27.5 37 27.5 35.5 28 34C28.5 32.5 29.5 31.2 30.5 30C32 28.2 33.5 26.2 34.5 24C36.5 19.5 36.5 14.5 34.5 10.5C32.5 6.5 28.6 4 24 4Z" fill="currentColor" opacity="0.28"/>
+      <path d="M24 10C21 10 18.5 11.8 17.5 14.5C16.5 17.2 16.5 20.5 17.5 23C18 24.2 18.8 25.3 19.5 26.5C20 27.3 20.3 28 20.3 29C20.3 30 20.3 31 20.3 32H27.7C27.7 31 27.7 30 27.7 29C27.7 28 28 27.3 28.5 26.5C29.2 25.3 30 24.2 30.5 23C31.5 20.5 31.5 17.2 30.5 14.5C29.5 11.8 27 10 24 10Z" fill="currentColor" opacity="0.15"/>
+      <circle cx="24" cy="38" r="6" fill="currentColor" opacity="0.2"/>
+      <path d="M14 16C14 16 17 20 24 20C31 20 34 16 34 16" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.35"/>
     </svg>
   ),
   mamaria: (
@@ -44,13 +49,12 @@ const categoryIcons: Record<string, React.ReactNode> = {
   ),
   facial: (
     <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8" aria-hidden="true">
-      <path d="M24 8C18 8 13 11 10 16C8 20 7 25 8 30C9 34 11 37 14 39.5C16 41 18 42 19.5 43C20.5 43.5 21.5 44.5 22 45.5L24 43L26 45.5C26.5 44.5 27.5 43.5 28.5 43C30 42 32 41 34 39.5C37 37 39 34 40 30C41 25 40 20 38 16C35 11 30 8 24 8Z" fill="currentColor" opacity="0.25"/>
-      <ellipse cx="17" cy="21" rx="3.5" ry="3" fill="currentColor" opacity="0.18"/>
-      <ellipse cx="31" cy="21" rx="3.5" ry="3" fill="currentColor" opacity="0.18"/>
-      <path d="M20 21C20 19 22 18 24 18C26 18 28 19 28 21" stroke="currentColor" strokeWidth="1" strokeLinecap="round" opacity="0.25"/>
-      <path d="M31 29C29 32.5 26.5 34 24 34C21.5 34 19 32.5 17 29" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.4"/>
-      <path d="M11 18C11 18 12.5 12 17 10" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.25"/>
-      <path d="M37 18C37 18 35.5 12 31 10" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.25"/>
+      <path d="M24 6C17 6 11 10 9 16C7 22 7 28 9 32C11 36 14 39 18 41C19 41.5 20 42 20.5 43C21 44 21 45 21 46L24 44L27 46C27 45 27 44 27.5 43C28 42 29 41.5 30 41C34 39 37 36 39 32C41 28 41 22 39 16C37 10 31 6 24 6Z" fill="currentColor" opacity="0.28"/>
+      <ellipse cx="17.5" cy="20" rx="3" ry="3" fill="currentColor" opacity="0.18"/>
+      <ellipse cx="30.5" cy="20" rx="3" ry="3" fill="currentColor" opacity="0.18"/>
+      <path d="M31 28C29 31.5 26.5 33 24 33C21.5 33 19 31.5 17 28" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.4"/>
+      <path d="M12 16C12 16 13 11 17 9" stroke="currentColor" strokeWidth="1" strokeLinecap="round" opacity="0.2"/>
+      <path d="M36 16C36 16 35 11 31 9" stroke="currentColor" strokeWidth="1" strokeLinecap="round" opacity="0.2"/>
     </svg>
   ),
 };
@@ -61,31 +65,131 @@ const tabsConfig = [
   { key: "facial" as const, label: "Cirugía Facial", categoryName: "Cirugía Facial" },
 ];
 
+const SvgIcon = ({ children }: { children: React.ReactNode }) => (
+  <svg viewBox="0 0 64 64" fill="none" className="w-5 h-5" aria-hidden="true" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    {children}
+  </svg>
+);
+
 const procedureIcons: Record<string, React.ReactNode> = {
-  lipoescultura: "🔄",
-  lipectomia: "✂️",
-  "lipo-lipectomia": "⬆️",
-  "lipo-lipectomia-senos": "🔄",
-  "lipo-lipectomia-pexia-periareolar": "🔄",
-  "lipo-lipectomia-pexia": "🔄",
-  hernia: "🔧",
-  "mamoplastia-aumento-rinoplastia": "🔄",
-  "mamoplastia-aumento": "📐",
-  gigantomastia: "⬇️",
-  ginecomastia: "👨",
-  "pexia-reconstructiva": "⬆️",
-  pexia: "⬆️",
-  "pexia-periareolar": "⬆️",
-  "lipo-pexia-periareolar": "🔄",
-  "lipo-pexia": "🔄",
-  "lipo-protesis-aumento": "🔄",
-  "lipectomia-pexia": "🔄",
-  "ritidoplastia-completa": "✨",
-  "ritidoplastia-tercio-medio": "✨",
-  "ritidoplastia-tercio-inferior": "✨",
-  rinoplastia: "👃",
-  "lipo-rinoplastia": "🔄",
-  "blefaroplastia-otoplastia-lipectomia": "🔄",
+  lipoescultura: <BodyContourSvg />,
+  lipectomia: <BodyContourSvg />,
+  "lipo-lipectomia": <BodyContourSvg />,
+  "lipo-lipectomia-senos": <LipectomySvg />,
+  "lipo-lipectomia-pexia-periareolar": <MammaplastySvg />,
+  "lipo-lipectomia-pexia": <MammaplastySvg />,
+  hernia: <HerniaSvg />,
+  "mamoplastia-aumento-rinoplastia": (
+    <SvgIcon>
+      <path d="M18 26c0-8 6-12 14-12" />
+      <ellipse cx="40" cy="30" rx="7" ry="6" />
+      <path d="M36 30h8" />
+      <path d="M40 26v8" />
+      <path d="M14 44c4 5.5 10.5 8 18 8" />
+    </SvgIcon>
+  ),
+  "mamoplastia-aumento": (
+    <SvgIcon>
+      <path d="M22 26c0-10 4.5-14 10-14s10 4 10 14c0 6-4 11-10 14-6-3-10-8-10-14z" />
+      <path d="M32 12v10" />
+      <path d="M27 17h10" />
+    </SvgIcon>
+  ),
+  gigantomastia: (
+    <SvgIcon>
+      <path d="M20 27c0-9 4.5-13 10-13s10 4 10 13c0 7-4 11.5-10 14.5-6-3-10-7.5-10-14.5z" />
+      <path d="M26 32l12-10" />
+      <circle cx="26" cy="32" r="2.5" />
+      <circle cx="38" cy="22" r="2.5" />
+    </SvgIcon>
+  ),
+  ginecomastia: (
+    <SvgIcon>
+      <rect x="14" y="14" width="36" height="22" rx="6" />
+      <path d="M24 25c0-2.5 2-4.5 8-4.5s8 2 8 4.5" />
+      <path d="M14 36h36v6" opacity="0.3" />
+      <path d="M20 47c4 4 8 6 12 6s8-2 12-6" />
+    </SvgIcon>
+  ),
+  "pexia-reconstructiva": <MammaplastySvg />,
+  pexia: <MammaplastySvg />,
+  "pexia-periareolar": <MammaplastySvg />,
+  "lipo-pexia-periareolar": <MammaplastySvg />,
+  "lipo-pexia": <MammaplastySvg />,
+  "lipo-protesis-aumento": (
+    <SvgIcon>
+      <path d="M32 10c-6 0-10 4-10 9v3" />
+      <path d="M32 10c6 0 10 4 10 9v3" />
+      <circle cx="44" cy="28" r="7" />
+      <path d="M40 28h8" />
+      <path d="M44 24v8" />
+      <path d="M22 30c2 3 5.5 5 10 6" opacity="0.45" />
+      <path d="M42 30c-2 3-5.5 5-10 6" opacity="0.45" />
+    </SvgIcon>
+  ),
+  "lipectomia-pexia": <MammaplastySvg />,
+  "ritidoplastia-completa": (
+    <SvgIcon>
+      <ellipse cx="32" cy="34" rx="16" ry="18" opacity="0.2" />
+      <path d="M16 22c-.5-3 1-6 3-8" opacity="0.5" />
+      <path d="M48 22c.5-3-1-6-3-8" opacity="0.5" />
+      <path d="M20 26c2 3 5.5 5 10 5.5" />
+      <path d="M44 26c-2 3-5.5 5-10 5.5" />
+      <path d="M22 30l-8-2" />
+      <path d="M42 30l8-2" />
+      <circle cx="24" cy="28" r="2.5" />
+      <circle cx="40" cy="28" r="2.5" />
+      <path d="M22 42c3 4 6 6 10 6s7-2 10-6" />
+    </SvgIcon>
+  ),
+  "ritidoplastia-tercio-medio": (
+    <SvgIcon>
+      <ellipse cx="32" cy="34" rx="16" ry="18" opacity="0.2" />
+      <path d="M16 22c-.5-3 1-6 3-8" opacity="0.35" />
+      <path d="M48 22c.5-3-1-6-3-8" opacity="0.35" />
+      <path d="M20 28c2 2.5 5.5 4 10 4.5" />
+      <path d="M44 28c-2 2.5-5.5 4-10 4.5" />
+      <circle cx="24" cy="28" r="2.5" />
+      <circle cx="40" cy="28" r="2.5" />
+      <path d="M22 34l-6-1.5" opacity="0.5" />
+      <path d="M42 34l6-1.5" opacity="0.5" />
+    </SvgIcon>
+  ),
+  "ritidoplastia-tercio-inferior": (
+    <SvgIcon>
+      <ellipse cx="32" cy="34" rx="16" ry="18" opacity="0.2" />
+      <path d="M20 26c2 3 5.5 5 10 5.5" />
+      <path d="M44 26c-2 3-5.5 5-10 5.5" />
+      <circle cx="24" cy="28" r="2.5" />
+      <circle cx="40" cy="28" r="2.5" />
+      <path d="M22 42c3 4 6 6 10 6s7-2 10-6" />
+      <path d="M16 46l4-3" opacity="0.5" />
+      <path d="M48 46l-4-3" opacity="0.5" />
+    </SvgIcon>
+  ),
+  rinoplastia: (
+    <SvgIcon>
+      <ellipse cx="32" cy="34" rx="16" ry="18" opacity="0.2" />
+      <circle cx="24" cy="28" r="2.5" />
+      <circle cx="40" cy="28" r="2.5" />
+      <path d="M32 16v10" />
+      <path d="M26 38c2 3 4 4.5 6 4.5s4-1.5 6-4.5" />
+      <path d="M24 34c3 2 5 3 8 3s5-1 8-3" opacity="0.5" />
+    </SvgIcon>
+  ),
+  "lipo-rinoplastia": (
+    <SvgIcon>
+      <path d="M32 10c-6 0-10 4-10 9v3" />
+      <path d="M32 10c6 0 10 4 10 9v3" />
+      <circle cx="32" cy="30" r="8" opacity="0.2" />
+      <path d="M32 26v4" />
+      <path d="M28 35c1 1.5 2.5 2.5 4 2.5s3-1 4-2.5" />
+      <path d="M27 33c2 1 3.5 1.5 5 1.5s3-.5 5-1.5" opacity="0.5" />
+      <path d="M22 38c2 3 5 5.5 10 6.5" opacity="0.4" />
+      <path d="M42 38c-2 3-5 5.5-10 6.5" opacity="0.4" />
+    </SvgIcon>
+  ),
+  "blefaroplastia-otoplastia-lipectomia": <BodyContourSvg />,
 };
 
 export default function ServiceTabs({ whatsappUrl }: { whatsappUrl: string }) {
