@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Link from "next/link";
+import CotizarModal from "@/components/CotizarModal";
 import Container from "@/components/ui/Container";
 import AnimateInView from "@/components/ui/AnimateInView";
 import { services } from "@/data/services";
@@ -97,6 +98,15 @@ const getIcon = (id: string) => procedureIcons[id] ?? procedureIcons[id.replace(
 
 export default function ServiceTabs({ whatsappUrl }: { whatsappUrl: string }) {
   const [activeTab, setActiveTab] = useState(0);
+  const [cotizarModal, setCotizarModal] = useState<{ open: boolean; procedure: string }>({ open: false, procedure: "" });
+
+  const openCotizar = useCallback((procedure: string) => {
+    setCotizarModal({ open: true, procedure });
+  }, []);
+
+  const closeCotizar = useCallback(() => {
+    setCotizarModal({ open: false, procedure: "" });
+  }, []);
 
   return (
     <AnimateInView as="section" id="servicios-lista" className="bg-white py-20 md:py-28 relative overflow-hidden">
@@ -142,16 +152,13 @@ export default function ServiceTabs({ whatsappUrl }: { whatsappUrl: string }) {
           if (activeTab !== idx) return null;
           const catServices = services.filter((s) => s.category === tab.categoryName);
           const catStyle = categoryConfig[tab.key];
+          const isQuirfanos = tab.key === "quirfanos";
           return (
             <div key={tab.key} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {catServices.map((service) => {
                 const href = service.href ?? service.detailUrl ?? "#";
-                return (
-                  <Link
-                    key={service.id}
-                    href={href}
-                    className="group relative bg-white rounded-2xl border border-silver/20 shadow-sm hover:shadow-xl transition-all duration-400 overflow-hidden no-underline flex flex-col"
-                  >
+                const cardContent = (
+                  <>
                     <div className={`h-2 bg-gradient-to-r ${catStyle.gradient}`} />
                     <div className="p-6 flex-1 flex flex-col">
                       <div className="flex items-start justify-between mb-3">
@@ -164,19 +171,40 @@ export default function ServiceTabs({ whatsappUrl }: { whatsappUrl: string }) {
                           </span>
                         )}
                       </div>
-                      <h3 className="font-heading font-bold text-text-dark text-base md:text-lg group-hover:text-primary transition-colors">
+                      <h3 className="font-heading font-bold text-text-dark text-base md:text-lg">
                         {service.title}
                       </h3>
                       <p className="mt-2 text-xs text-text-main/60 font-body leading-relaxed line-clamp-2 flex-1">
                         {service.description}
                       </p>
-                      <div className="mt-4 pt-4 border-t border-silver/10 flex items-center gap-1.5 text-xs font-body font-semibold text-primary/60 group-hover:text-primary transition-colors">
-                        Ver detalle
-                        <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                          <polyline points="9 18 15 12 9 6" />
-                        </svg>
-                      </div>
+                      {isQuirfanos ? (
+                        <button
+                          onClick={() => openCotizar(service.title)}
+                          className="mt-4 pt-4 border-t border-silver/10 flex items-center gap-1.5 text-xs font-body font-semibold text-primary/60 hover:text-primary transition-colors w-full cursor-pointer"
+                        >
+                          Cotizar
+                          <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                            <polyline points="9 18 15 12 9 6" />
+                          </svg>
+                        </button>
+                      ) : (
+                        <div className="mt-4 pt-4 border-t border-silver/10 flex items-center gap-1.5 text-xs font-body font-semibold text-primary/60 group-hover:text-primary transition-colors">
+                          Ver detalle
+                          <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                            <polyline points="9 18 15 12 9 6" />
+                          </svg>
+                        </div>
+                      )}
                     </div>
+                  </>
+                );
+                return isQuirfanos ? (
+                  <div key={service.id} className="group relative bg-white rounded-2xl border border-silver/20 shadow-sm hover:shadow-xl transition-all duration-400 overflow-hidden flex flex-col cursor-default">
+                    {cardContent}
+                  </div>
+                ) : (
+                  <Link key={service.id} href={href} className="group relative bg-white rounded-2xl border border-silver/20 shadow-sm hover:shadow-xl transition-all duration-400 overflow-hidden no-underline flex flex-col">
+                    {cardContent}
                   </Link>
                 );
               })}
@@ -195,6 +223,12 @@ export default function ServiceTabs({ whatsappUrl }: { whatsappUrl: string }) {
           </p>
         </div>
       </Container>
+
+      <CotizarModal
+        isOpen={cotizarModal.open}
+        onClose={closeCotizar}
+        initialProcedure={cotizarModal.procedure}
+      />
     </AnimateInView>
   );
 }
