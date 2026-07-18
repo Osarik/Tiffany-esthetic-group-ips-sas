@@ -10,6 +10,7 @@ import HerniaSvg from "@/components/icons/HerniaSvg";
 import MammaplastySvg from "@/components/icons/MammaplastySvg";
 import LipectomySvg from "@/components/icons/LipectomySvg";
 import MamariaSvg from "@/components/icons/MamariaSvg";
+import FacialSvg from "@/components/icons/FacialSvg";
 import GinecomastiaSvg from "@/components/icons/GinecomastiaSvg";
 
 const categoryConfig: Record<string, { gradient: string; label: string; iconBg: string; border: string }> = {
@@ -49,16 +50,7 @@ const categoryIcons: Record<string, React.ReactNode> = {
       <path d="M36 14C37.5 16 38 19 37 21.5C36 24 34 25.5 32 26C31 26.3 30 26.3 29.5 25.5C29 24.7 29 23 29.5 21.5C30 20 31 18.5 32 17.5C33 16.5 34 16 35 17C36 18 36 19.5 36 21C36 22.5 35.5 24 34.5 25" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.4"/>
     </svg>
   ),
-  facial: (
-    <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8" aria-hidden="true">
-      <path d="M24 6C17 6 11 10 9 16C7 22 7 28 9 32C11 36 14 39 18 41C19 41.5 20 42 20.5 43C21 44 21 45 21 46L24 44L27 46C27 45 27 44 27.5 43C28 42 29 41.5 30 41C34 39 37 36 39 32C41 28 41 22 39 16C37 10 31 6 24 6Z" fill="currentColor" opacity="0.28"/>
-      <ellipse cx="17.5" cy="20" rx="3" ry="3" fill="currentColor" opacity="0.18"/>
-      <ellipse cx="30.5" cy="20" rx="3" ry="3" fill="currentColor" opacity="0.18"/>
-      <path d="M31 28C29 31.5 26.5 33 24 33C21.5 33 19 31.5 17 28" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.4"/>
-      <path d="M12 16C12 16 13 11 17 9" stroke="currentColor" strokeWidth="1" strokeLinecap="round" opacity="0.2"/>
-      <path d="M36 16C36 16 35 11 31 9" stroke="currentColor" strokeWidth="1" strokeLinecap="round" opacity="0.2"/>
-    </svg>
-  ),
+  facial: <FacialSvg />,
 };
 
 const tabsConfig = [
