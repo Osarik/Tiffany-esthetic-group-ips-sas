@@ -14,6 +14,7 @@ import FacialSvg from "@/components/icons/FacialSvg";
 import EyeSvg from "@/components/icons/EyeSvg";
 import CirugiaMamariaSvg from "@/components/icons/CirugiaMamariaSvg";
 import CorporalSvg from "@/components/icons/CorporalSvg";
+import RinoplastiaSvg from "@/components/icons/RinoplastiaSvg";
 import RitidoplastiaSvg from "@/components/icons/RitidoplastiaSvg";
 import GinecomastiaSvg from "@/components/icons/GinecomastiaSvg";
 
@@ -78,28 +79,8 @@ const procedureIcons: Record<string, React.ReactNode> = {
   "ritidoplastia-completa": <RitidoplastiaSvg />,
   "ritidoplastia-tercio-medio": <RitidoplastiaSvg />,
   "ritidoplastia-tercio-inferior": <RitidoplastiaSvg />,
-  rinoplastia: (
-    <SvgIcon>
-      <ellipse cx="32" cy="34" rx="16" ry="18" opacity="0.2" />
-      <circle cx="24" cy="28" r="2.5" />
-      <circle cx="40" cy="28" r="2.5" />
-      <path d="M32 16v10" />
-      <path d="M26 38c2 3 4 4.5 6 4.5s4-1.5 6-4.5" />
-      <path d="M24 34c3 2 5 3 8 3s5-1 8-3" opacity="0.5" />
-    </SvgIcon>
-  ),
-  "lipo-rinoplastia": (
-    <SvgIcon>
-      <path d="M32 10c-6 0-10 4-10 9v3" />
-      <path d="M32 10c6 0 10 4 10 9v3" />
-      <circle cx="32" cy="30" r="8" opacity="0.2" />
-      <path d="M32 26v4" />
-      <path d="M28 35c1 1.5 2.5 2.5 4 2.5s3-1 4-2.5" />
-      <path d="M27 33c2 1 3.5 1.5 5 1.5s3-.5 5-1.5" opacity="0.5" />
-      <path d="M22 38c2 3 5 5.5 10 6.5" opacity="0.4" />
-      <path d="M42 38c-2 3-5 5.5-10 6.5" opacity="0.4" />
-    </SvgIcon>
-  ),
+  rinoplastia: <RinoplastiaSvg />,
+  "lipo-rinoplastia": <RinoplastiaSvg />,
   "blefaroplastia-otoplastia-lipectomia": <EyeSvg />,
 };
 
