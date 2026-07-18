@@ -44,6 +44,8 @@ const serviceIcons: Record<string, React.ReactNode> = {
   "blefaroplastia-otoplastia-lipectomia": <Eye size={18} />,
 };
 
+const getCarouselIcon = (id: string) => serviceIcons[id] ?? serviceIcons[id.replace(/^qr-/, "")] ?? <Sparkles size={18} />;
+
 const serviceImages: Record<string, string> = {};
 
 const AUTO_PLAY_INTERVAL = 5000;
@@ -167,7 +169,7 @@ export function ServicesCarousel() {
                         isActive ? "text-primary" : "text-white/40"
                         )}
                       >
-                        {serviceIcons[service.id]}
+                        {getCarouselIcon(service.id)}
                       </div>
 
                       <div className="flex flex-col">

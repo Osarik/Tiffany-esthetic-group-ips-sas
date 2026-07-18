@@ -17,6 +17,7 @@ import CorporalSvg from "@/components/icons/CorporalSvg";
 import RinoplastiaSvg from "@/components/icons/RinoplastiaSvg";
 import RitidoplastiaSvg from "@/components/icons/RitidoplastiaSvg";
 import GinecomastiaSvg from "@/components/icons/GinecomastiaSvg";
+import QuirfanosSvg from "@/components/icons/QuirfanosSvg";
 
 const categoryConfig: Record<string, { gradient: string; label: string; iconBg: string; border: string }> = {
   corporal: {
@@ -37,18 +38,26 @@ const categoryConfig: Record<string, { gradient: string; label: string; iconBg: 
     iconBg: "bg-[#4A8DB7]/10",
     border: "border-[#4A8DB7]/20",
   },
+  quirfanos: {
+    gradient: "from-[#4A6B8A] to-[#7BA0C4]",
+    label: "Alquiler de Quirófanos",
+    iconBg: "bg-[#4A6B8A]/10",
+    border: "border-[#4A6B8A]/20",
+  },
 };
 
 const categoryIcons: Record<string, React.ReactNode> = {
   corporal: <CorporalSvg />,
   mamaria: <CirugiaMamariaSvg />,
   facial: <FacialSvg />,
+  quirfanos: <QuirfanosSvg />,
 };
 
 const tabsConfig = [
   { key: "corporal" as const, label: "Cirugía Corporal", categoryName: "Cirugía Corporal" },
   { key: "mamaria" as const, label: "Cirugía Mamaria", categoryName: "Cirugía Mamaria" },
   { key: "facial" as const, label: "Cirugía Facial", categoryName: "Cirugía Facial" },
+  { key: "quirfanos" as const, label: "Alquiler de Quirófanos", categoryName: "Alquiler de Quirófanos" },
 ];
 
 const SvgIcon = ({ children }: { children: React.ReactNode }) => (
@@ -83,6 +92,8 @@ const procedureIcons: Record<string, React.ReactNode> = {
   "lipo-rinoplastia": <RinoplastiaSvg />,
   "blefaroplastia-otoplastia-lipectomia": <EyeSvg />,
 };
+
+const getIcon = (id: string) => procedureIcons[id] ?? procedureIcons[id.replace(/^qr-/, "")] ?? "🔹";
 
 export default function ServiceTabs({ whatsappUrl }: { whatsappUrl: string }) {
   const [activeTab, setActiveTab] = useState(0);
@@ -145,7 +156,7 @@ export default function ServiceTabs({ whatsappUrl }: { whatsappUrl: string }) {
                     <div className="p-6 flex-1 flex flex-col">
                       <div className="flex items-start justify-between mb-3">
                         <div className={`w-10 h-10 rounded-xl ${catStyle.iconBg} flex items-center justify-center text-lg`}>
-                          {procedureIcons[service.id] ?? "🔹"}
+                          {getIcon(service.id)}
                         </div>
                         {service.popular && (
                           <span className="text-[10px] font-body font-bold text-accent tracking-wider uppercase bg-accent/5 px-2 py-1 rounded-md">
