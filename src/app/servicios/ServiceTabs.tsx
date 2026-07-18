@@ -96,17 +96,7 @@ const procedureIcons: Record<string, React.ReactNode> = {
   "pexia-periareolar": <MammaplastySvg />,
   "lipo-pexia-periareolar": <MammaplastySvg />,
   "lipo-pexia": <MammaplastySvg />,
-  "lipo-protesis-aumento": (
-    <SvgIcon>
-      <path d="M32 10c-6 0-10 4-10 9v3" />
-      <path d="M32 10c6 0 10 4 10 9v3" />
-      <circle cx="44" cy="28" r="7" />
-      <path d="M40 28h8" />
-      <path d="M44 24v8" />
-      <path d="M22 30c2 3 5.5 5 10 6" opacity="0.45" />
-      <path d="M42 30c-2 3-5.5 5-10 6" opacity="0.45" />
-    </SvgIcon>
-  ),
+  "lipo-protesis-aumento": <MamariaSvg />,
   "lipectomia-pexia": <MammaplastySvg />,
   "ritidoplastia-completa": (
     <SvgIcon>
