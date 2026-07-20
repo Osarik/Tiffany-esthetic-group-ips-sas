@@ -282,7 +282,7 @@ export default function EquipoPage() {
                         <div className="shrink-0 transition-all duration-[700] ease-out scale-100">
                           <img alt={item.alt} className="w-14 h-14 object-contain" src={item.img} />
                         </div>
-                        <div className="overflow-hidden transition-all duration-[700] ease-out max-h-[500px] opacity-100">
+                        <div className="transition-all duration-[700] ease-out opacity-100">
                           <h3 className="font-heading font-bold text-text-dark text-lg text-center mt-2">{item.title}</h3>
                           <span className="block text-primary font-body font-semibold text-sm text-center mt-1">{item.subtitle}</span>
                           <p className="text-text-main/70 font-body text-sm leading-relaxed text-center mt-3 max-w-[260px] mx-auto">{item.desc}</p>
@@ -300,7 +300,7 @@ export default function EquipoPage() {
                 ))}
               </div>
               {/* Desktop: horizontal layout with positioning */}
-              <div className="hidden md:block relative h-[460px]">
+              <div className="hidden md:block relative h-[540px]">
                 {[
                   { img: "/images/cirujano.png", alt: "Cirujanos plásticos", title: "Cirujanos plásticos", subtitle: "Especialistas en cirugía plástica y estética", desc: "Cirujanos plásticos calificados para procedimientos corporales, mamarios y faciales. Algunos de nuestros profesionales son miembros de la Sociedad Colombiana de Cirugía Plástica (SCCP). Cada cirujano cuenta con la certificación que acredita su especialidad y se mantiene en actualización permanente." },
                   { img: "/images/anestesiologo.png", alt: "Anestesiólogos", title: "Anestesiólogos", subtitle: "Miembros del Consejo de Anestesiología (S.C.A.R.E.)", desc: "Anestesiólogos certificados y miembros del Consejo de Anestesiología, con recertificación periódica según los estándares del C.A.M.E.C. Evaluamos cada caso de forma individual para seleccionar la técnica anestésica más segura según el procedimiento y las condiciones del paciente." },
@@ -322,7 +322,7 @@ export default function EquipoPage() {
                         <div className="shrink-0 transition-all duration-[700] ease-out scale-100">
                           <img alt={item.alt} className="w-14 h-14 object-contain" src={item.img} />
                         </div>
-                        <div className="overflow-hidden transition-all duration-[700] ease-out max-h-[500px] opacity-100">
+                        <div className="transition-all duration-[700] ease-out opacity-100">
                           <h3 className="font-heading font-bold text-text-dark text-lg text-center mt-2">{item.title}</h3>
                           <span className="block text-primary font-body font-semibold text-sm text-center mt-1">{item.subtitle}</span>
                           <p className="text-text-main/70 font-body text-sm leading-relaxed text-center mt-3 max-w-[260px] mx-auto">{item.desc}</p>
