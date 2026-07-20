@@ -27,7 +27,7 @@ const facilities = [
       "Sistema de aspiración central y oxígeno",
       "Protocolos de esterilización y bioseguridad",
     ],
-    img: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&h=600&fit=crop&crop=entropy&auto=format&q=80",
+    img: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1920&q=85&fit=crop&crop=entropy&auto=format",
   },
   {
     title: "Área de Recuperación",
@@ -39,7 +39,7 @@ const facilities = [
       "Oxígeno suplementario y aspiración",
       "Protocolos de manejo del dolor y náuseas",
     ],
-    img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=600&fit=crop&crop=entropy&auto=format&q=80",
+    img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1920&q=85&fit=crop&crop=entropy&auto=format",
   },
   {
     title: "Farmacia Habilitada",
@@ -51,7 +51,7 @@ const facilities = [
       "Stock permanente de insumos quirúrgicos",
       "Trazabilidad completa de cada insumo",
     ],
-    img: "https://images.unsplash.com/photo-1585435557343-3b092031a831?w=800&h=600&fit=crop&crop=entropy&auto=format&q=80",
+    img: "https://images.unsplash.com/photo-1585435557343-3b092031a831?w=1920&q=85&fit=crop&crop=entropy&auto=format",
   },
 ];
 
