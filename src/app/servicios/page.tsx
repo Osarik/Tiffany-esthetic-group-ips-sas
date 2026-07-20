@@ -341,11 +341,11 @@ export default function ServiciosPage() {
 
               <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-4 relative z-10">
                 {[
-                  { num: "01", title: "Valoración médica", desc: "Evaluación clínica obligatoria para conocer tu estado de salud, tus objetivos estéticos y determinar el procedimiento más adecuado para ti." },
-                  { num: "02", title: "Exámenes preoperatorios", desc: "Cuadro hemático, pruebas de coagulación, electrocardiograma y valoración por anestesiología para garantizar que estás en condiciones óptimas." },
-                  { num: "03", title: "Procedimiento quirúrgico", desc: "Cirugía realizada en nuestras instalaciones habilitadas, con equipo médico calificado y estrictos protocolos internacionales de bioseguridad." },
-                  { num: "04", title: "Recuperación guiada", desc: "Acompañamiento postoperatorio con recomendaciones personalizadas, controles programados y sesiones de drenaje linfático especializado." },
-                  { num: "05", title: "Resultados médicos", desc: "Valoraciones periódicas a largo plazo para evaluar la evolución final, la maduración de las cicatrices y garantizar tu total satisfacción." },
+                  { num: "1", title: "Valoración médica", desc: "Evaluación clínica obligatoria para conocer tu estado de salud, tus objetivos estéticos y determinar el procedimiento más adecuado para ti." },
+                  { num: "2", title: "Exámenes preoperatorios", desc: "Cuadro hemático, pruebas de coagulación, electrocardiograma y valoración por anestesiología para garantizar que estás en condiciones óptimas." },
+                  { num: "3", title: "Procedimiento quirúrgico", desc: "Cirugía realizada en nuestras instalaciones habilitadas, con equipo médico calificado y estrictos protocolos internacionales de bioseguridad." },
+                  { num: "4", title: "Recuperación guiada", desc: "Acompañamiento postoperatorio con recomendaciones personalizadas, controles programados y sesiones de drenaje linfático especializado." },
+                  { num: "5", title: "Resultados médicos", desc: "Valoraciones periódicas a largo plazo para evaluar la evolución final, la maduración de las cicatrices y garantizar tu total satisfacción." },
                 ].map((step) => (
                   <div key={step.num} className="group relative flex flex-col items-center text-center transition-all duration-500 transform hover:-translate-y-3">
                     <div className="w-20 h-20 rounded-full bg-white border-4 border-[#FBFBF9] shadow-md group-hover:shadow-xl flex items-center justify-center mb-6 relative z-10 transition-all duration-300 group-hover:scale-110">
