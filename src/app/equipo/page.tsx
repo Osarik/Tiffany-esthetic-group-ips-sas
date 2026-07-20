@@ -233,6 +233,40 @@ export default function EquipoPage() {
                 La atención quirúrgica se apoya en cirujanos plásticos, anestesiólogos, farmaceuta, instrumentación, circulante de cirugía y enfermería recuperadora.
               </p>
             </div>
+
+            {/* ─── RETHUS BANNER ──────────────────────────────── */}
+            <div className="max-w-3xl mx-auto mb-12 p-5 md:p-6 rounded-2xl bg-green-50/80 border border-green-200 shadow-sm">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg className="w-5 h-5 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    <polyline points="9 12 11 14 15 10" />
+                  </svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="font-heading font-bold text-green-800 text-sm md:text-base">
+                    100 % de nuestro talento humano registrado y verificado en <span className="text-green-600">RETHUS</span>
+                  </p>
+                  <p className="text-green-700/70 font-body text-xs md:text-sm mt-1 leading-relaxed">
+                    El Registro de Talento Humano en Salud (RETHUS) es el sistema oficial del Ministerio de Salud de Colombia que acredita a los profesionales sanitarios.
+                  </p>
+                  <a
+                    href="https://rethussis.minsalud.gov.co/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 mt-3 text-green-700 font-body font-semibold text-xs hover:text-green-800 transition-colors"
+                  >
+                    <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    Consultar en el portal RETHUS
+                  </a>
+                </div>
+              </div>
+            </div>
+
             <div>
               {/* Mobile: stacked */}
               <div className="flex md:hidden flex-col items-stretch gap-4">
@@ -252,6 +286,13 @@ export default function EquipoPage() {
                           <h3 className="font-heading font-bold text-text-dark text-lg text-center mt-2">{item.title}</h3>
                           <span className="block text-primary font-body font-semibold text-sm text-center mt-1">{item.subtitle}</span>
                           <p className="text-text-main/70 font-body text-sm leading-relaxed text-center mt-3 max-w-[260px] mx-auto">{item.desc}</p>
+                          <div className="flex items-center justify-center gap-1.5 mt-4">
+                            <svg className="w-3.5 h-3.5 text-green-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                              <polyline points="9 12 11 14 15 10" />
+                            </svg>
+                            <span className="text-[11px] font-body font-semibold text-green-600">Registrado en RETHUS</span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -285,6 +326,13 @@ export default function EquipoPage() {
                           <h3 className="font-heading font-bold text-text-dark text-lg text-center mt-2">{item.title}</h3>
                           <span className="block text-primary font-body font-semibold text-sm text-center mt-1">{item.subtitle}</span>
                           <p className="text-text-main/70 font-body text-sm leading-relaxed text-center mt-3 max-w-[260px] mx-auto">{item.desc}</p>
+                          <div className="flex items-center justify-center gap-1.5 mt-4">
+                            <svg className="w-3.5 h-3.5 text-green-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                              <polyline points="9 12 11 14 15 10" />
+                            </svg>
+                            <span className="text-[11px] font-body font-semibold text-green-600">Registrado en RETHUS</span>
+                          </div>
                         </div>
                       </div>
                     </div>
