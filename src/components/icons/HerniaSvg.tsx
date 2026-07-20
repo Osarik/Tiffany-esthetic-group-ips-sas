@@ -1,5 +1,5 @@
 const HerniaSvg = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
     <path d="M7.89926 4.99988C10.7371 8.01919 12.156 11.9407 12.156 16.7644C12.156 23.9999 5.9995 29.5381 4.969 33.4999C4.282 36.1411 3.95884 39.3077 3.9995 42.9999" />
     <path d="M39.256 4.99988C36.4182 8.01919 34.9992 11.9407 34.9992 16.7644C34.9992 23.9999 41.1558 29.5381 42.1863 33.4999C42.8733 36.1411 43.1964 39.3077 43.1558 42.9999" />
     <path d="M6.24414 30.8368C12.7693 34.9666 18.6949 37.0316 24.0211 37.0316C29.3472 37.0316 34.9799 34.9666 40.9192 30.8368" />
