@@ -73,6 +73,7 @@ export default function ComplaintForm() {
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-5">
+      <input type="text" name="_hp" className="absolute -left-[9999px]" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       <div className="grid sm:grid-cols-2 gap-5">
         <div className="sm:col-span-2">
           <label htmlFor="name" className={labelClass}>Nombre completo *</label>

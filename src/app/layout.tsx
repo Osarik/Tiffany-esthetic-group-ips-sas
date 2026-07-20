@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Link from "next/link";
 import Script from "next/script";
 import { Fraunces, Manrope, Sacramento } from "next/font/google";
@@ -83,6 +83,11 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -94,7 +99,8 @@ export default function RootLayout({
       className={`${fraunces.variable} ${manrope.variable} ${sacramento.variable}`}
     >
       <head>
-        <link rel="canonical" href="https://www.tiffanyesthetic.com" />
+        <link rel="preconnect" href="https://images.unsplash.com" />
+        <link rel="preconnect" href="https://translate.google.com" />
         <SchemaMarkup />
       </head>
       <body className="min-h-screen flex flex-col font-body antialiased">

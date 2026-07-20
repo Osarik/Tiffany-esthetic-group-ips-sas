@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import ImageMouseTrail3 from "@/components/ui/image-mousetrail-without-component";
 import ResultadosGrid from "@/components/ui/resultados-grid";
@@ -84,6 +85,20 @@ export default function ResultadosPage() {
         url: "https://www.tiffanyesthetic.com/resultados",
         about: { "@id": "https://www.tiffanyesthetic.com/#business" },
       },
+      {
+        "@type": "MedicalClinic",
+        "@id": "https://www.tiffanyesthetic.com/#business",
+        name: "Tiffany Esthetic Group IPS",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "13a1-25, Cra 85c, Comuna 17",
+          addressLocality: "Cali",
+          addressRegion: "Valle del Cauca",
+          addressCountry: "CO",
+        },
+        telephone: "+57 320 270 3522",
+        medicalSpecialty: "PlasticSurgery",
+      },
     ],
   };
 
@@ -93,11 +108,13 @@ export default function ResultadosPage() {
       <article>
         {/* ─── HERO ─────────────────────────────────────────────── */}
         <section className="relative h-[70vh] md:h-[80vh] min-h-[500px] md:min-h-[600px] overflow-hidden">
-          <img
+          <Image
             src="/images/Combine_with_logo_202607111802.jpeg"
             alt=""
-            className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
-            loading="eager"
+            fill
+            className="object-cover pointer-events-none z-0"
+            sizes="100vw"
+            priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none z-[1]" />
           <ImageMouseTrail3 background />
@@ -115,8 +132,8 @@ export default function ResultadosPage() {
                   </HeroTextChild>
                   <HeroTextChild>
                     <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mix-blend-difference">
-                      Resultados que{" "}
-                      <span className="text-white">hablan por sí solos</span>
+                      Resultados Reales de{" "}
+                      <span className="text-white">Cirugía Plástica en Cali</span>
                     </h1>
                   </HeroTextChild>
                   <HeroTextChild>
@@ -267,10 +284,14 @@ export default function ResultadosPage() {
                 </div>
               </div>
               <div className="relative">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&q=80&auto=format&fit=crop"
                   alt="Instalaciones quirúrgicas de Tiffany Esthetic Group IPS"
-                  className="w-full rounded-2xl shadow-lg"
+                  width={600}
+                  height={400}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="rounded-2xl shadow-lg"
+                  style={{ width: '100%', height: 'auto' }}
                   loading="lazy"
                 />
                 <div className="absolute -bottom-4 -left-4 bg-primary-deep text-white p-5 rounded-2xl shadow-xl max-w-[220px]">
@@ -343,14 +364,17 @@ export default function ResultadosPage() {
                   <span className="text-primary">resultados</span>
                 </h2>
               </div>
-              <div className="space-y-3">
+              <div className="space-y-3" itemScope itemType="https://schema.org/FAQPage">
                 {faqs.map((faq) => (
                   <details
                     key={faq.q}
                     className="group rounded-xl border border-silver/20 bg-white transition-all duration-200 open:border-primary/30 open:bg-primary/[0.02]"
+                    itemScope
+                    itemProp="mainEntity"
+                    itemType="https://schema.org/Question"
                   >
                     <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-body font-semibold text-text-dark text-sm">
-                      {faq.q}
+                      <span itemProp="name">{faq.q}</span>
                       <svg
                         className="w-4 h-4 text-primary shrink-0 transition-transform duration-300 group-open:rotate-180"
                         viewBox="0 0 24 24"
@@ -364,13 +388,15 @@ export default function ResultadosPage() {
                         <polyline points="6 9 12 15 18 9" />
                       </svg>
                     </summary>
-                    <div className="px-5 pb-4 text-sm text-text-main/70 font-body leading-relaxed border-t border-silver/10 pt-3">
-                      {faq.a}
+                    <div className="px-5 pb-4 text-sm text-text-main/70 font-body leading-relaxed border-t border-silver/10 pt-3"
+                      itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                      <div itemProp="text">{faq.a}</div>
                     </div>
                   </details>
                 ))}
               </div>
             </div>
+
           </Container>
         </section>
 

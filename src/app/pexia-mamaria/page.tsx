@@ -35,7 +35,7 @@ const jsonLd = {
         latitude: 3.3811893,
         longitude: -76.5357955,
       },
-      telephone: "+57-602-XXX-XXXX",
+      telephone: "+57 320 270 3522",
       medicalSpecialty: "PlasticSurgery",
     },
     {

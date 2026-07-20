@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, ReactNode } from "react";
+import Image from "next/image";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -37,10 +38,12 @@ export default function ParallaxSection({
         className="absolute inset-0 w-full h-[150%] -top-[25%]"
         style={{ y, willChange: "transform" }}
       >
-        <img
+        <Image
           src={image}
           alt=""
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
+          sizes="100vw"
           draggable={false}
         />
       </motion.div>

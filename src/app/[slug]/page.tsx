@@ -123,7 +123,7 @@ export default async function ServiceLandingPage({ params }: Props) {
         name: "Tiffany Esthetic Group IPS",
         image: "https://www.tiffanyesthetic.com/icon.svg",
         address: { "@type": "PostalAddress", streetAddress: "13a1-25, Cra 85c, Comuna 17", addressLocality: "Cali", addressRegion: "Valle del Cauca", addressCountry: "CO" },
-        telephone: "+57-602-XXX-XXXX",
+        telephone: "+57 320 270 3522",
         medicalSpecialty: "PlasticSurgery",
       },
       {

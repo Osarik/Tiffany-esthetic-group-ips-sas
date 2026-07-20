@@ -34,6 +34,9 @@ export default function Hero() {
               Tiffany Esthetic Group{" "}
               <span className="text-primary">IPS SAS</span>
             </Heading>
+            <p className="text-base md:text-lg text-white/60 font-body -mt-4 mb-6">
+              Cirugía Plástica y Procedimientos Estéticos en Cali
+            </p>
             <p className="text-lg md:text-xl text-white/80 font-body leading-relaxed mb-8 max-w-lg">
               Somos una institución habilitada por la Secretaría de Salud, con
               salas de cirugía, área de recuperación, farmacia y personal

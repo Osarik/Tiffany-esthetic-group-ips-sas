@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import AnimateInView, { StaggerGrid, StaggerItem } from "@/components/ui/AnimateInView";
 import ImageCarousel from "@/components/ui/ImageCarousel";
@@ -121,7 +122,7 @@ const jsonLd = {
         latitude: 3.3811893,
         longitude: -76.5357955,
       },
-      telephone: "+57-602-XXX-XXXX",
+      telephone: "+57 320 270 3522",
       medicalSpecialty: "PlasticSurgery",
       availableService: ["Surgical", "Recovery", "Pharmacy"],
     },
@@ -335,11 +336,13 @@ export default function InstalacionesPage() {
           <Container>
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <AnimateInView variant="fadeLeft">
-                <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                  <img
+                <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl">
+                  <Image
                     src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1400&q=85&fit=crop&crop=entropy&auto=format"
                     alt="Equipos de esterilización y bioseguridad"
-                    className="w-full h-[400px] md:h-[500px] object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A2A26]/50 via-transparent to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import AnimateInView, { StaggerGrid, StaggerItem } from "@/components/ui/AnimateInView";
 import { services } from "@/data/services";
@@ -141,7 +142,7 @@ const jsonLd = {
         latitude: 3.3811893,
         longitude: -76.5357955,
       },
-      telephone: "+57-602-XXX-XXXX",
+      telephone: "+57 320 270 3522",
       medicalSpecialty: "PlasticSurgery",
     },
     {
@@ -193,10 +194,13 @@ export default function ServiciosPage() {
         {/* ─── HERO ─────────────────────────────────────────────── */}
         <section className="relative bg-gradient-to-br from-[#0F4A44] via-[#1B6E66] to-[#2FA79C] pt-28 pb-16 md:pt-36 md:pb-28 overflow-hidden">
           <div className="absolute inset-0" aria-hidden="true">
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=1920&h=1080&fit=crop"
               alt=""
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="100vw"
+              priority
             />
             <div className="absolute inset-0 bg-gradient-to-br from-[#0F4A44]/85 via-[#0F4A44]/70 to-[#0F4A44]/60" />
             <div className="absolute inset-0 bg-gradient-to-r from-[#0F4A44]/60 via-transparent to-[#0F4A44]/30" />
@@ -288,11 +292,13 @@ export default function ServiciosPage() {
           <Container>
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <AnimateInView variant="fadeLeft" className="relative">
-                <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                  <img
+                <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl">
+                  <Image
                     src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=700&h=800&fit=crop&crop=entropy&auto=format&q=80"
                     alt="Instalaciones quirúrgicas de Tiffany Esthetic Group IPS"
-                    className="w-full h-[400px] md:h-[500px] object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0F4A44]/50 via-transparent to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">

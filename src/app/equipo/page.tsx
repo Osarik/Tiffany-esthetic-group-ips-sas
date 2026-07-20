@@ -154,7 +154,7 @@ export default function EquipoPage() {
         mediaType="video"
         mediaSrc="/videos/drjuan.mp4"
         bgImageSrc="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=1920&auto=format&fit=crop"
-        title="Nuestro equipo profesional"
+        title="Equipo de Cirujanos Plásticos en Cali"
         date="IPS habilitada · Secretaría de Salud"
         scrollToExpand="Desliza para conocer al equipo"
         textBlend
