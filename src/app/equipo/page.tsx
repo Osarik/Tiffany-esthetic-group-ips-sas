@@ -342,14 +342,14 @@ export default function EquipoPage() {
               {/* Marquee logos */}
               <div className="w-full overflow-hidden mt-16 mask-fade">
                 <div className="flex items-center gap-16 md:gap-24 w-max marquee-track">
-                  {[...Array(4)].flatMap(() => [
-                    <a key="sccp" href="https://cirugiaplastica.org.co/" target="_blank" rel="noopener noreferrer" className="shrink-0 flex items-center justify-center h-14 md:h-16 px-6 gap-2 opacity-50 hover:opacity-100 transition-opacity duration-300">
+                  {[...Array(4)].flatMap((_, i) => [
+                    <a key={"sccp-" + i} href="https://cirugiaplastica.org.co/" target="_blank" rel="noopener noreferrer" className="shrink-0 flex items-center justify-center h-14 md:h-16 px-6 gap-2 opacity-50 hover:opacity-100 transition-opacity duration-300">
                       <img alt="Sociedad Colombiana de Cirugía Plástica" className="max-h-full max-w-[160px] object-contain" loading="lazy" src="https://cirugiaplastica.org.co/wp-content/uploads/2022/07/logo-sccp.png" />
                     </a>,
-                    <a key="scare" href="https://scare.org.co/" target="_blank" rel="noopener noreferrer" className="shrink-0 flex items-center justify-center h-14 md:h-16 px-6 gap-2 opacity-50 hover:opacity-100 transition-opacity duration-300">
+                    <a key={"scare-" + i} href="https://scare.org.co/" target="_blank" rel="noopener noreferrer" className="shrink-0 flex items-center justify-center h-14 md:h-16 px-6 gap-2 opacity-50 hover:opacity-100 transition-opacity duration-300">
                       <img alt="Sociedad Colombiana de Anestesiología y Reanimación" className="max-h-full max-w-[160px] object-contain" loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoFCeO86ByR6Xp9c02HTjR8tk7oSjy-m-Qko64JVRwsA&s=10" />
                     </a>,
-                    <a key="supersalud" href="https://www.supersalud.gov.co/" target="_blank" rel="noopener noreferrer" className="shrink-0 flex items-center justify-center h-14 md:h-16 px-6 gap-2 opacity-50 hover:opacity-100 transition-opacity duration-300">
+                    <a key={"supersalud-" + i} href="https://www.supersalud.gov.co/" target="_blank" rel="noopener noreferrer" className="shrink-0 flex items-center justify-center h-14 md:h-16 px-6 gap-2 opacity-50 hover:opacity-100 transition-opacity duration-300">
                       <span className="font-body font-bold text-sm text-black whitespace-nowrap leading-none">Vigilado</span>
                       <img alt="Superintendencia Nacional de Salud - Vigilado" className="max-h-full max-w-[160px] object-contain" loading="lazy" src="https://www.supersalud.gov.co/Style%20Library/Images/Logo-Supersalud-2024.svg" />
                     </a>,
