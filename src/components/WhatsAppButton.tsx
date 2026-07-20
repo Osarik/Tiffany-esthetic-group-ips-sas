@@ -81,11 +81,16 @@ export default function WhatsAppButton() {
             className="w-[340px] md:w-[380px] bg-clinic-bg rounded-2xl shadow-2xl border border-primary/10 overflow-hidden origin-bottom-right"
           >
             <div className="bg-primary px-5 py-4 flex items-center gap-3">
-              <img
-                src={TIFFANY_AVATAR}
-                alt="Tiffany"
-                className="w-10 h-10 rounded-full object-cover border-2 border-white/30"
-              />
+              <div className="relative flex-shrink-0">
+                <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white/30">
+                  <img
+                    src={TIFFANY_AVATAR}
+                    alt="Tiffany"
+                    className="w-full h-full object-cover scale-150"
+                  />
+                </div>
+                <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-500 border-2 border-white rounded-full" />
+              </div>
               <div className="flex-1">
                 <h3 className="font-heading font-bold text-white text-sm">
                   Tiffany Esthetic Group
@@ -105,11 +110,16 @@ export default function WhatsAppButton() {
 
             <div className="p-5">
               <div className="flex items-start gap-3 mb-5">
-                <img
-                  src={TIFFANY_AVATAR}
-                  alt="Tiffany"
-                  className="w-8 h-8 rounded-full object-cover mt-1 flex-shrink-0"
-                />
+                <div className="relative flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 rounded-full overflow-hidden">
+                    <img
+                      src={TIFFANY_AVATAR}
+                      alt="Tiffany"
+                      className="w-full h-full object-cover scale-150"
+                    />
+                  </div>
+                  <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-green-500 border-2 border-white rounded-full" />
+                </div>
                 <div className="bg-primary-soft rounded-2xl rounded-tl-sm px-4 py-3.5 text-sm font-body text-text-main leading-relaxed">
                   Hola, mi nombre es Tiffany. ¿Deseas que asigne un asesor para
                   tu procedimiento?
