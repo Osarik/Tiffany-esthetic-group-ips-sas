@@ -293,6 +293,7 @@ export default function ResultadosPage() {
                   className="rounded-2xl shadow-lg"
                   style={{ width: '100%', height: 'auto' }}
                   loading="lazy"
+                  unoptimized
                 />
                 <div className="absolute -bottom-4 -left-4 bg-primary-deep text-white p-5 rounded-2xl shadow-xl max-w-[220px]">
                   <p className="font-heading font-bold text-lg">8+</p>

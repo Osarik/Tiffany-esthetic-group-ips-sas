@@ -45,6 +45,7 @@ export default function ParallaxSection({
           className="object-cover"
           sizes="100vw"
           draggable={false}
+          unoptimized
         />
       </motion.div>
       <div

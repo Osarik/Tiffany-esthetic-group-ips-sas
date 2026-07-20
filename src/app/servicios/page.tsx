@@ -173,6 +173,7 @@ export default function ServiciosPage() {
               className="object-cover"
               sizes="100vw"
               priority
+              unoptimized
             />
             <div className="absolute inset-0 bg-gradient-to-br from-[#0F4A44]/85 via-[#0F4A44]/70 to-[#0F4A44]/60" />
             <div className="absolute inset-0 bg-gradient-to-r from-[#0F4A44]/60 via-transparent to-[#0F4A44]/30" />
@@ -271,6 +272,7 @@ export default function ServiciosPage() {
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
+                    unoptimized
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0F4A44]/50 via-transparent to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">

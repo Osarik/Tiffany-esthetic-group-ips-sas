@@ -343,6 +343,7 @@ export default function InstalacionesPage() {
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
+                    unoptimized
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A2A26]/50 via-transparent to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">
