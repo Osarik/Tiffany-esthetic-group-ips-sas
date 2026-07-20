@@ -19,7 +19,6 @@ export default function ParallaxSection({
   className,
   overlayClassName,
   containerClassName,
-  bgPosition = "center",
 }: ParallaxSectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -27,25 +26,24 @@ export default function ParallaxSection({
     offset: ["start end", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["-25%", "25%"]);
 
   return (
     <section
       ref={sectionRef}
       className={cn("relative overflow-hidden", className)}
     >
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url(${image})`,
-            backgroundSize: "cover",
-            backgroundPosition: bgPosition,
-            y,
-            willChange: "transform",
-          }}
+      <motion.div
+        className="absolute inset-0 w-full h-[150%] -top-[25%]"
+        style={{ y, willChange: "transform" }}
+      >
+        <img
+          src={image}
+          alt=""
+          className="w-full h-full object-cover"
+          draggable={false}
         />
-      </div>
+      </motion.div>
       <div
         className={cn(
           "absolute inset-0 bg-gradient-to-r from-primary-deep/85 via-primary-deep/50 to-primary-deep/20",
