@@ -14,34 +14,6 @@ const stats = [
   { value: "24", label: "Procedimientos quirúrgicos" },
 ];
 
-const processSteps = [
-  {
-    number: "01",
-    title: "Valoración médica",
-    desc: "Evaluación clínica obligatoria para conocer tu estado de salud, tus objetivos estéticos y determinar el procedimiento más adecuado para ti.",
-  },
-  {
-    number: "02",
-    title: "Exámenes preoperatorios",
-    desc: "Cuadro hemático, pruebas de coagulación, electrocardiograma y valoración por anestesiología para garantizar que estás en condiciones óptimas.",
-  },
-  {
-    number: "03",
-    title: "Procedimiento quirúrgico",
-    desc: "Cirugía realizada en nuestras instalaciones habilitadas, con equipo médico calificado y protocolos de bioseguridad.",
-  },
-  {
-    number: "04",
-    title: "Recuperación y cuidados",
-    desc: "Acompañamiento durante el postoperatorio con recomendaciones personalizadas, controles programados y drenaje linfático según el caso.",
-  },
-  {
-    number: "05",
-    title: "Resultados y seguimiento",
-    desc: "Valoraciones periódicas para evaluar la evolución, la maduración de las cicatrices y la satisfacción con los resultados obtenidos.",
-  },
-];
-
 const faqs = [
   {
     q: "¿Qué tipos de cirugía estética ofrecen?",
@@ -346,44 +318,55 @@ export default function ServiciosPage() {
         </AnimateInView>
 
         {/* ─── PROCESO ──────────────────────────────────────────── */}
-        <AnimateInView as="section" variant="fadeUp" className="bg-[#FBFBF9] py-20 md:py-28">
-          <Container>
-            <div className="text-center mb-16">
-              <span className="inline-block text-primary font-body font-semibold text-xs tracking-[0.2em] uppercase mb-4 border border-primary/20 rounded-full px-4 py-1.5">
+        <section className="relative bg-gradient-to-b from-[#FBFBF9] to-[#F5F5F2] py-20 md:py-32 overflow-hidden">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-20 max-w-3xl mx-auto">
+              <span className="inline-flex items-center gap-2 text-primary font-body font-semibold text-xs tracking-[0.2em] uppercase mb-4 border border-primary/30 bg-primary/5 rounded-full px-4 py-1.5 backdrop-blur-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary" />
                 Tu proceso quirúrgico
               </span>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl text-text-dark leading-tight">
+              <h2 className="font-heading font-bold text-3xl md:text-5xl text-text-dark leading-tight tracking-tight">
                 ¿Cómo es el proceso?
               </h2>
-              <p className="mt-4 text-text-main/70 font-body text-base max-w-2xl mx-auto">
-                Cinco etapas clave desde la primera consulta hasta tus resultados.
+              <p className="mt-4 text-text-main/70 font-body text-base md:text-lg max-w-2xl mx-auto">
+                Cinco etapas clave diseñadas con los más altos estándares médicos desde tu primera consulta hasta tus resultados definitivos.
               </p>
             </div>
 
-            <StaggerGrid className="grid md:grid-cols-5 gap-4 md:gap-6 max-w-5xl mx-auto" staggerDelay={0.1}>
-              {processSteps.map((step, i) => (
-                <StaggerItem key={step.number}>
-                  <div className="bg-white rounded-2xl p-6 border border-silver/15 shadow-sm hover:shadow-md transition-all duration-300 text-center h-full flex flex-col items-center">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center font-heading font-bold text-sm mb-4 shadow-lg shadow-primary/20">
-                      {step.number}
+            <div className="relative max-w-6xl mx-auto">
+              <div className="hidden lg:block absolute top-[40px] left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-primary/20 via-secondary/40 to-primary/20 z-0" />
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-4 relative z-10">
+                {[
+                  { num: "01", title: "Valoración médica", desc: "Evaluación clínica obligatoria para conocer tu estado de salud, tus objetivos estéticos y determinar el procedimiento más adecuado para ti." },
+                  { num: "02", title: "Exámenes preoperatorios", desc: "Cuadro hemático, pruebas de coagulación, electrocardiograma y valoración por anestesiología para garantizar que estás en condiciones óptimas." },
+                  { num: "03", title: "Procedimiento quirúrgico", desc: "Cirugía realizada en nuestras instalaciones habilitadas, con equipo médico calificado y estrictos protocolos internacionales de bioseguridad." },
+                  { num: "04", title: "Recuperación guiada", desc: "Acompañamiento postoperatorio con recomendaciones personalizadas, controles programados y sesiones de drenaje linfático especializado." },
+                  { num: "05", title: "Resultados médicos", desc: "Valoraciones periódicas a largo plazo para evaluar la evolución final, la maduración de las cicatrices y garantizar tu total satisfacción." },
+                ].map((step) => (
+                  <div key={step.num} className="group relative flex flex-col items-center text-center transition-all duration-500 transform hover:-translate-y-3">
+                    <div className="w-20 h-20 rounded-full bg-white border-4 border-[#FBFBF9] shadow-md group-hover:shadow-xl flex items-center justify-center mb-6 relative z-10 transition-all duration-300 group-hover:scale-110">
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center font-heading font-bold text-lg shadow-lg shadow-primary/20 group-hover:rotate-6 transition-transform duration-300">
+                        {step.num}
+                      </div>
                     </div>
-                    <h3 className="font-heading font-bold text-text-dark text-sm md:text-base mb-2">
-                      {step.title}
-                    </h3>
-                    <p className="text-xs text-text-main/65 font-body leading-relaxed flex-1">
-                      {step.desc}
-                    </p>
-                    {i < processSteps.length - 1 && (
-                      <svg className="w-5 h-5 text-primary/30 mt-3 hidden md:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                        <polyline points="9 18 15 12 9 6" />
-                      </svg>
-                    )}
+                    <div className="bg-white rounded-2xl p-6 border border-silver/20 shadow-sm group-hover:shadow-xl group-hover:border-primary/30 transition-all duration-500 flex flex-col items-center flex-1 w-full">
+                      <h3 className="font-heading font-bold text-text-dark text-base md:text-lg mb-3 group-hover:text-primary transition-colors duration-300">
+                        {step.title}
+                      </h3>
+                      <p className="text-xs md:text-[13px] text-text-main/70 font-body leading-relaxed flex-1">
+                        {step.desc}
+                      </p>
+                    </div>
                   </div>
-                </StaggerItem>
-              ))}
-            </StaggerGrid>
-          </Container>
-        </AnimateInView>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* ─── FAQ ──────────────────────────────────────────────── */}
         <AnimateInView as="section" variant="fadeUp" className="bg-[#FBFBF9] py-20 md:py-28">
