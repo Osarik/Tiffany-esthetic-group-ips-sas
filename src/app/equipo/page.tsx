@@ -251,7 +251,7 @@ export default function EquipoPage() {
                     El Registro de Talento Humano en Salud (RETHUS) es el sistema oficial del Ministerio de Salud de Colombia que acredita a los profesionales sanitarios.
                   </p>
                   <a
-                    href="https://rethussis.minsalud.gov.co/"
+                    href="https://web.sispro.gov.co/THS/Cliente/ConsultasPublicas/ConsultaPublicaDeTHxIdentificacion.aspx"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 mt-3 text-green-700 font-body font-semibold text-xs hover:text-green-800 transition-colors"
