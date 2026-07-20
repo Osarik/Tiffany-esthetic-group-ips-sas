@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
-import Heading from "@/components/ui/Heading";
 import AnimateInView, { StaggerGrid, StaggerItem } from "@/components/ui/AnimateInView";
 import ImageCarousel from "@/components/ui/ImageCarousel";
 import VenetianBlindHero from "@/components/ui/venetian-blind-hero";
 import HeroTextReveal from "@/components/ui/hero-text-reveal";
+import ParallaxSection from "@/components/ui/ParallaxSection";
 
 const whatsappUrl =
   "https://wa.me/573202703522?text=Hola%2C%20quiero%20agendar%20una%20visita%20a%20sus%20instalaciones%20en%20Cali.";
@@ -237,65 +237,61 @@ export default function InstalacionesPage() {
           </Container>
         </AnimateInView>
 
-        {/* ─── 3 INSTALACIONES — Feature cards ────────────────── */}
-        <section id="instalaciones-lista" className="bg-white py-20 md:py-28">
-          <Container>
-            <div className="text-center mb-16">
-              <AnimateInView variant="fadeUp">
-                <span className="inline-block text-primary font-body font-semibold text-xs tracking-[0.2em] uppercase mb-4 border border-primary/20 rounded-full px-4 py-1.5">
-                  Nuestras instalaciones
-                </span>
-                <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-text-dark leading-tight text-balance max-w-3xl mx-auto">
-                  Espacios diseñados para tu{" "}
-                  <span className="text-primary">seguridad</span>
-                </h2>
-                <p className="mt-4 text-text-main/70 font-body text-base max-w-2xl mx-auto">
-                  Cada espacio ha sido diseñado y equipado cumpliendo los
-                  estándares de la Resolución 3100 de 2019 del Ministerio de
-                  Salud de Colombia.
-                </p>
-              </AnimateInView>
+        {/* ─── 3 INSTALACIONES — Parallax sections ────────────────── */}
+        <section id="instalaciones-lista">
+          <AnimateInView variant="fadeUp">
+            <div className="text-center px-4 py-20 md:py-28 max-w-3xl mx-auto">
+              <span className="inline-block text-primary font-body font-semibold text-xs tracking-[0.2em] uppercase mb-4 border border-primary/20 rounded-full px-4 py-1.5">
+                Nuestras instalaciones
+              </span>
+              <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-text-dark leading-tight text-balance">
+                Espacios diseñados para tu{" "}
+                <span className="text-primary">seguridad</span>
+              </h2>
+              <p className="mt-4 text-text-main/70 font-body text-base max-w-2xl mx-auto">
+                Cada espacio ha sido diseñado y equipado cumpliendo los
+                estándares de la Resolución 3100 de 2019 del Ministerio de
+                Salud de Colombia.
+              </p>
             </div>
+          </AnimateInView>
 
-            <StaggerGrid className="space-y-10" staggerDelay={0.15}>
-              {facilities.map((item, i) => (
-                <StaggerItem key={item.title}>
-                  <div className={`group relative overflow-hidden rounded-3xl border border-silver/20 shadow-lg hover:shadow-2xl transition-all duration-500 ${i === 1 ? "md:flex-row-reverse" : ""} md:flex`}>
-                    <div className="md:w-1/2 h-[280px] md:h-[400px] relative overflow-hidden shrink-0">
-                      <img
-                        src={item.img}
-                        alt={item.title}
-                        loading="lazy"
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0A2A26]/40 to-transparent" />
-                    </div>
-                    <div className="md:w-1/2 p-8 md:p-10 lg:p-12 flex flex-col justify-center bg-white">
-                      <span className="text-primary font-body font-semibold text-xs tracking-[0.15em] uppercase">
-                        {item.subtitle}
-                      </span>
-                      <h3 className="font-heading font-bold text-2xl md:text-3xl text-text-dark mt-2">
-                        {item.title}
-                      </h3>
-                      <p className="mt-4 text-text-main/75 font-body text-sm leading-relaxed">
-                        {item.desc}
-                      </p>
-                      <ul className="mt-5 space-y-2.5">
-                        {item.features.map((f) => (
-                          <li key={f} className="flex items-start gap-3 text-sm text-text-main/80 font-body">
-                            <svg className="w-4 h-4 text-primary shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                              <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                            {f}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </StaggerItem>
-              ))}
-            </StaggerGrid>
-          </Container>
+          {facilities.map((item, i) => (
+            <ParallaxSection
+              key={item.title}
+              image={item.img}
+              bgPosition={i === 0 ? "51% 13%" : "center"}
+              className={`min-h-[70vh] ${i === 1 ? "md:flex-row-reverse" : ""}`}
+              overlayClassName={i % 2 === 0 ? "bg-gradient-to-r from-primary-deep/90 via-primary-deep/60 to-transparent" : "bg-gradient-to-l from-primary-deep/90 via-primary-deep/60 to-transparent"}
+            >
+              <Container>
+                <AnimateInView
+                  variant={i % 2 === 0 ? "fadeLeft" : "fadeRight"}
+                  className={`flex flex-col justify-center min-h-[70vh] py-24 max-w-xl ${i % 2 === 0 ? "" : "ml-auto text-right"}`}
+                >
+                  <span className="inline-block text-primary font-body font-semibold text-xs tracking-[0.2em] uppercase mb-3 border border-primary/30 rounded-full px-4 py-1.5 w-fit">
+                    {item.subtitle}
+                  </span>
+                  <h3 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-white leading-tight mt-2">
+                    {item.title}
+                  </h3>
+                  <p className="mt-4 text-white/80 font-body text-sm md:text-base leading-relaxed">
+                    {item.desc}
+                  </p>
+                  <ul className={`mt-6 space-y-3 ${i % 2 === 0 ? "" : "flex flex-col items-end"}`}>
+                    {item.features.map((f) => (
+                      <li key={f} className={`flex items-start gap-3 text-sm text-white/75 font-body ${i % 2 === 0 ? "" : "flex-row-reverse text-right"}`}>
+                        <svg className="w-4 h-4 text-primary shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                </AnimateInView>
+              </Container>
+            </ParallaxSection>
+          ))}
         </section>
 
         {/* ─── GALERÍA — Carrusel ────────────────────────────────── */}
