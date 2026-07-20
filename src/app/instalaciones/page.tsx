@@ -56,12 +56,12 @@ const facilities = [
 ];
 
 const gallery = [
-  { src: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=500&fit=crop&crop=entropy&auto=format&q=80", label: "Sala de Cirugía" },
-  { src: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&h=500&fit=crop&crop=entropy&auto=format&q=80", label: "Consultorio" },
-  { src: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&h=500&fit=crop&crop=entropy&auto=format&q=80", label: "Recuperación" },
-  { src: "https://images.unsplash.com/photo-1551076805-e1869033e561?w=600&h=500&fit=crop&crop=entropy&auto=format&q=80", label: "Equipo Quirúrgico" },
-  { src: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&h=500&fit=crop&crop=entropy&auto=format&q=80", label: "Tecnología" },
-  { src: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&h=500&fit=crop&crop=entropy&auto=format&q=80", label: "Esterilización" },
+  { src: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1200&q=85&fit=crop&crop=entropy&auto=format", label: "Sala de Cirugía" },
+  { src: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1200&q=85&fit=crop&crop=entropy&auto=format", label: "Consultorio" },
+  { src: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&q=85&fit=crop&crop=entropy&auto=format", label: "Recuperación" },
+  { src: "https://images.unsplash.com/photo-1551076805-e1869033e561?w=1200&q=85&fit=crop&crop=entropy&auto=format", label: "Equipo Quirúrgico" },
+  { src: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1200&q=85&fit=crop&crop=entropy&auto=format", label: "Tecnología" },
+  { src: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=85&fit=crop&crop=entropy&auto=format", label: "Esterilización" },
 ];
 
 const faqs = [
@@ -337,7 +337,7 @@ export default function InstalacionesPage() {
               <AnimateInView variant="fadeLeft">
                 <div className="relative rounded-2xl overflow-hidden shadow-xl">
                   <img
-                    src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=700&h=800&fit=crop&crop=entropy&auto=format&q=80"
+                    src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1400&q=85&fit=crop&crop=entropy&auto=format"
                     alt="Equipos de esterilización y bioseguridad"
                     className="w-full h-[400px] md:h-[500px] object-cover"
                   />
