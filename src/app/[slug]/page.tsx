@@ -19,6 +19,12 @@ const categoryConfig: Record<string, { gradient: string; label: string }> = {
   "Cirugía Facial": { gradient: "from-[#4A8DB7] to-[#6DB3D9]", label: "Cirugía Facial" },
 };
 
+const categoryImages: Record<string, string> = {
+  "Cirugía Corporal": "https://images.unsplash.com/photo-1551076805-e1869033e561?w=1200&q=80",
+  "Cirugía Mamaria": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1200&q=80",
+  "Cirugía Facial": "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1200&q=80",
+};
+
 const categoryDesign: Record<string, {
   sectionAltBg: string; cardBorder: string; timelineColor: string; iconBg: string; iconColor: string; patternId: string; patternPath: string;
 }> = {
@@ -138,7 +144,7 @@ export default async function ServiceLandingPage({ params }: Props) {
 
   const waMsg = `Hola%2C%20quiero%20agendar%20mi%20valoraci%C3%B3n%20para%20${encodeURIComponent(service.title.toLowerCase())}%20en%20Cali.`;
   const waLink = `https://wa.me/573202703522?text=${waMsg}`;
-  const placeholderImg = `https://picsum.photos/seed/${slug}/1200/800`;
+  const placeholderImg = categoryImages[service.category] ?? categoryImages["Cirugía Corporal"];
 
   return (
     <>
