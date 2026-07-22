@@ -4,6 +4,7 @@ import Heading from "@/components/ui/Heading";
 import { services } from "@/data/services";
 import { serviceLandings } from "@/data/service-landings";
 import AnimateInView, { StaggerGrid, StaggerItem } from "@/components/ui/AnimateInView";
+import ParallaxGradient from "@/components/ui/ParallaxGradient";
 
 const whatsappUrl =
   "https://wa.me/573202703522?text=Hola%2C%20quiero%20agendar%20mi%20valoraci%C3%B3n%20m%C3%A9dica%20en%20Tiffany%20Esthetic%20Group.";
@@ -293,7 +294,7 @@ export default async function ServiceLandingPage({ params }: Props) {
         </AnimateInView>
 
         {landing.benefits && landing.benefits.length > 0 && (
-          <AnimateInView variant="fadeUp" as="section" id="beneficios" className="bg-white py-16 md:py-24">
+          <ParallaxGradient gradientFrom={gradientFrom} gradientTo={gradientTo} id="beneficios" className="py-16 md:py-24">
             <Container>
               <AnimateInView variant="fadeIn">
                 <SectionHeader label="Beneficios" title={`Beneficios de la ${service.title.toLowerCase()}`} />
@@ -301,8 +302,7 @@ export default async function ServiceLandingPage({ params }: Props) {
               <div className="max-w-4xl mx-auto space-y-4">
                 {landing.benefits.map((item, i) => (
                   <AnimateInView key={i} variant={i % 2 === 0 ? "fadeLeft" : "fadeRight"} delay={i * 0.08}>
-                    <div className="group flex items-start gap-5 p-5 md:p-6 rounded-xl border border-silver/20 transition-all duration-300 hover:shadow-md"
-                      style={{ background: i % 2 === 0 ? "white" : `${gradientFrom}04` }}>
+                    <div className="group flex items-start gap-5 p-5 md:p-6 rounded-xl border border-silver/20 transition-all duration-300 hover:shadow-md bg-white/90 backdrop-blur-sm">
                       <div className="w-10 h-10 rounded-xl text-white flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 transition-transform duration-300"
                         style={{ background: `linear-gradient(135deg, ${gradientFrom}, ${gradientTo})` }}>
                         <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -317,7 +317,7 @@ export default async function ServiceLandingPage({ params }: Props) {
                 ))}
               </div>
             </Container>
-          </AnimateInView>
+          </ParallaxGradient>
         )}
 
         {landing.techniques && landing.techniques.length > 0 && (
@@ -442,15 +442,15 @@ export default async function ServiceLandingPage({ params }: Props) {
         )}
 
         {landing.contraindications && landing.contraindications.length > 0 && (
-          <AnimateInView variant="fadeUp" as="section" id="contraindicaciones" className="bg-[#FBFBF9] py-16 md:py-24">
+          <ParallaxGradient gradientFrom={gradientFrom} gradientTo={gradientTo} id="contraindicaciones" className="py-16 md:py-24">
             <Container>
               <AnimateInView variant="fadeIn">
                 <SectionHeader label="Contraindicaciones" title="¿Quién no es candidato?"
                   desc="Existen condiciones que pueden contraindicar temporal o permanentemente el procedimiento." />
               </AnimateInView>
               <AnimateInView variant="scaleIn" className="max-w-3xl mx-auto">
-                <div className="bg-white rounded-2xl shadow-sm overflow-hidden" style={{ borderColor: `${gradientFrom}44`, borderWidth: "1px" }}>
-                  <div className="px-6 py-4 border-b" style={{ background: `linear-gradient(to right, ${gradientFrom}08, white)`, borderColor: `${gradientFrom}15` }}>
+                <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
+                  <div className="px-6 py-4 border-b border-gray-200/60" style={{ background: `linear-gradient(to right, ${gradientFrom}08, white)` }}>
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: `${gradientFrom}15`, color: gradientFrom }}>
                         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -460,7 +460,7 @@ export default async function ServiceLandingPage({ params }: Props) {
                       <p className="font-heading font-bold text-text-dark text-sm">Condiciones que contraindican el procedimiento</p>
                     </div>
                   </div>
-                  <div className="p-6 space-y-4">
+                  <div className="p-6 space-y-4 bg-white">
                     {landing.contraindications.map((item, i) => (
                       <AnimateInView key={i} variant="fadeLeft" delay={i * 0.08}>
                         <div className="flex items-start gap-3">
@@ -477,7 +477,7 @@ export default async function ServiceLandingPage({ params }: Props) {
                 </div>
               </AnimateInView>
             </Container>
-          </AnimateInView>
+          </ParallaxGradient>
         )}
 
         <AnimateInView variant="fadeUp" as="section" id="recuperacion" className="bg-white py-16 md:py-24">
@@ -506,7 +506,7 @@ export default async function ServiceLandingPage({ params }: Props) {
         </AnimateInView>
 
         {landing.resultsDescription && (
-          <AnimateInView variant="fadeRight" as="section" id="resultados" className="bg-[#FBFBF9] py-16 md:py-24">
+          <ParallaxGradient gradientFrom={gradientFrom} gradientTo={gradientTo} id="resultados" className="py-16 md:py-24">
             <Container>
               <AnimateInView variant="fadeIn">
                 <SectionHeader label="Resultados" title="Resultados esperados"
@@ -514,7 +514,7 @@ export default async function ServiceLandingPage({ params }: Props) {
               </AnimateInView>
               <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
                 <AnimateInView variant="fadeLeft" delay={0.1}>
-                  <div className="bg-white rounded-2xl p-8 border border-silver/20 shadow-sm hover:shadow-md transition-all duration-300 h-full">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 border border-silver/20 shadow-sm hover:shadow-md transition-all duration-300 h-full">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: `${gradientFrom}15`, color: gradientFrom }}>
                         <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -527,7 +527,7 @@ export default async function ServiceLandingPage({ params }: Props) {
                   </div>
                 </AnimateInView>
                 <AnimateInView variant="fadeRight" delay={0.2}>
-                  <div className="bg-white rounded-2xl p-8 border border-silver/20 shadow-sm hover:shadow-md transition-all duration-300 h-full">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 border border-silver/20 shadow-sm hover:shadow-md transition-all duration-300 h-full">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: `${gradientFrom}15`, color: gradientFrom }}>
                         <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -546,7 +546,7 @@ export default async function ServiceLandingPage({ params }: Props) {
                 </p>
               </div>
             </Container>
-          </AnimateInView>
+          </ParallaxGradient>
         )}
 
         {landing.risks && landing.risks.length > 0 && (
