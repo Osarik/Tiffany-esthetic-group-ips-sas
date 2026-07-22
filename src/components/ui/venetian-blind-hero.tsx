@@ -4,9 +4,9 @@ import { motion, type Variants } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const gridItems = [
-  { type: "image" as const, src: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=500&fit=crop&auto=format&q=80" },
-  { type: "image" as const, src: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&h=500&fit=crop&auto=format&q=80" },
-  { type: "image" as const, src: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&h=500&fit=crop&auto=format&q=80" },
+  { type: "image" as const, src: "/images/22.webp" },
+  { type: "image" as const, src: "/images/23.webp" },
+  { type: "image" as const, src: "/images/19.webp" },
   { type: "video" as const, src: "/videos/instalaciones-bg.mp4" },
 ];
 
@@ -65,7 +65,7 @@ export default function VenetianBlindHero() {
           loop
           playsInline
           preload="auto"
-          poster="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=500&fit=crop&auto=format&q=80"
+          poster="/images/22.webp"
         />
       ) : (
         <motion.div
@@ -97,7 +97,7 @@ export default function VenetianBlindHero() {
                   loop
                   playsInline
                   preload="auto"
-                  poster="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=500&fit=crop&auto=format&q=80"
+                  poster="/images/22.webp"
                 />
               ) : (
                 <img
