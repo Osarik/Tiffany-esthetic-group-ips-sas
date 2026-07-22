@@ -138,6 +138,7 @@ export default async function ServiceLandingPage({ params }: Props) {
 
   const waMsg = `Hola%2C%20quiero%20agendar%20mi%20valoraci%C3%B3n%20para%20${encodeURIComponent(service.title.toLowerCase())}%20en%20Cali.`;
   const waLink = `https://wa.me/573202703522?text=${waMsg}`;
+  const placeholderImg = `https://picsum.photos/seed/${slug}/1200/800`;
 
   return (
     <>
@@ -145,9 +146,9 @@ export default async function ServiceLandingPage({ params }: Props) {
 
       <article>
         <section className={`relative bg-gradient-to-br from-[${gradientFrom}] via-[${gradientFrom}dd] to-[${gradientTo}] pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden`}>
-          {landing.heroImage && (
+          {(landing.heroImage || true) && (
             <div className="absolute inset-0" aria-hidden="true">
-              <img src={landing.heroImage} alt="" className="w-full h-full object-cover" />
+              <img src={landing.heroImage || placeholderImg} alt="" className="w-full h-full object-cover" />
               <div className="absolute inset-0" style={{ background: `linear-gradient(to right, ${gradientFrom} 0%, ${gradientFrom}dd 25%, ${gradientFrom}99 50%, ${gradientFrom}55 70%, transparent 100%)` }} />
             </div>
           )}
@@ -294,7 +295,7 @@ export default async function ServiceLandingPage({ params }: Props) {
         </AnimateInView>
 
         {landing.benefits && landing.benefits.length > 0 && (
-          <ParallaxGradient gradientFrom={gradientFrom} gradientTo={gradientTo} id="beneficios" className="py-16 md:py-24" image={landing.heroImage} serviceTitle={service.title}>
+          <ParallaxGradient gradientFrom={gradientFrom} gradientTo={gradientTo} id="beneficios" className="py-16 md:py-24" image={landing.heroImage || placeholderImg} serviceTitle={service.title}>
             <Container>
               <AnimateInView variant="fadeIn">
                 <SectionHeader label="Beneficios" title={`Beneficios de la ${service.title.toLowerCase()}`} />
@@ -442,7 +443,7 @@ export default async function ServiceLandingPage({ params }: Props) {
         )}
 
         {landing.contraindications && landing.contraindications.length > 0 && (
-          <ParallaxGradient gradientFrom={gradientFrom} gradientTo={gradientTo} id="contraindicaciones" className="py-16 md:py-24" image={landing.heroImage} serviceTitle={service.title}>
+          <ParallaxGradient gradientFrom={gradientFrom} gradientTo={gradientTo} id="contraindicaciones" className="py-16 md:py-24" image={landing.heroImage || placeholderImg} serviceTitle={service.title}>
             <Container>
               <AnimateInView variant="fadeIn">
                 <SectionHeader label="Contraindicaciones" title="¿Quién no es candidato?"
@@ -506,7 +507,7 @@ export default async function ServiceLandingPage({ params }: Props) {
         </AnimateInView>
 
         {landing.resultsDescription && (
-          <ParallaxGradient gradientFrom={gradientFrom} gradientTo={gradientTo} id="resultados" className="py-16 md:py-24" image={landing.heroImage} serviceTitle={service.title}>
+          <ParallaxGradient gradientFrom={gradientFrom} gradientTo={gradientTo} id="resultados" className="py-16 md:py-24" image={landing.heroImage || placeholderImg} serviceTitle={service.title}>
             <Container>
               <AnimateInView variant="fadeIn">
                 <SectionHeader label="Resultados" title="Resultados esperados"
