@@ -151,11 +151,21 @@ export default async function ServiceLandingPage({ params }: Props) {
             </div>
           )}
           <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-            <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-white/[0.04] blur-3xl animate-[float_12s_ease-in-out_infinite]" />
-            <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-white/[0.03] blur-3xl animate-[float_15s_ease-in-out_infinite_reverse]" />
-            <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-white/20 animate-[float_8s_ease-in-out_infinite]" />
-            <div className="absolute bottom-1/3 right-1/4 w-2 h-2 rounded-full bg-white/15 animate-[float_11s_ease-in-out_infinite_reverse]" />
-            <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 rounded-full bg-white/20 animate-[float_9s_ease-in-out_infinite]" />
+            <AnimateInView variant="fadeIn" delay={0.3} className="absolute inset-0">
+              <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-white/[0.04] blur-3xl animate-[float_12s_ease-in-out_infinite]" />
+            </AnimateInView>
+            <AnimateInView variant="fadeIn" delay={0.5} className="absolute inset-0">
+              <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-white/[0.03] blur-3xl animate-[float_15s_ease-in-out_infinite_reverse]" />
+            </AnimateInView>
+            <AnimateInView variant="fadeIn" delay={0.7}>
+              <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-white/20 animate-[float_8s_ease-in-out_infinite]" />
+            </AnimateInView>
+            <AnimateInView variant="fadeIn" delay={0.9}>
+              <div className="absolute bottom-1/3 right-1/4 w-2 h-2 rounded-full bg-white/15 animate-[float_11s_ease-in-out_infinite_reverse]" />
+            </AnimateInView>
+            <AnimateInView variant="fadeIn" delay={1.1}>
+              <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 rounded-full bg-white/20 animate-[float_9s_ease-in-out_infinite]" />
+            </AnimateInView>
           </div>
           <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true"
             style={{
