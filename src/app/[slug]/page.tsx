@@ -294,7 +294,7 @@ export default async function ServiceLandingPage({ params }: Props) {
         </AnimateInView>
 
         {landing.benefits && landing.benefits.length > 0 && (
-          <ParallaxGradient gradientFrom={gradientFrom} gradientTo={gradientTo} id="beneficios" className="py-16 md:py-24">
+          <ParallaxGradient gradientFrom={gradientFrom} gradientTo={gradientTo} id="beneficios" className="py-16 md:py-24" image={landing.heroImage} serviceTitle={service.title}>
             <Container>
               <AnimateInView variant="fadeIn">
                 <SectionHeader label="Beneficios" title={`Beneficios de la ${service.title.toLowerCase()}`} />
@@ -442,7 +442,7 @@ export default async function ServiceLandingPage({ params }: Props) {
         )}
 
         {landing.contraindications && landing.contraindications.length > 0 && (
-          <ParallaxGradient gradientFrom={gradientFrom} gradientTo={gradientTo} id="contraindicaciones" className="py-16 md:py-24">
+          <ParallaxGradient gradientFrom={gradientFrom} gradientTo={gradientTo} id="contraindicaciones" className="py-16 md:py-24" image={landing.heroImage} serviceTitle={service.title}>
             <Container>
               <AnimateInView variant="fadeIn">
                 <SectionHeader label="Contraindicaciones" title="¿Quién no es candidato?"
@@ -506,7 +506,7 @@ export default async function ServiceLandingPage({ params }: Props) {
         </AnimateInView>
 
         {landing.resultsDescription && (
-          <ParallaxGradient gradientFrom={gradientFrom} gradientTo={gradientTo} id="resultados" className="py-16 md:py-24">
+          <ParallaxGradient gradientFrom={gradientFrom} gradientTo={gradientTo} id="resultados" className="py-16 md:py-24" image={landing.heroImage} serviceTitle={service.title}>
             <Container>
               <AnimateInView variant="fadeIn">
                 <SectionHeader label="Resultados" title="Resultados esperados"
