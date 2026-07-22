@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 
 interface ParallaxSectionProps {
   image: string;
+  video?: string;
   children: ReactNode;
   className?: string;
   overlayClassName?: string;
@@ -16,6 +17,7 @@ interface ParallaxSectionProps {
 
 export default function ParallaxSection({
   image,
+  video,
   children,
   className,
   overlayClassName,
@@ -38,15 +40,27 @@ export default function ParallaxSection({
         className="absolute inset-0 w-full h-[150%] -top-[25%]"
         style={{ y, willChange: "transform" }}
       >
-        <Image
-          src={image}
-          alt=""
-          fill
-          className="object-cover"
-          sizes="100vw"
-          draggable={false}
-          unoptimized
-        />
+        {video ? (
+          <video
+            src={video}
+            className="w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+          />
+        ) : (
+          <Image
+            src={image}
+            alt=""
+            fill
+            className="object-cover"
+            sizes="100vw"
+            draggable={false}
+            unoptimized
+          />
+        )}
       </motion.div>
       <div
         className={cn(

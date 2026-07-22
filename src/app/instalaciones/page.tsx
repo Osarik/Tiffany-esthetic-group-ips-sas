@@ -28,7 +28,8 @@ const facilities = [
       "Sistema de aspiración central y oxígeno",
       "Protocolos de esterilización y bioseguridad",
     ],
-    img: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1920&q=85&fit=crop&crop=entropy&auto=format",
+    img: "/images/22.webp",
+    video: "/videos/v7.mp4",
   },
   {
     title: "Área de Recuperación",
@@ -40,7 +41,8 @@ const facilities = [
       "Oxígeno suplementario y aspiración",
       "Protocolos de manejo del dolor y náuseas",
     ],
-    img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1920&q=85&fit=crop&crop=entropy&auto=format",
+    img: "/images/23.webp",
+    video: "/videos/v1.mp4",
   },
   {
     title: "Farmacia Habilitada",
@@ -52,7 +54,8 @@ const facilities = [
       "Stock permanente de insumos quirúrgicos",
       "Trazabilidad completa de cada insumo",
     ],
-    img: "https://images.unsplash.com/photo-1585435557343-3b092031a831?w=1920&q=85&fit=crop&crop=entropy&auto=format",
+    img: "/images/19.webp",
+    video: "/videos/v2.mp4",
   },
 ];
 
@@ -261,6 +264,7 @@ export default function InstalacionesPage() {
             <ParallaxSection
               key={item.title}
               image={item.img}
+              video={item.video}
               bgPosition={i === 0 ? "51% 13%" : "center"}
               className={`min-h-[70vh] ${i === 1 ? "md:flex-row-reverse" : ""}`}
               overlayClassName={i % 2 === 0 ? "bg-gradient-to-r from-primary-deep/90 via-primary-deep/60 to-transparent" : "bg-gradient-to-l from-primary-deep/90 via-primary-deep/60 to-transparent"}
