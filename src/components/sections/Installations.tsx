@@ -5,34 +5,13 @@ import { ZoomParallax } from '@/components/ui/zoom-parallax';
 import { cn } from '@/lib/utils';
 
 const images = [
-  {
-    src: 'https://images.unsplash.com/photo-1551076805-e1869033e561?w=1280&h=720&fit=crop&crop=entropy&auto=format&q=80',
-    alt: 'Sala de cirugía',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1280&h=720&fit=crop&crop=entropy&auto=format&q=80',
-    alt: 'Área de recuperación',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&h=800&fit=crop&crop=entropy&auto=format&q=80',
-    alt: 'Consultorio médico',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1280&h=720&fit=crop&crop=entropy&auto=format&q=80',
-    alt: 'Sala de espera',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=800&fit=crop&crop=entropy&auto=format&q=80',
-    alt: 'Equipamiento de última generación',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1585435557343-3b092031a831?w=1280&h=720&fit=crop&crop=entropy&auto=format&q=80',
-    alt: 'Recepción',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&h=800&fit=crop&crop=entropy&auto=format&q=80',
-    alt: 'Instrumental quirúrgico',
-  },
+  { src: '/images/13.webp', alt: 'Sala de cirugía' },
+  { src: '/images/19.webp', alt: 'Área de recuperación' },
+  { src: '/images/23.webp', alt: 'Consultorio médico' },
+  { src: '/images/22.webp', alt: 'Sala de espera' },
+  { src: '/images/11.webp', alt: 'Equipamiento de última generación' },
+  { src: '/images/8.webp', alt: 'Recepción' },
+  { src: '/images/6.webp', alt: 'Instrumental quirúrgico' },
 ];
 
 export default function Installations() {
