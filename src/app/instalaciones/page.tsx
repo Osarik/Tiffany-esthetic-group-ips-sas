@@ -179,9 +179,9 @@ export default function InstalacionesPage() {
                   Resolución 3100 de 2019 · IPS Habilitada
                 </span>
               </div>
-              <h1 className="font-heading font-bold text-4xl md:text-6xl lg:text-7xl text-white leading-[1.05] text-balance max-w-3xl">
+              <h1 className="font-heading font-bold text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-balance max-w-3xl bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent">
                 Instalaciones quirúrgicas{" "}
-                <span className="text-accent-light">habilitadas en Cali</span>
+                <span>habilitadas en Cali</span>
               </h1>
               <p className="mt-5 text-lg md:text-xl text-white/75 font-body leading-relaxed max-w-2xl">
                 Tres salas de cirugía completamente equipadas, área de
