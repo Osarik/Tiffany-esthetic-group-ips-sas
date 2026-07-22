@@ -37,7 +37,7 @@ export default function ParallaxSection({
       className={cn("relative overflow-hidden", className)}
     >
       <motion.div
-        className="absolute inset-0 w-full h-[150%] -top-[25%]"
+        className="absolute inset-0 w-full h-[120%] -top-[10%]"
         style={{ y, willChange: "transform" }}
       >
         {video ? (
