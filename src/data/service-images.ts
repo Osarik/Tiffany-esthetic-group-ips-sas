@@ -5,9 +5,9 @@ export interface ServiceImageConfig {
 }
 
 export const serviceImageMap: Record<string, ServiceImageConfig> = {
-  lipoescultura: { folder: "Lipo escultura", abbr: "le", numbers: [1, 2, 3, 5, 6, 7] },
-  "lipo-lipectomia": { folder: "Lipo + Lipectomia", abbr: "LL", numbers: [1, 2, 3, 4] },
-  "lipo-protesis-aumento": { folder: "lpo + lipec + amuento", abbr: "LLA", numbers: [1, 2, 3] },
+  lipoescultura: { folder: "lipo-escultura", abbr: "le", numbers: [1, 2, 3, 5, 6, 7] },
+  "lipo-lipectomia": { folder: "lipo-lipectomia", abbr: "LL", numbers: [1, 2, 3, 4] },
+  "lipo-protesis-aumento": { folder: "lipo-protesis-aumento", abbr: "LLA", numbers: [1, 2, 3] },
 };
 
 export interface BeforeAfterPair {
