@@ -1,15 +1,17 @@
 //@ts-nocheck
 'use client';
-import { items } from '@/components/ui/image-mousetrail-without-component-utils/constant';
 import React, { createRef, useRef } from 'react';
+import { getAllAfterImages } from '@/data/service-images';
 
 type Props = {
   background?: boolean;
 };
 
+const afterImages = getAllAfterImages();
+
 export default function ImageMouseTrail3({ background = false }: Props) {
   const containerRef = useRef(null);
-  const refs = useRef(items.map(() => createRef<HTMLImageElement>()));
+  const refs = useRef(afterImages.map(() => createRef<HTMLImageElement>()));
 
   let globalIndex = 0;
   let last = { x: 0, y: 0 };
@@ -21,7 +23,7 @@ export default function ImageMouseTrail3({ background = false }: Props) {
     image.style.left = `${relativeX}px`;
     image.style.top = `${relativeY}px`;
 
-    image.style.zIndex = 50 + (globalIndex % items.length);
+    image.style.zIndex = 50 + (globalIndex % afterImages.length);
     image.style.scale = '1';
     image.style.opacity = '1';
     image.dataset.status = 'active';
@@ -63,7 +65,7 @@ export default function ImageMouseTrail3({ background = false }: Props) {
           : 'grid place-content-center h-[500px] md:h-[600px] w-full bg-[#e0dfdf] relative overflow-hidden rounded-2xl'
       }
     >
-      {items.map((item, index) => (
+      {afterImages.map((item, index) => (
         <img
           key={item.src}
           className={

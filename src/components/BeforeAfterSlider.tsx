@@ -72,7 +72,7 @@ export default function BeforeAfterSlider({
   return (
     <div
       ref={containerRef}
-      className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl select-none cursor-ew-resize bg-silver/30"
+      className="relative w-full overflow-hidden rounded-2xl select-none cursor-ew-resize bg-silver/30 leading-[0]"
       onMouseDown={handleMouseDown}
       onTouchStart={handleTouchStart}
       role="slider"
@@ -89,7 +89,7 @@ export default function BeforeAfterSlider({
       <img
         src={afterSrc}
         alt={`${alt} - ${afterLabel}`}
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        className="w-full h-auto block pointer-events-none"
         loading="lazy"
       />
       <div

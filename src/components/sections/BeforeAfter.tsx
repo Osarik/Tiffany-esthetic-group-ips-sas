@@ -6,9 +6,9 @@ import Heading from "@/components/ui/Heading";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 
 const cases = [
-  { id: "case1", beforeLabel: "Antes", afterLabel: "Después" },
-  { id: "case2", beforeLabel: "Antes", afterLabel: "Después" },
-  { id: "case3", beforeLabel: "Antes", afterLabel: "Después" },
+  { id: "case1", beforeLabel: "Antes", afterLabel: "Después", beforeSrc: "/images/lpo + lipec + amuento/LLA1.webp", afterSrc: "/images/lpo + lipec + amuento/LLA1r.webp" },
+  { id: "case2", beforeLabel: "Antes", afterLabel: "Después", beforeSrc: "/images/lpo + lipec + amuento/LLA2.webp", afterSrc: "/images/lpo + lipec + amuento/LLA2r.webp" },
+  { id: "case3", beforeLabel: "Antes", afterLabel: "Después", beforeSrc: "/images/Lipo escultura/le1.webp", afterSrc: "/images/Lipo escultura/le1r.webp" },
 ];
 
 export default function BeforeAfter() {
@@ -43,6 +43,8 @@ export default function BeforeAfter() {
             transition={{ duration: 1.0, delay: i * 0.1 }}
           >
             <BeforeAfterSlider
+              beforeSrc={c.beforeSrc}
+              afterSrc={c.afterSrc}
               beforeLabel={c.beforeLabel}
               afterLabel={c.afterLabel}
             />

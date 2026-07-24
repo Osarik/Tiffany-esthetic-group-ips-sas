@@ -3,6 +3,7 @@ import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { items } from "@/components/ui/image-mousetrail-without-component-utils/constant";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
+import { getBeforeAfterPairs, type BeforeAfterPair } from "@/data/service-images";
 
 type Procedure = {
   name: string;
@@ -45,6 +46,10 @@ export default function ResultadosGrid({ procedures }: Props) {
   const [expanded, setExpanded] = useState<number | null>(null);
 
   const selected = expanded !== null ? procedures[expanded] : null;
+  const beforeAfterPairs = useMemo(
+    () => (selected ? getBeforeAfterPairs(selected.slug) : []),
+    [selected],
+  );
   const galleryImages = useMemo(
     () => (expanded !== null ? getGalleryImages(expanded) : []),
     [expanded],
@@ -148,11 +153,14 @@ export default function ResultadosGrid({ procedures }: Props) {
             </div>
 
             <div className="grid grid-cols-2 gap-3 md:gap-4">
-              {galleryImages.map((url, i) => (
+              {(beforeAfterPairs.length > 0 ? beforeAfterPairs : galleryImages.map((url) => ({
+                before: url,
+                after: url.includes("?") ? `${url}&sat=-100` : `${url}?sat=-100`,
+              }))).map((pair, i) => (
                 <BeforeAfterSlider
                   key={i}
-                  beforeSrc={url}
-                  afterSrc={url.includes("?") ? `${url}&sat=-100` : `${url}?sat=-100`}
+                  beforeSrc={pair.before}
+                  afterSrc={pair.after}
                   beforeLabel="Antes"
                   afterLabel="Después"
                   alt={`${selected?.name} - resultado ${i + 1}`}
