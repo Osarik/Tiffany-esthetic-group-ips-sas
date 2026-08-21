@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { testimonialsData, type Review } from "@/data/testimonials";
 
 const GRAVITY_AVATAR = "https://ui-avatars.com/api/?name=";
@@ -222,29 +222,141 @@ function AICard() {
 
 function HorizontalScroller({
   children,
-  speed = "40s",
+  speed = 40,
   direction = "left",
 }: {
   children: React.ReactNode;
-  speed?: string;
+  speed?: number;
   direction?: "left" | "right";
 }) {
-  const animationClass =
-    direction === "right"
-      ? "animate-scroll-horizontal-reverse"
-      : "animate-scroll-horizontal";
+  const outerRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+
+  const offsetRef = useRef(0);
+  const halfWidthRef = useRef(0);
+  const draggingRef = useRef(false);
+  const startXRef = useRef(0);
+  const startOffsetRef = useRef(0);
+  const movedRef = useRef(false);
+  const momentumRef = useRef<number | null>(null);
+  const lastSampleXRef = useRef(0);
+  const lastSampleTRef = useRef(0);
+  const velocityRef = useRef(0);
+
+  useEffect(() => {
+    const track = trackRef.current;
+    const outer = outerRef.current;
+    if (!track || !outer) return;
+
+    const measure = () => {
+      halfWidthRef.current = track.scrollWidth / 2;
+    };
+    measure();
+    window.addEventListener("resize", measure);
+
+    const isMobile = window.matchMedia("(max-width: 640px)").matches;
+    const speedFactor = isMobile ? 0.4 : 1;
+    const dir = direction === "right" ? -1 : 1;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    let rafId = 0;
+    let lastTime = performance.now();
+
+    const step = (now: number) => {
+      const dtMs = Math.min(now - lastTime, 64);
+      lastTime = now;
+      const half = halfWidthRef.current;
+
+      if (!draggingRef.current && half > 0 && !reducedMotion) {
+        const autoV = (dir * half) / (speed * speedFactor * 1000);
+        let v = autoV;
+        if (momentumRef.current !== null) {
+          v = momentumRef.current;
+          momentumRef.current *= Math.exp(-dtMs / 280);
+          if (Math.abs(momentumRef.current) < Math.abs(autoV)) {
+            momentumRef.current = null;
+            v = autoV;
+          }
+        }
+        offsetRef.current += v * dtMs;
+      }
+
+      if (half > 0) {
+        offsetRef.current = ((offsetRef.current % half) + half) % half;
+      }
+      track.style.transform = `translate3d(${-offsetRef.current}px, 0, 0)`;
+      rafId = requestAnimationFrame(step);
+    };
+    rafId = requestAnimationFrame(step);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      window.removeEventListener("resize", measure);
+    };
+  }, [speed, direction]);
+
+  const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (e.pointerType === "mouse" && e.button !== 0) return;
+    draggingRef.current = true;
+    movedRef.current = false;
+    startXRef.current = e.clientX;
+    startOffsetRef.current = offsetRef.current;
+    lastSampleXRef.current = e.clientX;
+    lastSampleTRef.current = performance.now();
+    velocityRef.current = 0;
+    momentumRef.current = null;
+    outerRef.current?.setPointerCapture(e.pointerId);
+  };
+
+  const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (!draggingRef.current) return;
+    const dx = e.clientX - startXRef.current;
+    if (Math.abs(dx) > 4) movedRef.current = true;
+    offsetRef.current = startOffsetRef.current - dx;
+
+    const now = performance.now();
+    const dt = now - lastSampleTRef.current;
+    if (dt > 12) {
+      velocityRef.current = (-(e.clientX - lastSampleXRef.current) / dt) * 16;
+      lastSampleXRef.current = e.clientX;
+      lastSampleTRef.current = now;
+    }
+  };
+
+  const endDrag = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (!draggingRef.current) return;
+    draggingRef.current = false;
+    const elapsed = performance.now() - lastSampleTRef.current;
+    if (elapsed < 120 && Math.abs(velocityRef.current) > 0.15) {
+      momentumRef.current = Math.max(-60, Math.min(60, velocityRef.current));
+    }
+    outerRef.current?.releasePointerCapture?.(e.pointerId);
+  };
+
+  const handleClickCapture = (e: React.MouseEvent) => {
+    if (movedRef.current) {
+      e.preventDefault();
+      e.stopPropagation();
+      movedRef.current = false;
+    }
+  };
 
   return (
-    <div className="w-full overflow-hidden group relative mask-fade">
-      <div
-        className={`flex ${animationClass}`}
-        style={{ "--scroll-duration": speed } as React.CSSProperties}
-      >
-        <div className="flex items-stretch justify-center gap-6 px-4">
+    <div
+      ref={outerRef}
+      onPointerDown={handlePointerDown}
+      onPointerMove={handlePointerMove}
+      onPointerUp={endDrag}
+      onPointerCancel={endDrag}
+      onClickCapture={handleClickCapture}
+      className="w-full overflow-hidden group relative mask-fade cursor-grab active:cursor-grabbing select-none [touch-action:pan-y]"
+    >
+      <div ref={trackRef} className="flex w-max items-stretch will-change-transform">
+        <div className="flex items-stretch gap-6 pr-6 px-4">
           {children}
         </div>
         <div
-          className="flex items-stretch justify-center gap-6 px-4"
+          className="flex items-stretch gap-6 pr-6 px-4"
           aria-hidden="true"
         >
           {children}
@@ -288,13 +400,13 @@ export default function TestimonialsSection() {
       </div>
 
       <div className="flex flex-col gap-8 z-10 w-full max-w-6xl">
-        <HorizontalScroller speed="50s" direction="left">
+        <HorizontalScroller speed={50} direction="left">
           <AICard />
           {reviews.slice(0, 5).map((review) => (
             <ReviewCard key={review.id} review={review} />
           ))}
         </HorizontalScroller>
-        <HorizontalScroller speed="40s" direction="right">
+        <HorizontalScroller speed={40} direction="right">
           {reviews.slice(5).map((review) => (
             <ReviewCard key={review.id} review={review} />
           ))}
