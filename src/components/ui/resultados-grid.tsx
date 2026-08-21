@@ -152,7 +152,7 @@ export default function ResultadosGrid({ procedures }: Props) {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 md:gap-4">
+            <div className="grid grid-cols-2 gap-3 md:gap-4 justify-items-center">
               {(beforeAfterPairs.length > 0 ? beforeAfterPairs : galleryImages.map((url) => ({
                 before: url,
                 after: url.includes("?") ? `${url}&sat=-100` : `${url}?sat=-100`,
