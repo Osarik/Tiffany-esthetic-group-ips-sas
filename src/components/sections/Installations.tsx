@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { ZoomParallax } from '@/components/ui/zoom-parallax';
+import { IdleScrollHint } from '@/components/ui/IdleScrollHint';
 import { cn } from '@/lib/utils';
 
 const images = [
@@ -15,8 +16,11 @@ const images = [
 ];
 
 export default function Installations() {
+  const sectionRef = React.useRef<HTMLElement | null>(null);
+
   return (
-    <section id="instalaciones" className="relative w-full">
+    <section id="instalaciones" ref={sectionRef} className="relative w-full">
+      <IdleScrollHint rootRef={sectionRef} />
       <div className="relative flex min-h-[60vh] items-center justify-center px-4">
         <div
           aria-hidden="true"

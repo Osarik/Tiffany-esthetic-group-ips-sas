@@ -29,11 +29,13 @@ function ComparisonView({
   alt,
   sizes,
   roundedClass = "rounded-2xl",
+  viewportSized = false,
   showExpandButton = false,
   onExpand,
 }: ComparisonSrc & {
   sizes: string;
   roundedClass?: string;
+  viewportSized?: boolean;
   showExpandButton?: boolean;
   onExpand?: () => void;
 }) {
@@ -110,8 +112,13 @@ function ComparisonView({
   return (
     <div
       ref={containerRef}
-      className={`relative w-full ${roundedClass} overflow-hidden select-none cursor-ew-resize bg-silver/30`}
-      style={{ aspectRatio: "3 / 4" }}
+      className={`relative ${viewportSized ? "" : "w-full"} ${roundedClass} overflow-hidden select-none cursor-ew-resize bg-silver/30`}
+      style={{
+        aspectRatio: "3 / 4",
+        ...(viewportSized
+          ? { width: "min(90vw, 56.25vh)", maxWidth: "100%" }
+          : {}),
+      }}
       onMouseDown={handleMouseDown}
       onTouchStart={handleTouchStart}
       onClickCapture={handleClickCapture}
@@ -240,7 +247,7 @@ function Lightbox({
         </svg>
       </button>
       <div
-        className="w-full max-w-[560px] max-h-full"
+        className="flex flex-col items-center justify-center max-h-full min-w-0"
         onClick={(e) => e.stopPropagation()}
       >
         {children}
@@ -282,8 +289,9 @@ export default function BeforeAfterSlider({
           beforeLabel={beforeLabel}
           afterLabel={afterLabel}
           alt={alt}
-          sizes="92vw"
+          sizes="min(90vw, 56.25vh)"
           roundedClass="rounded-xl"
+          viewportSized
         />
         <p className="mt-3 text-center text-xs text-white/60 font-body">
           Desliza para comparar · Esc o clic fuera para cerrar

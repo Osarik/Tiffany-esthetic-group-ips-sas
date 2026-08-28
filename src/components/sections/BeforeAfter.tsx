@@ -6,9 +6,9 @@ import Heading from "@/components/ui/Heading";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 
 const cases = [
-  { id: "case1", beforeLabel: "Antes", afterLabel: "Después", beforeSrc: "/images/lipo-protesis-aumento/LLA1.webp", afterSrc: "/images/lipo-protesis-aumento/LLA1r.webp" },
-  { id: "case2", beforeLabel: "Antes", afterLabel: "Después", beforeSrc: "/images/lipo-protesis-aumento/LLA2.webp", afterSrc: "/images/lipo-protesis-aumento/LLA2r.webp" },
-  { id: "case3", beforeLabel: "Antes", afterLabel: "Después", beforeSrc: "/images/lipo-escultura/le1.webp", afterSrc: "/images/lipo-escultura/le1r.webp" },
+  { id: "case1", beforeLabel: "Antes", afterLabel: "Después", beforeSrc: "/images/aa1.webp", afterSrc: "/images/aa2.webp" },
+  { id: "case2", beforeLabel: "Antes", afterLabel: "Después", beforeSrc: "/images/bb1.jpeg", afterSrc: "/images/bb2.jpeg" },
+  { id: "case3", beforeLabel: "Antes", afterLabel: "Después", beforeSrc: "/images/dd1.webp", afterSrc: "/images/dd2.jpeg" },
 ];
 
 export default function BeforeAfter() {
