@@ -4,12 +4,12 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const IMAGES = [
-  "https://images.unsplash.com/photo-1551076805-e1869033e561?w=200&h=200&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200&h=200&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=200&h=200&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?w=200&h=200&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=200&h=200&fit=crop&crop=face",
+  "/images/splash/p1.webp",
+  "/images/splash/p2.webp",
+  "/images/splash/p3.webp",
+  "/images/splash/p4.webp",
+  "/images/splash/p5.webp",
+  "/images/splash/p6.webp",
 ];
 
 export default function SplashScreen({ onFinish }: { onFinish: () => void }) {
@@ -21,6 +21,13 @@ export default function SplashScreen({ onFinish }: { onFinish: () => void }) {
     handle();
     window.addEventListener("resize", handle);
     return () => window.removeEventListener("resize", handle);
+  }, []);
+
+  useEffect(() => {
+    IMAGES.forEach((url) => {
+      const warm = new Image();
+      warm.src = url;
+    });
   }, []);
 
   const finish = useCallback(() => {
@@ -36,8 +43,8 @@ export default function SplashScreen({ onFinish }: { onFinish: () => void }) {
     const t1 = setTimeout(() => setPhase(1), 1800);
     const t2 = setTimeout(() => setPhase(2), 3200);
     const t3 = setTimeout(() => setPhase(3), 4400);
-    const t4 = setTimeout(() => setPhase(4), 5600);
-    const t5 = setTimeout(finish, 6600);
+    const t4 = setTimeout(() => setPhase(4), 6600);
+    const t5 = setTimeout(finish, 7600);
     return () => {
       clearTimeout(t1); clearTimeout(t2);
       clearTimeout(t3); clearTimeout(t4); clearTimeout(t5);
@@ -183,7 +190,7 @@ export default function SplashScreen({ onFinish }: { onFinish: () => void }) {
                   ? { duration: 1.2, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }
                   : { duration: 0.9, ease: "easeIn" }
               }
-              style={{ width: imgSize, height: imgSize, position: "absolute" }}
+              style={{ width: imgSize, height: imgSize, position: "absolute", willChange: "transform, opacity" }}
               className="rounded-full overflow-hidden border-[3px] md:border-[4px] border-white shadow-xl"
             >
               <div
