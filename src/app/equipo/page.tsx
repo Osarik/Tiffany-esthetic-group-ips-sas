@@ -3,16 +3,10 @@ import ScrollExpandMedia from "@/components/ui/scroll-expansion-hero";
 import Container from "@/components/ui/Container";
 import AnimateInView, { StaggerGrid, StaggerItem } from "@/components/ui/AnimateInView";
 import ForceTopOnMount from "@/components/ForceTopOnMount";
+import TeamGallery from "@/components/ui/team-gallery";
 
 const whatsappUrl =
   "https://wa.me/573202703522?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n%20m%C3%A9dica%20en%20Tiffany%20Esthetic%20Group.";
-
-const stats = [
-  { value: "3", label: "Salas de cirugía habilitadas" },
-  { value: "3", label: "Especialidades quirúrgicas" },
-  { value: "6+", label: "Profesionales de enfermería" },
-  { value: "1", label: "Farmacia habilitada" },
-];
 
 const servicesOffered = [
   {
@@ -159,27 +153,6 @@ export default function EquipoPage() {
         textBlend
       >
         <article>
-        {/* ─── STATS ──────────────────────────────────────────── */}
-        <AnimateInView variant="fadeUp" as="section" className="bg-primary-deep py-14 md:py-18 overflow-hidden">
-          <Container>
-            <StaggerGrid className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8" staggerDelay={0.1}>
-              {stats.map((stat) => (
-                <StaggerItem key={stat.label}>
-                  <div className="text-center p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-                    <span className="block text-4xl md:text-5xl font-heading font-bold text-white mb-1">
-                      {stat.value}
-                    </span>
-                    <span className="w-8 h-0.5 bg-accent block mx-auto mb-3 rounded-full" />
-                    <p className="text-white/65 font-body text-sm leading-snug">
-                      {stat.label}
-                    </p>
-                  </div>
-                </StaggerItem>
-              ))}
-            </StaggerGrid>
-          </Container>
-        </AnimateInView>
-
         {/* ─── SERVICIOS QUIRÚRGICOS ──────────────────────────── */}
         <section className="bg-white py-20 md:py-28">
           <Container>
@@ -268,108 +241,8 @@ export default function EquipoPage() {
             </div>
 
             <div>
-              {/* Mobile: stacked */}
-              <div className="flex md:hidden flex-col items-stretch gap-4">
-                {[
-                  { img: "/images/cirujano.png", alt: "Cirujanos plásticos", title: "Cirujanos plásticos", subtitle: "Especialistas en cirugía plástica y estética", desc: "Cirujanos plásticos calificados para procedimientos corporales, mamarios y faciales. Algunos de nuestros profesionales son miembros de la Sociedad Colombiana de Cirugía Plástica (SCCP). Cada cirujano cuenta con la certificación que acredita su especialidad y se mantiene en actualización permanente." },
-                  { img: "/images/anestesiologo.png", alt: "Anestesiólogos", title: "Anestesiólogos", subtitle: "Miembros del Consejo de Anestesiología (S.C.A.R.E.)", desc: "Anestesiólogos certificados y miembros del Consejo de Anestesiología, con recertificación periódica según los estándares del C.A.M.E.C. Evaluamos cada caso de forma individual para seleccionar la técnica anestésica más segura según el procedimiento y las condiciones del paciente." },
-                  { img: "/images/equipo.png", alt: "Equipo quirúrgico", title: "Equipo quirúrgico y recuperación", subtitle: "Instrumentación, circulante, enfermería y jefe de planta", desc: "Contamos con instrumentador quirúrgico, circulante de cirugía y enfermeras recuperadoras que acompañan al paciente antes, durante y después del procedimiento. Un jefe de planta coordina todo el servicio quirúrgico para garantizar la continuidad y calidad de la atención." },
-                  { img: "/images/farmaco.png", alt: "Servicio farmacéutico", title: "Servicio farmacéutico", subtitle: "Farmaceuta con habilitación institucional", desc: "Nuestra farmacia habilitada cuenta con profesional farmaceuta que garantiza la gestión, dispensación y trazabilidad de medicamentos e insumos quirúrgicos bajo estándares de calidad, seguridad y oportunidad durante cada etapa de la atención." },
-                ].map((item, idx) => (
-                  <div key={idx} data-card-idx={idx} className="cursor-default transition-all duration-[700] ease-out basis-full" style={{ opacity: 0, transform: "translateY(20px)" }}>
-                    <div className="h-full rounded-3xl transition-all duration-[700] ease-out bg-white/50">
-                      <div className="flex flex-col items-center justify-center h-full p-6 transition-all duration-[700] ease-out gap-4">
-                        <div className="shrink-0 transition-all duration-[700] ease-out scale-100">
-                          <img alt={item.alt} className="w-14 h-14 object-contain" src={item.img} />
-                        </div>
-                        <div className="transition-all duration-[700] ease-out opacity-100">
-                          <h3 className="font-heading font-bold text-text-dark text-lg text-center mt-2">{item.title}</h3>
-                          <span className="block text-primary font-body font-semibold text-sm text-center mt-1">{item.subtitle}</span>
-                          <p className="text-text-main/70 font-body text-sm leading-relaxed text-center mt-3 max-w-[260px] mx-auto">{item.desc}</p>
-                          <div className="flex items-center justify-center gap-1.5 mt-4">
-                            <svg className="w-3.5 h-3.5 text-green-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                              <polyline points="9 12 11 14 15 10" />
-                            </svg>
-                            <span className="text-[11px] font-body font-semibold text-green-600">Registrado en RETHUS</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              {/* Desktop: horizontal layout with positioning */}
-              <div className="hidden md:block relative h-[540px]">
-                {[
-                  { img: "/images/cirujano.png", alt: "Cirujanos plásticos", title: "Cirujanos plásticos", subtitle: "Especialistas en cirugía plástica y estética", desc: "Cirujanos plásticos calificados para procedimientos corporales, mamarios y faciales. Algunos de nuestros profesionales son miembros de la Sociedad Colombiana de Cirugía Plástica (SCCP). Cada cirujano cuenta con la certificación que acredita su especialidad y se mantiene en actualización permanente." },
-                  { img: "/images/anestesiologo.png", alt: "Anestesiólogos", title: "Anestesiólogos", subtitle: "Miembros del Consejo de Anestesiología (S.C.A.R.E.)", desc: "Anestesiólogos certificados y miembros del Consejo de Anestesiología, con recertificación periódica según los estándares del C.A.M.E.C. Evaluamos cada caso de forma individual para seleccionar la técnica anestésica más segura según el procedimiento y las condiciones del paciente." },
-                  { img: "/images/equipo.png", alt: "Equipo quirúrgico", title: "Equipo quirúrgico y recuperación", subtitle: "Instrumentación, circulante, enfermería y jefe de planta", desc: "Contamos con instrumentador quirúrgico, circulante de cirugía y enfermeras recuperadoras que acompañan al paciente antes, durante y después del procedimiento. Un jefe de planta coordina todo el servicio quirúrgico para garantizar la continuidad y calidad de la atención." },
-                  { img: "/images/farmaco.png", alt: "Servicio farmacéutico", title: "Servicio farmacéutico", subtitle: "Farmaceuta con habilitación institucional", desc: "Nuestra farmacia habilitada cuenta con profesional farmaceuta que garantiza la gestión, dispensación y trazabilidad de medicamentos e insumos quirúrgicos bajo estándares de calidad, seguridad y oportunidad durante cada etapa de la atención." },
-                ].map((item, idx) => (
-                  <div key={idx} data-card-idx={idx} className="cursor-default" style={{
-                    position: "absolute",
-                    left: `calc(${idx * 25}% + ${idx * 6}px)`,
-                    width: "calc(25% - 18px)",
-                    top: 0,
-                    bottom: 0,
-                    transition: "left 0.7s cubic-bezier(0.34, 1.56, 0.64, 1), width 0.7s cubic-bezier(0.34, 1.56, 0.64, 1)",
-                    opacity: 1,
-                    transform: "none",
-                  }}>
-                    <div className="h-full rounded-3xl transition-all duration-[700] ease-out bg-white/50">
-                      <div className="flex flex-col items-center justify-center h-full p-6 transition-all duration-[700] ease-out gap-4">
-                        <div className="shrink-0 transition-all duration-[700] ease-out scale-100">
-                          <img alt={item.alt} className="w-14 h-14 object-contain" src={item.img} />
-                        </div>
-                        <div className="transition-all duration-[700] ease-out opacity-100">
-                          <h3 className="font-heading font-bold text-text-dark text-lg text-center mt-2">{item.title}</h3>
-                          <span className="block text-primary font-body font-semibold text-sm text-center mt-1">{item.subtitle}</span>
-                          <p className="text-text-main/70 font-body text-sm leading-relaxed text-center mt-3 max-w-[260px] mx-auto">{item.desc}</p>
-                          <div className="flex items-center justify-center gap-1.5 mt-4">
-                            <svg className="w-3.5 h-3.5 text-green-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                              <polyline points="9 12 11 14 15 10" />
-                            </svg>
-                            <span className="text-[11px] font-body font-semibold text-green-600">Registrado en RETHUS</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              {/* Marquee logos */}
-              <div className="w-full overflow-hidden mt-16 mask-fade">
-                <div className="flex items-center gap-16 md:gap-24 w-max marquee-track">
-                  {[...Array(4)].flatMap((_, i) => [
-                    <a key={"sccp-" + i} href="https://cirugiaplastica.org.co/" target="_blank" rel="noopener noreferrer" className="shrink-0 flex items-center justify-center h-14 md:h-16 px-6 gap-2 opacity-50 hover:opacity-100 transition-opacity duration-300">
-                      <img alt="Sociedad Colombiana de Cirugía Plástica" className="max-h-full max-w-[160px] object-contain" loading="lazy" src="https://cirugiaplastica.org.co/wp-content/uploads/2022/07/logo-sccp.png" />
-                    </a>,
-                    <a key={"scare-" + i} href="https://scare.org.co/" target="_blank" rel="noopener noreferrer" className="shrink-0 flex items-center justify-center h-14 md:h-16 px-6 gap-2 opacity-50 hover:opacity-100 transition-opacity duration-300">
-                      <img alt="Sociedad Colombiana de Anestesiología y Reanimación" className="max-h-full max-w-[160px] object-contain" loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoFCeO86ByR6Xp9c02HTjR8tk7oSjy-m-Qko64JVRwsA&s=10" />
-                    </a>,
-                    <a key={"supersalud-" + i} href="https://www.supersalud.gov.co/" target="_blank" rel="noopener noreferrer" className="shrink-0 flex items-center justify-center h-14 md:h-16 px-6 gap-2 opacity-50 hover:opacity-100 transition-opacity duration-300">
-                      <span className="font-body font-bold text-sm text-black whitespace-nowrap leading-none">Vigilado</span>
-                      <img alt="Superintendencia Nacional de Salud - Vigilado" className="max-h-full max-w-[160px] object-contain" loading="lazy" src="https://www.supersalud.gov.co/Style%20Library/Images/Logo-Supersalud-2024.svg" />
-                    </a>,
-                  ])}
-                </div>
-              </div>
-              <style>{`
-@keyframes marquee-loop {
-  from { transform: translateX(0); }
-  to { transform: translateX(-25%); }
-}
-.marquee-track {
-  animation: marquee-loop 25s linear infinite;
-}
-@media (min-width: 768px) {
-  .marquee-track {
-    animation-duration: 60s;
-  }
-}
-              `}</style>
+              {/* Galería de equipo */}
+              <TeamGallery />
             </div>
           </div>
         </section>
