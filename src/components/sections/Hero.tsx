@@ -3,20 +3,12 @@
 import { motion } from "framer-motion";
 import Heading from "@/components/ui/Heading";
 import Button from "@/components/ui/Button";
+import HeroBackground from "@/components/ui/hero-background";
 
 export default function Hero() {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src="/videos/hero-bg.mp4" type="video/mp4" />
-      </video>
+      <HeroBackground />
 
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
 
