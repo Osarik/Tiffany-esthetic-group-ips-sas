@@ -167,7 +167,7 @@ export default function ServiciosPage() {
         <section className="relative bg-gradient-to-br from-[#0F4A44] via-[#1B6E66] to-[#2FA79C] pt-28 pb-16 md:pt-36 md:pb-28 overflow-hidden">
           <div className="absolute inset-0" aria-hidden="true">
             <Image
-              src="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=1920&h=1080&fit=crop"
+              src="/images/26.webp"
               alt=""
               fill
               className="object-cover"
