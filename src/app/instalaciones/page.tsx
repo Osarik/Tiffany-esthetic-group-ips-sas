@@ -60,12 +60,12 @@ const facilities = [
 ];
 
 const gallery = [
-  { src: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1200&q=85&fit=crop&crop=entropy&auto=format", label: "Sala de Cirugía" },
-  { src: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1200&q=85&fit=crop&crop=entropy&auto=format", label: "Consultorio" },
+  { src: "/images/25.webp", label: "Sala de Cirugía" },
+  { src: "/images/24.webp", collage: "/images/23.webp", label: "Consultorio" },
   { src: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&q=85&fit=crop&crop=entropy&auto=format", label: "Recuperación" },
-  { src: "https://images.unsplash.com/photo-1551076805-e1869033e561?w=1200&q=85&fit=crop&crop=entropy&auto=format", label: "Equipo Quirúrgico" },
-  { src: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1200&q=85&fit=crop&crop=entropy&auto=format", label: "Tecnología" },
-  { src: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=85&fit=crop&crop=entropy&auto=format", label: "Esterilización" },
+  { src: "/images/14.webp", label: "Equipo Quirúrgico" },
+  { src: "/images/22.webp", label: "Sala de espera" },
+  { src: "/images/11.webp", label: "Esterilización" },
 ];
 
 const faqs = [
@@ -342,7 +342,7 @@ export default function InstalacionesPage() {
               <AnimateInView variant="fadeLeft">
                 <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl">
                   <Image
-                    src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1400&q=85&fit=crop&crop=entropy&auto=format"
+                    src="/images/26.webp"
                     alt="Equipos de esterilización y bioseguridad"
                     fill
                     className="object-cover"

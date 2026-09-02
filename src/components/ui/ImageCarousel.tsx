@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 type Slide = {
   src: string;
   label: string;
+  collage?: string;
 };
 
 type ImageCarouselProps = {
@@ -59,18 +60,43 @@ export default function ImageCarousel({
     >
       <div className="aspect-[16/10] md:aspect-[16/9] relative">
         <AnimatePresence custom={dir} mode="wait">
-          <motion.img
-            key={slide.src}
-            src={slide.src}
-            alt={slide.label}
-            custom={dir}
-            variants={variants}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            transition={{ duration: 0.45, ease: [0.25, 0.1, 0.25, 1] }}
-            className="absolute inset-0 w-full h-full object-cover"
-          />
+          {slide.collage ? (
+            <motion.div
+              key={slide.src}
+              custom={dir}
+              variants={variants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.45, ease: [0.25, 0.1, 0.25, 1] }}
+              className="absolute inset-0"
+            >
+              <img
+                src={slide.src}
+                alt={slide.label}
+                className="absolute left-0 top-0 h-full w-1/2 object-cover"
+              />
+              <div className="absolute left-1/2 top-0 h-full w-px bg-white/40 pointer-events-none z-10" />
+              <img
+                src={slide.collage}
+                alt=""
+                className="absolute right-0 top-0 h-full w-1/2 object-cover"
+              />
+            </motion.div>
+          ) : (
+            <motion.img
+              key={slide.src}
+              src={slide.src}
+              alt={slide.label}
+              custom={dir}
+              variants={variants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.45, ease: [0.25, 0.1, 0.25, 1] }}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          )}
         </AnimatePresence>
 
         <div className="absolute inset-0 bg-gradient-to-t from-[#0A2A26]/60 via-transparent to-transparent pointer-events-none" />
