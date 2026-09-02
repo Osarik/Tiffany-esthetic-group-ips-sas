@@ -101,6 +101,12 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="preconnect" href="https://translate.google.com" />
+        <link
+          rel="preload"
+          as="video"
+          href="/videos/hero1.webm"
+          type="video/webm"
+        />
         <SchemaMarkup />
       </head>
       <body className="min-h-screen flex flex-col font-body antialiased">
