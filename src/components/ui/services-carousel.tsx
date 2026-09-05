@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { services } from "@/data/services";
@@ -46,7 +47,37 @@ const serviceIcons: Record<string, React.ReactNode> = {
 
 const getCarouselIcon = (id: string) => serviceIcons[id] ?? serviceIcons[id.replace(/^qr-/, "")] ?? <Sparkles size={18} />;
 
-const serviceImages: Record<string, string> = {};
+const serviceImages: Record<string, string> = {
+  lipoescultura: "/images/carrousel_source/lipoescultura.webp",
+  lipectomia: "/images/carrousel_source/lipectomia.webp",
+  "lipo-lipectomia": "/images/carrousel_source/lipo-lipectomia.webp",
+  "lipo-lipectomia-pexia-periareolar":
+    "/images/carrousel_source/lipo-lipectomia-pexia-periareolar.webp",
+  "lipo-lipectomia-pexia": "/images/carrousel_source/lipo-lipectomia-pexia.webp",
+  hernia: "/images/carrousel_source/hernia.webp",
+  "mamoplastia-aumento-rinoplastia":
+    "/images/carrousel_source/mamoplastia-aumento-rinoplastia.webp",
+  "mamoplastia-aumento": "/images/carrousel_source/mamoplastia-aumento.webp",
+  gigantomastia: "/images/carrousel_source/gigantomastia.webp",
+  ginecomastia: "/images/carrousel_source/ginecomastia.webp",
+  "pexia-reconstructiva": "/images/carrousel_source/pexia-reconstructiva.webp",
+  pexia: "/images/carrousel_source/Pexia.webp",
+  "pexia-periareolar": "/images/carrousel_source/pexia-periareolar.webp",
+  "lipo-pexia-periareolar": "/images/carrousel_source/lipo-pexia-periareolar.webp",
+  "lipo-pexia": "/images/carrousel_source/lipo-pexia.webp",
+  "lipo-protesis-aumento": "/images/carrousel_source/lipo-protesis-aumento.webp",
+  "lipectomia-pexia": "/images/carrousel_source/lipectomia-pexia.webp",
+  "ritidoplastia-completa": "/images/carrousel_source/ritidoplastia-completa.webp",
+  "ritidoplastia-tercio-medio":
+    "/images/carrousel_source/ritidoplastia-1-3-medio.webp",
+  "ritidoplastia-tercio-inferior":
+    "/images/carrousel_source/ritidoplastia-1-3-inferior.webp",
+  rinoplastia: "/images/carrousel_source/rinoplastia.webp",
+  "lipo-rinoplastia": "/images/carrousel_source/lipo-rinoplastia.webp",
+  "blefaroplastia-otoplastia-lipectomia":
+    "/images/carrousel_source/blefaroplastia-otoplastia-lipectomia.webp",
+  "alquiler-quirofanos": "/images/carrousel_source/Alquiler.webp",
+};
 
 const AUTO_PLAY_INTERVAL = 5000;
 const ITEM_HEIGHT = 70;
@@ -216,6 +247,7 @@ export function ServicesCarousel() {
                 const isPrev = status === "prev";
                 const isNext = status === "next";
                 const serviceHref = service.href ?? service.detailUrl;
+                const serviceImage = serviceImages[service.id];
 
                 return (
                   <motion.div
@@ -237,13 +269,24 @@ export function ServicesCarousel() {
                     }}
                     className="absolute inset-0 rounded-[2rem] md:rounded-[2.8rem] overflow-hidden border-4 md:border-8 border-clinic-bg bg-clinic-bg origin-center"
                   >
-                    <div className="w-full h-full bg-gradient-to-br from-primary-deep/80 via-primary/60 to-primary-dark/80 transition-all duration-[1400] flex items-center justify-center">
-                      <div className="w-20 h-20 rounded-full border-2 border-white/20 flex items-center justify-center">
-                        <svg className="w-8 h-8 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
+                    {serviceImage ? (
+                      <Image
+                        src={serviceImage}
+                        alt={service.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 90vw, 420px"
+                        priority={isActive}
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-primary-deep/80 via-primary/60 to-primary-dark/80 transition-all duration-[1400] flex items-center justify-center">
+                        <div className="w-20 h-20 rounded-full border-2 border-white/20 flex items-center justify-center">
+                          <svg className="w-8 h-8 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                        </div>
                       </div>
-                    </div>
+                    )}
 
                     <AnimatePresence>
                       {isActive && (
