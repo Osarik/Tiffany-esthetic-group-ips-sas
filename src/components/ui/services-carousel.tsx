@@ -330,7 +330,7 @@ export function ServicesCarousel() {
                       )}
                     >
                       <div className="w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_#2FA79C]" />
-                      <span className="text-white/70 text-[10px] font-normal uppercase tracking-[0.25em]">
+                      <span className="text-primary text-[10px] font-bold uppercase tracking-[0.25em]">
                         Procedimiento
                       </span>
                     </div>
