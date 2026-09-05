@@ -167,7 +167,7 @@ export default function ServiciosPage() {
         <section className="relative bg-gradient-to-br from-[#0F4A44] via-[#1B6E66] to-[#2FA79C] pt-28 pb-16 md:pt-36 md:pb-28 overflow-hidden">
           <div className="absolute inset-0" aria-hidden="true">
             <Image
-              src="/images/p2.webp"
+              src="/images/26.webp"
               alt=""
               fill
               className="object-cover"
@@ -267,7 +267,7 @@ export default function ServiciosPage() {
               <AnimateInView variant="fadeLeft" className="relative">
                 <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl">
                   <Image
-                    src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=700&h=800&fit=crop&crop=entropy&auto=format&q=80"
+                    src="/images/p2.webp"
                     alt="Instalaciones quirúrgicas de Tiffany Esthetic Group IPS"
                     fill
                     className="object-cover"
