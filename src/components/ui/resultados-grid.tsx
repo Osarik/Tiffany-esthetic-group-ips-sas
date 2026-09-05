@@ -32,6 +32,17 @@ const gridOrder: (GridPos | "svg")[] = [
   { shape: "circle", procIndex: 7 },
 ];
 
+const procedureImages: Record<string, string> = {
+  lipoescultura: "/images/carrousel_source/lipoescultura.webp",
+  lipectomia: "/images/carrousel_source/lipectomia.webp",
+  "lipo-lipectomia": "/images/carrousel_source/lipo-lipectomia.webp",
+  "lipo-protesis-aumento": "/images/carrousel_source/lipo-protesis-aumento.webp",
+  "mamoplastia-aumento": "/images/carrousel_source/mamoplastia-aumento.webp",
+  ginecomastia: "/images/carrousel_source/ginecomastia.webp",
+  "pexia-mamaria": "/images/carrousel_source/Pexia.webp",
+  "pexia-periareolar": "/images/carrousel_source/pexia-periareolar.webp",
+};
+
 function getGalleryImages(procIndex: number): string[] {
   const pool = items.map((i) => i.url);
   const start = (procIndex * 4) % pool.length;
@@ -95,7 +106,7 @@ export default function ResultadosGrid({ procedures }: Props) {
                 );
               }
               const proc = procedures[item.procIndex];
-              const img = items[item.procIndex % items.length];
+              const img = procedureImages[proc.slug] ?? items[item.procIndex % items.length].url;
               return (
                 <motion.button
                   key={`proc-${item.procIndex}`}
@@ -109,7 +120,7 @@ export default function ResultadosGrid({ procedures }: Props) {
                   aria-label={`Ver galería de ${proc.name}`}
                 >
                   <img
-                    src={img.url}
+                    src={img}
                     alt={proc.name}
                     className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                   />
