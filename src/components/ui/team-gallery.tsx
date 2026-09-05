@@ -25,33 +25,33 @@ interface Member {
 const members: Member[] = [
   {
     src: "/images/p1.webp",
-    name: "Dr. Andrés Ramírez",
-    title: "Cirujano plástico · Miembro SCCP",
+    name: "Keylin Dayana León",
+    title: "Auxiliar de farmacia",
   },
   {
     src: "/images/p2.webp",
-    name: "Dra. Laura Mendoza",
-    title: "Anestesióloga · Consejo de Anestesiología",
+    name: "Cristian David Beltrán",
+    title: "Enfermero recuperador",
   },
   {
     src: "/images/p3.webp",
-    name: "Ana Sofía Torres",
-    title: "Instrumentadora quirúrgica",
+    name: "Jaime Ricardo Chunga",
+    title: "Anestesiólogo",
   },
   {
     src: "/images/p4.webp",
-    name: "Camilo Restrepo",
-    title: "Circulante de cirugía",
+    name: "Leydi Viviana Rojas",
+    title: "Enfermera circulante",
   },
   {
     src: "/images/p5.webp",
-    name: "María Fernanda Duarte",
-    title: "Enfermera recuperadora",
+    name: "Diana María Daza",
+    title: "Recepcionista",
   },
   {
     src: "/images/p6.webp",
-    name: "Jorge Eduardo Salazar",
-    title: "Jefe de planta",
+    name: "Lina María Caicedo",
+    title: "Área de servicios generales",
   },
 ];
 
