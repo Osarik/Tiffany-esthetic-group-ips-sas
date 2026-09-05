@@ -51,6 +51,7 @@ const serviceImages: Record<string, string> = {
   lipoescultura: "/images/carrousel_source/lipoescultura.webp",
   lipectomia: "/images/carrousel_source/lipectomia.webp",
   "lipo-lipectomia": "/images/carrousel_source/lipo-lipectomia.webp",
+  "lipo-lipectomia-senos": "/images/carrousel_source/lipo-lipectomia-senos.webp",
   "lipo-lipectomia-pexia-periareolar":
     "/images/carrousel_source/lipo-lipectomia-pexia-periareolar.webp",
   "lipo-lipectomia-pexia": "/images/carrousel_source/lipo-lipectomia-pexia.webp",
