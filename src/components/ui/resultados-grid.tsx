@@ -1,9 +1,8 @@
 'use client';
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { items } from "@/components/ui/image-mousetrail-without-component-utils/constant";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
-import { getBeforeAfterPairs, type BeforeAfterPair } from "@/data/service-images";
+import { getBeforeAfterPairs, recentBeforeAfterPairs } from "@/data/service-images";
 
 type Procedure = {
   name: string;
@@ -43,15 +42,12 @@ const procedureImages: Record<string, string> = {
   "pexia-periareolar": "/images/carrousel_source/pexia-periareolar.webp",
 };
 
-function getGalleryImages(procIndex: number): string[] {
-  const pool = items.map((i) => i.url);
-  const start = (procIndex * 4) % pool.length;
-  const result: string[] = [];
-  for (let i = 0; i < 4; i++) {
-    result.push(pool[(start + i) % pool.length]);
-  }
-  return result;
-}
+const recentGridImages = [
+  "/images/aa1.webp",
+  "/images/bb1.jpeg",
+  "/images/cc1.jpeg",
+  "/images/dd1.webp",
+];
 
 export default function ResultadosGrid({ procedures }: Props) {
   const [expanded, setExpanded] = useState<number | null>(null);
@@ -60,10 +56,6 @@ export default function ResultadosGrid({ procedures }: Props) {
   const beforeAfterPairs = useMemo(
     () => (selected ? getBeforeAfterPairs(selected.slug) : []),
     [selected],
-  );
-  const galleryImages = useMemo(
-    () => (expanded !== null ? getGalleryImages(expanded) : []),
-    [expanded],
   );
 
   return (
@@ -106,7 +98,7 @@ export default function ResultadosGrid({ procedures }: Props) {
                 );
               }
               const proc = procedures[item.procIndex];
-              const img = procedureImages[proc.slug] ?? items[item.procIndex % items.length].url;
+              const img = procedureImages[proc.slug] ?? recentGridImages[i % recentGridImages.length];
               return (
                 <motion.button
                   key={`proc-${item.procIndex}`}
@@ -164,10 +156,7 @@ export default function ResultadosGrid({ procedures }: Props) {
             </div>
 
             <div className="grid grid-cols-2 gap-3 md:gap-4 justify-items-center">
-              {(beforeAfterPairs.length > 0 ? beforeAfterPairs : galleryImages.map((url) => ({
-                before: url,
-                after: url.includes("?") ? `${url}&sat=-100` : `${url}?sat=-100`,
-              }))).map((pair, i) => (
+              {(beforeAfterPairs.length > 0 ? beforeAfterPairs : recentBeforeAfterPairs).map((pair, i) => (
                 <BeforeAfterSlider
                   key={i}
                   beforeSrc={pair.before}

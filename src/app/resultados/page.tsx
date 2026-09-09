@@ -109,7 +109,7 @@ export default function ResultadosPage() {
         {/* ─── HERO ─────────────────────────────────────────────── */}
         <section className="relative h-[70vh] md:h-[80vh] min-h-[500px] md:min-h-[600px] overflow-hidden">
           <Image
-            src="/images/Combine_with_logo_202607111802.jpeg"
+            src="/images/26.webp"
             alt=""
             fill
             className="object-cover pointer-events-none z-0"
@@ -285,7 +285,7 @@ export default function ResultadosPage() {
               </div>
               <div className="relative">
                 <Image
-                  src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&q=80&auto=format&fit=crop"
+                  src="/images/25.webp"
                   alt="Instalaciones quirúrgicas de Tiffany Esthetic Group IPS"
                   width={600}
                   height={400}
@@ -293,12 +293,11 @@ export default function ResultadosPage() {
                   className="rounded-2xl shadow-lg"
                   style={{ width: '100%', height: 'auto' }}
                   loading="lazy"
-                  unoptimized
                 />
                 <div className="absolute -bottom-4 -left-4 bg-primary-deep text-white p-5 rounded-2xl shadow-xl max-w-[220px]">
-                  <p className="font-heading font-bold text-lg">8+</p>
+                  <p className="font-heading font-bold text-lg">24</p>
                   <p className="text-xs text-white/70 font-body">
-                    Procedimientos quirúrgicos realizados por nuestro equipo
+                    Procedimientos quirúrgicos disponibles en nuestro catálogo
                   </p>
                 </div>
               </div>

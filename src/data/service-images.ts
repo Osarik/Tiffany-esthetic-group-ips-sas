@@ -15,6 +15,13 @@ export interface BeforeAfterPair {
   after: string;
 }
 
+export const recentBeforeAfterPairs: BeforeAfterPair[] = [
+  { before: "/images/aa1.webp", after: "/images/aa2.webp" },
+  { before: "/images/bb1.jpeg", after: "/images/bb2.jpeg" },
+  { before: "/images/cc1.jpeg", after: "/images/cc2.jpeg" },
+  { before: "/images/dd1.webp", after: "/images/dd2.jpeg" },
+];
+
 export function getBeforeAfterPairs(slug: string): BeforeAfterPair[] {
   const config = serviceImageMap[slug];
   if (!config) return [];
