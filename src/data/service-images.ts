@@ -32,17 +32,8 @@ export function getBeforeAfterPairs(slug: string): BeforeAfterPair[] {
 }
 
 export function getAllAfterImages(): { url: string; src: string }[] {
-  const images: { url: string; src: string }[] = [];
-  for (const config of Object.values(serviceImageMap)) {
-    for (const n of config.numbers) {
-      images.push({
-        url: `/images/${config.folder}/${config.abbr}${n}r.webp`,
-        src: `${config.abbr}${n}r`,
-      });
-    }
-  }
-  for (const pair of recentBeforeAfterPairs) {
-    images.push({ url: pair.after, src: pair.after.replace(/^.*\//, "").replace(/\.[^.]+$/, "") });
-  }
-  return images;
+  return recentBeforeAfterPairs.map((pair) => ({
+    url: pair.after,
+    src: pair.after.replace(/^.*\//, "").replace(/\.[^.]+$/, ""),
+  }));
 }
