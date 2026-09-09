@@ -41,5 +41,8 @@ export function getAllAfterImages(): { url: string; src: string }[] {
       });
     }
   }
+  for (const pair of recentBeforeAfterPairs) {
+    images.push({ url: pair.after, src: pair.after.replace(/^.*\//, "").replace(/\.[^.]+$/, "") });
+  }
   return images;
 }
