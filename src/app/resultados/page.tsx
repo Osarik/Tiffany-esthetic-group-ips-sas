@@ -3,6 +3,7 @@ import Image from "next/image";
 import Container from "@/components/ui/Container";
 import ImageMouseTrail3 from "@/components/ui/image-mousetrail-without-component";
 import ResultadosGrid from "@/components/ui/resultados-grid";
+import Logo from "@/components/Logo";
 import { HeroTextContainer, HeroTextChild } from "@/components/ui/hero-text-animated";
 
 const whatsappUrl =
@@ -107,37 +108,41 @@ export default function ResultadosPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(resultadosSchema) }} />
       <article>
         {/* ─── HERO ─────────────────────────────────────────────── */}
-        <section className="relative h-[70vh] md:h-[80vh] min-h-[500px] md:min-h-[600px] overflow-hidden">
-          <Image
-            src="/images/26.webp"
-            alt=""
-            fill
-            className="object-cover pointer-events-none z-0"
-            sizes="100vw"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none z-[1]" />
+        <section className="relative h-[70vh] md:h-[80vh] min-h-[500px] md:min-h-[600px] overflow-hidden bg-gradient-to-br from-[#0F4A44] via-[#17675E] to-[#2FA79C]">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none z-[1]" aria-hidden="true">
+            <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-white/[0.06] blur-3xl" />
+            <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-black/20 blur-3xl" />
+            <div className="absolute inset-0 opacity-[0.05]"
+              style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+              }} />
+          </div>
           <ImageMouseTrail3 background />
           <div className="absolute inset-0 flex items-center pointer-events-none z-40">
             <Container>
               <div className="max-w-3xl">
                 <HeroTextContainer>
                   <HeroTextChild>
+                    <div className="mb-6 inline-flex items-center gap-4 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-sm px-5 py-3">
+                      <Logo size={36} className="text-white" />
+                    </div>
+                  </HeroTextChild>
+                  <HeroTextChild>
                     <div className="flex items-center gap-2 mb-5">
                       <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                      <span className="text-white/70 font-body font-semibold text-xs tracking-[0.2em] uppercase mix-blend-difference">
+                      <span className="text-white/70 font-body font-semibold text-xs tracking-[0.2em] uppercase">
                         Resultados reales · Pacientes reales
                       </span>
                     </div>
                   </HeroTextChild>
                   <HeroTextChild>
-                    <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mix-blend-difference">
+                    <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1]">
                       Resultados Reales de{" "}
-                      <span className="text-white">Cirugía Plástica en Cali</span>
+                      <span className="text-accent-light">Cirugía Plástica en Cali</span>
                     </h1>
                   </HeroTextChild>
                   <HeroTextChild>
-                    <p className="mt-6 text-base md:text-lg text-white font-body leading-relaxed max-w-xl mix-blend-difference">
+                    <p className="mt-6 text-base md:text-lg text-white/85 font-body leading-relaxed max-w-xl">
                     Cada procedimiento en Tiffany Esthetic Group es realizado por
                     cirujanos plásticos miembros de la SCCP en instalaciones
                     habilitadas por la Secretaría de Salud. Explora resultados
