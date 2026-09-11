@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 import { services } from "@/data/services";
@@ -79,6 +80,8 @@ export async function generateStaticParams() {
   return services.filter((s) => s.href).map((s) => ({ slug: slugFromHref(s.href!) }));
 }
 
+export const dynamicParams = false;
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const service = services.find((s) => slugFromHref(s.href ?? "") === slug);
@@ -102,10 +105,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ServiceLandingPage({ params }: Props) {
   const { slug } = await params;
   const service = services.find((s) => slugFromHref(s.href ?? "") === slug);
-  if (!service) return null;
+  if (!service) notFound();
 
   const landing = serviceLandings[service.id];
-  if (!landing) return null;
+  if (!landing) notFound();
 
   const cat = categoryConfig[service.category];
   const catDesign = categoryDesign[service.category] ?? categoryDesign["Cirugía Corporal"];
