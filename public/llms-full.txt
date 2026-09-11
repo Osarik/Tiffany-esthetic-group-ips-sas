@@ -1,124 +1,252 @@
-# Tiffany Esthetic Group Ips SAS
+# Tiffany Esthetic Group IPS SAS — Full Profile
 
-> Clínica boutique de cirugía plástica y medicina estética en Cali, Colombia. Habilitada por la Secretaría de Salud. Tres salas de cirugía, farmacia habilitada, enfermería permanente y coordinación quirúrgica 24 horas.
-
-## Descripción
-
-Tiffany Esthetic Group Ips SAS es una institución prestadora de servicios de salud (IPS) especializada en cirugía plástica, estética y reconstructiva. Ubicada en el sur de Cali (Comuna 17), la clínica cuenta con tres salas de cirugía completamente equipadas, área de recuperación con monitorización permanente, farmacia habilitada y un equipo de cirujanos plásticos certificados por la Sociedad Colombiana de Cirugía Plástica. Todos los procedimientos se realizan bajo estrictos protocolos de seguridad y bioseguridad.
-
-## Mapa del sitio
-
-El sitio web cuenta con las siguientes secciones y sub-páginas:
-
-- `/` — Landing page principal con 10 secciones: Hero con video, Beneficios, Servicios (carrusel), Antes/Después (slider con clip-path), Instalaciones (zoom parallax con 7 imágenes), Estadísticas, Testimonios (scroll infinito 3 filas), Equipo, FAQs (3 capas SVG wave), CTA Final
-- `/resultados` — Galería interactiva de resultados reales con mouse trail, 20 imágenes médicas, 8 procedimientos linkeables, estadísticas, FAQ y CTA
-- `/equipo` — Equipo médico con scroll-expansion hero y ForceTopOnMount
-- `/preguntas-frecuentes` — FAQ con 8 categorías estilo Cleveland Clinic iconos 48×48, hero con lluvia de signos "?"
-- `/politica-de-privacidad` — Política de tratamiento de datos personales (Ley 1581/2012)
-- `/terminos-y-condiciones` — Términos y condiciones, descargo médico, jurisdicción Cali
-- `/derechos-y-deberes` — Derechos y deberes de pacientes (Res. 434/2012)
-- `/politica-de-cookies` — Tipos de cookies, base legal, gestión
-- 12 sub-páginas de servicios (server components estáticos): lipoescultura, liposucción, abdominoplastia, aumento mamario, pexia mamaria, lipectomía, rinoplastia, blefaroplastia, lifting facial, procedimientos combinados
-
-## Servicios detallados
-
-### Cirugía Facial
-
-- **Rinoplastia**: Cirugía de remodelación nasal con enfoque estético y funcional. Resultados naturales que armonizan el rostro.
-- **Blefaroplastia**: Rejuvenecimiento de la mirada mediante eliminación de exceso de piel y bolsas palpebrales, tanto superior como inferior.
-- **Lifting Facial**: Estiramiento facial profundo que reposiciona los tejidos del tercio medio e inferior del rostro para un resultado natural y duradero.
-
-### Cirugía Corporal
-
-- **Lipoescultura con Lipoinyección Glútea (LIPOGYM)**: Técnica avanzada que combina liposucción de alta definición con transferencia de grasa a los glúteos. Esculpe el contorno corporal mientras aumenta y proyecta los glúteos de forma natural.
-- **Liposucción**: Extracción de depósitos localizados de grasa. Técnica VASER HD que permite definir el contorno muscular.
-- **Abdominoplastia**: Eliminación de piel sobrante y tensado de la pared abdominal. Combinable con liposucción del flanco.
-- **Mamoplastia de Aumento**: Aumento mamario con implantes, ajustado a la anatomía y objetivos de cada paciente.
-- **Mamoplastia de Elevación (Pexia Mamaria)**: Corrección de la ptosis mamaria, reposicionando la glándula y el complejo areola-pezón.
-- **Lipectomía**: Eliminación quirúrgica de exceso de piel y grasa, generalmente en la región abdominal inferior.
-
-### Procedimientos Combinados
-
-- **Liposucción + Pexia Mamaria**: Corrección simultánea del contorno corporal y elevación mamaria en un solo tiempo quirúrgico.
-- **Liposucción + Aumento Mamario**: Liposucción corporal combinada con aumento mamario para un rejuvenecimiento integral.
-
-## Galería de resultados
-
-La página `/resultados` presenta una galería interactiva de resultados quirúrgicos con las siguientes características:
-
-- **Mouse trail interactivo**: 20 imágenes médicas que siguen el cursor del usuario en una cuadrícula dinámica, ofreciendo una experiencia de navegación visual única
-- **Grid de procedimientos**: 8 tarjetas linkeables para lipoescultura lipogym, mamoplastia, abdominoplastia, liposucción + pexia, rinoplastia, blefaroplastia, liposucción + aumento, lifting facial
-- **Estadísticas institucionales**: +200 cirugías realizadas, 98% tasa de éxito, +15 procedimientos al mes, +95% pacientes satisfechos
-- **FAQ de resultados**: Preguntas frecuentes sobre realismo de imágenes, proceso quirúrgico, recuperación y resultados esperados
-- **CTA**: Enlace a WhatsApp y sección de galería
-
-## Instalaciones
-
-- 3 salas de cirugía habilitadas
-- Área de recuperación con enfermería permanente
-- Farmacia habilitada (cumple normativa INVIMA)
-- Coordinación quirúrgica disponible 24 horas
-- Equipos de última generación certificados
-
-## Datos de la clínica
-
-- **Dirección**: 13a1-25, Cra 85c, Comuna 17, Cali, Valle del Cauca, Colombia
-- **Teléfono**: +57 320 2703522
-- **WhatsApp**: +57 320 2703522
-- **Email**: info@tiffanyesthetic.com
-- **Instagram**: https://www.instagram.com/tiffanyeg_ips/
-- **Horario**: Lunes a viernes 8:00 a. m. – 5:00 p. m. | Sábados 8:00 a. m. – 12:00 p. m. | Domingos cerrado
-
-## Preguntas frecuentes
-
-### ¿Qué procedimientos realizan?
-Lipoescultura con lipoinyección glútea, liposucción VASER HD, lipectomía, pexia mamaria, aumento mamario, rinoplastia, blefaroplastia, lifting facial y abdominoplastia.
-
-### ¿La consulta inicial tiene costo?
-No. La primera consulta es gratuita. Incluye evaluación médica, explicación detallada del procedimiento y resolución de dudas.
-
-### ¿La clínica está habilitada por la Secretaría de Salud?
-Sí. Tiffany Esthetic Group IPS SAS es una institución habilitada que cumple con todos los requisitos legales y sanitarios exigidos por la normativa colombiana.
-
-### ¿Cuentan con farmacia habilitada?
-Sí. La clínica cuenta con farmacia habilitada que cumple con los estándares INVIMA para la dispensación de medicamentos controlados.
-
-### ¿Cuánto tiempo toma la recuperación?
-Depende del procedimiento: liposucción 1-2 semanas de reposo relativo, abdominoplastia 2-4 semanas, rinoplastia 1-2 semanas. El equipo proporciona un plan detallado post-procedimiento.
-
-### ¿Los resultados son permanentes?
-Los procedimientos quirúrgicos (rinoplastia, abdominoplastia, mamoplastia) tienen resultados permanentes. El envejecimiento natural continúa pero manteniendo la mejoría.
-
-### ¿Ofrecen planes de financiamiento?
-Sí. Múltiples opciones de pago y financiamiento. Consulte con el equipo las opciones disponibles sin compromiso.
-
-### ¿Alquilan salas de cirugía a médicos?
-Sí. Contamos con tres salas de cirugía disponibles para cirujanos plásticos, con apoyo quirúrgico completo (anestesia, circulante, instrumentación).
-
-### ¿Dónde están ubicados?
-Cra 85c # 13a1-25, Comuna 17, Cali, Valle del Cauca, Colombia.
-
-### ¿Cuál es su horario de atención?
-Lunes a viernes de 8:00 a. m. a 5:00 p. m. Sábados de 8:00 a. m. a 12:00 p. m. Domingos cerrado.
-
-### ¿Cómo agendo una cita?
-Puede escribirnos al WhatsApp +57 320 2703522, llamarnos al mismo número, o enviar un correo a info@tiffanyesthetic.com.
-
-## Testimonios
-
-- **María Fernanda López** (Liposucción HD): "Desde la primera consulta sentí total confianza. El resultado superó mis expectativas. Recuperé mi silueta y mi autoestima." ⭐⭐⭐⭐⭐
-- **Carolina Méndez** (Rinoplastia): "Un antes y después increíble. El equipo fue muy atento y el proceso fue mucho más cómodo de lo que imaginaba." ⭐⭐⭐⭐⭐
-- **Andrea Restrepo** (Ácido Hialurónico): "Resultados naturales y muy bien logrados. Exactamente lo que quería: verme mejor sin perder mi esencia." ⭐⭐⭐⭐⭐
-
-## Información legal
-
-- Razón social: Tiffany Esthetic Group Ips SAS
-- Tipo: Institución Prestadora de Servicios de Salud (IPS)
-- Habilitación: Secretaría de Salud
-- País: Colombia
-- Ciudad: Cali, Valle del Cauca
-- Servicio farmacéutico habilitado
+> Boutique plastic, aesthetic and reconstructive surgery clinic in Cali, Colombia. A licensed Healthcare Service Provider (IPS) authorized by the local Department of Health (Secretaría de Salud) and supervised by the National Health Superintendence (SuperSalud). Provides 3 operating rooms, a licensed pharmacy, a monitored recovery area and 24-hour surgical coordination.
 
 ---
 
-*Documento generado para optimización de motores de respuesta AI (GEO/AEO). Última actualización: Julio 2026.*
+# English — Descriptive Profile
+
+## 1. Company overview
+
+Tiffany Esthetic Group IPS SAS (NIT 901634870) is a health service institution (IPS) based in southern Cali, Colombia, specialized in plastic, aesthetic and reconstructive surgery. The clinic holds full regulatory authorization to operate (Resolución 3100 de 2019), is supervised by the National Health Superintendence and processes personal data in compliance with Colombian Law 1581 of 2012.
+
+The clinic operates three fully equipped operating rooms, a recovery area with permanent nursing staff, a licensed pharmacy and 24-hour surgical coordination. Every procedure is performed by plastic surgeons who are members of the Colombian Society of Plastic Surgery (SCCP), supported by certified anesthesiologists, surgical instrument technicians, circulating nurses and recovery staff.
+
+**Key identification**
+- Legal name: Tiffany Esthetic Group Ips SAS
+- Tax ID (NIT): 901634870
+- Legal representative: Sandra Milena Gomez Vasquez
+- Type: IPS (licensed healthcare provider)
+- Country: Colombia — City: Cali, Valle del Cauca
+- Website: https://www.tiffanyesthetic.com
+
+## 2. Contact information
+
+- **Address:** Carrera 85C # 13A-1-25, Comuna 17, Cali, Valle del Cauca, Colombia
+- **Phone / WhatsApp:** +57 320 2703522
+- **Email:** tiffanyestheticgroup@gmail.com · info@tiffanyesthetic.com
+- **Instagram:** https://www.instagram.com/tiffanyeg_ips/
+- **Hours:** Mon–Fri 8:00 a.m. – 6:00 p.m. | Sat 8:00 a.m. – 1:00 p.m. | Closed Sundays
+
+## 3. Facilities and safety
+
+- 3 accredited operating rooms, available for rental to plastic surgeons with full surgical support (anesthesiologist, circulating nurse, instrument technician)
+- Recovery area staffed by recovery nurses and a floor supervisor
+- Licensed pharmacy per INVIMA standards
+- SCCP-member plastic surgeons and certified anesthesiologists
+- Recovery guidance, scheduled post-operative follow-up visits and personalized recommendations
+- Compliance: Resolución 3100 de 2019 (licensing), Ley 1581 de 2012 (personal data), Res. 434 de 2012 (patient rights and duties)
+
+## 4. Procedures catalog
+
+### Body contouring surgery
+
+- **Lipoescultura (VASER HD liposuction with gluteal fat transfer)** `/lipoescultura` — High-definition body contouring combined with autologous fat transfer to shape the silhouette and enhance gluteal projection. Popular.
+- **Lipectomy (abdominoplasty of excess skin)** `/lipectomia` — Surgical removal of localized excess skin and fat to redefine the abdominal contour.
+- **Lipo + Lipectomy** `/lipo-lipectomia` — Combined liposuction and lipectomy to remove both fat and excess skin in a single operation. Popular.
+- **Lipo + Lipectomy + Breast Augmentation** `/lipo-lipectomia-senos` — Comprehensive surgical plan combining body contouring, lipectomy and breast augmentation.
+- **Lipo + Lipectomy + Periareolar Mastopexy** `/lipo-lipectomia-pexia-periareolar` — Liposuction, lipectomy and periareolar breast lift to harmonize body and bust.
+- **Lipo + Lipectomy + Mastopexy** `/lipo-lipectomia-pexia` — Full-integration liposuction plus lipectomy plus breast lift.
+- **Hernia repair** `/hernia` — Surgical repair of abdominal or umbilical hernia, combinable with body-contouring aesthetic procedures.
+
+### Breast surgery
+
+- **Breast Augmentation + Rhinoplasty** `/mamoplastia-aumento-rinoplastia` — Combined breast augmentation and rhinoplasty to harmonize face and bust in one surgical time.
+- **Breast Augmentation** `/mamoplastia-aumento` — Breast volume enhancement with implants to improve projection, shape and symmetry. Popular.
+- **Gigantomastia reduction** `/gigantomastia` — Breast reduction surgery for excessive breast tissue growth and symptom relief.
+- **Gynecomastia correction** `/ginecomastia` — Correction of enlarged male breast tissue, improving chest contour and self-esteem. Popular.
+- **Implant-free Reconstructive Mastopexy** `/pexia-reconstructiva` — Breast lift using reconstructive techniques that reposition tissue without implants.
+- **Mastopexy (breast lift)** `/pexia-mamaria` — Surgical breast lift to correct sagging and restore younger positioning. Popular.
+- **Periareolar Mastopexy** `/pexia-periareolar` — Breast lift with an areola-circumference incision for mild-to-moderate ptosis.
+- **Lipo + Periareolar Mastopexy** `/lipo-pexia-periareolar` — Body liposuction combined with periareolar breast lift.
+- **Lipo + Mastopexy** `/lipo-pexia` — Liposuction plus breast lift to define the body contour and raise the bust.
+- **Lipo + Breast Implants** `/lipo-protesis-aumento` — Body liposuction plus breast augmentation with implants.
+- **Lipectomy + Mastopexy** `/lipectomia-pexia` — Abdominal lipectomy combined with breast lift.
+
+### Facial surgery
+
+- **Full Rhytidectomy (facelift)** `/ritidoplastia-completa` — Comprehensive face and neck lift restoring youthful contours.
+- **Mid-face Rhytidectomy** `/ritidoplastia-tercio-medio` — Lift of the mid-face: cheekbones, nasolabial folds and cheeks.
+- **Lower-face Rhytidectomy** `/ritidoplastia-tercio-inferior` — Lift of the lower third: jaw, jowls and neck.
+- **Rhinoplasty** `/rinoplastia` — Nasal surgery focused on facial harmony and respiratory function when indicated. Popular.
+- **Lipo + Rhinoplasty** `/lipo-rinoplastia` — Body liposuction plus nasal surgery in a single procedure.
+- **Blepharoplasty + Otoplasty + Lipectomy** `/blefaroplastia-otoplastia-lipectomia` — Combined eyelid rejuvenation, ear correction and abdominal contouring.
+
+### Operating room rental
+
+- **Operating Room Rental** `/alquiler-quirofanos` — Fully equipped operating rooms with qualified staff, ideal for outpatient aesthetic surgery.
+
+## 5. Website map
+
+Main pages and their content:
+
+- `/` — Landing page: video hero, benefits, services carousel (25 procedures with images), before/after slider, facilities gallery, statistics, testimonials, team, FAQ and final CTA.
+- `/servicios` — Interactive services catalog with per-procedure detail pages.
+- `/resultados` — Interactive real-results gallery with before/after sliders per procedure.
+- `/instalaciones` — Facilities: surgery room, consultation offices, sterilization, waiting room and surgical equipment.
+- `/equipo` — Medical team gallery.
+- `/preguntas-frecuentes` — FAQ grouped by category (procedures, licensing, surgical process, medical assessment, facilities, post-op care, team, pricing).
+- `/politica-de-privacidad` — Personal data policy (Ley 1581/2012, Habeas Data rights).
+- `/terminos-y-condiciones` — Terms and conditions, medical disclaimer, jurisdiction of Cali.
+- `/derechos-y-deberes` — Patient rights and duties (Res. 434/2012).
+- `/politica-de-cookies` — Cookie types, legal basis and management.
+- Service routes: `/lipoescultura`, `/lipectomia`, `/lipo-lipectomia`, `/mamoplastia-aumento`, `/pexia-mamaria`, `/ginecomastia`, `/gigantomastia`, `/rinoplastia`, `/hernia`, `/ritidoplastia-completa`, `/lipo-protesis-aumento`, `/alquiler-quirofanos`, and more (24 procedure pages in total).
+
+## 6. Frequently asked questions
+
+**What procedures do you perform?**
+Lipoescultura with gluteal fat grafting, liposuction, lipectomy, mastopexy, periareolar mastopexy, breast augmentation, rhinoplasty, blepharoplasty, facelift, gynecomastia correction and combined plans — always after a medical assessment.
+
+**Is the clinic licensed?**
+Yes. Tiffany Esthetic Group IPS SAS is authorized by the Department of Health and has a licensed pharmacy service.
+
+**Do you rent operating rooms to physicians?**
+Yes. Three operating rooms are available for plastic surgeons, supported by anesthesiologists, circulating nurses and surgical instrument technicians.
+
+**Is there a recovery area?**
+Yes, with recovery nurses and a floor supervisor coordinating surgical service.
+
+**Is the first consultation free?**
+Yes. The initial medical assessment has no cost and includes evaluation, procedure explanation and questions.
+
+**Who accompanies procedures?**
+Plastic surgeon, anesthesiologist, surgical instrument technician, circulating nurse, recovery nursing and floor supervisor.
+
+**How are results handled on the website?**
+Images correspond to real patients with express authorization (informed consent, Ley 1581 of 2012). Results are individual and not guaranteed to be identical for other patients.
+
+## 7. Testimonials
+
+- **María Fernanda López** (HD Liposuction): "From the first consultation I felt total trust. The result exceeded my expectations. I recovered my silhouette and my self-esteem." ★★★★★
+- **Carolina Méndez** (Rhinoplasty): "An incredible before and after. The team was very attentive and the process was much more comfortable than I imagined." ★★★★★
+- **Andrea Restrepo** (Hyaluronic Acid): "Natural and very well-done results. Exactly what I wanted: to look better without losing my essence." ★★★★★
+
+---
+
+# Español — Perfil descriptivo
+
+## 1. Resumen de la empresa
+
+Tiffany Esthetic Group Ips SAS (NIT 901634870) es una Institución Prestadora de Servicios de Salud (IPS) ubicada en el sur de Cali (Comuna 17), especializada en cirugía plástica, estética y reconstructiva. La clínica cuenta con habilitación sanitaria vigente (Resolución 3100 de 2019), está vigilada por la Superintendencia Nacional de Salud y trata datos personales conforme a la Ley 1581 de 2012.
+
+Dispone de tres salas de cirugía totalmente equipadas, área de recuperación con enfermería permanente, farmacia habilitada y coordinación quirúrgica 24 horas. Todos los procedimientos son realizados por cirujanos plásticos miembros de la Sociedad Colombiana de Cirugía Plástica (SCCP), acompañados de anestesiólogos certificados, instrumentación, circulantes de cirugía y enfermería recuperadora.
+
+**Identificación**
+- Razón social: Tiffany Esthetic Group Ips SAS
+- NIT: 901634870
+- Representante legal: Sandra Milena Gomez Vasquez
+- Tipo: IPS habilitada
+- País: Colombia — Ciudad: Cali, Valle del Cauca
+- Sitio web: https://www.tiffanyesthetic.com
+
+## 2. Información de contacto
+
+- **Dirección:** Carrera 85C # 13A-1-25, Comuna 17, Cali, Valle del Cauca, Colombia
+- **Teléfono / WhatsApp:** +57 320 2703522
+- **Correo:** tiffanyestheticgroup@gmail.com · info@tiffanyesthetic.com
+- **Instagram:** https://www.instagram.com/tiffanyeg_ips/
+- **Horario:** Lunes a viernes 8:00 a. m. – 6:00 p. m. | Sábados 8:00 a. m. – 1:00 p. m. | Domingos cerrado
+
+## 3. Instalaciones y seguridad
+
+- 3 quirófanos habilitados, disponibles para alquiler a cirujanos plásticos con apoyo quirúrgico completo (anestesiólogo, circulante, instrumentador)
+- Área de recuperación atendida por enfermeras recuperadoras y jefe de planta
+- Farmacia habilitada según normativa
+- Cirujanos plásticos SCCP y anestesiólogos certificados
+- Plan de recuperación, controles postoperatorios programados y recomendaciones personalizadas
+- Cumplimiento: Resolución 3100 de 2019 (habilitación), Ley 1581 de 2012 (protección de datos), Res. 434 de 2012 (derechos y deberes del paciente)
+
+## 4. Catálogo de procedimientos
+
+### Cirugía corporal
+
+- **Lipoescultura (liposucción VASER HD con lipoinyección glútea)** `/lipoescultura` — Contorno corporal de alta definición con transferencia de grasa autóloga para modelar la silueta y proyectar los glúteos. Popular.
+- **Lipectomía** `/lipectomia` — Resección quirúrgica de exceso de piel y grasa localizada para redefinir el contorno abdominal.
+- **Lipo + Lipectomía** `/lipo-lipectomia` — Liposucción y lipectomía combinadas para retirar grasa y exceso de piel en una sola cirugía. Popular.
+- **Lipo + Lipectomía + Senos (Aumento)** `/lipo-lipectomia-senos` — Plan quirúrgico integral: contorno corporal, lipectomía y aumento mamario.
+- **Lipo + Lipectomía + Pexia Periareolar** `/lipo-lipectomia-pexia-periareolar` — Liposucción, lipectomía y elevación mamaria periareolar.
+- **Lipo + Lipectomía + Pexia** `/lipo-lipectomia-pexia` — Procedimiento integral de liposucción, lipectomía y pexia mamaria.
+- **Hernia** `/hernia` — Reparación quirúrgica de hernia abdominal o umbilical, combinable con procedimientos estéticos.
+
+### Cirugía mamaria
+
+- **Mamoplastia de aumento + Rinoplastia** `/mamoplastia-aumento-rinoplastia` — Aumento mamario y rinoplastia en un solo tiempo quirúrgico.
+- **Mamoplastia de aumento** `/mamoplastia-aumento` — Aumento del volumen mamario con implantes. Popular.
+- **Gigantomastia** `/gigantomastia` — Reducción mamaria para crecimiento excesivo del tejido y síntomas asociados.
+- **Ginecomastia** `/ginecomastia` — Corrección del aumento de tejido mamario en hombres. Popular.
+- **Pexia reconstructiva sin implantes** `/pexia-reconstructiva` — Elevación mamaria con técnicas reconstructivas sin prótesis.
+- **Pexia** `/pexia-mamaria` — Elevación mamaria para corregir la caída del seno. Popular.
+- **Pexia periareolar** `/pexia-periareolar` — Elevación con incisión alrededor de la areola (ptosis leve a moderada).
+- **Lipo + Pexia periareolar** `/lipo-pexia-periareolar` — Liposucción corporal y elevación periareolar.
+- **Lipo + Pexia** `/lipo-pexia` — Liposucción y pexia mamaria para definir contorno y elevar el busto.
+- **Lipo + Prótesis de aumento** `/lipo-protesis-aumento` — Liposucción corporal y aumento mamario con prótesis.
+- **Lipectomía + Pexia** `/lipectomia-pexia` — Lipectomía abdominal con elevación mamaria.
+
+### Cirugía facial
+
+- **Ritidoplastia completa** `/ritidoplastia-completa` — Lifting integral de rostro y cuello para restaurar contornos juveniles.
+- **Ritidoplastia 1/3 medio** `/ritidoplastia-tercio-medio` — Lifting de pómulos, surcos nasogenianos y mejillas.
+- **Ritidoplastia 1/3 inferior** `/ritidoplastia-tercio-inferior` — Lifting de mandíbula, papada y cuello.
+- **Rinoplastia** `/rinoplastia` — Cirugía nasal con enfoque estético y funcional. Popular.
+- **Lipo + Rinoplastia** `/lipo-rinoplastia` — Liposucción corporal y rinoplastia en un solo procedimiento.
+- **Blefaroplastia + Otoplastia + Lipectomía** `/blefaroplastia-otoplastia-lipectomia` — Rejuvenecimiento de la mirada, corrección de orejas y contorno abdominal.
+
+### Alquiler de quirófanos
+
+- **Alquiler de quirófano** `/alquiler-quirofanos` — Quirófanos completamente equipados con personal calificado, ideales para cirugía estética ambulatoria.
+
+## 5. Mapa del sitio web
+
+- `/` — Landing: hero con video, beneficios, carrusel de servicios (25 procedimientos con imagen), antes/después, galería de instalaciones, estadísticas, testimonios, equipo, FAQ y CTA final.
+- `/servicios` — Catálogo interactivo de procedimientos.
+- `/resultados` — Galería interactiva de resultados reales con antes/después por procedimiento.
+- `/instalaciones` — Sala de cirugía, consultorios, esterilización, sala de espera y equipo quirúrgico.
+- `/equipo` — Galería del equipo médico.
+- `/preguntas-frecuentes` — FAQ por categorías (procedimientos, habilitación, proceso quirúrgico, valoración, instalaciones, postoperatorio, equipo, precios).
+- `/politica-de-privacidad` — Tratamiento de datos personales (Ley 1581/2012, derechos Habeas Data).
+- `/terminos-y-condiciones` — Términos, descargo médico y jurisdicción de Cali.
+- `/derechos-y-deberes` — Derechos y deberes del paciente (Res. 434/2012).
+- `/politica-de-cookies` — Tipos de cookies, base legal y gestión.
+- Rutas de servicios: `/lipoescultura`, `/lipectomia`, `/lipo-lipectomia`, `/mamoplastia-aumento`, `/pexia-mamaria`, `/ginecomastia`, `/gigantomastia`, `/rinoplastia`, `/hernia`, `/ritidoplastia-completa`, `/lipo-protesis-aumento`, `/alquiler-quirofanos` y más (24 páginas de procedimientos en total).
+
+## 6. Preguntas frecuentes
+
+**¿Qué procedimientos realizan?**
+Lipoescultura con lipoinyección glútea, liposucción, lipectomía, pexia mamaria, pexia periareolar, aumento mamario, rinoplastia, blefaroplastia, lifting facial, corrección de ginecomastia y planes combinados, siempre previa valoración médica.
+
+**¿La clínica está habilitada?**
+Sí. Tiffany Esthetic Group IPS SAS está habilitada por la Secretaría de Salud y cuenta con servicio de farmacia habilitado.
+
+**¿Alquilan salas de cirugía a médicos?**
+Sí. Tres salas de cirugía disponibles para cirujanos plásticos, con apoyo de anestesiólogos, circulante de cirugía e instrumentador.
+
+**¿Cuentan con área de recuperación?**
+Sí, atendida por enfermeras recuperadoras y un jefe de planta encargado de la coordinación quirúrgica.
+
+**¿La primera consulta tiene costo?**
+No. La valoración médica inicial es gratuita; incluye evaluación, explicación del procedimiento y resolución de dudas.
+
+**¿Qué personal acompaña los procedimientos?**
+Cirujano plástico, anestesiólogo, instrumentador quirúrgico, circulante, enfermería recuperadora y jefe de planta.
+
+**¿Cómo se manejan las imágenes en el sitio?**
+Corresponden a pacientes reales con autorización expresa (consentimiento informado, Ley 1581 de 2012). Los resultados son individuales y no garantizan resultados idénticos.
+
+## 7. Testimonios
+
+- **María Fernanda López** (Liposucción HD): "Desde la primera consulta sentí total confianza. El resultado superó mis expectativas. Recuperé mi silueta y mi autoestima." ★★★★★
+- **Carolina Méndez** (Rinoplastia): "Un antes y después increíble. El equipo fue muy atento y el proceso fue mucho más cómodo de lo que imaginaba." ★★★★★
+- **Andrea Restrepo** (Ácido Hialurónico): "Resultados naturales y muy bien logrados. Exactamente lo que quería: verme mejor sin perder mi esencia." ★★★★★
+
+---
+
+## Información legal
+
+- Razón social: Tiffany Esthetic Group Ips SAS — NIT 901634870
+- Tipo: Institución Prestadora de Servicios de Salud (IPS)
+- Habilitación: Secretaría de Salud (Res. 3100 de 2019)
+- Vigilancia: Superintendencia Nacional de Salud
+- Datos personales: Ley 1581 de 2012 | Derechos del paciente: Res. 434 de 2012
+- Representante legal: Sandra Milena Gomez Vasquez
+
+*Documento optimizado para motores de respuesta AI (GEO/AEO). Actualizado: 2026.*
