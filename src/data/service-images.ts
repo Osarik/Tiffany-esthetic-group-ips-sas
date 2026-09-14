@@ -32,8 +32,35 @@ export function getBeforeAfterPairs(slug: string): BeforeAfterPair[] {
 }
 
 export function getAllAfterImages(): { url: string; src: string }[] {
-  return recentBeforeAfterPairs.map((pair) => ({
+  const recent = recentBeforeAfterPairs.map((pair) => ({
     url: pair.after,
     src: pair.after.replace(/^.*\//, "").replace(/\.[^.]+$/, ""),
   }));
+
+  const uploaded = [
+    "/images/aa2.webp",
+    "/images/bb2.jpeg",
+    "/images/cc2.jpeg",
+    "/images/dd2.jpeg",
+    "/images/IMG_3974.jpg",
+    "/images/IMG_4003.jpg",
+    "/images/IMG_4256.jpg",
+    "/images/IMG_4257.jpg",
+    "/images/IMG_4301.jpg",
+    "/images/w1.jpg",
+    "/images/w2.jpg",
+    "/images/w3.jpg",
+    "/images/w4.jpg",
+    "/images/w5.jpg",
+  ].map((url) => ({
+    url,
+    src: url.replace(/^.*\//, "").replace(/\.[^.]+$/, ""),
+  }));
+
+  const seen = new Set<string>();
+  return [...recent, ...uploaded].filter((img) => {
+    if (seen.has(img.url)) return false;
+    seen.add(img.url);
+    return true;
+  });
 }
