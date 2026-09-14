@@ -54,13 +54,13 @@ export const metadata: Metadata = {
   title:
     "Resultados Reales | Antes y Después | Tiffany Esthetic Group IPS",
   description:
-    "Galería de resultados quirúrgicos reales de pacientes de Tiffany Esthetic Group IPS en Cali. Procedimientos de cirugía plástica realizados por cirujanos miembros de la SCCP.",
+    "Galería de resultados quirúrgicos reales de pacientes de Tiffany Esthetic Group IPS en Cali. Procedimientos de cirugía plástica realizados por cirujanos plásticos calificados.",
   robots: { index: true, follow: true },
   alternates: { canonical: "/resultados" },
   openGraph: {
     title: "Resultados Reales | Tiffany Esthetic Group IPS",
     description:
-      "Conoce resultados reales de cirugía plástica en Cali. Procedimientos realizados por cirujanos miembros de la SCCP en instalaciones habilitadas por la Secretaría de Salud.",
+      "Conoce resultados reales de cirugía plástica en Cali. Procedimientos realizados por cirujanos plásticos calificados en instalaciones habilitadas por la Secretaría de Salud.",
     locale: "es_CO",
     type: "website",
   },
@@ -144,9 +144,9 @@ export default function ResultadosPage() {
                   <HeroTextChild>
                     <p className="mt-6 text-base md:text-lg text-white/85 font-body leading-relaxed max-w-xl">
                     Cada procedimiento en Tiffany Esthetic Group es realizado por
-                    cirujanos plásticos miembros de la SCCP en instalaciones
-                    habilitadas por la Secretaría de Salud. Explora resultados
-                    reales de nuestros pacientes.
+                    cirujanos plásticos calificados en instalaciones habilitadas
+                    por la Secretaría de Salud. Explora resultados reales de
+                    nuestros pacientes.
                   </p>
                   </HeroTextChild>
                   <HeroTextChild>
@@ -282,7 +282,7 @@ export default function ResultadosPage() {
                       <p className="text-xs text-text-main/70 font-body mt-1 leading-relaxed">
                         Todos los procedimientos se realizan en quirófanos
                         habilitados por la Secretaría de Salud, con cirujanos
-                        miembros de la SCCP y anestesiólogos certificados.
+                        plásticos calificados y anestesiólogos certificados.
                       </p>
                     </div>
                   </div>
@@ -323,8 +323,7 @@ export default function ResultadosPage() {
               </h2>
               <p className="mt-4 text-text-main/70 font-body text-base leading-relaxed">
                 Todos los resultados mostrados en esta galería corresponden a
-                procedimientos realizados por cirujanos plásticos miembros de
-                la Sociedad Colombiana de Cirugía Plástica (SCCP) en
+                procedimientos realizados por cirujanos plásticos calificados en
                 instalaciones debidamente habilitadas por la Secretaría de
                 Salud, cumpliendo la Resolución 3100 de 2019 y normativa
                 vigente.
@@ -333,7 +332,7 @@ export default function ResultadosPage() {
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary" />
                   <span className="text-sm font-body text-text-main/80">
-                    Cirujanos SCCP
+                    Cirujanos calificados
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
