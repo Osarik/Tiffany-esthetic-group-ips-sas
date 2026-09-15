@@ -61,7 +61,7 @@ const facilities = [
 
 const gallery = [
   { src: "/images/25.webp", label: "Sala de Cirugía" },
-  { src: "/images/24.webp", collage: "/images/23.webp", label: "Consultorio" },
+  { src: "/images/23.webp", label: "Consultorio" },
   { src: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&q=85&fit=crop&crop=entropy&auto=format", label: "Recuperación" },
   { src: "/images/14.webp", label: "Equipo Quirúrgico" },
   { src: "/images/22.webp", label: "Sala de espera" },
