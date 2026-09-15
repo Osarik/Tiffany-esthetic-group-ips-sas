@@ -20,10 +20,13 @@ const categoryConfig: Record<string, { gradient: string; label: string }> = {
   "Cirugía Facial": { gradient: "from-[#4A8DB7] to-[#6DB3D9]", label: "Cirugía Facial" },
 };
 
+const heroineImage =
+  "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783832108/ChatGPT_Image_11_jul_2026_11_37_31_p.m._mwqeu8.png";
+
 const categoryImages: Record<string, string> = {
-  "Cirugía Corporal": "https://images.unsplash.com/photo-1551076805-e1869033e561?w=1200&q=80",
-  "Cirugía Mamaria": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1200&q=80",
-  "Cirugía Facial": "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1200&q=80",
+  "Cirugía Corporal": heroineImage,
+  "Cirugía Mamaria": "/images/Heromamo.webp",
+  "Cirugía Facial": "/images/Herocara.webp",
 };
 
 const categoryDesign: Record<string, {
