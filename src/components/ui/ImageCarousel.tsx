@@ -7,6 +7,7 @@ type Slide = {
   src: string;
   label: string;
   collage?: string;
+  objectPosition?: string;
 };
 
 type ImageCarouselProps = {
@@ -95,6 +96,7 @@ export default function ImageCarousel({
               exit="exit"
               transition={{ duration: 0.45, ease: [0.25, 0.1, 0.25, 1] }}
               className="absolute inset-0 w-full h-full object-cover"
+              style={slide.objectPosition ? { objectPosition: slide.objectPosition } : undefined}
             />
           )}
         </AnimatePresence>
