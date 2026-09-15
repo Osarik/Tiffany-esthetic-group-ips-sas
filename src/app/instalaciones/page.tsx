@@ -83,7 +83,7 @@ const faqs = [
   },
   {
     q: "¿Qué equipos tiene cada sala de cirugía?",
-    a: "Cada sala cuenta con mesa quirúrgica, lámpara de techo LED, equipo de anestesia con monitorización multiparámetro (FC, PA, SpO2, capnografía), sistema de aspiración central, oxígeno, electrobisturí y equipos de emergencia. Además, contamos con temperatura y humedad controladas.",
+    a: "Electrobisturí, máquina de anestesia, mesa de cirugía, lámpara cielítica, unidad de succión y monitor de signos vitales con sistema de monitoreo de gases anestésicos o capnografía.",
   },
   {
     q: "¿La farmacia tiene todos los medicamentos para el postoperatorio?",
