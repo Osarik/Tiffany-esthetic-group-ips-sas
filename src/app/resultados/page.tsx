@@ -10,18 +10,14 @@ const whatsappUrl =
   "https://wa.me/573202703522?text=Hola%2C%20quiero%20conocer%20resultados%20de%20procedimientos%20en%20Tiffany%20Esthetic%20Group.";
 
 const procedures = [
-  { name: "Lipoescultura", slug: "lipoescultura", desc: "Contorno corporal y aumento glúteo con grasa autóloga." },
-  { name: "Lipectomía", slug: "lipectomia", desc: "Resección de exceso de piel y grasa abdominal." },
-  { name: "Lipo + Lipectomía", slug: "lipo-lipectomia", desc: "Liposucción con resección de piel abdominal." },
-  { name: "Lipo + Prótesis de aumento", slug: "lipo-protesis-aumento", desc: "Liposucción simultánea con aumento de senos." },
-  { name: "Mamoplastia de aumento", slug: "mamoplastia-aumento", desc: "Aumento mamario con implantes." },
-  { name: "Ginecomastia", slug: "ginecomastia", desc: "Corrección de aumento mamario en hombres." },
-  { name: "Pexia mamaria", slug: "pexia-mamaria", desc: "Levantamiento de senos sin implantes." },
-  { name: "Pexia periareolar", slug: "pexia-periareolar", desc: "Elevación mamaria con incisión periareolar." },
+  { name: "Lipo + Pexia", slug: "lipo-pexia", desc: "Liposucción y elevación mamaria para definir el contorno y el busto." },
+  { name: "Pexia", slug: "pexia-mamaria", desc: "Levantamiento de senos sin implantes." },
+  { name: "Aumento", slug: "mamoplastia-aumento", desc: "Aumento mamario con implantes." },
+  { name: "Lipo + Lipectomía + Pexia", slug: "lipo-lipectomia-pexia", desc: "Liposucción, resección de piel y elevación mamaria." },
+  { name: "Lifting", slug: "ritidoplastia-completa", desc: "Rejuvenecimiento facial integral." },
   { name: "Rinoplastia", slug: "rinoplastia", desc: "Cirugía estética y funcional de nariz." },
-  { name: "Ritidoplastia completa", slug: "ritidoplastia-completa", desc: "Rejuvenecimiento facial integral." },
-  { name: "Ritidoplastia 1/3 medio", slug: "ritidoplastia-tercio-medio", desc: "Lifting de tercio medio facial." },
-  { name: "Ritidoplastia 1/3 inferior", slug: "ritidoplastia-tercio-inferior", desc: "Lifting de tercio inferior facial." },
+  { name: "Lipoescultura", slug: "lipoescultura", desc: "Contorno corporal y aumento glúteo con grasa autóloga." },
+  { name: "Lipo + Abdominoplastia", slug: "lipo-lipectomia", desc: "Liposucción con resección de piel abdominal." },
 ];
 
 const faqs = [

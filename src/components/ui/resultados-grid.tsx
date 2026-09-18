@@ -32,14 +32,14 @@ const gridOrder: (GridPos | "svg")[] = [
 ];
 
 const procedureImages: Record<string, string> = {
-  lipoescultura: "/images/carrousel_source/lipoescultura.webp",
-  lipectomia: "/images/carrousel_source/lipectomia.webp",
-  "lipo-lipectomia": "/images/carrousel_source/lipo-lipectomia.webp",
-  "lipo-protesis-aumento": "/images/carrousel_source/lipo-protesis-aumento.webp",
-  "mamoplastia-aumento": "/images/carrousel_source/mamoplastia-aumento.webp",
-  ginecomastia: "/images/carrousel_source/ginecomastia.webp",
+  "lipo-pexia": "/images/carrousel_source/lipo-pexia.webp",
   "pexia-mamaria": "/images/carrousel_source/Pexia.webp",
-  "pexia-periareolar": "/images/carrousel_source/pexia-periareolar.webp",
+  "mamoplastia-aumento": "/images/carrousel_source/mamoplastia-aumento.webp",
+  "lipo-lipectomia-pexia": "/images/carrousel_source/lipo-lipectomia-pexia.webp",
+  "ritidoplastia-completa": "/images/carrousel_source/ritidoplastia-completa.webp",
+  rinoplastia: "/images/carrousel_source/rinoplastia.webp",
+  lipoescultura: "/images/carrousel_source/lipoescultura.webp",
+  "lipo-lipectomia": "/images/carrousel_source/lipo-lipectomia.webp",
 };
 
 const recentGridImages = [
