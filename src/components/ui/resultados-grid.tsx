@@ -2,7 +2,12 @@
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
-import { getBeforeAfterPairs, recentBeforeAfterPairs } from "@/data/service-images";
+import { resultadoImagenes } from "@/data/service-images";
+
+const INSTAGRAM_URL = "https://www.instagram.com/tiffanyeg_ips/?hl=es";
+
+const UPDATING_MESSAGE =
+  "Estamos actualizando nuestros recursos con imágenes nuevas. Si deseas, puedes revisar nuestro Instagram donde hay más resultados.";
 
 type Procedure = {
   name: string;
@@ -53,10 +58,11 @@ export default function ResultadosGrid({ procedures }: Props) {
   const [expanded, setExpanded] = useState<number | null>(null);
 
   const selected = expanded !== null ? procedures[expanded] : null;
-  const beforeAfterPairs = useMemo(
-    () => (selected ? getBeforeAfterPairs(selected.slug) : []),
+  const images = useMemo(
+    () => (selected ? (resultadoImagenes[selected.slug] ?? { pairs: [], singles: [] }) : { pairs: [], singles: [] }),
     [selected],
   );
+  const hasImages = images.pairs.length > 0 || images.singles.length > 0;
 
   return (
     <div className="w-full">
@@ -156,9 +162,9 @@ export default function ResultadosGrid({ procedures }: Props) {
             </div>
 
             <div className="grid grid-cols-2 gap-3 md:gap-4 justify-items-center">
-              {(beforeAfterPairs.length > 0 ? beforeAfterPairs : recentBeforeAfterPairs).map((pair, i) => (
+              {images.pairs.map((pair, i) => (
                 <BeforeAfterSlider
-                  key={i}
+                  key={`pair-${i}`}
                   beforeSrc={pair.before}
                   afterSrc={pair.after}
                   beforeLabel="Antes"
@@ -166,9 +172,48 @@ export default function ResultadosGrid({ procedures }: Props) {
                   alt={`${selected?.name} - resultado ${i + 1}`}
                 />
               ))}
+              {images.singles.map((src, i) => (
+                <div key={`single-${i}`} className="w-full max-w-[340px] mx-auto">
+                  <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden bg-silver/30">
+                    <img
+                      src={src}
+                      alt={`${selected?.name} - resultado único ${images.singles.length > 1 ? i + 1 : ""}`}
+                      className="absolute inset-0 w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                    <span className="absolute top-3 right-3 bg-primary/80 backdrop-blur-sm text-white text-xs font-body font-semibold px-3 py-1 rounded-full">
+                      Resultado
+                    </span>
+                  </div>
+                </div>
+              ))}
             </div>
 
-            <div className="mt-8 text-center">
+            {!hasImages && (
+              <div className="rounded-2xl border border-dashed border-primary/40 bg-primary/5 p-6 md:p-8 text-center">
+                <p className="text-sm md:text-base text-text-main/80 font-body leading-relaxed max-w-[420px] mx-auto">
+                  {UPDATING_MESSAGE}
+                </p>
+              </div>
+            )}
+
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full text-white no-underline font-body font-bold text-sm transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-lg shadow-[#E1306C]/30"
+                style={{
+                  background: "linear-gradient(45deg,#833AB4,#FD1D1D,#F77737,#FCAF45)",
+                }}
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+                Ver más en Instagram
+              </a>
               <a
                 href={`https://wa.me/573202703522?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20${encodeURIComponent(selected?.name ?? "")}%20en%20Tiffany%20Esthetic%20Group.`}
                 target="_blank"
