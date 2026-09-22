@@ -424,15 +424,16 @@ export default function EquipoPage() {
         </AnimateInView>
 
         {/* ─── CTA ────────────────────────────────────────────── */}
-        <AnimateInView as="section" variant="fadeUp" className="relative bg-gradient-to-br from-[#0F4A44] via-[#1B6E66] to-[#2FA79C] py-24 md:py-32 overflow-hidden">
+        <section className="relative w-screen left-1/2 -translate-x-1/2 bg-gradient-to-br from-[#0F4A44] via-[#1B6E66] to-[#2FA79C] py-24 md:py-32 overflow-hidden">
           <div className="absolute inset-0 opacity-[0.05]" aria-hidden="true"
             style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
             }} />
-          <div className="absolute top-0 left-0 w-full h-full opacity-10"
+          <div className="absolute inset-0 opacity-10"
             style={{
               backgroundImage: "radial-gradient(ellipse 100% 80% at 30% 50%, rgba(255,255,255,0.15) 0%, transparent 70%)",
             }} aria-hidden="true" />
+          <AnimateInView as="div" variant="fadeUp">
           <Container>
             <div className="relative text-center max-w-3xl mx-auto">
               <div className="inline-flex items-center gap-2 mb-6 bg-white/10 border border-white/20 rounded-full px-5 py-2">
@@ -470,10 +471,11 @@ export default function EquipoPage() {
               </p>
             </div>
           </Container>
-        </AnimateInView>
+          </AnimateInView>
+        </section>
       </article>
 
-      <footer className="bg-[#223231] text-white/60 py-8">
+      <footer className="relative w-screen left-1/2 -translate-x-1/2 bg-[#223231] text-white/60 py-8">
         <Container>
           <p className="text-xs leading-relaxed text-center font-body">
             Tiffany Esthetic Group IPS es una institución prestadora de servicios
