@@ -42,7 +42,7 @@ const facilities = [
       "Protocolos de manejo del dolor y náuseas",
     ],
     img: "/images/23.webp",
-    video: "/videos/v1.mp4",
+    video: "/videos/tifany.mp4",
   },
   {
     title: "Farmacia Habilitada",
