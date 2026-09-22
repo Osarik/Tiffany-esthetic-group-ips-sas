@@ -423,6 +423,19 @@ export default function RootLayout({
                 </div>
               </div>
             </div>
+            <div className="mt-12 pt-6 border-t border-white/10 text-center">
+              <p className="text-sm font-body text-white/50">
+                Diseñado y posicionado por:{" "}
+                <a
+                  href="https://www.lulosimpulsodigital.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-primary transition-colors no-underline font-medium"
+                >
+                  Lulos impulso digital
+                </a>
+              </p>
+            </div>
           </footer>
           <WhatsAppButton />
           <GoogleTranslate />
