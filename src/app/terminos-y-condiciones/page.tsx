@@ -5,11 +5,14 @@ export const metadata: Metadata = {
   description:
     "Términos y condiciones de uso del sitio web de Tiffany Esthetic Group Ips SAS. Descargo de responsabilidad médica y condiciones legales.",
   robots: "index, follow",
+  alternates: {
+    canonical: "/terminos-y-condiciones",
+  },
   openGraph: {
     title: "Términos y Condiciones | Tiffany Esthetic Group",
     description:
       "Conoce los términos legales de uso de nuestro sitio web y descargo de responsabilidad médica.",
-    url: "https://www.tiffanyesthetic.com/terminos-y-condiciones",
+    url: "https://clinicatiffany.com/terminos-y-condiciones",
     siteName: "Tiffany Esthetic Group",
     locale: "es_CO",
     type: "website",

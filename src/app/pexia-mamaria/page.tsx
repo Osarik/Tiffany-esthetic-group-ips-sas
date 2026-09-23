@@ -10,8 +10,9 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      "@id": "https://www.tiffanyesthetic.com/pexia-mamaria#webpage",
-      url: "https://www.tiffanyesthetic.com/pexia-mamaria",
+      about: { "@id": "https://clinicatiffany.com/#business" },
+      "@id": "https://clinicatiffany.com/pexia-mamaria#webpage",
+      url: "https://clinicatiffany.com/pexia-mamaria",
       name: "Pexia Mamaria y Pexia Periareolar en Cali",
       description:
         "Elevación mamaria con técnicas adaptadas a cada paciente, incluida la pexia periareolar. IPS habilitada en Cali. Agenda tu valoración médica.",
@@ -21,8 +22,9 @@ const jsonLd = {
     },
     {
       "@type": "MedicalClinic",
+      "@id": "https://clinicatiffany.com/#business",
       name: "Tiffany Esthetic Group IPS",
-      image: "https://www.tiffanyesthetic.com/icon.svg",
+      image: "https://clinicatiffany.com/icon.svg",
       address: {
         "@type": "PostalAddress",
         streetAddress: "13a1-25, Cra 85c, Comuna 17",
@@ -40,6 +42,8 @@ const jsonLd = {
     },
     {
       "@type": "MedicalProcedure",
+      url: "https://clinicatiffany.com/pexia-mamaria",
+      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Pexia Mamaria o Mastopexy",
       procedureType: "SurgicalProcedure",
       bodyLocation: ["Breasts"],
@@ -48,6 +52,8 @@ const jsonLd = {
     },
     {
       "@type": "MedicalProcedure",
+      url: "https://clinicatiffany.com/pexia-mamaria",
+      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Pexia Periareolar",
       procedureType: "SurgicalProcedure",
       bodyLocation: ["Breasts"],
@@ -70,7 +76,7 @@ export const metadata: Metadata = {
     title: "Pexia Mamaria y Pexia Periareolar en Cali",
     description:
       "Elevación mamaria con técnicas personalizadas. Pexia tradicional y periareolar para ptosis leve, moderada o avanzada.",
-    url: "https://www.tiffanyesthetic.com/pexia-mamaria",
+    url: "https://clinicatiffany.com/pexia-mamaria",
     siteName: "Tiffany Esthetic Group IPS SAS",
     locale: "es_CO",
     type: "article",

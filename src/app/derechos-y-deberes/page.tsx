@@ -5,11 +5,14 @@ export const metadata: Metadata = {
   description:
     "Carta de derechos y deberes del paciente de Tiffany Esthetic Group Ips SAS, conforme a la Resolución 434 de 2012 y normativa de la Superintendencia Nacional de Salud.",
   robots: "index, follow",
+  alternates: {
+    canonical: "/derechos-y-deberes",
+  },
   openGraph: {
     title: "Derechos y Deberes del Paciente | Tiffany Esthetic Group",
     description:
       "Conoce tus derechos y deberes como paciente de nuestra IPS en Cali, Colombia.",
-    url: "https://www.tiffanyesthetic.com/derechos-y-deberes",
+    url: "https://clinicatiffany.com/derechos-y-deberes",
     siteName: "Tiffany Esthetic Group",
     locale: "es_CO",
     type: "website",

@@ -11,10 +11,61 @@ import ReTHUS from "@/components/sections/ReTHUS";
 import FAQs from "@/components/sections/FAQs";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Map from "@/components/sections/Map";
+import { faqs } from "@/data/faqs";
+import { testimonialsData } from "@/data/testimonials";
+
+const siteUrl = "https://clinicatiffany.com";
+
+const homeJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "@id": `${siteUrl}/#webpage`,
+      url: siteUrl,
+      name: "Tiffany Esthetic Group Ips SAS - Cirugía Plástica en Cali",
+      description:
+        "Clínica boutique de cirugía plástica y estética en Cali, Colombia. Habilitada por la Secretaría de Salud. Especialistas en lipoescultura, rinoplastia, blefaroplastia y más.",
+      inLanguage: "es",
+      medicalAudience: "Patient",
+      about: { "@id": `${siteUrl}/#business` },
+      primaryImageOfPage: `${siteUrl}/icon.svg`,
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${siteUrl}/#faq`,
+      url: siteUrl,
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    },
+    ...testimonialsData.reviews.slice(0, 4).map((review) => ({
+      "@type": "Review",
+      "@id": `${siteUrl}/#review-${review.id}`,
+      itemReviewed: { "@id": `${siteUrl}/#business` },
+      author: { "@type": "Person", name: review.name },
+      reviewBody: review.text,
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: review.rating,
+        bestRating: 5,
+      },
+    })),
+  ],
+};
 
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
+      />
       <Hero />
       <Benefits />
       <Certifications />

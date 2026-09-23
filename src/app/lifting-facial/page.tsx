@@ -10,8 +10,9 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      "@id": "https://www.tiffanyesthetic.com/lifting-facial#webpage",
-      url: "https://www.tiffanyesthetic.com/lifting-facial",
+      about: { "@id": "https://clinicatiffany.com/#business" },
+      "@id": "https://clinicatiffany.com/lifting-facial#webpage",
+      url: "https://clinicatiffany.com/lifting-facial",
       name: "Lifting Facial en Cali | Rejuvenecimiento Facial",
       description:
         "Cirugía de rejuvenecimiento facial para mejorar flacidez y contornos del rostro. IPS habilitada en Cali. Agenda tu valoración médica.",
@@ -21,8 +22,9 @@ const jsonLd = {
     },
     {
       "@type": "MedicalClinic",
+      "@id": "https://clinicatiffany.com/#business",
       name: "Tiffany Esthetic Group IPS",
-      image: "https://www.tiffanyesthetic.com/icon.svg",
+      image: "https://clinicatiffany.com/icon.svg",
       address: {
         "@type": "PostalAddress",
         streetAddress: "13a1-25, Cra 85c, Comuna 17",
@@ -40,6 +42,8 @@ const jsonLd = {
     },
     {
       "@type": "MedicalProcedure",
+      url: "https://clinicatiffany.com/lifting-facial",
+      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Lifting Facial o Ritidectomía",
       procedureType: "SurgicalProcedure",
       bodyLocation: ["Face", "Neck"],
@@ -48,6 +52,8 @@ const jsonLd = {
     },
     {
       "@type": "MedicalProcedure",
+      url: "https://clinicatiffany.com/lifting-facial",
+      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Lifting de Tercio Medio Facial",
       procedureType: "SurgicalProcedure",
       bodyLocation: ["Face"],
@@ -70,7 +76,7 @@ export const metadata: Metadata = {
     title: "Lifting Facial en Cali",
     description:
       "Rejuvenecimiento facial quirúrgico con técnicas personalizadas. Resultados naturales que armonizan los contornos del rostro y el cuello.",
-    url: "https://www.tiffanyesthetic.com/lifting-facial",
+    url: "https://clinicatiffany.com/lifting-facial",
     siteName: "Tiffany Esthetic Group IPS SAS",
     locale: "es_CO",
     type: "article",

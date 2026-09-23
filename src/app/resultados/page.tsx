@@ -68,23 +68,23 @@ export default function ResultadosPage() {
     "@graph": [
       {
         "@type": "MedicalWebPage",
-        "@id": "https://www.tiffanyesthetic.com/resultados/#webpage",
-        url: "https://www.tiffanyesthetic.com/resultados",
+        "@id": "https://clinicatiffany.com/resultados#webpage",
+        url: "https://clinicatiffany.com/resultados",
         name: "Resultados Reales de Cirugía Plástica | Tiffany Esthetic Group IPS",
         description:
           "Galería de resultados quirúrgicos reales en Cali, Colombia. Antes y después de lipoescultura, rinoplastia, blefaroplastia, abdominoplastia y más procedimientos estéticos.",
-        about: { "@id": "https://www.tiffanyesthetic.com/#business" },
-        mainContentOfPage: { "@type": "ImageGallery", about: { "@id": "https://www.tiffanyesthetic.com/#business" } },
+        about: { "@id": "https://clinicatiffany.com/#business" },
+        mainContentOfPage: { "@type": "ImageGallery", about: { "@id": "https://clinicatiffany.com/#business" } },
       },
       {
         "@type": "ImageGallery",
-        "@id": "https://www.tiffanyesthetic.com/resultados/#gallery",
-        url: "https://www.tiffanyesthetic.com/resultados",
-        about: { "@id": "https://www.tiffanyesthetic.com/#business" },
+        "@id": "https://clinicatiffany.com/resultados/#gallery",
+        url: "https://clinicatiffany.com/resultados",
+        about: { "@id": "https://clinicatiffany.com/#business" },
       },
       {
         "@type": "MedicalClinic",
-        "@id": "https://www.tiffanyesthetic.com/#business",
+        "@id": "https://clinicatiffany.com/#business",
         name: "Tiffany Esthetic Group IPS",
         address: {
           "@type": "PostalAddress",

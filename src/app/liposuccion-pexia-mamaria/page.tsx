@@ -10,8 +10,9 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      "@id": "https://www.tiffanyesthetic.com/liposuccion-pexia-mamaria#webpage",
-      url: "https://www.tiffanyesthetic.com/liposuccion-pexia-mamaria",
+      about: { "@id": "https://clinicatiffany.com/#business" },
+      "@id": "https://clinicatiffany.com/liposuccion-pexia-mamaria#webpage",
+      url: "https://clinicatiffany.com/liposuccion-pexia-mamaria",
       name: "Liposucción y Pexia Mamaria en Cali",
       description:
         "Combinación de contorno corporal mediante liposucción y elevación mamaria (mastopexy) en Cali. IPS habilitada con protocolos clínicos establecidos.",
@@ -21,8 +22,9 @@ const jsonLd = {
     },
     {
       "@type": "MedicalClinic",
+      "@id": "https://clinicatiffany.com/#business",
       name: "Tiffany Esthetic Group IPS",
-      image: "https://www.tiffanyesthetic.com/icon.svg",
+      image: "https://clinicatiffany.com/icon.svg",
       address: {
         "@type": "PostalAddress",
         streetAddress: "13a1-25, Cra 85c, Comuna 17",
@@ -40,6 +42,8 @@ const jsonLd = {
     },
     {
       "@type": "MedicalProcedure",
+      url: "https://clinicatiffany.com/liposuccion-pexia-mamaria",
+      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Pexia Mamaria o Mastopexy",
       procedureType: "SurgicalProcedure",
       bodyLocation: ["Breasts"],
@@ -48,6 +52,8 @@ const jsonLd = {
     },
     {
       "@type": "MedicalProcedure",
+      url: "https://clinicatiffany.com/liposuccion-pexia-mamaria",
+      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Liposucción",
       procedureType: "SurgicalProcedure",
       bodyLocation: ["Abdomen", "Flanks", "Back", "Thighs", "Arms"],
@@ -70,7 +76,7 @@ export const metadata: Metadata = {
     title: "Liposucción y Pexia Mamaria en Cali",
     description:
       "Combinación de contorno corporal y elevación mamaria para armonizar la silueta. IPS habilitada.",
-    url: "https://www.tiffanyesthetic.com/liposuccion-pexia-mamaria",
+    url: "https://clinicatiffany.com/liposuccion-pexia-mamaria",
     siteName: "Tiffany Esthetic Group IPS SAS",
     locale: "es_CO",
     type: "article",

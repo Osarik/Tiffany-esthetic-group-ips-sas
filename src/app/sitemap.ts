@@ -25,10 +25,11 @@ const procedures = [
   "rinoplastia",
   "lipo-rinoplastia",
   "blefaroplastia-otoplastia-lipectomia",
+  "alquiler-quirofanos",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.tiffanyesthetic.com";
+  const baseUrl = "https://clinicatiffany.com";
 
   const staticPages: Array<{ path: string; priority: number }> = [
     { path: "", priority: 1 },

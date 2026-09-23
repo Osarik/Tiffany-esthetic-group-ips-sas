@@ -10,8 +10,9 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      "@id": "https://www.tiffanyesthetic.com/liposuccion-aumento#webpage",
-      url: "https://www.tiffanyesthetic.com/liposuccion-aumento",
+      about: { "@id": "https://clinicatiffany.com/#business" },
+      "@id": "https://clinicatiffany.com/liposuccion-aumento#webpage",
+      url: "https://clinicatiffany.com/liposuccion-aumento",
       name: "Liposucción y Aumento de Volumen en Cali",
       description:
         "Plan quirúrgico integral que combina liposucción de contorno corporal con aumento de volumen mediante transferencia de grasa autóloga. IPS habilitada en Cali.",
@@ -21,8 +22,9 @@ const jsonLd = {
     },
     {
       "@type": "MedicalClinic",
+      "@id": "https://clinicatiffany.com/#business",
       name: "Tiffany Esthetic Group IPS",
-      image: "https://www.tiffanyesthetic.com/icon.svg",
+      image: "https://clinicatiffany.com/icon.svg",
       address: {
         "@type": "PostalAddress",
         streetAddress: "13a1-25, Cra 85c, Comuna 17",
@@ -40,6 +42,8 @@ const jsonLd = {
     },
     {
       "@type": "MedicalProcedure",
+      url: "https://clinicatiffany.com/liposuccion-aumento",
+      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Liposucción",
       procedureType: "SurgicalProcedure",
       bodyLocation: ["Abdomen", "Flanks", "Back", "Thighs", "Arms"],
@@ -48,6 +52,8 @@ const jsonLd = {
     },
     {
       "@type": "MedicalProcedure",
+      url: "https://clinicatiffany.com/liposuccion-aumento",
+      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Transferencia de grasa autóloga",
       procedureType: "SurgicalProcedure",
       bodyLocation: ["Gluteal Region", "Face", "Hands"],
@@ -70,7 +76,7 @@ export const metadata: Metadata = {
     title: "Liposucción y Aumento de Volumen en Cali",
     description:
       "Plan quirúrgico integral: liposucción de contorno corporal y aumento de volumen con grasa autóloga en una misma intervención.",
-    url: "https://www.tiffanyesthetic.com/liposuccion-aumento",
+    url: "https://clinicatiffany.com/liposuccion-aumento",
     siteName: "Tiffany Esthetic Group IPS SAS",
     locale: "es_CO",
     type: "article",

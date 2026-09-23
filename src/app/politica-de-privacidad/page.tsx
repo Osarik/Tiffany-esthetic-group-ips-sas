@@ -5,11 +5,14 @@ export const metadata: Metadata = {
   description:
     "Política de tratamiento de datos personales de Tiffany Esthetic Group Ips SAS. Cumplimiento Ley 1581 de 2012, protección de datos sensibles en salud.",
   robots: "index, follow",
+  alternates: {
+    canonical: "/politica-de-privacidad",
+  },
   openGraph: {
     title: "Política de Privacidad | Tiffany Esthetic Group",
     description:
       "Conoce cómo protegemos tus datos personales y sensibles en nuestra IPS.",
-    url: "https://www.tiffanyesthetic.com/politica-de-privacidad",
+    url: "https://clinicatiffany.com/politica-de-privacidad",
     siteName: "Tiffany Esthetic Group",
     locale: "es_CO",
     type: "website",

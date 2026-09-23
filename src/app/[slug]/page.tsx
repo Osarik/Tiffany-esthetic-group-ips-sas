@@ -97,7 +97,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${service.title} en Cali`,
       description: service.description,
-      url: `https://www.tiffanyesthetic.com/${slug}`,
+      url: `https://clinicatiffany.com/${slug}`,
       siteName: "Tiffany Esthetic Group IPS SAS",
       locale: "es_CO",
       type: "article",
@@ -123,27 +123,31 @@ export default async function ServiceLandingPage({ params }: Props) {
     "@graph": [
       {
         "@type": "MedicalWebPage",
-        "@id": `https://www.tiffanyesthetic.com/${slug}#webpage`,
-        url: `https://www.tiffanyesthetic.com/${slug}`,
+        "@id": `https://clinicatiffany.com/${slug}#webpage`,
+        url: `https://clinicatiffany.com/${slug}`,
         name: `${service.title} en Cali`,
         description: service.description,
         inLanguage: "es",
         medicalAudience: "Patient",
         aspect: "Treatment",
+        about: { "@id": "https://clinicatiffany.com/#business" },
       },
       {
         "@type": "MedicalClinic",
+        "@id": "https://clinicatiffany.com/#business",
         name: "Tiffany Esthetic Group IPS",
-        image: "https://www.tiffanyesthetic.com/icon.svg",
+        image: "https://clinicatiffany.com/icon.svg",
         address: { "@type": "PostalAddress", streetAddress: "13a1-25, Cra 85c, Comuna 17", addressLocality: "Cali", addressRegion: "Valle del Cauca", addressCountry: "CO" },
         telephone: "+57 320 270 3522",
         medicalSpecialty: "PlasticSurgery",
       },
       {
         "@type": "MedicalProcedure",
+        url: `https://clinicatiffany.com/${slug}`,
         name: service.title,
         procedureType: "SurgicalProcedure",
         description: service.description,
+        provider: { "@id": "https://clinicatiffany.com/#business" },
       },
     ],
   };

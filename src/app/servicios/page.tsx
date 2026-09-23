@@ -89,19 +89,21 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      "@id": "https://www.tiffanyesthetic.com/servicios#webpage",
-      url: "https://www.tiffanyesthetic.com/servicios",
+      "@id": "https://clinicatiffany.com/servicios#webpage",
+      url: "https://clinicatiffany.com/servicios",
       name: "Procedimientos Quirúrgicos Estéticos en Cali",
       description:
         "Conoce todos los procedimientos quirúrgicos estéticos que ofrecemos en Tiffany Esthetic Group IPS: cirugía corporal, mamaria y facial en Cali. IPS habilitada.",
       inLanguage: "es",
       medicalAudience: "Patient",
       aspect: "Treatment",
+      about: { "@id": "https://clinicatiffany.com/#business" },
     },
     {
       "@type": "MedicalClinic",
+      "@id": "https://clinicatiffany.com/#business",
       name: "Tiffany Esthetic Group IPS",
-      image: "https://www.tiffanyesthetic.com/icon.svg",
+      image: "https://clinicatiffany.com/icon.svg",
       address: {
         "@type": "PostalAddress",
         streetAddress: "13a1-25, Cra 85c, Comuna 17",
@@ -122,10 +124,13 @@ const jsonLd = {
       itemListElement: services.map((s, i) => ({
         "@type": "ListItem",
         position: i + 1,
+        url: s.href ? `https://clinicatiffany.com${s.href}` : undefined,
         item: {
           "@type": "MedicalProcedure",
           name: s.title,
           description: s.description,
+          url: s.href ? `https://clinicatiffany.com${s.href}` : undefined,
+          provider: { "@id": "https://clinicatiffany.com/#business" },
         },
       })),
     },
@@ -145,7 +150,7 @@ export const metadata: Metadata = {
     title: "Procedimientos Quirúrgicos Estéticos en Cali",
     description:
       "Cirugía corporal, mamaria y facial en Cali. IPS habilitada con sala de cirugía, recuperación, farmacia y personal calificado.",
-    url: "https://www.tiffanyesthetic.com/servicios",
+    url: "https://clinicatiffany.com/servicios",
     siteName: "Tiffany Esthetic Group IPS SAS",
     locale: "es_CO",
     type: "website",

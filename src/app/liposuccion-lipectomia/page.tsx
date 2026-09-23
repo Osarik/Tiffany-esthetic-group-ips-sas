@@ -10,8 +10,9 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      "@id": "https://www.tiffanyesthetic.com/liposuccion-lipectomia#webpage",
-      url: "https://www.tiffanyesthetic.com/liposuccion-lipectomia",
+      about: { "@id": "https://clinicatiffany.com/#business" },
+      "@id": "https://clinicatiffany.com/liposuccion-lipectomia#webpage",
+      url: "https://clinicatiffany.com/liposuccion-lipectomia",
       name: "Liposucción y Lipectomía en Cali",
       description:
         "Información médica sobre liposucción, lipectomía y transferencia de grasa autóloga en Tiffany Esthetic Group IPS SAS. IPS habilitada con protocolos clínicos establecidos.",
@@ -21,8 +22,9 @@ const jsonLd = {
     },
     {
       "@type": "MedicalClinic",
+      "@id": "https://clinicatiffany.com/#business",
       name: "Tiffany Esthetic Group IPS",
-      image: "https://www.tiffanyesthetic.com/icon.svg",
+      image: "https://clinicatiffany.com/icon.svg",
       address: {
         "@type": "PostalAddress",
         streetAddress: "13a1-25, Cra 85c, Comuna 17",
@@ -40,6 +42,8 @@ const jsonLd = {
     },
     {
       "@type": "MedicalProcedure",
+      url: "https://clinicatiffany.com/liposuccion-lipectomia",
+      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Liposucción",
       procedureType: "SurgicalProcedure",
       bodyLocation: ["Abdomen", "Flanks", "Back", "Thighs", "Arms"],
@@ -48,6 +52,8 @@ const jsonLd = {
     },
     {
       "@type": "MedicalProcedure",
+      url: "https://clinicatiffany.com/liposuccion-lipectomia",
+      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Lipectomía o Abdominoplastia",
       procedureType: "SurgicalProcedure",
       bodyLocation: ["Abdomen"],
@@ -56,6 +62,8 @@ const jsonLd = {
     },
     {
       "@type": "MedicalProcedure",
+      url: "https://clinicatiffany.com/liposuccion-lipectomia",
+      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Transferencia de grasa autóloga",
       procedureType: "SurgicalProcedure",
       bodyLocation: ["Gluteal Region"],

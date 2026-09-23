@@ -33,6 +33,7 @@ const sacramento = Sacramento({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://clinicatiffany.com"),
   icons: {
     icon: "/icon.svg",
     shortcut: "/icon.svg",
@@ -61,13 +62,13 @@ export const metadata: Metadata = {
       "Tiffany Esthetic Group Ips SAS | Cirugía Plástica y Servicios Quirúrgicos",
     description:
       "Institución habilitada con salas de cirugía, recuperación, farmacia y personal calificado en Cali.",
-    url: "https://www.tiffanyesthetic.com",
+    url: "https://clinicatiffany.com",
     siteName: "Tiffany Esthetic Group",
     locale: "es_CO",
     type: "website",
     images: [
       {
-        url: "https://www.tiffanyesthetic.com/icon.svg",
+        url: "https://clinicatiffany.com/icon.svg",
         width: 512,
         height: 512,
         alt: "Tiffany Esthetic Group - Logo",
@@ -79,7 +80,7 @@ export const metadata: Metadata = {
     title: "Tiffany Esthetic Group Ips SAS",
     description:
       "Cirugía plástica, servicios quirúrgicos, recuperación y farmacia habilitada en Cali.",
-    images: ["https://www.tiffanyesthetic.com/icon.svg"],
+    images: ["https://clinicatiffany.com/icon.svg"],
   },
 };
 
@@ -99,7 +100,6 @@ export default function RootLayout({
       className={`${fraunces.variable} ${manrope.variable} ${sacramento.variable}`}
     >
       <head>
-        <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="preconnect" href="https://translate.google.com" />
         <link
           rel="preload"

@@ -34,7 +34,7 @@ export default function NotFound() {
             name: "Página no encontrada (404)",
             description:
               "La página solicitada no existe. Explore los procedimientos de cirugía plástica en Tiffany Esthetic Group IPS, Cali.",
-            url: "https://www.tiffanyesthetic.com/",
+            url: "https://clinicatiffany.com/",
           }),
         }}
       />

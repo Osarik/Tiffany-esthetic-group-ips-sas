@@ -94,17 +94,22 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      "@id": "https://www.tiffanyesthetic.com/equipo#webpage",
-      url: "https://www.tiffanyesthetic.com/equipo",
+      "@id": "https://clinicatiffany.com/equipo#webpage",
+      url: "https://clinicatiffany.com/equipo",
       name: "Equipo Médico Profesional | Tiffany Esthetic Group IPS",
       description:
         "Conoce nuestro equipo de cirujanos plásticos miembros de la SCCP, anestesiólogos certificados, enfermería recuperadora y servicios quirúrgicos en Cali.",
       inLanguage: "es",
       medicalAudience: "Patient",
+      about: { "@id": "https://clinicatiffany.com/#business" },
     },
     {
       "@type": "MedicalClinic",
+      "@id": "https://clinicatiffany.com/#business",
       name: "Tiffany Esthetic Group IPS",
+      image: "https://clinicatiffany.com/icon.svg",
+      description:
+        "Equipo de cirujanos plásticos miembros de la SCCP, anestesiólogos certificados por el Consejo de Anestesiología, enfermería recuperadora y jefe de planta.",
       address: {
         "@type": "PostalAddress",
         streetAddress: "13a1-25, Cra 85c, Comuna 17",
@@ -112,8 +117,18 @@ const jsonLd = {
         addressRegion: "Valle del Cauca",
         addressCountry: "CO",
       },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 3.3811893,
+        longitude: -76.5357955,
+      },
+      telephone: "+57 320 270 3522",
       medicalSpecialty: "PlasticSurgery",
-      availableService: ["Surgical", "Recovery", "Pharmacy"],
+      availableService: [
+        { "@type": "MedicalProcedure", name: "Cirugía plástica y estética" },
+        { "@type": "MedicalProcedure", name: "Anestesiología" },
+        { "@type": "MedicalProcedure", name: "Enfermería y recuperación postoperatoria" },
+      ],
     },
   ],
 };

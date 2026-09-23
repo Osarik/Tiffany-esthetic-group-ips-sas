@@ -93,7 +93,7 @@ export async function POST(request: Request) {
         <tr><td style="padding:8px 12px;background:#f5f5f5;font-weight:bold;vertical-align:top;">Descripción</td><td style="padding:8px 12px;white-space:pre-wrap;">${esc(description)}</td></tr>
       </table>
       <hr style="margin-top:24px;" />
-      <p style="color:#666;font-size:12px;">Enviado desde el formulario de quejas y reclamos de tiffanyesthetic.com</p>
+      <p style="color:#666;font-size:12px;">Enviado desde el formulario de quejas y reclamos de clinicatiffany.com</p>
     `;
 
     const transporter = createTransporter();
