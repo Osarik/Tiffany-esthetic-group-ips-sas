@@ -118,6 +118,8 @@ export default async function ServiceLandingPage({ params }: Props) {
   const gradientFrom = cat?.gradient.split(" ")[0]?.replace("from-[", "").replace("]", "") ?? "#0F4A44";
   const gradientTo = cat?.gradient.split(" ")[1]?.replace("to-[", "").replace("]", "") ?? "#2FA79C";
 
+  const isAlquiler = service.id === "alquiler-quirofanos";
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -130,25 +132,33 @@ export default async function ServiceLandingPage({ params }: Props) {
         inLanguage: "es",
         medicalAudience: "Patient",
         aspect: "Treatment",
+        isPartOf: { "@id": "https://clinicatiffany.com/#website" },
         about: { "@id": "https://clinicatiffany.com/#business" },
       },
       {
-        "@type": "MedicalClinic",
-        "@id": "https://clinicatiffany.com/#business",
-        name: "Tiffany Esthetic Group IPS",
-        image: "https://clinicatiffany.com/icon.svg",
-        address: { "@type": "PostalAddress", streetAddress: "13a1-25, Cra 85c, Comuna 17", addressLocality: "Cali", addressRegion: "Valle del Cauca", addressCountry: "CO" },
-        telephone: "+57 320 270 3522",
-        medicalSpecialty: "PlasticSurgery",
-      },
-      {
-        "@type": "MedicalProcedure",
+        "@type": isAlquiler ? "Service" : "MedicalProcedure",
         url: `https://clinicatiffany.com/${slug}`,
         name: service.title,
-        procedureType: "SurgicalProcedure",
+        procedureType: isAlquiler ? undefined : "SurgicalProcedure",
+        serviceType: isAlquiler ? "Alquiler de quirófano" : undefined,
         description: service.description,
         provider: { "@id": "https://clinicatiffany.com/#business" },
       },
+      ...(landing.faqs?.length
+        ? [
+            {
+              "@type": "FAQPage",
+              "@id": `https://clinicatiffany.com/${slug}#faq`,
+              url: `https://clinicatiffany.com/${slug}`,
+              isPartOf: { "@id": `https://clinicatiffany.com/${slug}#webpage` },
+              mainEntity: landing.faqs.map((f) => ({
+                "@type": "Question",
+                name: f.q,
+                acceptedAnswer: { "@type": "Answer", text: f.a },
+              })),
+            },
+          ]
+        : []),
     ],
   };
 

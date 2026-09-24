@@ -270,6 +270,27 @@ export default function LiftingFacialPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "FAQPage",
+                "@id": "https://clinicatiffany.com/lifting-facial#faq",
+                url: "https://clinicatiffany.com/lifting-facial",
+                isPartOf: { "@id": "https://clinicatiffany.com/lifting-facial#webpage" },
+                mainEntity: faqs.map((f) => ({
+                  "@type": "Question",
+                  name: f.q,
+                  acceptedAnswer: { "@type": "Answer", text: f.a },
+                })),
+              },
+            ],
+          }),
+        }}
+      />
 
       <article>
         <section className="relative bg-[#0F4A44] pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">

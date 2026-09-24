@@ -28,13 +28,28 @@ const homeJsonLd = {
         "Clínica boutique de cirugía plástica y estética en Cali, Colombia. Habilitada por la Secretaría de Salud. Especialistas en lipoescultura, rinoplastia, blefaroplastia y más.",
       inLanguage: "es",
       medicalAudience: "Patient",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      mainEntityOfPage: `${siteUrl}`,
       about: { "@id": `${siteUrl}/#business` },
-      primaryImageOfPage: `${siteUrl}/icon.svg`,
+      primaryImageOfPage: `${siteUrl}/images/schema/25-16x9.webp`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${siteUrl}/#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Inicio",
+          item: `${siteUrl}`,
+        },
+      ],
     },
     {
       "@type": "FAQPage",
       "@id": `${siteUrl}/#faq`,
       url: siteUrl,
+      isPartOf: { "@id": `${siteUrl}/#webpage` },
       mainEntity: faqs.map((faq) => ({
         "@type": "Question",
         name: faq.question,

@@ -132,7 +132,7 @@ const jsonLd = {
       telephone: "+57 320 270 3522",
       medicalSpecialty: "PlasticSurgery",
       availableService: [
-        { "@type": "MedicalProcedure", name: "Alquiler de salas de cirugía" },
+        { "@type": "Service", name: "Alquiler de salas de cirugía", serviceType: "Alquiler de quirófano" },
         { "@type": "MedicalProcedure", name: "Cuidado postoperatorio en área de recuperación" },
         { "@type": "MedicalProcedure", name: "Servicio farmacéutico con registro INVIMA" },
       ],

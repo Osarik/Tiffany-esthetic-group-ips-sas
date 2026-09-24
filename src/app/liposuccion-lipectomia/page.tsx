@@ -311,6 +311,27 @@ export default function LiposuccionLipectomiaPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "FAQPage",
+                "@id": "https://clinicatiffany.com/liposuccion-lipectomia#faq",
+                url: "https://clinicatiffany.com/liposuccion-lipectomia",
+                isPartOf: { "@id": "https://clinicatiffany.com/liposuccion-lipectomia#webpage" },
+                mainEntity: faqs.map((f) => ({
+                  "@type": "Question",
+                  name: f.q,
+                  acceptedAnswer: { "@type": "Answer", text: f.a },
+                })),
+              },
+            ],
+          }),
+        }}
+      />
 
       <article>
         <section className="relative bg-gradient-to-br from-[#0F4A44] via-[#1B6E66] to-[#2FA79C] pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">

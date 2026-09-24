@@ -248,6 +248,27 @@ export default function RinoplastiaPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "FAQPage",
+                "@id": "https://clinicatiffany.com/rinoplastia#faq",
+                url: "https://clinicatiffany.com/rinoplastia",
+                isPartOf: { "@id": "https://clinicatiffany.com/rinoplastia#webpage" },
+                mainEntity: faqs.map((f) => ({
+                  "@type": "Question",
+                  name: f.q,
+                  acceptedAnswer: { "@type": "Answer", text: f.a },
+                })),
+              },
+            ],
+          }),
+        }}
+      />
 
       <article>
         <section className="relative bg-[#4A8DB7] pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
