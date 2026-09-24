@@ -34,6 +34,7 @@ const sacramento = Sacramento({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://clinicatiffany.com"),
+  manifest: "/site.webmanifest",
   icons: {
     icon: "/icon.svg",
     shortcut: "/icon.svg",
