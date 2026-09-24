@@ -12,51 +12,55 @@
 - **Horario:** Lun–Vie 8:00 a 6:00 | Sáb 8:00 a 1:00 | Domingos cerrado
 - **Dominio:** https://clinicatiffany.com
 
-## Procedimientos
+## Cirugía corporal
 
-### Cirugía Corporal
-- **Lipoescultura** — Moldeamiento corporal con lipoinyección glútea (`/lipoescultura`) [popular]
-- **Lipectomía** — Resección de exceso de piel y grasa (`/lipectomia`)
-- **Lipo + Lipectomía** — Liposucción y lipectomía en una cirugía (`/lipo-lipectomia`) [popular]
-- **Lipo + Lipectomía + Senos (Aumento)** — Plan integral corporal + mamario (`/lipo-lipectomia-senos`)
-- **Lipo + Lipectomía + Pexia Periareolar** — Cuerpo + elevación mamaria (`/lipo-lipectomia-pexia-periareolar`)
-- **Lipo + Lipectomía + Pexia** — Cuerpo + pexia mamaria (`/lipo-lipectomia-pexia`)
-- **Hernia** — Reparación de hernia abdominal/umbilical (`/hernia`)
+- [Lipoescultura](https://clinicatiffany.com/lipoescultura): Moldeamiento corporal con lipoinyección glútea. Procedimiento popular.
+- [Lipectomía](https://clinicatiffany.com/lipectomia): Resección de exceso de piel y grasa.
+- [Lipo + Lipectomía](https://clinicatiffany.com/lipo-lipectomia): Liposucción y lipectomía en una cirugía. Procedimiento popular.
+- [Lipo + Lipectomía + Senos (Aumento)](https://clinicatiffany.com/lipo-lipectomia-senos): Plan integral corporal y mamario.
+- [Lipo + Lipectomía + Pexia Periareolar](https://clinicatiffany.com/lipo-lipectomia-pexia-periareolar): Cuerpo y elevación mamaria.
+- [Lipo + Lipectomía + Pexia](https://clinicatiffany.com/lipo-lipectomia-pexia): Cuerpo y pexia mamaria.
+- [Hernia](https://clinicatiffany.com/hernia): Reparación de hernia abdominal y umbilical.
 
-### Cirugía Mamaria
-- **Mamoplastia de aumento + Rinoplastia** — Rostro + busto en un tiempo (`/mamoplastia-aumento-rinoplastia`)
-- **Mamoplastia de aumento** — Aumento mamario con implantes (`/mamoplastia-aumento`) [popular]
-- **Gigantomastia** — Reducción mamaria por crecimiento excesivo (`/gigantomastia`)
-- **Ginecomastia** — Corrección de tejido mamario en hombres (`/ginecomastia`) [popular]
-- **Pexia reconstructiva sin implantes** — Elevación sin implantes (`/pexia-reconstructiva`)
-- **Pexia** — Elevación mamaria (`/pexia-mamaria`) [popular]
-- **Pexia periareolar** — Elevación con incisión periareolar (`/pexia-periareolar`)
-- **Lipo + Pexia periareolar** (`/lipo-pexia-periareolar`)
-- **Lipo + Pexia** — Contorno + elevación (`/lipo-pexia`)
-- **Lipo + Prótesis de aumento** — Cuerpo + prótesis mamarias (`/lipo-protesis-aumento`)
-- **Lipectomía + Pexia** — Abdomen + busto (`/lipectomia-pexia`)
+## Cirugía mamaria
 
-### Cirugía Facial
-- **Ritidoplastia completa** — Lifting integral de rostro y cuello (`/ritidoplastia-completa`)
-- **Ritidoplastia 1/3 medio** — Pómulos y mejillas (`/ritidoplastia-tercio-medio`)
-- **Ritidoplastia 1/3 inferior** — Mandíbula, papada y cuello (`/ritidoplastia-tercio-inferior`)
-- **Rinoplastia** — Estética y función nasal (`/rinoplastia`) [popular]
-- **Lipo + Rinoplastia** — Silueta + rostro (`/lipo-rinoplastia`)
-- **Blefaroplastia + Otoplastia + Lipectomía** — Mirada, orejas y abdomen (`/blefaroplastia-otoplastia-lipectomia`)
+- [Mamoplastia de aumento + Rinoplastia](https://clinicatiffany.com/mamoplastia-aumento-rinoplastia): Rostro y busto en un tiempo.
+- [Mamoplastia de aumento](https://clinicatiffany.com/mamoplastia-aumento): Aumento mamario con implantes. Procedimiento popular.
+- [Gigantomastia](https://clinicatiffany.com/gigantomastia): Reducción mamaria por crecimiento excesivo.
+- [Ginecomastia](https://clinicatiffany.com/ginecomastia): Corrección de tejido mamario en hombres. Procedimiento popular.
+- [Pexia reconstructiva sin implantes](https://clinicatiffany.com/pexia-reconstructiva): Elevación sin implantes.
+- [Pexia](https://clinicatiffany.com/pexia-mamaria): Elevación mamaria. Procedimiento popular.
+- [Pexia periareolar](https://clinicatiffany.com/pexia-periareolar): Elevación con incisión periareolar.
+- [Lipo + Pexia periareolar](https://clinicatiffany.com/lipo-pexia-periareolar)
+- [Lipo + Pexia](https://clinicatiffany.com/lipo-pexia): Contorno y elevación.
+- [Lipo + Prótesis de aumento](https://clinicatiffany.com/lipo-protesis-aumento): Cuerpo y prótesis mamarias.
+- [Lipectomía + Pexia](https://clinicatiffany.com/lipectomia-pexia): Abdomen y busto.
 
-### Alquiler de Quirófanos
-- **Alquiler de quirófano** — 3 salas equipadas con personal calificado (`/alquiler-quirofanos`)
+## Cirugía facial
 
-## Páginas
+- [Ritidoplastia completa](https://clinicatiffany.com/ritidoplastia-completa): Lifting integral de rostro y cuello.
+- [Ritidoplastia 1/3 medio](https://clinicatiffany.com/ritidoplastia-tercio-medio): Pómulos y mejillas.
+- [Ritidoplastia 1/3 inferior](https://clinicatiffany.com/ritidoplastia-tercio-inferior): Mandíbula, papada y cuello.
+- [Rinoplastia](https://clinicatiffany.com/rinoplastia): Estética y función nasal. Procedimiento popular.
+- [Lipo + Rinoplastia](https://clinicatiffany.com/lipo-rinoplastia): Silueta y rostro.
+- [Blefaroplastia + Otoplastia + Lipectomía](https://clinicatiffany.com/blefaroplastia-otoplastia-lipectomia): Mirada, orejas y abdomen.
 
-- `/` — Landing: hero con video, servicios (carrusel), antes/después, instalaciones, testimonios, equipo, FAQ, CTA
-- `/servicios` — Catálogo interactivo de procedimientos
-- `/resultados` — Galería interactiva de resultados reales (antes/después)
-- `/instalaciones` — Quirófanos, sala de cirugía, esterilización, recuperación
-- `/equipo` — Equipo médico (cirujanos SCCP, anestesiólogos, enfermería)
-- `/preguntas-frecuentes` — FAQ agrupada por categorías
-- `/politica-de-privacidad`, `/terminos-y-condiciones`, `/derechos-y-deberes`, `/politica-de-cookies` — Páginas legales
-- Rutas de procedimientos: `/lipoescultura`, `/lipectomia`, `/lipo-lipectomia`, `/mamoplastia-aumento`, `/pexia-mamaria`, `/ginecomastia`, `/rinoplastia`, `/gigantomastia`, y más
+## Alquiler de quirófanos
+
+- [Alquiler de quirófano](https://clinicatiffany.com/alquiler-quirofanos): 3 salas equipadas con personal calificado.
+
+## Páginas del sitio
+
+- [Inicio](https://clinicatiffany.com/): Hero con video, servicios, resultados, instalaciones, equipo, FAQ y CTA.
+- [Servicios](https://clinicatiffany.com/servicios): Catálogo interactivo de procedimientos.
+- [Resultados](https://clinicatiffany.com/resultados): Galería interactiva de resultados reales antes y después.
+- [Instalaciones](https://clinicatiffany.com/instalaciones): Quirófanos, sala de cirugía, esterilización y recuperación.
+- [Equipo](https://clinicatiffany.com/equipo): Cirujanos SCCP, anestesiólogos y enfermería.
+- [Preguntas frecuentes](https://clinicatiffany.com/preguntas-frecuentes): FAQ agrupada por categorías.
+- [Política de privacidad](https://clinicatiffany.com/politica-de-privacidad)
+- [Términos y condiciones](https://clinicatiffany.com/terminos-y-condiciones)
+- [Derechos y deberes de los pacientes](https://clinicatiffany.com/derechos-y-deberes)
+- [Política de cookies](https://clinicatiffany.com/politica-de-cookies)
 
 ## Instalaciones y seguridad
 
@@ -73,3 +77,8 @@
 - **¿Alquilan salas de cirugía?** Sí, tres salas para cirujanos plásticos con personal de apoyo.
 - **¿Cuentan con área de recuperación?** Sí, atendida por enfermeras recuperadoras.
 - **¿Quién acompaña los procedimientos?** Cirujano plástico, anestesiólogo, instrumentador, circulante, enfermería recuperadora y jefe de planta.
+
+## Optional
+
+- [Mapa del sitio (sitemap.xml)](https://clinicatiffany.com/sitemap.xml): Lista canónica de URLs.
+- [Perfil completo (llms-full.txt)](https://clinicatiffany.com/llms-full.txt): Perfil bilingüe detallado de la clínica.
