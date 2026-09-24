@@ -5,6 +5,25 @@ import Heading from "@/components/ui/Heading";
 const whatsappUrl =
   "https://wa.me/573202703522?text=Hola%2C%20quiero%20agendar%20mi%20valoraci%C3%B3n%20para%20liposucci%C3%B3n%20o%20lipectom%C3%ADa%20en%20Cali.";
 
+export const metadata: Metadata = {
+  title: "Liposucción y Lipectomía en Cali | Tiffany Esthetic Group IPS SAS",
+  description:
+    "Remodelación corporal mediante liposucción, lipectomía y transferencia de grasa autóloga en Cali. IPS habilitada con protocolos clínicos establecidos. Agenda tu valoración.",
+  robots: { index: true, follow: true },
+  alternates: {
+    canonical: "/liposuccion-lipectomia",
+  },
+  openGraph: {
+    title: "Liposucción y Lipectomía en Cali",
+    description:
+      "Procedimientos quirúrgicos de contorno corporal: liposucción selectiva, lipectomía y transferencia de grasa autóloga.",
+    url: "https://clinicatiffany.com/liposuccion-lipectomia",
+    siteName: "Tiffany Esthetic Group IPS SAS",
+    locale: "es_CO",
+    type: "article",
+  },
+};
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
