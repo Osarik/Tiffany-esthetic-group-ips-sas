@@ -47,14 +47,13 @@ const stats = [
 ];
 
 export const metadata: Metadata = {
-  title:
-    "Resultados Reales | Antes y Después | Tiffany Esthetic Group IPS",
+  title: "Antes y Después en Cali | Tiffany Esthetic Group",
   description:
     "Galería de resultados quirúrgicos reales de pacientes de Tiffany Esthetic Group IPS en Cali. Procedimientos de cirugía plástica realizados por cirujanos plásticos calificados.",
   robots: { index: true, follow: true },
   alternates: { canonical: "/resultados" },
   openGraph: {
-    title: "Resultados Reales | Tiffany Esthetic Group IPS",
+    title: "Antes y Después en Cali | Tiffany Esthetic Group",
     description:
       "Conoce resultados reales de cirugía plástica en Cali. Procedimientos realizados por cirujanos plásticos calificados en instalaciones habilitadas por la Secretaría de Salud.",
     locale: "es_CO",

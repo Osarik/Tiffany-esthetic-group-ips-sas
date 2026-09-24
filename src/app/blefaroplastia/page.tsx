@@ -64,8 +64,7 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  title:
-    "Blefaroplastia en Cali | Rejuvenecimiento de la Mirada | Tiffany Esthetic Group IPS SAS",
+  title: "Blefaroplastia en Cali | Tiffany Esthetic Group",
   description:
     "Rejuvenecimiento de la mirada mediante blefaroplastia superior e inferior. Manejo del exceso de piel y bolsas palpebrales. IPS habilitada en Cali. Agenda tu valoración.",
   robots: { index: true, follow: true },
@@ -77,7 +76,7 @@ export const metadata: Metadata = {
     description:
       "Rejuvenecimiento de la mirada con blefaroplastia superior e inferior. Resultados naturales que realzan la expresión facial.",
     url: "https://clinicatiffany.com/blefaroplastia",
-    siteName: "Tiffany Esthetic Group IPS SAS",
+    siteName: "Tiffany Esthetic Group",
     locale: "es_CO",
     type: "article",
   },

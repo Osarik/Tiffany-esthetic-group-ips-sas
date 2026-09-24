@@ -141,8 +141,7 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  title:
-    "Instalaciones Quirúrgicas Habilitadas en Cali | Tiffany Esthetic Group IPS SAS",
+  title: "Instalaciones de la Clínica en Cali | Tiffany Esthetic Group",
   description:
     "Conoce nuestras instalaciones: 3 salas de cirugía completamente equipadas, área de recuperación con enfermería especializada y farmacia habilitada. IPS habilitada en Cali. Agenda tu visita.",
   robots: { index: true, follow: true },
@@ -154,7 +153,7 @@ export const metadata: Metadata = {
     description:
       "Salas de cirugía, recuperación y farmacia habilitada. IPS habilitada según Resolución 3100 de 2019. Conoce nuestras instalaciones en Cali.",
     url: "https://clinicatiffany.com/instalaciones",
-    siteName: "Tiffany Esthetic Group IPS SAS",
+    siteName: "Tiffany Esthetic Group",
     locale: "es_CO",
     type: "website",
   },

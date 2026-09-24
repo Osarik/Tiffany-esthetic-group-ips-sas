@@ -138,8 +138,7 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  title:
-    "Procedimientos Quirúrgicos Estéticos en Cali | Tiffany Esthetic Group IPS SAS",
+  title: "Cirugía Plástica en Cali | Tiffany Esthetic Group",
   description:
     "Conoce todos los procedimientos de cirugía plástica y estética en Cali: lipoescultura, liposucción, pexia mamaria, rinoplastia, blefaroplastia y lifting facial. IPS habilitada.",
   robots: { index: true, follow: true },
@@ -151,7 +150,7 @@ export const metadata: Metadata = {
     description:
       "Cirugía corporal, mamaria y facial en Cali. IPS habilitada con sala de cirugía, recuperación, farmacia y personal calificado.",
     url: "https://clinicatiffany.com/servicios",
-    siteName: "Tiffany Esthetic Group IPS SAS",
+    siteName: "Tiffany Esthetic Group",
     locale: "es_CO",
     type: "website",
   },

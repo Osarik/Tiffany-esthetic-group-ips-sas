@@ -64,8 +64,7 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  title:
-    "Liposucción y Pexia Mamaria en Cali | Tiffany Esthetic Group IPS SAS",
+  title: "Liposucción y Pexia Mamaria en Cali | Tiffany Esthetic Group",
   description:
     "Combina contorno corporal con liposucción y elevación mamaria (mastopexy) en una misma intervención. IPS habilitada en Cali. Agenda tu valoración médica.",
   robots: { index: true, follow: true },
@@ -77,7 +76,7 @@ export const metadata: Metadata = {
     description:
       "Combinación de contorno corporal y elevación mamaria para armonizar la silueta. IPS habilitada.",
     url: "https://clinicatiffany.com/liposuccion-pexia-mamaria",
-    siteName: "Tiffany Esthetic Group IPS SAS",
+    siteName: "Tiffany Esthetic Group",
     locale: "es_CO",
     type: "article",
   },

@@ -3,7 +3,7 @@ import Link from "next/link";
 import Container from "@/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Página no encontrada (404) | Tiffany Esthetic Group IPS",
+  title: "Página no encontrada (404) | Tiffany Esthetic Group",
   description:
     "La página que buscas no existe o fue movida. Explora nuestros procedimientos de cirugía plástica en Cali: lipoescultura, aumento mamario, rinoplastia y más.",
   robots: { index: false, follow: true },

@@ -55,8 +55,7 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  title:
-    "Rinoplastia en Cali | Cirugía Nasal | Tiffany Esthetic Group IPS SAS",
+  title: "Rinoplastia en Cali | Tiffany Esthetic Group",
   description:
     "Cirugía nasal enfocada en la armonía facial y la función respiratoria cuando aplica. IPS habilitada en Cali. Rinoplastia abierta y cerrada. Agenda tu valoración.",
   robots: { index: true, follow: true },
@@ -68,7 +67,7 @@ export const metadata: Metadata = {
     description:
       "Cirugía nasal para armonía facial y función respiratoria. Técnicas abierta y cerrada adaptadas a cada paciente.",
     url: "https://clinicatiffany.com/rinoplastia",
-    siteName: "Tiffany Esthetic Group IPS SAS",
+    siteName: "Tiffany Esthetic Group",
     locale: "es_CO",
     type: "article",
   },

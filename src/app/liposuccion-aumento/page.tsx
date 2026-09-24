@@ -64,8 +64,7 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  title:
-    "Liposucción y Aumento de Volumen en Cali | Tiffany Esthetic Group IPS SAS",
+  title: "Liposucción en Cali | Tiffany Esthetic Group",
   description:
     "Plan quirúrgico integral para definir el cuerpo con liposucción y complementar volumen con transferencia de grasa autóloga. IPS habilitada en Cali. Agenda tu valoración.",
   robots: { index: true, follow: true },
@@ -77,7 +76,7 @@ export const metadata: Metadata = {
     description:
       "Plan quirúrgico integral: liposucción de contorno corporal y aumento de volumen con grasa autóloga en una misma intervención.",
     url: "https://clinicatiffany.com/liposuccion-aumento",
-    siteName: "Tiffany Esthetic Group IPS SAS",
+    siteName: "Tiffany Esthetic Group",
     locale: "es_CO",
     type: "article",
   },

@@ -134,14 +134,13 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  title:
-    "Equipo Médico Profesional | Cirujanos SCCP y Anestesiólogos | Tiffany Esthetic Group IPS SAS",
+  title: "Equipo Médico en Cali | Tiffany Esthetic Group",
   description:
     "Cirujanos plásticos miembros de la Sociedad Colombiana de Cirugía Plástica (SCCP), anestesiólogos certificados por el Consejo de Anestesiología, enfermería recuperadora y servicios quirúrgicos en Cali. IPS habilitada.",
   robots: { index: true, follow: true },
   alternates: { canonical: "/equipo" },
   openGraph: {
-    title: "Equipo Médico Profesional | Tiffany Esthetic Group IPS",
+    title: "Equipo Médico en Cali | Tiffany Esthetic Group",
     description:
       "Cirujanos plásticos miembros de la SCCP, anestesiólogos certificados y personal de enfermería especializado. IPS habilitada con 3 salas de cirugía en Cali.",
     locale: "es_CO",

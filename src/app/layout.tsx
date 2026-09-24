@@ -39,8 +39,7 @@ export const metadata: Metadata = {
     icon: "/icon.svg",
     shortcut: "/icon.svg",
   },
-  title:
-    "Tiffany Esthetic Group Ips SAS | Cirugía Plástica y Servicios Quirúrgicos",
+  title: "Clínica de Cirugía Plástica en Cali | Tiffany Esthetic Group",
   description:
     "Institución habilitada por la Secretaría de Salud en Cali, con salas de cirugía, recuperación, farmacia habilitada y personal calificado para procedimientos de cirugía plástica y estética.",
   keywords: [
@@ -78,7 +77,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tiffany Esthetic Group Ips SAS",
+    title: "Tiffany Esthetic Group",
     description:
       "Cirugía plástica, servicios quirúrgicos, recuperación y farmacia habilitada en Cali.",
     images: ["https://clinicatiffany.com/icon.svg"],

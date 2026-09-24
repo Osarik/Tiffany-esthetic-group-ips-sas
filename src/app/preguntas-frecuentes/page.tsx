@@ -148,14 +148,13 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  title:
-    "Preguntas Frecuentes | Cirugía Plástica en Cali | Tiffany Esthetic Group IPS SAS",
+  title: "Preguntas Frecuentes | Tiffany Esthetic Group",
   description:
     "Resuelve todas tus dudas sobre procedimientos quirúrgicos estéticos, habilitación de la IPS, proceso de valoración, recuperación y cómo agendar tu cita en Cali.",
   robots: { index: true, follow: true },
   alternates: { canonical: "/preguntas-frecuentes" },
   openGraph: {
-    title: "Preguntas Frecuentes | Tiffany Esthetic Group IPS",
+    title: "Preguntas Frecuentes | Tiffany Esthetic Group",
     description:
       "Todo lo que necesitas saber sobre cirugía plástica estética en Cali: procedimientos, seguridad, proceso quirúrgico y contacto.",
     locale: "es_CO",

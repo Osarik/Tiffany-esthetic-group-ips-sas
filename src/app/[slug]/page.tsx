@@ -90,7 +90,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = services.find((s) => slugFromHref(s.href ?? "") === slug);
   if (!service) return {};
   return {
-    title: `${service.title} en Cali | Tiffany Esthetic Group IPS`,
+    title: `${service.title} en Cali | Tiffany Esthetic Group`,
     description: service.description,
     robots: { index: true, follow: true },
     alternates: { canonical: `/${slug}` },
@@ -98,7 +98,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${service.title} en Cali`,
       description: service.description,
       url: `https://clinicatiffany.com/${slug}`,
-      siteName: "Tiffany Esthetic Group IPS SAS",
+      siteName: "Tiffany Esthetic Group",
       locale: "es_CO",
       type: "article",
     },

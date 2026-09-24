@@ -64,8 +64,7 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  title:
-    "Pexia Mamaria y Pexia Periareolar en Cali | Tiffany Esthetic Group IPS SAS",
+  title: "Pexia Mamaria en Cali | Tiffany Esthetic Group",
   description:
     "Elevación mamaria con técnicas quirúrgicas adaptadas a cada paciente, incluida la pexia periareolar para ptosis leve. IPS habilitada en Cali. Agenda tu valoración.",
   robots: { index: true, follow: true },
@@ -77,7 +76,7 @@ export const metadata: Metadata = {
     description:
       "Elevación mamaria con técnicas personalizadas. Pexia tradicional y periareolar para ptosis leve, moderada o avanzada.",
     url: "https://clinicatiffany.com/pexia-mamaria",
-    siteName: "Tiffany Esthetic Group IPS SAS",
+    siteName: "Tiffany Esthetic Group",
     locale: "es_CO",
     type: "article",
   },

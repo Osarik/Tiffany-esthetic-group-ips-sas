@@ -64,8 +64,7 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  title:
-    "Lifting Facial en Cali | Rejuvenecimiento Facial | Tiffany Esthetic Group IPS SAS",
+  title: "Lifting Facial en Cali | Tiffany Esthetic Group",
   description:
     "Cirugía de rejuvenecimiento facial para mejorar flacidez y contornos del rostro. Técnicas SMAS, lifting de tercio medio y mini-lifting. IPS habilitada en Cali. Agenda tu valoración.",
   robots: { index: true, follow: true },
@@ -77,7 +76,7 @@ export const metadata: Metadata = {
     description:
       "Rejuvenecimiento facial quirúrgico con técnicas personalizadas. Resultados naturales que armonizan los contornos del rostro y el cuello.",
     url: "https://clinicatiffany.com/lifting-facial",
-    siteName: "Tiffany Esthetic Group IPS SAS",
+    siteName: "Tiffany Esthetic Group",
     locale: "es_CO",
     type: "article",
   },

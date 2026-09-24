@@ -51,15 +51,13 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  title:
-    "Lipoescultura y Lipoinyección Glútea en Cali | Tiffany Esthetic Group IPS",
+  title: "Lipoescultura en Cali | Tiffany Esthetic Group",
   description:
     "Remodela tu contorno corporal mediante lipoescultura y transferencia de grasa autóloga en Cali. Procedimiento seguro en una IPS habilitada. Agenda tu valoración médica especializada.",
   robots: { index: true, follow: true },
   alternates: { canonical: "/lipoescultura-lipoinyeccion-glutea-cali" },
   openGraph: {
-    title:
-      "Lipoescultura con Lipoinyección Glútea en Cali | Tiffany Esthetic Group IPS",
+    title: "Lipoescultura en Cali | Tiffany Esthetic Group",
     description:
       "Procedimiento quirúrgico de moldeamiento corporal mediante transferencia de grasa autóloga.",
     url: "https://clinicatiffany.com/lipoescultura-lipoinyeccion-glutea-cali",
