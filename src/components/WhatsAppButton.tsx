@@ -2,7 +2,8 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { MessageCircle, X, ArrowRight } from "lucide-react";
+import { X, ArrowRight } from "lucide-react";
+import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import { cn } from "@/lib/utils";
 
 const PHONE = "573202703522";
@@ -161,7 +162,7 @@ export default function WhatsAppButton() {
           )}
           aria-label={isOpen ? "Cerrar chat" : "Abrir chat"}
         >
-          {isOpen ? <X size={24} /> : <MessageCircle size={24} />}
+          {isOpen ? <X size={24} /> : <WhatsAppIcon className="w-6 h-6" />}
         </button>
       </div>
     </div>

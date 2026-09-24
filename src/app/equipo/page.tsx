@@ -4,6 +4,7 @@ import Container from "@/components/ui/Container";
 import AnimateInView, { StaggerGrid, StaggerItem } from "@/components/ui/AnimateInView";
 import ForceTopOnMount from "@/components/ForceTopOnMount";
 import TeamGallery from "@/components/ui/team-gallery";
+import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
 const whatsappUrl =
   "https://wa.me/573202703522?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n%20m%C3%A9dica%20en%20Tiffany%20Esthetic%20Group.";
@@ -399,9 +400,7 @@ export default function EquipoPage() {
                 </p>
                 <div className="mt-8 p-5 bg-primary/5 rounded-xl border border-primary/10">
                   <div className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-primary mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
-                    </svg>
+                    <WhatsAppIcon className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                     <p className="text-sm font-body text-primary-dark font-semibold">
                       ¿Quieres conocer más sobre nuestro equipo y servicios?{" "}
                       <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">
