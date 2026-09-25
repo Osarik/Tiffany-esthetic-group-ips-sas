@@ -41,21 +41,17 @@ const jsonLd = {
       medicalSpecialty: "PlasticSurgery",
     },
     {
-      "@type": "MedicalProcedure",
+      "@type": "SurgicalProcedure",
       url: "https://clinicatiffany.com/liposuccion-aumento",
-      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Liposucción",
-      procedureType: "SurgicalProcedure",
       bodyLocation: ["Abdomen", "Flanks", "Back", "Thighs", "Arms"],
       description:
         "Remoción quirúrgica de depósitos de grasa localizada para mejorar el contorno corporal.",
     },
     {
-      "@type": "MedicalProcedure",
+      "@type": "SurgicalProcedure",
       url: "https://clinicatiffany.com/liposuccion-aumento",
-      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Transferencia de grasa autóloga",
-      procedureType: "SurgicalProcedure",
       bodyLocation: ["Gluteal Region", "Face", "Hands"],
       description:
         "Recolección, procesamiento y aplicación de grasa del propio paciente para aumentar el volumen en áreas específicas del cuerpo.",

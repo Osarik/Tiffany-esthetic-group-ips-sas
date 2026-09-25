@@ -41,21 +41,17 @@ const jsonLd = {
       medicalSpecialty: "PlasticSurgery",
     },
     {
-      "@type": "MedicalProcedure",
+      "@type": "SurgicalProcedure",
       url: "https://clinicatiffany.com/liposuccion-pexia-mamaria",
-      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Pexia Mamaria o Mastopexy",
-      procedureType: "SurgicalProcedure",
       bodyLocation: ["Breasts"],
       description:
         "Procedimiento quirúrgico que eleva y remodela las mamas caídas, reposicionando el complejo areola-pezón y eliminando el exceso de piel.",
     },
     {
-      "@type": "MedicalProcedure",
+      "@type": "SurgicalProcedure",
       url: "https://clinicatiffany.com/liposuccion-pexia-mamaria",
-      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Liposucción",
-      procedureType: "SurgicalProcedure",
       bodyLocation: ["Abdomen", "Flanks", "Back", "Thighs", "Arms"],
       description:
         "Remoción quirúrgica de depósitos de grasa localizada para mejorar el contorno corporal.",

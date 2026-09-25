@@ -41,21 +41,17 @@ const jsonLd = {
       medicalSpecialty: "PlasticSurgery",
     },
     {
-      "@type": "MedicalProcedure",
+      "@type": "SurgicalProcedure",
       url: "https://clinicatiffany.com/pexia-mamaria",
-      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Pexia Mamaria o Mastopexy",
-      procedureType: "SurgicalProcedure",
       bodyLocation: ["Breasts"],
       description:
         "Procedimiento quirúrgico que eleva y remodela las mamas caídas, reposicionando el complejo areola-pezón y eliminando el exceso de piel.",
     },
     {
-      "@type": "MedicalProcedure",
+      "@type": "SurgicalProcedure",
       url: "https://clinicatiffany.com/pexia-mamaria",
-      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Pexia Periareolar",
-      procedureType: "SurgicalProcedure",
       bodyLocation: ["Breasts"],
       description:
         "Técnica de elevación mamaria con incisión exclusivamente alrededor de la areola, indicada para ptosis leve a moderada.",

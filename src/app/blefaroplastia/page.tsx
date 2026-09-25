@@ -41,21 +41,17 @@ const jsonLd = {
       medicalSpecialty: "PlasticSurgery",
     },
     {
-      "@type": "MedicalProcedure",
+      "@type": "SurgicalProcedure",
       url: "https://clinicatiffany.com/blefaroplastia",
-      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Blefaroplastia Superior",
-      procedureType: "SurgicalProcedure",
       bodyLocation: ["Eyelids"],
       description:
         "Remoción quirúrgica del exceso de piel y grasa del párpado superior para rejuvenecer la mirada.",
     },
     {
-      "@type": "MedicalProcedure",
+      "@type": "SurgicalProcedure",
       url: "https://clinicatiffany.com/blefaroplastia",
-      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Blefaroplastia Inferior",
-      procedureType: "SurgicalProcedure",
       bodyLocation: ["Eyelids"],
       description:
         "Corrección quirúrgica de bolsas palpebrales inferiores y exceso de piel mediante abordaje transconjuntival o subciliar.",

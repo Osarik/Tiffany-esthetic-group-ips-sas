@@ -60,31 +60,25 @@ const jsonLd = {
       medicalSpecialty: "PlasticSurgery",
     },
     {
-      "@type": "MedicalProcedure",
+      "@type": "SurgicalProcedure",
       url: "https://clinicatiffany.com/liposuccion-lipectomia",
-      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Liposucción",
-      procedureType: "SurgicalProcedure",
       bodyLocation: ["Abdomen", "Flanks", "Back", "Thighs", "Arms"],
       description:
         "Remoción quirúrgica de depósitos de grasa localizada en zonas específicas del cuerpo mediante aspiración selectiva.",
     },
     {
-      "@type": "MedicalProcedure",
+      "@type": "SurgicalProcedure",
       url: "https://clinicatiffany.com/liposuccion-lipectomia",
-      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Lipectomía o Abdominoplastia",
-      procedureType: "SurgicalProcedure",
       bodyLocation: ["Abdomen"],
       description:
         "Procedimiento quirúrgico para retirar exceso de piel y tejido graso abdominal, y mejorar la firmeza de la pared abdominal.",
     },
     {
-      "@type": "MedicalProcedure",
+      "@type": "SurgicalProcedure",
       url: "https://clinicatiffany.com/liposuccion-lipectomia",
-      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Transferencia de grasa autóloga",
-      procedureType: "SurgicalProcedure",
       bodyLocation: ["Gluteal Region"],
       description:
         "Recolección, procesamiento y aplicación de grasa del propio paciente en áreas como la región glútea para mejorar contorno y proyección.",

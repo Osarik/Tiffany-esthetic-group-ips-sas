@@ -42,11 +42,9 @@ const jsonLd = {
       medicalSpecialty: "PlasticSurgery",
     },
     {
-      "@type": "MedicalProcedure",
+      "@type": "SurgicalProcedure",
       url: "https://clinicatiffany.com/rinoplastia",
-      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Rinoplastia",
-      procedureType: "SurgicalProcedure",
       bodyLocation: ["Nose"],
       description:
         "Cirugía nasal para mejorar la armonía facial y, cuando aplica, la función respiratoria. Puede realizarse mediante técnica abierta o cerrada.",

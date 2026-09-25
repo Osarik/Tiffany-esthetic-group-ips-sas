@@ -38,11 +38,9 @@ const jsonLd = {
       medicalSpecialty: "PlasticSurgery",
     },
     {
-      "@type": "MedicalProcedure",
+      "@type": "SurgicalProcedure",
       url: "https://clinicatiffany.com/lipoescultura-lipoinyeccion-glutea-cali",
-      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Lipoescultura con Lipoinyección Glútea",
-      procedureType: "SurgicalProcedure",
       bodyLocation: ["Abdomen", "Flanks", "Back", "Gluteal Region"],
       description:
         "Remodelación corporal mediante liposucción e inyección de tejido adiposo autólogo purificado en la región glútea.",

@@ -136,13 +136,11 @@ export default async function ServiceLandingPage({ params }: Props) {
         about: { "@id": "https://clinicatiffany.com/#business" },
       },
       {
-        "@type": isAlquiler ? "Service" : "MedicalProcedure",
+        "@type": isAlquiler ? "Service" : "SurgicalProcedure",
         url: `https://clinicatiffany.com/${slug}`,
         name: service.title,
-        procedureType: isAlquiler ? undefined : "SurgicalProcedure",
         serviceType: isAlquiler ? "Alquiler de quirófano" : undefined,
         description: service.description,
-        provider: { "@id": "https://clinicatiffany.com/#business" },
       },
       ...(landing.faqs?.length
         ? [

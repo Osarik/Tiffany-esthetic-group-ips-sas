@@ -41,21 +41,17 @@ const jsonLd = {
       medicalSpecialty: "PlasticSurgery",
     },
     {
-      "@type": "MedicalProcedure",
+      "@type": "SurgicalProcedure",
       url: "https://clinicatiffany.com/lifting-facial",
-      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Lifting Facial o Ritidectomía",
-      procedureType: "SurgicalProcedure",
       bodyLocation: ["Face", "Neck"],
       description:
         "Procedimiento quirúrgico que reposiciona los tejidos faciales profundos, reseca el exceso de piel y redefine los contornos del rostro y el cuello.",
     },
     {
-      "@type": "MedicalProcedure",
+      "@type": "SurgicalProcedure",
       url: "https://clinicatiffany.com/lifting-facial",
-      provider: { "@id": "https://clinicatiffany.com/#business" },
       name: "Lifting de Tercio Medio Facial",
-      procedureType: "SurgicalProcedure",
       bodyLocation: ["Face"],
       description:
         "Técnica quirúrgica que eleva y reposiciona los tejidos del tercio medio de la cara, mejorando el surco nasogeniano, el pómulo y la región malar.",

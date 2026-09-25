@@ -41,25 +41,37 @@ export default function SchemaMarkup() {
 
   const procedures = services.filter((s) => s.href);
 
-  const availableService = procedures.map((s) =>
-    s.id === "alquiler-quirofanos"
-      ? {
-          "@type": "Service",
-          name: s.title,
-          description: s.description,
-          url: `${siteUrl}${s.href}`,
-          serviceType: "Alquiler de quirófano",
-          provider: { "@id": `${siteUrl}/#business` },
-        }
-      : {
-          "@type": "MedicalProcedure",
-          name: s.title,
-          description: s.description,
-          procedureType: "SurgicalProcedure",
-          url: `${siteUrl}${s.href}`,
-          provider: { "@id": `${siteUrl}/#business` },
-        },
+  const availableService = procedures
+    .filter((s) => s.id !== "alquiler-quirofanos")
+    .map((p) => ({
+      "@type": "SurgicalProcedure",
+      name: p.title,
+      description: p.description,
+      url: `${siteUrl}${p.href}`,
+    }));
+
+  const alquilerQuirofano = procedures.find(
+    (s) => s.id === "alquiler-quirofanos",
   );
+
+  const makesOffer = alquilerQuirofano
+    ? {
+        "@type": "Offer",
+        "@id": `${siteUrl}/#offer-alquiler-quirofanos`,
+        url: `${siteUrl}${alquilerQuirofano.href}`,
+        itemOffered: {
+          "@type": "Service",
+          "@id": `${siteUrl}/#service-alquiler-quirofanos`,
+          name: alquilerQuirofano.title,
+          description: alquilerQuirofano.description,
+          serviceType: "Alquiler de quirófano",
+          url: `${siteUrl}${alquilerQuirofano.href}`,
+          offeredBy: { "@id": `${siteUrl}/#business` },
+        },
+        offeredBy: { "@id": `${siteUrl}/#business` },
+        areaServed: "CO",
+      }
+    : undefined;
 
   const schema = {
     "@context": "https://schema.org",
@@ -152,7 +164,6 @@ export default function SchemaMarkup() {
           "https://share.google/MzXxcRbLtvpwRjNLt",
         ],
         parentOrganization: { "@id": `${siteUrl}/#organization` },
-        medicalStaff: { "@id": `${siteUrl}/#physician` },
         contactPoint: {
           "@type": "ContactPoint",
           telephone: "+57-3202703522",
@@ -179,23 +190,6 @@ export default function SchemaMarkup() {
           reviewCount: testimonialsData.aiSummary.totalReviews,
         },
         availableService,
-      },
-      {
-        "@type": "Physician",
-        "@id": `${siteUrl}/#physician`,
-        name: "Equipo médico de Tiffany Esthetic Group Ips SAS",
-        description:
-          "Cirujanos plásticos calificados y personal médico de Tiffany Esthetic Group IPS en Cali.",
-        medicalSpecialty: "PlasticSurgery",
-        worksFor: { "@id": `${siteUrl}/#business` },
-        address: {
-          "@type": "PostalAddress",
-          addressCountry: "CO",
-          addressLocality: "Cali",
-          addressRegion: "Valle del Cauca",
-          streetAddress: "Cra 85c #13a1-25, Comuna 17",
-          postalCode: "760032",
-        },
       },
       {
         "@type": "WebSite",
