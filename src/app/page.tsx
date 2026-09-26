@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Hero from "@/components/sections/Hero";
 import Benefits from "@/components/sections/Benefits";
 import Certifications from "@/components/sections/Certifications";
@@ -15,6 +16,12 @@ import { faqs } from "@/data/faqs";
 import { testimonialsData } from "@/data/testimonials";
 
 const siteUrl = "https://clinicatiffany.com";
+
+export const metadata: Metadata = {
+  other: {
+    "msvalidate.01": "EA7A4077E8463A4C5B79E016A68F1266",
+  },
+};
 
 const homeJsonLd = {
   "@context": "https://schema.org",
