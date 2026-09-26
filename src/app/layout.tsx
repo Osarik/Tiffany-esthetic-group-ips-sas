@@ -63,15 +63,15 @@ export const metadata: Metadata = {
       "Tiffany Esthetic Group Ips SAS | Cirugía Plástica y Servicios Quirúrgicos",
     description:
       "Institución habilitada con salas de cirugía, recuperación, farmacia y personal calificado en Cali.",
-    url: "https://clinicatiffany.com",
+url: "https://www.clinicatiffany.com",
     siteName: "Tiffany Esthetic Group",
     locale: "es_CO",
     type: "website",
     images: [
       {
-        url: "https://clinicatiffany.com/icon.svg",
-        width: 512,
-        height: 512,
+        url: "https://www.clinicatiffany.com/images/tiffany-og.png",
+        width: 1200,
+        height: 630,
         alt: "Tiffany Esthetic Group - Logo",
       },
     ],
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     title: "Tiffany Esthetic Group",
     description:
       "Cirugía plástica, servicios quirúrgicos, recuperación y farmacia habilitada en Cali.",
-    images: ["https://clinicatiffany.com/icon.svg"],
+    images: ["https://www.clinicatiffany.com/images/tiffany-og.png"],
   },
 };
 
