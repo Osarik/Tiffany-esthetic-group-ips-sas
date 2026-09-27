@@ -22,7 +22,7 @@ export default function Hero() {
           >
             <Heading as="h1" className="mb-8 !text-white">
               Cirugía Plástica en Cali{" "}
-              <br className="hidden md:block" />
+              <br className="hidden sm:block" />
               <span className="text-primary">| Tiffany Esthetic Group</span>
             </Heading>
             <p className="text-base md:text-lg text-white/60 font-body mb-8">
