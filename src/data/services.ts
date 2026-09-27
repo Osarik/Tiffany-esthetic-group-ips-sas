@@ -207,13 +207,6 @@ export const services: Service[] = [
     category: "Cirugía Facial",
     href: "/blefaroplastia-otoplastia-lipectomia",
   },
-  {
-    id: "alquiler-quirofanos",
-    title: "Alquiler de quirófano",
-    description: "Quirófanos completamente equipados con personal calificado ideal para cirugías estéticas ambulatorias.",
-    category: "Alquiler de Quirófanos",
-    href: "/alquiler-quirofanos",
-  },
 ];
 
 

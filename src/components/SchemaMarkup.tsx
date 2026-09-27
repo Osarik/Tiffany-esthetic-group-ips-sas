@@ -3,7 +3,7 @@ import { services } from "@/data/services";
 import { testimonialsData } from "@/data/testimonials";
 
 export default function SchemaMarkup() {
-  const siteUrl = "https://clinicatiffany.com";
+  const siteUrl = "https://www.clinicatiffany.com";
   const whatsappUrl = `https://wa.me/${clinicData.whatsapp}`;
 
   const clinicImages = [
@@ -41,37 +41,12 @@ export default function SchemaMarkup() {
 
   const procedures = services.filter((s) => s.href);
 
-  const availableService = procedures
-    .filter((s) => s.id !== "alquiler-quirofanos")
-    .map((p) => ({
-      "@type": "SurgicalProcedure",
-      name: p.title,
-      description: p.description,
-      url: `${siteUrl}${p.href}`,
-    }));
-
-  const alquilerQuirofano = procedures.find(
-    (s) => s.id === "alquiler-quirofanos",
-  );
-
-  const makesOffer = alquilerQuirofano
-    ? {
-        "@type": "Offer",
-        "@id": `${siteUrl}/#offer-alquiler-quirofanos`,
-        url: `${siteUrl}${alquilerQuirofano.href}`,
-        itemOffered: {
-          "@type": "Service",
-          "@id": `${siteUrl}/#service-alquiler-quirofanos`,
-          name: alquilerQuirofano.title,
-          description: alquilerQuirofano.description,
-          serviceType: "Alquiler de quirófano",
-          url: `${siteUrl}${alquilerQuirofano.href}`,
-          offeredBy: { "@id": `${siteUrl}/#business` },
-        },
-        offeredBy: { "@id": `${siteUrl}/#business` },
-        areaServed: "CO",
-      }
-    : undefined;
+  const availableService = procedures.map((p) => ({
+    "@type": "SurgicalProcedure",
+    name: p.title,
+    description: p.description,
+    url: `${siteUrl}${p.href}`,
+  }));
 
   const schema = {
     "@context": "https://schema.org",

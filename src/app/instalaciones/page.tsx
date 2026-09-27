@@ -100,21 +100,21 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      "@id": "https://clinicatiffany.com/instalaciones#webpage",
-      url: "https://clinicatiffany.com/instalaciones",
+      "@id": "https://www.clinicatiffany.com/instalaciones#webpage",
+      url: "https://www.clinicatiffany.com/instalaciones",
       name: "Instalaciones Quirúrgicas Habilitadas en Cali",
       description:
         "Conoce nuestras instalaciones: 3 salas de cirugía, área de recuperación con enfermería y farmacia habilitada. IPS habilitada según Resolución 3100 de 2019 en Cali.",
       inLanguage: "es",
       medicalAudience: "Patient",
       aspect: "Facility",
-      about: { "@id": "https://clinicatiffany.com/#business" },
+      about: { "@id": "https://www.clinicatiffany.com/#business" },
     },
     {
       "@type": "MedicalClinic",
-      "@id": "https://clinicatiffany.com/#business",
+      "@id": "https://www.clinicatiffany.com/#business",
       name: "Tiffany Esthetic Group IPS",
-      image: "https://clinicatiffany.com/icon.svg",
+      image: "https://www.clinicatiffany.com/icon.svg",
       description:
         "Instalaciones quirúrgicas habilitadas: 3 salas de cirugía, área de recuperación con enfermería especializada y farmacia habilitada ante las autoridades sanitarias.",
       address: {
@@ -152,7 +152,7 @@ export const metadata: Metadata = {
     title: "Instalaciones Quirúrgicas en Cali",
     description:
       "Salas de cirugía, recuperación y farmacia habilitada. IPS habilitada según Resolución 3100 de 2019. Conoce nuestras instalaciones en Cali.",
-    url: "https://clinicatiffany.com/instalaciones",
+    url: "https://www.clinicatiffany.com/instalaciones",
     siteName: "Tiffany Esthetic Group",
     locale: "es_CO",
     type: "website",

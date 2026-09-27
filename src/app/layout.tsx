@@ -34,7 +34,7 @@ const sacramento = Sacramento({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://clinicatiffany.com"),
+  metadataBase: new URL("https://www.clinicatiffany.com"),
   manifest: "/site.webmanifest",
   icons: {
     icon: "/icon.svg",
@@ -58,6 +58,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Tiffany Esthetic Group Ips SAS" }],
   robots: { index: true, follow: true },
+  alternates: { canonical: "/" },
   openGraph: {
     title:
       "Tiffany Esthetic Group Ips SAS | Cirugía Plástica y Servicios Quirúrgicos",

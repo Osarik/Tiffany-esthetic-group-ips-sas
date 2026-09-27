@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Política de Cookies | Tiffany Esthetic Group",
     description:
       "Política de cookies de Tiffany Esthetic Group Ips SAS, IPS habilitada en Cali, Colombia.",
-    url: "https://clinicatiffany.com/politica-de-cookies",
+    url: "https://www.clinicatiffany.com/politica-de-cookies",
     siteName: "Tiffany Esthetic Group",
     locale: "es_CO",
     type: "website",

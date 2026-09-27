@@ -124,14 +124,14 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      "@id": "https://clinicatiffany.com/preguntas-frecuentes#webpage",
-      url: "https://clinicatiffany.com/preguntas-frecuentes",
+      "@id": "https://www.clinicatiffany.com/preguntas-frecuentes#webpage",
+      url: "https://www.clinicatiffany.com/preguntas-frecuentes",
       name: "Preguntas Frecuentes | Tiffany Esthetic Group IPS SAS",
       description:
         "Resuelve tus dudas sobre procedimientos de cirugía plástica, habilitación de la IPS, proceso quirúrgico y cómo agendar tu valoración médica en Cali.",
       inLanguage: "es",
       medicalAudience: "Patient",
-      about: { "@id": "https://clinicatiffany.com/#business" },
+      about: { "@id": "https://www.clinicatiffany.com/#business" },
       mainEntity: {
         "@type": "FAQPage",
         mainEntity: faqs.map((faq) => ({

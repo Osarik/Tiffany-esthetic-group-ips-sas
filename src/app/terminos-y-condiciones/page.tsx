@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Términos y Condiciones | Tiffany Esthetic Group",
     description:
       "Conoce los términos legales de uso de nuestro sitio web y descargo de responsabilidad médica.",
-    url: "https://clinicatiffany.com/terminos-y-condiciones",
+    url: "https://www.clinicatiffany.com/terminos-y-condiciones",
     siteName: "Tiffany Esthetic Group",
     locale: "es_CO",
     type: "website",

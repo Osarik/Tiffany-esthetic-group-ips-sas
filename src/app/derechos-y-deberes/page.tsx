@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Derechos y Deberes del Paciente | Tiffany Esthetic Group",
     description:
       "Conoce tus derechos y deberes como paciente de nuestra IPS en Cali, Colombia.",
-    url: "https://clinicatiffany.com/derechos-y-deberes",
+    url: "https://www.clinicatiffany.com/derechos-y-deberes",
     siteName: "Tiffany Esthetic Group",
     locale: "es_CO",
     type: "website",

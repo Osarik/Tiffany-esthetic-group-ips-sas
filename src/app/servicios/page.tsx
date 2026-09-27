@@ -89,21 +89,21 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      "@id": "https://clinicatiffany.com/servicios#webpage",
-      url: "https://clinicatiffany.com/servicios",
+      "@id": "https://www.clinicatiffany.com/servicios#webpage",
+      url: "https://www.clinicatiffany.com/servicios",
       name: "Procedimientos Quirúrgicos Estéticos en Cali",
       description:
         "Conoce todos los procedimientos quirúrgicos estéticos que ofrecemos en Tiffany Esthetic Group IPS: cirugía corporal, mamaria y facial en Cali. IPS habilitada.",
       inLanguage: "es",
       medicalAudience: "Patient",
       aspect: "Treatment",
-      about: { "@id": "https://clinicatiffany.com/#business" },
+      about: { "@id": "https://www.clinicatiffany.com/#business" },
     },
     {
       "@type": "MedicalClinic",
-      "@id": "https://clinicatiffany.com/#business",
+      "@id": "https://www.clinicatiffany.com/#business",
       name: "Tiffany Esthetic Group IPS",
-      image: "https://clinicatiffany.com/icon.svg",
+      image: "https://www.clinicatiffany.com/icon.svg",
       address: {
         "@type": "PostalAddress",
         streetAddress: "13a1-25, Cra 85c, Comuna 17",
@@ -124,13 +124,13 @@ const jsonLd = {
       itemListElement: services.map((s, i) => ({
         "@type": "ListItem",
         position: i + 1,
-        url: s.href ? `https://clinicatiffany.com${s.href}` : undefined,
+        url: s.href ? `https://www.clinicatiffany.com${s.href}` : undefined,
         item: {
           "@type": "MedicalProcedure",
           name: s.title,
           description: s.description,
-          url: s.href ? `https://clinicatiffany.com${s.href}` : undefined,
-          provider: { "@id": "https://clinicatiffany.com/#business" },
+          url: s.href ? `https://www.clinicatiffany.com${s.href}` : undefined,
+          provider: { "@id": "https://www.clinicatiffany.com/#business" },
         },
       })),
     },
@@ -149,7 +149,7 @@ export const metadata: Metadata = {
     title: "Procedimientos Quirúrgicos Estéticos en Cali",
     description:
       "Cirugía corporal, mamaria y facial en Cali. IPS habilitada con sala de cirugía, recuperación, farmacia y personal calificado.",
-    url: "https://clinicatiffany.com/servicios",
+    url: "https://www.clinicatiffany.com/servicios",
     siteName: "Tiffany Esthetic Group",
     locale: "es_CO",
     type: "website",

@@ -149,12 +149,20 @@ export default function ServiceTabs({ whatsappUrl }: { whatsappUrl: string }) {
         </div>
 
         {tabsConfig.map((tab, idx) => {
-          if (activeTab !== idx) return null;
+          const isActive = activeTab === idx;
           const catServices = services.filter((s) => s.category === tab.categoryName);
           const catStyle = categoryConfig[tab.key];
           const isQuirfanos = tab.key === "quirfanos";
           return (
-            <div key={tab.key} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div
+              key={tab.key}
+              className={
+                isActive
+                  ? "grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
+                  : "hidden"
+              }
+              aria-hidden={!isActive}
+            >
               {catServices.map((service) => {
                 const href = service.href ?? service.detailUrl ?? "#";
                 const cardContent = (

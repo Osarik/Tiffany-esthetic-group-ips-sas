@@ -15,7 +15,7 @@ import Map from "@/components/sections/Map";
 import { faqs } from "@/data/faqs";
 import { testimonialsData } from "@/data/testimonials";
 
-const siteUrl = "https://clinicatiffany.com";
+const siteUrl = "https://www.clinicatiffany.com";
 
 export const metadata: Metadata = {
   other: {

@@ -97,7 +97,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${service.title} en Cali`,
       description: service.description,
-      url: `https://clinicatiffany.com/${slug}`,
+      url: `https://www.clinicatiffany.com/${slug}`,
       siteName: "Tiffany Esthetic Group",
       locale: "es_CO",
       type: "article",
@@ -125,19 +125,19 @@ export default async function ServiceLandingPage({ params }: Props) {
     "@graph": [
       {
         "@type": "MedicalWebPage",
-        "@id": `https://clinicatiffany.com/${slug}#webpage`,
-        url: `https://clinicatiffany.com/${slug}`,
+        "@id": `https://www.clinicatiffany.com/${slug}#webpage`,
+        url: `https://www.clinicatiffany.com/${slug}`,
         name: `${service.title} en Cali`,
         description: service.description,
         inLanguage: "es",
         medicalAudience: "Patient",
         aspect: "Treatment",
-        isPartOf: { "@id": "https://clinicatiffany.com/#website" },
-        about: { "@id": "https://clinicatiffany.com/#business" },
+        isPartOf: { "@id": "https://www.clinicatiffany.com/#website" },
+        about: { "@id": "https://www.clinicatiffany.com/#business" },
       },
       {
         "@type": isAlquiler ? "Service" : "SurgicalProcedure",
-        url: `https://clinicatiffany.com/${slug}`,
+        url: `https://www.clinicatiffany.com/${slug}`,
         name: service.title,
         serviceType: isAlquiler ? "Alquiler de quirófano" : undefined,
         description: service.description,
@@ -146,9 +146,9 @@ export default async function ServiceLandingPage({ params }: Props) {
         ? [
             {
               "@type": "FAQPage",
-              "@id": `https://clinicatiffany.com/${slug}#faq`,
-              url: `https://clinicatiffany.com/${slug}`,
-              isPartOf: { "@id": `https://clinicatiffany.com/${slug}#webpage` },
+              "@id": `https://www.clinicatiffany.com/${slug}#faq`,
+              url: `https://www.clinicatiffany.com/${slug}`,
+              isPartOf: { "@id": `https://www.clinicatiffany.com/${slug}#webpage` },
               mainEntity: landing.faqs.map((f) => ({
                 "@type": "Question",
                 name: f.q,

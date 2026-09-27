@@ -25,11 +25,10 @@ const procedures = [
   "rinoplastia",
   "lipo-rinoplastia",
   "blefaroplastia-otoplastia-lipectomia",
-  "alquiler-quirofanos",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://clinicatiffany.com";
+  const baseUrl = "https://www.clinicatiffany.com";
 
   const staticPages: Array<{ path: string; priority: number }> = [
     { path: "", priority: 1 },
@@ -44,8 +43,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/liposuccion-aumento", priority: 0.7 },
     { path: "/liposuccion-lipectomia", priority: 0.7 },
     { path: "/liposuccion-pexia-mamaria", priority: 0.7 },
-    { path: "/pexia-mamaria", priority: 0.7 },
-    { path: "/rinoplastia", priority: 0.7 },
     { path: "/politica-de-privacidad", priority: 0.5 },
     { path: "/terminos-y-condiciones", priority: 0.5 },
     { path: "/derechos-y-deberes", priority: 0.5 },

@@ -14,7 +14,7 @@ const popularLinks = [
   { label: "Lipoescultura", href: "/lipoescultura" },
   { label: "Mamoplastia de aumento", href: "/mamoplastia-aumento" },
   { label: "Rinoplastia", href: "/rinoplastia" },
-  { label: "Pexia mamaria", href: "/pexia-mamaria" },
+    { label: "Pexia mamaria", href: "/pexia-mamaria" },
   { label: "Ginecomastia", href: "/ginecomastia" },
   { label: "Lipectomía", href: "/lipectomia" },
 ];
@@ -34,7 +34,7 @@ export default function NotFound() {
             name: "Página no encontrada (404)",
             description:
               "La página solicitada no existe. Explore los procedimientos de cirugía plástica en Tiffany Esthetic Group IPS, Cali.",
-            url: "https://clinicatiffany.com/",
+            url: "https://www.clinicatiffany.com/",
           }),
         }}
       />

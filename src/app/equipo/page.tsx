@@ -95,20 +95,20 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      "@id": "https://clinicatiffany.com/equipo#webpage",
-      url: "https://clinicatiffany.com/equipo",
+      "@id": "https://www.clinicatiffany.com/equipo#webpage",
+      url: "https://www.clinicatiffany.com/equipo",
       name: "Equipo Médico Profesional | Tiffany Esthetic Group IPS",
       description:
         "Conoce nuestro equipo de cirujanos plásticos miembros de la SCCP, anestesiólogos certificados, enfermería recuperadora y servicios quirúrgicos en Cali.",
       inLanguage: "es",
       medicalAudience: "Patient",
-      about: { "@id": "https://clinicatiffany.com/#business" },
+      about: { "@id": "https://www.clinicatiffany.com/#business" },
     },
     {
       "@type": "MedicalClinic",
-      "@id": "https://clinicatiffany.com/#business",
+      "@id": "https://www.clinicatiffany.com/#business",
       name: "Tiffany Esthetic Group IPS",
-      image: "https://clinicatiffany.com/icon.svg",
+      image: "https://www.clinicatiffany.com/icon.svg",
       description:
         "Equipo de cirujanos plásticos miembros de la SCCP, anestesiólogos certificados por el Consejo de Anestesiología, enfermería recuperadora y jefe de planta.",
       address: {

@@ -7,9 +7,9 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      about: { "@id": "https://clinicatiffany.com/#business" },
-      "@id": "https://clinicatiffany.com/lipoescultura-lipoinyeccion-glutea-cali",
-      url: "https://clinicatiffany.com/lipoescultura-lipoinyeccion-glutea-cali",
+      about: { "@id": "https://www.clinicatiffany.com/#business" },
+      "@id": "https://www.clinicatiffany.com/lipoescultura-lipoinyeccion-glutea-cali",
+      url: "https://www.clinicatiffany.com/lipoescultura-lipoinyeccion-glutea-cali",
       name: "Lipoescultura con Lipoinyección Glútea en Cali",
       description:
         "Procedimiento quirúrgico de moldeamiento corporal mediante transferencia de grasa autóloga en Cali por Tiffany Esthetic Group IPS.",
@@ -19,9 +19,9 @@ const jsonLd = {
     },
     {
       "@type": "MedicalClinic",
-      "@id": "https://clinicatiffany.com/#business",
+      "@id": "https://www.clinicatiffany.com/#business",
       name: "Tiffany Esthetic Group IPS",
-      image: "https://clinicatiffany.com/icon.svg",
+      image: "https://www.clinicatiffany.com/icon.svg",
       address: {
         "@type": "PostalAddress",
         streetAddress: "13a1-25, Cra 85c, Comuna 17",
@@ -39,7 +39,7 @@ const jsonLd = {
     },
     {
       "@type": "SurgicalProcedure",
-      url: "https://clinicatiffany.com/lipoescultura-lipoinyeccion-glutea-cali",
+      url: "https://www.clinicatiffany.com/lipoescultura-lipoinyeccion-glutea-cali",
       name: "Lipoescultura con Lipoinyección Glútea",
       bodyLocation: ["Abdomen", "Flanks", "Back", "Gluteal Region"],
       description:
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: "Lipoescultura en Cali | Tiffany Esthetic Group",
     description:
       "Procedimiento quirúrgico de moldeamiento corporal mediante transferencia de grasa autóloga.",
-    url: "https://clinicatiffany.com/lipoescultura-lipoinyeccion-glutea-cali",
+    url: "https://www.clinicatiffany.com/lipoescultura-lipoinyeccion-glutea-cali",
     locale: "es_CO",
     type: "website",
   },
@@ -176,9 +176,9 @@ export default function LipoesculturaPage() {
             "@graph": [
               {
                 "@type": "FAQPage",
-                "@id": "https://clinicatiffany.com/lipoescultura-lipoinyeccion-glutea-cali#faq",
-                url: "https://clinicatiffany.com/lipoescultura-lipoinyeccion-glutea-cali",
-                isPartOf: { "@id": "https://clinicatiffany.com/lipoescultura-lipoinyeccion-glutea-cali#webpage" },
+                "@id": "https://www.clinicatiffany.com/lipoescultura-lipoinyeccion-glutea-cali#faq",
+                url: "https://www.clinicatiffany.com/lipoescultura-lipoinyeccion-glutea-cali",
+                isPartOf: { "@id": "https://www.clinicatiffany.com/lipoescultura-lipoinyeccion-glutea-cali#webpage" },
                 mainEntity: faqs.map((f) => ({
                   "@type": "Question",
                   name: f.q,

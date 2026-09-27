@@ -11,9 +11,9 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      about: { "@id": "https://clinicatiffany.com/#business" },
-      "@id": "https://clinicatiffany.com/rinoplastia#webpage",
-      url: "https://clinicatiffany.com/rinoplastia",
+      about: { "@id": "https://www.clinicatiffany.com/#business" },
+      "@id": "https://www.clinicatiffany.com/rinoplastia#webpage",
+      url: "https://www.clinicatiffany.com/rinoplastia",
       name: "Rinoplastia en Cali | Cirugía Nasal",
       description:
         "Cirugía nasal enfocada en la armonía facial y la función respiratoria cuando aplica. IPS habilitada en Cali. Agenda tu valoración médica.",
@@ -23,9 +23,9 @@ const jsonLd = {
     },
     {
       "@type": "MedicalClinic",
-      "@id": "https://clinicatiffany.com/#business",
+      "@id": "https://www.clinicatiffany.com/#business",
       name: "Tiffany Esthetic Group IPS",
-      image: "https://clinicatiffany.com/icon.svg",
+      image: "https://www.clinicatiffany.com/icon.svg",
       address: {
         "@type": "PostalAddress",
         streetAddress: "13a1-25, Cra 85c, Comuna 17",
@@ -43,7 +43,7 @@ const jsonLd = {
     },
     {
       "@type": "SurgicalProcedure",
-      url: "https://clinicatiffany.com/rinoplastia",
+      url: "https://www.clinicatiffany.com/rinoplastia",
       name: "Rinoplastia",
       bodyLocation: ["Nose"],
       description:
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     title: "Rinoplastia en Cali",
     description:
       "Cirugía nasal para armonía facial y función respiratoria. Técnicas abierta y cerrada adaptadas a cada paciente.",
-    url: "https://clinicatiffany.com/rinoplastia",
+    url: "https://www.clinicatiffany.com/rinoplastia",
     siteName: "Tiffany Esthetic Group",
     locale: "es_CO",
     type: "article",
@@ -254,9 +254,9 @@ export default function RinoplastiaPage() {
             "@graph": [
               {
                 "@type": "FAQPage",
-                "@id": "https://clinicatiffany.com/rinoplastia#faq",
-                url: "https://clinicatiffany.com/rinoplastia",
-                isPartOf: { "@id": "https://clinicatiffany.com/rinoplastia#webpage" },
+                "@id": "https://www.clinicatiffany.com/rinoplastia#faq",
+                url: "https://www.clinicatiffany.com/rinoplastia",
+                isPartOf: { "@id": "https://www.clinicatiffany.com/rinoplastia#webpage" },
                 mainEntity: faqs.map((f) => ({
                   "@type": "Question",
                   name: f.q,

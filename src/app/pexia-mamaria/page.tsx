@@ -10,9 +10,9 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      about: { "@id": "https://clinicatiffany.com/#business" },
-      "@id": "https://clinicatiffany.com/pexia-mamaria#webpage",
-      url: "https://clinicatiffany.com/pexia-mamaria",
+      about: { "@id": "https://www.clinicatiffany.com/#business" },
+      "@id": "https://www.clinicatiffany.com/pexia-mamaria#webpage",
+      url: "https://www.clinicatiffany.com/pexia-mamaria",
       name: "Pexia Mamaria y Pexia Periareolar en Cali",
       description:
         "Elevación mamaria con técnicas adaptadas a cada paciente, incluida la pexia periareolar. IPS habilitada en Cali. Agenda tu valoración médica.",
@@ -22,9 +22,9 @@ const jsonLd = {
     },
     {
       "@type": "MedicalClinic",
-      "@id": "https://clinicatiffany.com/#business",
+      "@id": "https://www.clinicatiffany.com/#business",
       name: "Tiffany Esthetic Group IPS",
-      image: "https://clinicatiffany.com/icon.svg",
+      image: "https://www.clinicatiffany.com/icon.svg",
       address: {
         "@type": "PostalAddress",
         streetAddress: "13a1-25, Cra 85c, Comuna 17",
@@ -42,7 +42,7 @@ const jsonLd = {
     },
     {
       "@type": "SurgicalProcedure",
-      url: "https://clinicatiffany.com/pexia-mamaria",
+      url: "https://www.clinicatiffany.com/pexia-mamaria",
       name: "Pexia Mamaria o Mastopexy",
       bodyLocation: ["Breasts"],
       description:
@@ -50,7 +50,7 @@ const jsonLd = {
     },
     {
       "@type": "SurgicalProcedure",
-      url: "https://clinicatiffany.com/pexia-mamaria",
+      url: "https://www.clinicatiffany.com/pexia-mamaria",
       name: "Pexia Periareolar",
       bodyLocation: ["Breasts"],
       description:
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     title: "Pexia Mamaria y Pexia Periareolar en Cali",
     description:
       "Elevación mamaria con técnicas personalizadas. Pexia tradicional y periareolar para ptosis leve, moderada o avanzada.",
-    url: "https://clinicatiffany.com/pexia-mamaria",
+    url: "https://www.clinicatiffany.com/pexia-mamaria",
     siteName: "Tiffany Esthetic Group",
     locale: "es_CO",
     type: "article",
@@ -278,9 +278,9 @@ export default function PexiaMamariaPage() {
             "@graph": [
               {
                 "@type": "FAQPage",
-                "@id": "https://clinicatiffany.com/pexia-mamaria#faq",
-                url: "https://clinicatiffany.com/pexia-mamaria",
-                isPartOf: { "@id": "https://clinicatiffany.com/pexia-mamaria#webpage" },
+                "@id": "https://www.clinicatiffany.com/pexia-mamaria#faq",
+                url: "https://www.clinicatiffany.com/pexia-mamaria",
+                isPartOf: { "@id": "https://www.clinicatiffany.com/pexia-mamaria#webpage" },
                 mainEntity: faqs.map((f) => ({
                   "@type": "Question",
                   name: f.q,

@@ -343,20 +343,21 @@ const ScrollExpandMedia = ({
                 </div>
               </div>
 
-              <div className="flex items-center justify-center text-center gap-4 w-full relative z-10 transition-none flex-col">
-                <motion.h2
+              <h1 className="flex items-center justify-center text-center gap-4 w-full relative z-10 transition-none flex-col font-heading">
+                <motion.span
                   className='text-4xl md:text-5xl lg:text-6xl font-bold text-white font-heading leading-tight drop-shadow-lg'
                   style={{ transform: `translateX(-${textTranslateX}vw)` }}
                 >
                   {firstWord}
-                </motion.h2>
-                <motion.h2
+                </motion.span>
+                {" "}
+                <motion.span
                   className='text-4xl md:text-5xl lg:text-6xl font-bold text-center text-accent-light font-heading leading-tight drop-shadow-lg'
                   style={{ transform: `translateX(${textTranslateX}vw)` }}
                 >
                   {restOfTitle}
-                </motion.h2>
-              </div>
+                </motion.span>
+              </h1>
             </div>
 
             <motion.section

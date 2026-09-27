@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const baseUrl = "https://clinicatiffany.com";
+const baseUrl = "https://www.clinicatiffany.com";
 
 const allowAll = {
   allow: "/",
@@ -33,6 +33,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "ia_archiver", ...allowAll },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
-    host: "clinicatiffany.com",
+    host: "www.clinicatiffany.com",
   };
 }

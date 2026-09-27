@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Política de Privacidad | Tiffany Esthetic Group",
     description:
       "Conoce cómo protegemos tus datos personales y sensibles en nuestra IPS.",
-    url: "https://clinicatiffany.com/politica-de-privacidad",
+    url: "https://www.clinicatiffany.com/politica-de-privacidad",
     siteName: "Tiffany Esthetic Group",
     locale: "es_CO",
     type: "website",

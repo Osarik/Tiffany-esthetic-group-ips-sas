@@ -10,9 +10,9 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "MedicalWebPage",
-      about: { "@id": "https://clinicatiffany.com/#business" },
-      "@id": "https://clinicatiffany.com/blefaroplastia#webpage",
-      url: "https://clinicatiffany.com/blefaroplastia",
+      about: { "@id": "https://www.clinicatiffany.com/#business" },
+      "@id": "https://www.clinicatiffany.com/blefaroplastia#webpage",
+      url: "https://www.clinicatiffany.com/blefaroplastia",
       name: "Blefaroplastia en Cali | Rejuvenecimiento de la Mirada",
       description:
         "Rejuvenecimiento de la mirada mediante manejo del exceso de piel y bolsas palpebrales. IPS habilitada en Cali. Agenda tu valoración médica.",
@@ -22,9 +22,9 @@ const jsonLd = {
     },
     {
       "@type": "MedicalClinic",
-      "@id": "https://clinicatiffany.com/#business",
+      "@id": "https://www.clinicatiffany.com/#business",
       name: "Tiffany Esthetic Group IPS",
-      image: "https://clinicatiffany.com/icon.svg",
+      image: "https://www.clinicatiffany.com/icon.svg",
       address: {
         "@type": "PostalAddress",
         streetAddress: "13a1-25, Cra 85c, Comuna 17",
@@ -42,7 +42,7 @@ const jsonLd = {
     },
     {
       "@type": "SurgicalProcedure",
-      url: "https://clinicatiffany.com/blefaroplastia",
+      url: "https://www.clinicatiffany.com/blefaroplastia",
       name: "Blefaroplastia Superior",
       bodyLocation: ["Eyelids"],
       description:
@@ -50,7 +50,7 @@ const jsonLd = {
     },
     {
       "@type": "SurgicalProcedure",
-      url: "https://clinicatiffany.com/blefaroplastia",
+      url: "https://www.clinicatiffany.com/blefaroplastia",
       name: "Blefaroplastia Inferior",
       bodyLocation: ["Eyelids"],
       description:
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     title: "Blefaroplastia en Cali",
     description:
       "Rejuvenecimiento de la mirada con blefaroplastia superior e inferior. Resultados naturales que realzan la expresión facial.",
-    url: "https://clinicatiffany.com/blefaroplastia",
+    url: "https://www.clinicatiffany.com/blefaroplastia",
     siteName: "Tiffany Esthetic Group",
     locale: "es_CO",
     type: "article",
@@ -274,9 +274,9 @@ export default function BlefaroplastiaPage() {
             "@graph": [
               {
                 "@type": "FAQPage",
-                "@id": "https://clinicatiffany.com/blefaroplastia#faq",
-                url: "https://clinicatiffany.com/blefaroplastia",
-                isPartOf: { "@id": "https://clinicatiffany.com/blefaroplastia#webpage" },
+                "@id": "https://www.clinicatiffany.com/blefaroplastia#faq",
+                url: "https://www.clinicatiffany.com/blefaroplastia",
+                isPartOf: { "@id": "https://www.clinicatiffany.com/blefaroplastia#webpage" },
                 mainEntity: faqs.map((f) => ({
                   "@type": "Question",
                   name: f.q,
