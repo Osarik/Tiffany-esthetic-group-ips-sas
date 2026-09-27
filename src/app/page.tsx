@@ -41,18 +41,6 @@ const homeJsonLd = {
       primaryImageOfPage: `${siteUrl}/images/schema/25-16x9.webp`,
     },
     {
-      "@type": "BreadcrumbList",
-      "@id": `${siteUrl}/#breadcrumb`,
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Inicio",
-          item: `${siteUrl}`,
-        },
-      ],
-    },
-    {
       "@type": "FAQPage",
       "@id": `${siteUrl}/#faq`,
       url: siteUrl,
@@ -66,7 +54,7 @@ const homeJsonLd = {
         },
       })),
     },
-    ...testimonialsData.reviews.slice(0, 4).map((review) => ({
+    ...testimonialsData.reviews.map((review) => ({
       "@type": "Review",
       "@id": `${siteUrl}/#review-${review.id}`,
       itemReviewed: { "@id": `${siteUrl}/#business` },

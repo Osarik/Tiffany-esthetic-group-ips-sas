@@ -20,15 +20,14 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.4, ease: "easeOut" }}
           >
-            <span className="inline-block text-white/70 font-body font-semibold text-sm tracking-widest uppercase mb-4">
-              Cirugía Plástica & Servicios Quirúrgicos
-            </span>
-            <Heading as="h1" className="mb-6 !text-white">
-              Tiffany Esthetic Group{" "}
-              <span className="text-primary">IPS SAS</span>
+            <Heading as="h1" className="mb-8 !text-white">
+              Cirugía Plástica en Cali{" "}
+              <br className="hidden md:block" />
+              <span className="text-primary">| Tiffany Esthetic Group</span>
             </Heading>
-            <p className="text-base md:text-lg text-white/60 font-body -mt-4 mb-6">
-              Cirugía Plástica y Procedimientos Estéticos en Cali
+            <p className="text-base md:text-lg text-white/60 font-body mb-8">
+              Equipo médico certificado. Tu seguridad y tus resultados, nuestra
+              prioridad.
             </p>
             <p className="text-lg md:text-xl text-white/80 font-body leading-relaxed mb-8 max-w-lg">
               Somos una institución habilitada por la Secretaría de Salud, con

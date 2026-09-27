@@ -118,11 +118,33 @@ export default async function ServiceLandingPage({ params }: Props) {
   const gradientFrom = cat?.gradient.split(" ")[0]?.replace("from-[", "").replace("]", "") ?? "#0F4A44";
   const gradientTo = cat?.gradient.split(" ")[1]?.replace("to-[", "").replace("]", "") ?? "#2FA79C";
 
-  const isAlquiler = service.id === "alquiler-quirofanos";
-
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `https://www.clinicatiffany.com/${slug}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Inicio",
+            item: "https://www.clinicatiffany.com",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Servicios",
+            item: "https://www.clinicatiffany.com/servicios",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: service.title,
+            item: `https://www.clinicatiffany.com/${slug}`,
+          },
+        ],
+      },
       {
         "@type": "MedicalWebPage",
         "@id": `https://www.clinicatiffany.com/${slug}#webpage`,
@@ -136,10 +158,9 @@ export default async function ServiceLandingPage({ params }: Props) {
         about: { "@id": "https://www.clinicatiffany.com/#business" },
       },
       {
-        "@type": isAlquiler ? "Service" : "SurgicalProcedure",
+        "@type": "SurgicalProcedure",
         url: `https://www.clinicatiffany.com/${slug}`,
         name: service.title,
-        serviceType: isAlquiler ? "Alquiler de quirófano" : undefined,
         description: service.description,
       },
       ...(landing.faqs?.length
