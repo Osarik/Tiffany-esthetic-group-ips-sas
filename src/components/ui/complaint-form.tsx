@@ -25,6 +25,7 @@ const relations = [
 export default function ComplaintForm() {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const [sentType, setSentType] = useState("");
   const [error, setError] = useState("");
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -34,6 +35,7 @@ export default function ComplaintForm() {
 
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form));
+    setSentType(String(data.type || ""));
 
     try {
       const res = await fetch("/api/quejas", {
@@ -43,9 +45,10 @@ export default function ComplaintForm() {
       });
       const json = await res.json();
       if (!json.ok) throw new Error(json.error || "Error al enviar");
+      form.reset();
       setSent(true);
-    } catch (err: any) {
-      setError(err.message || "Error de conexión. Intenta de nuevo.");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Error de conexión. Intenta de nuevo.");
     } finally {
       setSending(false);
     }
@@ -56,6 +59,8 @@ export default function ComplaintForm() {
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
+        role="status"
+        aria-live="polite"
         className="text-center py-16"
       >
         <div className="w-16 h-16 rounded-full bg-[#2FA79C]/10 flex items-center justify-center mx-auto mb-5">
@@ -63,21 +68,28 @@ export default function ComplaintForm() {
             <polyline points="20 6 9 17 4 12" />
           </svg>
         </div>
-        <h3 className="font-heading font-bold text-2xl text-[#223231]">Recibimos tu {types.find(t => t.value === "complaint")?.label || "mensaje"}</h3>
+        <h3 className="font-heading font-bold text-2xl text-[#223231]">Recibimos tu {sentType || "mensaje"}</h3>
         <p className="text-[#223231]/60 font-body mt-2 max-w-md mx-auto">
           Daremos respuesta dentro de los términos establecidos por la normativa colombiana.
         </p>
+        <button
+          type="button"
+          onClick={() => setSent(false)}
+          className="mt-8 inline-flex items-center gap-2 font-body font-semibold text-[#2FA79C] border border-[#2FA79C]/30 rounded-full px-6 py-2.5 hover:bg-[#2FA79C]/5 transition-all duration-300"
+        >
+          Enviar otro mensaje
+        </button>
       </motion.div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="space-y-5">
+    <form onSubmit={handleSubmit} className="space-y-5">
       <input type="text" name="_hp" className="absolute -left-[9999px]" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       <div className="grid sm:grid-cols-2 gap-5">
         <div className="sm:col-span-2">
           <label htmlFor="name" className={labelClass}>Nombre completo *</label>
-          <input id="name" name="name" required className={inputClass} placeholder="Como aparece en tu documento" />
+          <input id="name" name="name" required maxLength={120} className={inputClass} placeholder="Como aparece en tu documento" />
         </div>
         <div>
           <label htmlFor="docType" className={labelClass}>Tipo de documento</label>
@@ -90,15 +102,15 @@ export default function ComplaintForm() {
         </div>
         <div>
           <label htmlFor="docNumber" className={labelClass}>Número de documento</label>
-          <input id="docNumber" name="docNumber" className={inputClass} placeholder="Sin puntos ni guiones" />
+          <input id="docNumber" name="docNumber" maxLength={30} className={inputClass} placeholder="Sin puntos ni guiones" />
         </div>
         <div>
           <label htmlFor="email" className={labelClass}>Correo electrónico *</label>
-          <input id="email" name="email" type="email" required className={inputClass} placeholder="tucorreo@ejemplo.com" />
+          <input id="email" name="email" type="email" required maxLength={254} className={inputClass} placeholder="tucorreo@ejemplo.com" />
         </div>
         <div>
           <label htmlFor="phone" className={labelClass}>Teléfono</label>
-          <input id="phone" name="phone" type="tel" className={inputClass} placeholder="300 123 4567" />
+          <input id="phone" name="phone" type="tel" maxLength={30} className={inputClass} placeholder="300 123 4567" />
         </div>
         <div>
           <label htmlFor="type" className={labelClass}>Tipo *</label>
@@ -125,6 +137,7 @@ export default function ComplaintForm() {
           name="description"
           required
           rows={5}
+          maxLength={5000}
           className={`${inputClass} resize-y min-h-[120px]`}
           placeholder="Describe de forma clara y completa tu queja, reclamo, sugerencia o felicitación. Incluye fechas, nombres y cualquier información relevante."
         />
@@ -148,6 +161,8 @@ export default function ComplaintForm() {
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
+            role="alert"
+            aria-live="assertive"
             className="text-red-600 text-sm font-body bg-red-50 rounded-xl px-4 py-3"
           >
             {error}
