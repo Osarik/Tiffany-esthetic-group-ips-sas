@@ -35,7 +35,8 @@ export default function ComplaintForm() {
 
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form));
-    setSentType(String(data.type || ""));
+    const label = types.find((t) => t.value === data.type)?.label;
+    setSentType(label ? label.toLowerCase() : "");
 
     try {
       const res = await fetch("/api/quejas", {
