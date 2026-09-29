@@ -18,7 +18,7 @@ The clinic operates three fully equipped operating rooms, a recovery area with p
 - Legal representative: Sandra Milena Gomez Vasquez
 - Type: IPS (licensed healthcare provider)
 - Country: Colombia — City: Cali, Valle del Cauca
-- Website: https://clinicatiffany.com
+- Website: https://www.clinicatiffany.com
 
 ## 2. Contact information
 
@@ -74,7 +74,7 @@ The clinic operates three fully equipped operating rooms, a recovery area with p
 
 ### Operating room rental
 
-- **Operating Room Rental** `/alquiler-quirofanos` — Fully equipped operating rooms with qualified staff, ideal for outpatient aesthetic surgery.
+- **Operating room rental** — Three fully equipped operating rooms with qualified surgical staff, ideal for outpatient aesthetic surgery. Inquire through the clinic contact channel.
 
 ## 5. Website map
 
@@ -90,7 +90,7 @@ Main pages and their content:
 - `/terminos-y-condiciones` — Terms and conditions, medical disclaimer, jurisdiction of Cali.
 - `/derechos-y-deberes` — Patient rights and duties (Res. 434/2012).
 - `/politica-de-cookies` — Cookie types, legal basis and management.
-- Service routes: `/lipoescultura`, `/lipectomia`, `/lipo-lipectomia`, `/mamoplastia-aumento`, `/pexia-mamaria`, `/ginecomastia`, `/gigantomastia`, `/rinoplastia`, `/hernia`, `/ritidoplastia-completa`, `/lipo-protesis-aumento`, `/alquiler-quirofanos`, and more (24 procedure pages in total).
+- Service routes: `/lipoescultura`, `/lipectomia`, `/lipo-lipectomia`, `/mamoplastia-aumento`, `/pexia-mamaria`, `/ginecomastia`, `/gigantomastia`, `/rinoplastia`, `/hernia`, `/ritidoplastia-completa`, `/lipo-protesis-aumento`, and more (30 procedure pages in total).
 
 ## 6. Frequently asked questions
 
@@ -137,7 +137,7 @@ Dispone de tres salas de cirugía totalmente equipadas, área de recuperación c
 - Representante legal: Sandra Milena Gomez Vasquez
 - Tipo: IPS habilitada
 - País: Colombia — Ciudad: Cali, Valle del Cauca
-- Sitio web: https://clinicatiffany.com
+- Sitio web: https://www.clinicatiffany.com
 
 ## 2. Información de contacto
 
@@ -193,7 +193,7 @@ Dispone de tres salas de cirugía totalmente equipadas, área de recuperación c
 
 ### Alquiler de quirófanos
 
-- **Alquiler de quirófano** `/alquiler-quirofanos` — Quirófanos completamente equipados con personal calificado, ideales para cirugía estética ambulatoria.
+- **Alquiler de quirófano** — Tres quirófanos completamente equipados con personal quirúrgico calificado, ideales para cirugía estética ambulatoria. Consultar por el canal de contacto de la clínica.
 
 ## 5. Mapa del sitio web
 
@@ -207,7 +207,7 @@ Dispone de tres salas de cirugía totalmente equipadas, área de recuperación c
 - `/terminos-y-condiciones` — Términos, descargo médico y jurisdicción de Cali.
 - `/derechos-y-deberes` — Derechos y deberes del paciente (Res. 434/2012).
 - `/politica-de-cookies` — Tipos de cookies, base legal y gestión.
-- Rutas de servicios: `/lipoescultura`, `/lipectomia`, `/lipo-lipectomia`, `/mamoplastia-aumento`, `/pexia-mamaria`, `/ginecomastia`, `/gigantomastia`, `/rinoplastia`, `/hernia`, `/ritidoplastia-completa`, `/lipo-protesis-aumento`, `/alquiler-quirofanos` y más (24 páginas de procedimientos en total).
+- Rutas de servicios: `/lipoescultura`, `/lipectomia`, `/lipo-lipectomia`, `/mamoplastia-aumento`, `/pexia-mamaria`, `/ginecomastia`, `/gigantomastia`, `/rinoplastia`, `/hernia`, `/ritidoplastia-completa`, `/lipo-protesis-aumento` y más (30 páginas de procedimientos en total).
 
 ## 6. Preguntas frecuentes
 

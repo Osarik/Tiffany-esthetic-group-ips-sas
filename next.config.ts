@@ -11,6 +11,31 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async headers() {
+    return [
+      {
+        source: "/((?!_next|api|llms).*)",
+        headers: [
+          {
+            key: "Link",
+            value: '</llms.txt>; rel="describedby"; type="text/markdown"',
+          },
+        ],
+      },
+      {
+        source: "/llms.txt",
+        headers: [
+          { key: "Content-Type", value: "text/markdown; charset=utf-8" },
+        ],
+      },
+      {
+        source: "/llms-full.txt",
+        headers: [
+          { key: "Content-Type", value: "text/markdown; charset=utf-8" },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

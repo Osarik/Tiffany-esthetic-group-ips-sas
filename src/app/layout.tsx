@@ -103,6 +103,7 @@ export default function RootLayout({
     >
       <head>
         <link rel="preconnect" href="https://translate.google.com" />
+        <link rel="describedby" href="/llms.txt" type="text/markdown" />
         <link
           rel="preload"
           as="video"
