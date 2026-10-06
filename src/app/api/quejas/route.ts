@@ -170,11 +170,20 @@ export async function POST(request: Request) {
       );
     }
 
-    const code = (err as { code?: string }).code;
-    console.error("Error sending complaint email:", code, err);
-    return NextResponse.json(
-      { ok: false, error: "No pudimos enviar tu mensaje. Intenta de nuevo en unos minutos." },
-      { status: 502 }
-    );
+    const rawCode = (err as { code?: string }).code || "UNKNOWN";
+    const code = `SMTP_${String(rawCode).toUpperCase().replace(/[^A-Z0-9]/g, "")}`;
+    console.error("Error sending complaint email:", rawCode, err);
+
+    const body: { ok: false; error: string; code: string; detail?: string } = {
+      ok: false,
+      error: "No pudimos enviar tu mensaje. Intenta de nuevo en unos minutos.",
+      code,
+    };
+
+    if (process.env.SMTP_DEBUG === "1") {
+      body.detail = String((err as { message?: string }).message || "").slice(0, 300);
+    }
+
+    return NextResponse.json(body, { status: 502 });
   }
 }

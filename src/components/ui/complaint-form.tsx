@@ -45,7 +45,12 @@ export default function ComplaintForm() {
         body: JSON.stringify(data),
       });
       const json = await res.json();
-      if (!json.ok) throw new Error(json.error || "Error al enviar");
+      if (!json.ok) {
+        const parts = [json.error || "Error al enviar"];
+        if (json.code) parts.push(`(${json.code})`);
+        if (json.detail) parts.push(json.detail);
+        throw new Error(parts.join(" "));
+      }
       form.reset();
       setSent(true);
     } catch (err) {
