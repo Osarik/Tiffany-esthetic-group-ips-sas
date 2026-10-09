@@ -359,7 +359,7 @@ export default function RootLayout({
                         </li>
                         <li>
                           <a
-                            href="mailto:tiffanyestheticgroup@gmail.com"
+                            href="mailto:info@clinicatiffany.com"
                             className="text-sm font-body text-white/50 hover:text-primary transition-colors no-underline flex items-center gap-2"
                           >
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

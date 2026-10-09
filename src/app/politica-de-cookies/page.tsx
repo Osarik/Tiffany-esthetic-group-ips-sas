@@ -202,7 +202,7 @@ export default function PoliticaDeCookies() {
               cookies, puedes contactarnos a través de los siguientes medios:
             </p>
             <ul className="list-none pl-0 mt-3 space-y-2 text-sm">
-              <li><strong>Correo electrónico:</strong> tiffanyestheticgroup@gmail.com</li>
+              <li><strong>Correo electrónico:</strong> info@clinicatiffany.com</li>
               <li><strong>Teléfono:</strong> +57 320 2703522</li>
               <li><strong>Dirección:</strong> Carrera 85C # 13A-1-25, Cali, Colombia</li>
             </ul>

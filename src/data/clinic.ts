@@ -4,7 +4,7 @@ export const clinicData = {
   city: "Cali, Valle del Cauca, Colombia",
   phone: "+57 320 2703522",
   whatsapp: "573202703522",
-  email: "info@tiffanyesthetic.com",
+  email: "info@clinicatiffany.com",
   hours: [
     { day: "Lunes a viernes", time: "8:00 a. m. - 5:00 p. m." },
     { day: "Sábado", time: "8:00 a. m. - 12:00 p. m." },

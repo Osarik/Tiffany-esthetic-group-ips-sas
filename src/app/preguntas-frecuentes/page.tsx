@@ -477,8 +477,8 @@ export default function FAQsPage() {
                     <div className="space-y-4">
                       <div>
                         <p className="font-semibold text-[#223231] text-xs uppercase tracking-wider">Correo</p>
-                        <a href="mailto:tiffanyestheticgroup@gmail.com" className="text-[#2FA79C] hover:underline">
-                          tiffanyestheticgroup@gmail.com
+                        <a href="mailto:info@clinicatiffany.com" className="text-[#2FA79C] hover:underline">
+                          info@clinicatiffany.com
                         </a>
                       </div>
                       <div>

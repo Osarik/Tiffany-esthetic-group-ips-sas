@@ -24,7 +24,7 @@ const sections = [
     title: "1. Responsable del tratamiento",
     content: [
       "Tiffany Esthetic Group Ips SAS, identificada con NIT 901634870, con domicilio principal en la Carrera 85C # 13A-1-25, Cali, Valle del Cauca, Colombia, es la responsable del tratamiento de los datos personales suministrados a través de este sitio web y de los canales de comunicación asociados.",
-      "Para cualquier consulta relacionada con la presente política, el titular puede contactarnos a través del correo electrónico tiffanyestheticgroup@gmail.com o al teléfono +57 320 2703522.",
+      "Para cualquier consulta relacionada con la presente política, el titular puede contactarnos a través del correo electrónico info@clinicatiffany.com o al teléfono +57 320 2703522.",
     ],
   },
   {
@@ -74,7 +74,7 @@ const sections = [
   {
     title: "6. Procedimiento para ejercer los derechos",
     content: [
-      "El titular puede ejercer sus derechos enviando una comunicación al correo electrónico tiffanyestheticgroup@gmail.com con el asunto \"Derechos Habeas Data\", indicando:",
+      "El titular puede ejercer sus derechos enviando una comunicación al correo electrónico info@clinicatiffany.com con el asunto \"Derechos Habeas Data\", indicando:",
       "Nombre completo y número de identificación del titular.",
       "Descripción clara de la solicitud (actualizar, rectificar, suprimir, revocar).",
       "Datos de contacto para respuesta.",
