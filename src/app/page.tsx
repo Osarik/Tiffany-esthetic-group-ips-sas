@@ -78,7 +78,6 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
       />
       <Hero />
-      <KeyFacts />
       <Benefits />
       <Certifications />
       <Services />
@@ -91,6 +90,7 @@ export default function Home() {
       <FAQs />
       <FinalCTA />
       <Map />
+      <KeyFacts />
     </>
   );
 }
