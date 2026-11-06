@@ -14,7 +14,6 @@ import FAQs from "@/components/sections/FAQs";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Map from "@/components/sections/Map";
 import { faqs } from "@/data/faqs";
-import { testimonialsData } from "@/data/testimonials";
 
 const siteUrl = "https://www.clinicatiffany.com";
 
@@ -55,18 +54,6 @@ const homeJsonLd = {
         },
       })),
     },
-    ...testimonialsData.reviews.map((review) => ({
-      "@type": "Review",
-      "@id": `${siteUrl}/#review-${review.id}`,
-      itemReviewed: { "@id": `${siteUrl}/#business` },
-      author: { "@type": "Person", name: review.name },
-      reviewBody: review.text,
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: review.rating,
-        bestRating: 5,
-      },
-    })),
   ],
 };
 

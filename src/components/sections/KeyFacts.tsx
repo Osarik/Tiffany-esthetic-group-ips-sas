@@ -29,7 +29,7 @@ const facts: Array<{ label: string; value: string }> = [
   },
   {
     label: "Servicios",
-    value: `${clinicData.procedurePages} procedimientos de ${clinicData.serviceCategories.join(", ").toLowerCase()}`,
+    value: `${clinicData.procedurePages} procedimientos de cirugía corporal, mamaria y facial`,
   },
   { label: "Fundación", value: "2022" },
 ];

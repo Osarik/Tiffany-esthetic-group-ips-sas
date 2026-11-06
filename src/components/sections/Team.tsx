@@ -30,7 +30,7 @@ const logos = [
   {
     href: "https://scare.org.co/",
     src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoFCeO86ByR6Xp9c02HTjR8tk7oSjy-m-Qko64JVRwsA&s=10",
-    alt: "Sociedad Colombiana de Anestesiología y Reanimación",
+    alt: "Sociedad Colombiana de Anestesiología y Reanimación (S.C.A.R.E.)",
   },
   {
     href: "https://www.supersalud.gov.co/",

@@ -14,7 +14,7 @@
 - **Correo:** info@clinicatiffany.com
 - **Fundación:** 2022
 - **Instalaciones:** 3 salas de cirugía, 1 área de recuperación, farmacia habilitada
-- **Servicios:** 30 procedimientos de cirugía corporal, mamaria y facial
+- **Servicios:** 24 procedimientos en el catálogo principal, más 6 páginas de servicio específicas
 - **Horario:** Lunes a viernes 8:00 a.m. a 5:00 p.m. | Sábado 8:00 a.m. a 12:00 p.m. | Domingo cerrado
 - **Dominio:** https://www.clinicatiffany.com
 - **Instagram:** https://www.instagram.com/tiffanyeg_ips/
@@ -23,14 +23,11 @@
 ## Cirugía corporal
 
 - [Lipoescultura](https://www.clinicatiffany.com/lipoescultura): Moldeamiento corporal con lipoinyección glútea. Procedimiento popular.
-- [Lipoescultura en Cali](https://www.clinicatiffany.com/lipoescultura-lipoinyeccion-glutea-cali): Transferencia de grasa autóloga para moldeamiento corporal, con ubicación optimizada para pacientes en Cali.
 - [Lipectomía](https://www.clinicatiffany.com/lipectomia): Resección de exceso de piel y grasa.
 - [Lipo + Lipectomía](https://www.clinicatiffany.com/lipo-lipectomia): Liposucción y lipectomía en una cirugía. Procedimiento popular.
 - [Lipo + Lipectomía + Senos (Aumento)](https://www.clinicatiffany.com/lipo-lipectomia-senos): Plan integral corporal y mamario.
 - [Lipo + Lipectomía + Pexia Periareolar](https://www.clinicatiffany.com/lipo-lipectomia-pexia-periareolar): Cuerpo y elevación mamaria.
 - [Lipo + Lipectomía + Pexia](https://www.clinicatiffany.com/lipo-lipectomia-pexia): Cuerpo y pexia mamaria.
-- [Liposucción + aumento](https://www.clinicatiffany.com/liposuccion-aumento): Liposucción de contorno corporal con aumento de volumen por transferencia de grasa autóloga.
-- [Liposucción + lipectomía](https://www.clinicatiffany.com/liposuccion-lipectomia): Remodelación corporal con liposucción, lipectomía y transferencia de grasa autóloga.
 - [Hernia](https://www.clinicatiffany.com/hernia): Reparación de hernia abdominal y umbilical.
 
 ## Cirugía mamaria
@@ -46,7 +43,6 @@
 - [Lipo + Pexia](https://www.clinicatiffany.com/lipo-pexia): Contorno y elevación.
 - [Lipo + Prótesis de aumento](https://www.clinicatiffany.com/lipo-protesis-aumento): Cuerpo y prótesis mamarias.
 - [Lipectomía + Pexia](https://www.clinicatiffany.com/lipectomia-pexia): Abdomen y busto.
-- [Liposucción + Pexia Mamaria](https://www.clinicatiffany.com/liposuccion-pexia-mamaria): Contorno corporal y elevación mamaria en un solo procedimiento.
 
 ## Cirugía facial
 
@@ -56,8 +52,15 @@
 - [Rinoplastia](https://www.clinicatiffany.com/rinoplastia): Estética y función nasal. Procedimiento popular.
 - [Lipo + Rinoplastia](https://www.clinicatiffany.com/lipo-rinoplastia): Silueta y rostro.
 - [Blefaroplastia + Otoplastia + Lipectomía](https://www.clinicatiffany.com/blefaroplastia-otoplastia-lipectomia): Mirada, orejas y abdomen.
+
+## Páginas de servicio específicas
+
 - [Blefaroplastia](https://www.clinicatiffany.com/blefaroplastia): Cirugía de párpados para exceso de piel y bolsas. Rejuvenecimiento de la mirada.
 - [Lifting facial](https://www.clinicatiffany.com/lifting-facial): Rejuvenecimiento de rostro y cuello frente a la flacidez.
+- [Lipoescultura en Cali](https://www.clinicatiffany.com/lipoescultura-lipoinyeccion-glutea-cali): Transferencia de grasa autóloga para moldeamiento corporal, con página de ubicación para pacientes en Cali.
+- [Liposucción + aumento](https://www.clinicatiffany.com/liposuccion-aumento): Liposucción de contorno corporal con aumento de volumen por transferencia de grasa autóloga.
+- [Liposucción + lipectomía](https://www.clinicatiffany.com/liposuccion-lipectomia): Remodelación corporal con liposucción, lipectomía y transferencia de grasa autóloga.
+- [Liposucción + pexia mamaria](https://www.clinicatiffany.com/liposuccion-pexia-mamaria): Contorno corporal y elevación mamaria en un solo procedimiento.
 
 ## Páginas del sitio
 

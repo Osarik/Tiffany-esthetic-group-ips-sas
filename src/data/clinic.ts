@@ -43,7 +43,7 @@ export const clinicData = {
   pharmacyLicensed: true,
 
   // Catálogo
-  procedurePages: 30,
+  procedurePages: 24,
   serviceCategories: [
     "Cirugía corporal",
     "Cirugía mamaria",

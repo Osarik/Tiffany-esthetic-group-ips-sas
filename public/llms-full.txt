@@ -52,9 +52,6 @@ The clinic operates three fully equipped operating rooms, a recovery area with p
 - **Lipo + Lipectomy + Periareolar Mastopexy** `/lipo-lipectomia-pexia-periareolar` — Liposuction, lipectomy and periareolar breast lift to harmonize body and bust.
 - **Lipo + Lipectomy + Mastopexy** `/lipo-lipectomia-pexia` — Full-integration liposuction plus lipectomy plus breast lift.
 - **Hernia repair** `/hernia` — Surgical repair of abdominal or umbilical hernia, combinable with body-contouring aesthetic procedures.
-- **Liposuction + Augmentation** `/liposuccion-aumento` — Body contouring liposuction with volume enhancement through autologous fat transfer.
-- **Liposuction + Lipectomy** `/liposuccion-lipectomia` — Body reshaping combining liposuction, lipectomy and autologous fat transfer.
-- **Lipoescultura in Cali** `/lipoescultura-lipoinyeccion-glutea-cali` — Gluteal fat transfer body contouring, with a location page for patients in Cali.
 
 ### Breast surgery
 
@@ -69,7 +66,6 @@ The clinic operates three fully equipped operating rooms, a recovery area with p
 - **Lipo + Mastopexy** `/lipo-pexia` — Liposuction plus breast lift to define the body contour and raise the bust.
 - **Lipo + Breast Implants** `/lipo-protesis-aumento` — Body liposuction plus breast augmentation with implants.
 - **Lipectomy + Mastopexy** `/lipectomia-pexia` — Abdominal lipectomy combined with breast lift.
-- **Liposuction + Breast Lift** `/liposuccion-pexia-mamaria` — Body contouring and breast lift in a single procedure.
 
 ### Facial surgery
 
@@ -79,8 +75,17 @@ The clinic operates three fully equipped operating rooms, a recovery area with p
 - **Rhinoplasty** `/rinoplastia` — Nasal surgery focused on facial harmony and respiratory function when indicated. Popular.
 - **Lipo + Rhinoplasty** `/lipo-rinoplastia` — Body liposuction plus nasal surgery in a single procedure.
 - **Blepharoplasty + Otoplasty + Lipectomy** `/blefaroplastia-otoplastia-lipectomia` — Combined eyelid rejuvenation, ear correction and abdominal contouring.
+
+### Additional service pages
+
+These standalone pages detail individual procedures and are not counted in the 24-item catalog above.
+
 - **Blepharoplasty** `/blefaroplastia` — Eyelid surgery for excess skin and under-eye bags, rejuvenating the gaze.
 - **Facelift** `/lifting-facial` — Facial and neck rejuvenation for skin laxity.
+- **Lipoescultura in Cali** `/lipoescultura-lipoinyeccion-glutea-cali` — Gluteal fat transfer body contouring, with a location page for patients in Cali.
+- **Liposuction + Augmentation** `/liposuccion-aumento` — Body contouring liposuction with volume enhancement through autologous fat transfer.
+- **Liposuction + Lipectomy** `/liposuccion-lipectomia` — Body reshaping combining liposuction, lipectomy and autologous fat transfer.
+- **Liposuction + Breast Lift** `/liposuccion-pexia-mamaria` — Body contouring and breast lift in a single procedure.
 
 ### Operating room rental
 
@@ -90,7 +95,7 @@ The clinic operates three fully equipped operating rooms, a recovery area with p
 
 Main pages and their content:
 
-- `/` — Landing page: video hero, benefits, services carousel (30 procedures with images), before/after slider, facilities gallery, statistics, testimonials, team, FAQ and final CTA.
+- `/` — Landing page: video hero, benefits, services carousel (24 procedures with images), before/after slider, facilities gallery, statistics, testimonials, team, FAQ and final CTA.
 - `/servicios` — Interactive services catalog with per-procedure detail pages.
 - `/resultados` — Interactive real-results gallery with before/after sliders per procedure.
 - `/instalaciones` — Facilities: surgery room, consultation offices, sterilization, waiting room and surgical equipment.
@@ -100,7 +105,7 @@ Main pages and their content:
 - `/terminos-y-condiciones` — Terms and conditions, medical disclaimer, jurisdiction of Cali.
 - `/derechos-y-deberes` — Patient rights and duties (Res. 434/2012).
 - `/politica-de-cookies` — Cookie types, legal basis and management.
-- Service routes: `/lipoescultura`, `/lipectomia`, `/lipo-lipectomia`, `/mamoplastia-aumento`, `/pexia-mamaria`, `/ginecomastia`, `/gigantomastia`, `/rinoplastia`, `/hernia`, `/ritidoplastia-completa`, `/lipo-protesis-aumento`, and more (30 procedure pages in total).
+- Service routes: `/lipoescultura`, `/lipectomia`, `/lipo-lipectomia`, `/mamoplastia-aumento`, `/pexia-mamaria`, `/ginecomastia`, `/gigantomastia`, `/rinoplastia`, `/hernia`, `/ritidoplastia-completa`, `/lipo-protesis-aumento`, and more (24 catalog procedures plus 6 additional service pages).
 
 ## 6. Frequently asked questions
 
@@ -181,9 +186,6 @@ Dispone de tres salas de cirugía totalmente equipadas, área de recuperación c
 - **Lipo + Lipectomía + Pexia Periareolar** `/lipo-lipectomia-pexia-periareolar` — Liposucción, lipectomía y elevación mamaria periareolar.
 - **Lipo + Lipectomía + Pexia** `/lipo-lipectomia-pexia` — Procedimiento integral de liposucción, lipectomía y pexia mamaria.
 - **Hernia** `/hernia` — Reparación quirúrgica de hernia abdominal o umbilical, combinable con procedimientos estéticos.
-- **Liposucción + aumento** `/liposuccion-aumento` — Liposucción de contorno corporal con aumento de volumen por transferencia de grasa autóloga.
-- **Liposucción + lipectomía** `/liposuccion-lipectomia` — Remodelación corporal con liposucción, lipectomía y transferencia de grasa autóloga.
-- **Lipoescultura en Cali** `/lipoescultura-lipoinyeccion-glutea-cali` — Moldeamiento corporal con transferencia de grasa autóloga, con página de ubicación para pacientes en Cali.
 
 ### Cirugía mamaria
 
@@ -198,7 +200,6 @@ Dispone de tres salas de cirugía totalmente equipadas, área de recuperación c
 - **Lipo + Pexia** `/lipo-pexia` — Liposucción y pexia mamaria para definir contorno y elevar el busto.
 - **Lipo + Prótesis de aumento** `/lipo-protesis-aumento` — Liposucción corporal y aumento mamario con prótesis.
 - **Lipectomía + Pexia** `/lipectomia-pexia` — Lipectomía abdominal con elevación mamaria.
-- **Liposucción + pexia mamaria** `/liposuccion-pexia-mamaria` — Contorno corporal y elevación mamaria en un solo procedimiento.
 
 ### Cirugía facial
 
@@ -208,8 +209,17 @@ Dispone de tres salas de cirugía totalmente equipadas, área de recuperación c
 - **Rinoplastia** `/rinoplastia` — Cirugía nasal con enfoque estético y funcional. Popular.
 - **Lipo + Rinoplastia** `/lipo-rinoplastia` — Liposucción corporal y rinoplastia en un solo procedimiento.
 - **Blefaroplastia + Otoplastia + Lipectomía** `/blefaroplastia-otoplastia-lipectomia` — Rejuvenecimiento de la mirada, corrección de orejas y contorno abdominal.
+
+### Páginas de servicio específicas
+
+Estas páginas independientes desarrollan procedimientos individuales con más detalle y no se cuentan en el catálogo de 24.
+
 - **Blefaroplastia** `/blefaroplastia` — Cirugía de párpados para exceso de piel y bolsas, rejuvenecimiento de la mirada.
 - **Lifting facial** `/lifting-facial` — Rejuvenecimiento de rostro y cuello frente a la flacidez.
+- **Lipoescultura en Cali** `/lipoescultura-lipoinyeccion-glutea-cali` — Moldeamiento corporal con transferencia de grasa autóloga, con página de ubicación para pacientes en Cali.
+- **Liposucción + aumento** `/liposuccion-aumento` — Liposucción de contorno corporal con aumento de volumen por transferencia de grasa autóloga.
+- **Liposucción + lipectomía** `/liposuccion-lipectomia` — Remodelación corporal con liposucción, lipectomía y transferencia de grasa autóloga.
+- **Liposucción + pexia mamaria** `/liposuccion-pexia-mamaria` — Contorno corporal y elevación mamaria en un solo procedimiento.
 
 ### Alquiler de quirófanos
 
@@ -217,7 +227,7 @@ Dispone de tres salas de cirugía totalmente equipadas, área de recuperación c
 
 ## 5. Mapa del sitio web
 
-- `/` — Landing: hero con video, datos clave, beneficios, carrusel de servicios (30 procedimientos con imagen), antes/después, galería de instalaciones, estadísticas, testimonios, equipo, FAQ y CTA final.
+- `/` — Landing: hero con video, datos clave, beneficios, carrusel de servicios (24 procedimientos con imagen), antes/después, galería de instalaciones, estadísticas, testimonios, equipo, FAQ y CTA final.
 - `/servicios` — Catálogo interactivo de procedimientos.
 - `/resultados` — Galería interactiva de resultados reales con antes/después por procedimiento.
 - `/instalaciones` — Sala de cirugía, consultorios, esterilización, sala de espera y equipo quirúrgico.
@@ -227,7 +237,7 @@ Dispone de tres salas de cirugía totalmente equipadas, área de recuperación c
 - `/terminos-y-condiciones` — Términos, descargo médico y jurisdicción de Cali.
 - `/derechos-y-deberes` — Derechos y deberes del paciente (Res. 434/2012).
 - `/politica-de-cookies` — Tipos de cookies, base legal y gestión.
-- Rutas de servicios: `/lipoescultura`, `/lipectomia`, `/lipo-lipectomia`, `/mamoplastia-aumento`, `/pexia-mamaria`, `/ginecomastia`, `/gigantomastia`, `/rinoplastia`, `/hernia`, `/ritidoplastia-completa`, `/lipo-protesis-aumento` y más (30 páginas de procedimientos en total).
+- Rutas de servicios: `/lipoescultura`, `/lipectomia`, `/lipo-lipectomia`, `/mamoplastia-aumento`, `/pexia-mamaria`, `/ginecomastia`, `/gigantomastia`, `/rinoplastia`, `/hernia`, `/ritidoplastia-completa`, `/lipo-protesis-aumento` y más (24 procedimientos en el catálogo más 6 páginas de servicio específicas).
 
 ## 6. Preguntas frecuentes
 

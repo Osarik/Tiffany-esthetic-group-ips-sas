@@ -349,6 +349,26 @@ export function ServicesCarousel() {
           </div>
         </div>
       </div>
+
+      <details className="mt-10 mx-auto max-w-4xl px-4">
+        <summary className="mx-auto w-fit cursor-pointer list-none rounded-full border border-primary/20 bg-white px-6 py-3 text-sm font-body font-semibold text-primary transition-colors hover:bg-primary/5">
+          Ver todos los procedimientos ({services.filter((s) => s.href).length})
+        </summary>
+        <ul className="mt-6 flex flex-wrap justify-center gap-2">
+          {services
+            .filter((s) => s.href)
+            .map((s) => (
+              <li key={`todos-${s.id}`}>
+                <Link
+                  href={s.href as string}
+                  className="inline-block rounded-full border border-silver/30 px-3.5 py-1.5 text-xs font-body text-text-main/70 transition-colors hover:border-primary/40 hover:text-primary"
+                >
+                  {s.title}
+                </Link>
+              </li>
+            ))}
+        </ul>
+      </details>
     </section>
   );
 }

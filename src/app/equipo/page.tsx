@@ -68,7 +68,7 @@ const values = [
   },
   {
     title: "Idoneidad profesional",
-    desc: "Cirujanos plásticos miembros de la SCCP y anestesiólogos certificados por el Consejo de Anestesiología, con recertificación periódica que garantiza estándares de calidad y actualización científica.",
+    desc: "Cirujanos plásticos miembros de la SCCP y anestesiólogos certificados por la Sociedad Colombiana de Anestesiología y Reanimación (S.C.A.R.E.), con recertificación periódica que garantiza estándares de calidad y actualización científica.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M12 2L2 7l10 5 10-5-10-5z" />
@@ -309,7 +309,7 @@ export default function EquipoPage() {
                       </div>
                       <div>
                         <h3 className="font-heading font-bold text-text-dark text-sm">
-                          S.C.A.R.E. — Consejo de Anestesiología
+                          S.C.A.R.E. — Sociedad Colombiana de Anestesiología y Reanimación
                         </h3>
                         <p className="text-xs text-text-main/70 font-body mt-1 leading-relaxed">
                           Anestesiólogos miembros de la Sociedad Colombiana de

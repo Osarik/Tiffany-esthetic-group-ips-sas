@@ -1,6 +1,5 @@
 import { clinicData, clinicSameAs } from "@/data/clinic";
 import { services } from "@/data/services";
-import { testimonialsData } from "@/data/testimonials";
 
 export default function SchemaMarkup() {
   const siteUrl = "https://www.clinicatiffany.com";
@@ -96,7 +95,6 @@ export default function SchemaMarkup() {
         telephone: "+57-3202703522",
         email: clinicData.email,
         taxID: clinicData.nit,
-        vatID: `CO${clinicData.nit}`,
         identifier: identifiers,
         foundingDate: clinicData.foundingDate,
         medicalSpecialty: "PlasticSurgery",
@@ -159,12 +157,6 @@ export default function SchemaMarkup() {
           },
         ],
         knowsLanguage: "es",
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: testimonialsData.aiSummary.rating,
-          bestRating: 5,
-          reviewCount: testimonialsData.aiSummary.totalReviews,
-        },
         availableService,
       },
       {

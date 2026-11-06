@@ -13,9 +13,9 @@ export const team: TeamMember[] = [
   },
   {
     name: "Anestesiólogos",
-    title: "Miembros del Consejo de Anestesiología (S.C.A.R.E.)",
+    title: "Miembros de la Sociedad Colombiana de Anestesiología y Reanimación (S.C.A.R.E.)",
     description:
-      "Anestesiólogos certificados y miembros del Consejo de Anestesiología, con recertificación periódica según los estándares del C.A.M.E.C. Evaluamos cada caso de forma individual para seleccionar la técnica anestésica más segura según el procedimiento y las condiciones del paciente.",
+      "Anestesiólogos certificados y miembros de la Sociedad Colombiana de Anestesiología y Reanimación (S.C.A.R.E.), con recertificación periódica según los estándares del C.A.M.E.C. Evaluamos cada caso de forma individual para seleccionar la técnica anestésica más segura según el procedimiento y las condiciones del paciente.",
   },
   {
     name: "Equipo quirúrgico y recuperación",

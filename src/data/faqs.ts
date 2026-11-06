@@ -32,6 +32,6 @@ export const faqs: FAQ[] = [
   {
     question: "¿Los cirujanos y anestesiólogos están calificados?",
     answer:
-      "Contamos con cirujanos plásticos miembros de la Sociedad Colombiana de Cirugía Plástica y anestesiólogos miembros del Consejo de Anestesiología.",
+      "Contamos con cirujanos plásticos miembros de la Sociedad Colombiana de Cirugía Plástica y anestesiólogos miembros de la Sociedad Colombiana de Anestesiología y Reanimación (S.C.A.R.E.).",
   },
 ];
