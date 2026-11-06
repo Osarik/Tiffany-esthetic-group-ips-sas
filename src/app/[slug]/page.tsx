@@ -4,6 +4,7 @@ import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 import { services } from "@/data/services";
 import { serviceLandings } from "@/data/service-landings";
+import { buildMetadata, serviceMetaDescription } from "@/lib/metadata";
 import AnimateInView, { StaggerGrid, StaggerItem } from "@/components/ui/AnimateInView";
 import ParallaxGradient from "@/components/ui/ParallaxGradient";
 
@@ -20,8 +21,7 @@ const categoryConfig: Record<string, { gradient: string; label: string }> = {
   "Cirugía Facial": { gradient: "from-[#4A8DB7] to-[#6DB3D9]", label: "Cirugía Facial" },
 };
 
-const heroineImage =
-  "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783832108/ChatGPT_Image_11_jul_2026_11_37_31_p.m._mwqeu8.png";
+const heroineImage = "/images/schema/25-16x9.webp";
 
 const categoryImages: Record<string, string> = {
   "Cirugía Corporal": heroineImage,
@@ -89,20 +89,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const service = services.find((s) => slugFromHref(s.href ?? "") === slug);
   if (!service) return {};
-  return {
+  const landing = serviceLandings[service.id];
+  const heroImage = landing?.heroImage;
+  return buildMetadata({
     title: `${service.title} en Cali | Tiffany Esthetic Group`,
-    description: service.description,
-    robots: { index: true, follow: true },
-    alternates: { canonical: `/${slug}` },
-    openGraph: {
-      title: `${service.title} en Cali`,
-      description: service.description,
-      url: `https://www.clinicatiffany.com/${slug}`,
-      siteName: "Tiffany Esthetic Group",
-      locale: "es_CO",
-      type: "article",
-    },
-  };
+    description: serviceMetaDescription(service.title, service.category),
+    path: `/${slug}`,
+    type: "article",
+    image: heroImage || undefined,
+    imageWidth: heroImage ? 960 : undefined,
+    imageHeight: heroImage ? 540 : undefined,
+  });
 }
 
 export default async function ServiceLandingPage({ params }: Props) {
@@ -193,7 +190,7 @@ export default async function ServiceLandingPage({ params }: Props) {
         <section className={`relative bg-gradient-to-br from-[${gradientFrom}] via-[${gradientFrom}dd] to-[${gradientTo}] pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden`}>
           {(landing.heroImage || true) && (
             <div className="absolute inset-0" aria-hidden="true">
-              <img src={landing.heroImage || placeholderImg} alt="" className="w-full h-full object-cover" />
+              <img src={landing.heroImage || placeholderImg} alt={`Sala de cirugía de Tiffany Esthetic Group IPS en Cali - ${service.title}`} className="w-full h-full object-cover" />
               <div className="absolute inset-0" style={{ background: `linear-gradient(to right, ${gradientFrom} 0%, ${gradientFrom}dd 25%, ${gradientFrom}99 50%, ${gradientFrom}55 70%, transparent 100%)` }} />
             </div>
           )}
@@ -340,7 +337,7 @@ export default async function ServiceLandingPage({ params }: Props) {
         </AnimateInView>
 
         {landing.benefits && landing.benefits.length > 0 && (
-          <ParallaxGradient gradientFrom={gradientFrom} gradientTo={gradientTo} id="beneficios" className="py-16 md:py-24" image={landing.heroImage || placeholderImg} serviceTitle={service.title}>
+          <ParallaxGradient gradientFrom={gradientFrom} gradientTo={gradientTo} id="beneficios" className="py-16 md:py-24" image="/images/schema/25-16x9.webp" alt={`Sala de cirugía de Tiffany Esthetic Group IPS en Cali - ${service.title}`} serviceTitle={service.title}>
             <Container>
               <AnimateInView variant="fadeIn">
                 <SectionHeader label="Beneficios" title={`Beneficios de la ${service.title.toLowerCase()}`} />
@@ -488,7 +485,7 @@ export default async function ServiceLandingPage({ params }: Props) {
         )}
 
         {landing.contraindications && landing.contraindications.length > 0 && (
-          <ParallaxGradient gradientFrom={gradientFrom} gradientTo={gradientTo} id="contraindicaciones" className="py-16 md:py-24" image={landing.heroImage || placeholderImg} serviceTitle={service.title}>
+          <ParallaxGradient gradientFrom={gradientFrom} gradientTo={gradientTo} id="contraindicaciones" className="py-16 md:py-24" image="/images/schema/14-4x3.webp" alt={`Equipo quirúrgico de Tiffany Esthetic Group IPS - ${service.title}`} serviceTitle={service.title}>
             <Container>
               <AnimateInView variant="fadeIn">
                 <SectionHeader label="Contraindicaciones" title="¿Quién no es candidato?"
@@ -552,7 +549,7 @@ export default async function ServiceLandingPage({ params }: Props) {
         </AnimateInView>
 
         {landing.resultsDescription && (
-          <ParallaxGradient gradientFrom={gradientFrom} gradientTo={gradientTo} id="resultados" className="py-16 md:py-24" image={landing.heroImage || placeholderImg} serviceTitle={service.title}>
+          <ParallaxGradient gradientFrom={gradientFrom} gradientTo={gradientTo} id="resultados" className="py-16 md:py-24" image="/images/schema/23-4x3.webp" alt={`Consultorio de Tiffany Esthetic Group IPS en Cali - ${service.title}`} serviceTitle={service.title}>
             <Container>
               <AnimateInView variant="fadeIn">
                 <SectionHeader label="Resultados" title="Resultados esperados"

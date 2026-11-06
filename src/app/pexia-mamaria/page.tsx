@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildMetadata, clampDescription } from "@/lib/metadata";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 
@@ -21,26 +22,6 @@ const jsonLd = {
       aspect: "Treatment",
     },
     {
-      "@type": "MedicalClinic",
-      "@id": "https://www.clinicatiffany.com/#business",
-      name: "Tiffany Esthetic Group IPS",
-      image: "https://www.clinicatiffany.com/icon.svg",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "13a1-25, Cra 85c, Comuna 17",
-        addressLocality: "Cali",
-        addressRegion: "Valle del Cauca",
-        addressCountry: "CO",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: 3.3811893,
-        longitude: -76.5357955,
-      },
-      telephone: "+57 320 270 3522",
-      medicalSpecialty: "PlasticSurgery",
-    },
-    {
       "@type": "SurgicalProcedure",
       url: "https://www.clinicatiffany.com/pexia-mamaria",
       name: "Pexia Mamaria o Mastopexy",
@@ -59,24 +40,14 @@ const jsonLd = {
   ],
 };
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Pexia Mamaria en Cali | Tiffany Esthetic Group",
-  description:
-    "Elevación mamaria con técnicas quirúrgicas adaptadas a cada paciente, incluida la pexia periareolar para ptosis leve. IPS habilitada en Cali. Agenda tu valoración.",
-  robots: { index: true, follow: true },
-  alternates: {
-    canonical: "/pexia-mamaria",
-  },
-  openGraph: {
-    title: "Pexia Mamaria y Pexia Periareolar en Cali",
-    description:
-      "Elevación mamaria con técnicas personalizadas. Pexia tradicional y periareolar para ptosis leve, moderada o avanzada.",
-    url: "https://www.clinicatiffany.com/pexia-mamaria",
-    siteName: "Tiffany Esthetic Group",
-    locale: "es_CO",
-    type: "article",
-  },
-};
+  description: clampDescription(
+    "Pexia mamaria en Cali con técnicas personalizadas, incluida la periareolar. Elevación de senos en una IPS habilitada. Agenda tu valoración."
+  ),
+  path: "/pexia-mamaria",
+  type: "article",
+});
 
 const procedureSteps = [
   {

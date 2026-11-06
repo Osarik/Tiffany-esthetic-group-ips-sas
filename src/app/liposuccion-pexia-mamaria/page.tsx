@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildMetadata, clampDescription } from "@/lib/metadata";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 
@@ -21,26 +22,6 @@ const jsonLd = {
       aspect: "Treatment",
     },
     {
-      "@type": "MedicalClinic",
-      "@id": "https://www.clinicatiffany.com/#business",
-      name: "Tiffany Esthetic Group IPS",
-      image: "https://www.clinicatiffany.com/icon.svg",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "13a1-25, Cra 85c, Comuna 17",
-        addressLocality: "Cali",
-        addressRegion: "Valle del Cauca",
-        addressCountry: "CO",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: 3.3811893,
-        longitude: -76.5357955,
-      },
-      telephone: "+57 320 270 3522",
-      medicalSpecialty: "PlasticSurgery",
-    },
-    {
       "@type": "SurgicalProcedure",
       url: "https://www.clinicatiffany.com/liposuccion-pexia-mamaria",
       name: "Pexia Mamaria o Mastopexy",
@@ -59,24 +40,14 @@ const jsonLd = {
   ],
 };
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Liposucción y Pexia Mamaria en Cali | Tiffany Esthetic Group",
-  description:
-    "Combina contorno corporal con liposucción y elevación mamaria (mastopexy) en una misma intervención. IPS habilitada en Cali. Agenda tu valoración médica.",
-  robots: { index: true, follow: true },
-  alternates: {
-    canonical: "/liposuccion-pexia-mamaria",
-  },
-  openGraph: {
-    title: "Liposucción y Pexia Mamaria en Cali",
-    description:
-      "Combinación de contorno corporal y elevación mamaria para armonizar la silueta. IPS habilitada.",
-    url: "https://www.clinicatiffany.com/liposuccion-pexia-mamaria",
-    siteName: "Tiffany Esthetic Group",
-    locale: "es_CO",
-    type: "article",
-  },
-};
+  description: clampDescription(
+    "Liposucción y pexia mamaria en Cali: contorno corporal y elevación de senos en una sola intervención. IPS habilitada. Agenda tu valoración."
+  ),
+  path: "/liposuccion-pexia-mamaria",
+  type: "article",
+});
 
 const procedureSteps = [
   {

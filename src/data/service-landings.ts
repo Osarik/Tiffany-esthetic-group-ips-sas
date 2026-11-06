@@ -41,7 +41,7 @@ export interface ServiceLanding {
 
 export const serviceLandings: Record<string, ServiceLanding> = {
   lipoescultura: {
-    heroImage: "https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783832108/ChatGPT_Image_11_jul_2026_11_37_31_p.m._mwqeu8.png",
+    heroImage: "/images/schema/25-16x9.webp",
     descriptionLong:
       "La lipoescultura es un procedimiento quirúrgico que extrae grasa acumulada de zonas como el abdomen, flancos o espalda para moldear el contorno corporal y, en muchos casos, transferir el tejido adiposo purificado a los glúteos. A diferencia de la liposucción convencional, la lipoescultura utiliza la grasa extraída como material de diseño anatómico para mejorar la proyección y el perfil del cuerpo.",
     benefits: [

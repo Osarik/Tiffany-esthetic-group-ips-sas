@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Hero from "@/components/sections/Hero";
+import KeyFacts from "@/components/sections/KeyFacts";
 import Benefits from "@/components/sections/Benefits";
 import Certifications from "@/components/sections/Certifications";
 import Services from "@/components/sections/Services";
@@ -30,7 +31,7 @@ const homeJsonLd = {
       "@type": "MedicalWebPage",
       "@id": `${siteUrl}/#webpage`,
       url: siteUrl,
-      name: "Tiffany Esthetic Group Ips SAS - Cirugía Plástica en Cali",
+      name: "Tiffany Esthetic Group IPS SAS - Cirugía Plástica en Cali",
       description:
         "Clínica boutique de cirugía plástica y estética en Cali, Colombia. Habilitada por la Secretaría de Salud. Especialistas en lipoescultura, rinoplastia, blefaroplastia y más.",
       inLanguage: "es",
@@ -77,6 +78,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
       />
       <Hero />
+      <KeyFacts />
       <Benefits />
       <Certifications />
       <Services />

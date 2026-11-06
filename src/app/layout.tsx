@@ -3,6 +3,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { Fraunces, Manrope, Sacramento } from "next/font/google";
 import SchemaMarkup from "@/components/SchemaMarkup";
+import { clinicData } from "@/data/clinic";
 import Logo from "@/components/Logo";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import SplashWrapper from "@/components/SplashWrapper";
@@ -42,29 +43,15 @@ export const metadata: Metadata = {
   },
   title: "Clínica de Cirugía Plástica en Cali | Tiffany Esthetic Group",
   description:
-    "Institución habilitada por la Secretaría de Salud en Cali, con salas de cirugía, recuperación, farmacia habilitada y personal calificado para procedimientos de cirugía plástica y estética.",
-  keywords: [
-    "cirugía plástica Cali",
-    "Tiffany Esthetic Group",
-    "lipoescultura",
-    "liposucción",
-    "lipectomía",
-    "pexia mamaria",
-    "rinoplastia",
-    "blefaroplastia",
-    "lifting facial",
-    "alquiler salas de cirugía Cali",
-    "farmacia habilitada",
-  ],
-  authors: [{ name: "Tiffany Esthetic Group Ips SAS" }],
+    "Cirugía plástica y estética en Cali en una IPS habilitada por la Secretaría de Salud. 3 quirófanos, recuperación y farmacia. Agenda tu valoración.",
+  authors: [{ name: clinicData.legalName }],
   robots: { index: true, follow: true },
   alternates: { canonical: "/" },
   openGraph: {
-    title:
-      "Tiffany Esthetic Group Ips SAS | Cirugía Plástica y Servicios Quirúrgicos",
+    title: "Clínica Tiffany | Cirugía Plástica en Cali",
     description:
-      "Institución habilitada con salas de cirugía, recuperación, farmacia y personal calificado en Cali.",
-url: "https://www.clinicatiffany.com",
+      "Cirugía plástica y estética en Cali en una IPS habilitada. 3 quirófanos, área de recuperación y farmacia.",
+    url: "https://www.clinicatiffany.com",
     siteName: "Tiffany Esthetic Group",
     locale: "es_CO",
     type: "website",
@@ -73,15 +60,15 @@ url: "https://www.clinicatiffany.com",
         url: "https://www.clinicatiffany.com/images/tiffany-og.png",
         width: 1200,
         height: 630,
-        alt: "Tiffany Esthetic Group - Logo",
+        alt: "Clínica Tiffany - Tiffany Esthetic Group IPS SAS",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tiffany Esthetic Group",
+    title: "Clínica Tiffany | Cirugía Plástica en Cali",
     description:
-      "Cirugía plástica, servicios quirúrgicos, recuperación y farmacia habilitada en Cali.",
+      "Cirugía plástica y estética en Cali en una IPS habilitada. 3 quirófanos, recuperación y farmacia.",
     images: ["https://www.clinicatiffany.com/images/tiffany-og.png"],
   },
 };
@@ -220,7 +207,7 @@ export default function RootLayout({
                     <Logo className="brightness-0 invert" />
                   </Link>
                   <p className="text-sm text-white/60 mt-4 font-body">
-                    © {new Date().getFullYear()} Tiffany Esthetic Group Ips SAS.
+                    © {new Date().getFullYear()} Tiffany Esthetic Group IPS SAS.
                     Todos los derechos reservados.
                   </p>
                   <p className="text-xs text-white/30 mt-2 font-body leading-relaxed">
@@ -428,7 +415,7 @@ export default function RootLayout({
                 <a
                   href="https://www.lulosimpulsodigital.com/"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"
                   className="text-white/80 hover:text-primary transition-colors no-underline font-medium"
                 >
                   Lulos impulso digital

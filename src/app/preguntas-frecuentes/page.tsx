@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildMetadata, clampDescription } from "@/lib/metadata";
 import Container from "@/components/ui/Container";
 import AnimateInView, { StaggerGrid, StaggerItem } from "@/components/ui/AnimateInView";
 import { faqs } from "@/data/faqs";
@@ -147,20 +148,13 @@ const jsonLd = {
   ],
 };
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Preguntas Frecuentes | Tiffany Esthetic Group",
-  description:
-    "Resuelve todas tus dudas sobre procedimientos quirúrgicos estéticos, habilitación de la IPS, proceso de valoración, recuperación y cómo agendar tu cita en Cali.",
-  robots: { index: true, follow: true },
-  alternates: { canonical: "/preguntas-frecuentes" },
-  openGraph: {
-    title: "Preguntas Frecuentes | Tiffany Esthetic Group",
-    description:
-      "Todo lo que necesitas saber sobre cirugía plástica estética en Cali: procedimientos, seguridad, proceso quirúrgico y contacto.",
-    locale: "es_CO",
-    type: "website",
-  },
-};
+  description: clampDescription(
+    "Resuelve tus dudas sobre cirugía plástica en Cali: procedimientos, habilitación, valoración, recuperación y cómo agendar tu cita."
+  ),
+  path: "/preguntas-frecuentes",
+});
 
 export default function FAQsPage() {
   return (

@@ -13,10 +13,13 @@ Tiffany Esthetic Group IPS SAS (NIT 901634870) is a health service institution (
 The clinic operates three fully equipped operating rooms, a recovery area with permanent nursing staff, a licensed pharmacy and 24-hour surgical coordination. Every procedure is performed by plastic surgeons who are members of the Colombian Society of Plastic Surgery (SCCP), supported by certified anesthesiologists, surgical instrument technicians, circulating nurses and recovery staff.
 
 **Key identification**
-- Legal name: Tiffany Esthetic Group Ips SAS
+- Legal name: Tiffany Esthetic Group IPS SAS
+- Also known as: Clínica Tiffany, Tiffany Esthetic Group, Tiffany E.G. IPS
 - Tax ID (NIT): 901634870
+- Health registry (REPS): 7600113199-01
 - Legal representative: Sandra Milena Gomez Vasquez
 - Type: IPS (licensed healthcare provider)
+- Founded: 2022
 - Country: Colombia — City: Cali, Valle del Cauca
 - Website: https://www.clinicatiffany.com
 
@@ -26,7 +29,8 @@ The clinic operates three fully equipped operating rooms, a recovery area with p
 - **Phone / WhatsApp:** +57 320 2703522
 - **Email:** info@clinicatiffany.com
 - **Instagram:** https://www.instagram.com/tiffanyeg_ips/
-- **Hours:** Mon–Fri 8:00 a.m. – 6:00 p.m. | Sat 8:00 a.m. – 1:00 p.m. | Closed Sundays
+- **Google Maps:** https://www.google.com/maps/place/Tiffany+Esthetic+Group+Ips+SAS/@3.3811893,-76.5383704,17z/data=!4m6!3m5!1s0x8e30a1a218ba2a73:0x9e0b5db8cc3e4ffa!8m2!3d3.3811893!4d-76.5357955!16s%2Fg%2F11s9pzn3td?entry=ttu
+- **Hours:** Mon–Fri 8:00 a.m. – 5:00 p.m. | Sat 8:00 a.m. – 12:00 p.m. | Closed Sundays
 
 ## 3. Facilities and safety
 
@@ -48,6 +52,9 @@ The clinic operates three fully equipped operating rooms, a recovery area with p
 - **Lipo + Lipectomy + Periareolar Mastopexy** `/lipo-lipectomia-pexia-periareolar` — Liposuction, lipectomy and periareolar breast lift to harmonize body and bust.
 - **Lipo + Lipectomy + Mastopexy** `/lipo-lipectomia-pexia` — Full-integration liposuction plus lipectomy plus breast lift.
 - **Hernia repair** `/hernia` — Surgical repair of abdominal or umbilical hernia, combinable with body-contouring aesthetic procedures.
+- **Liposuction + Augmentation** `/liposuccion-aumento` — Body contouring liposuction with volume enhancement through autologous fat transfer.
+- **Liposuction + Lipectomy** `/liposuccion-lipectomia` — Body reshaping combining liposuction, lipectomy and autologous fat transfer.
+- **Lipoescultura in Cali** `/lipoescultura-lipoinyeccion-glutea-cali` — Gluteal fat transfer body contouring, with a location page for patients in Cali.
 
 ### Breast surgery
 
@@ -62,6 +69,7 @@ The clinic operates three fully equipped operating rooms, a recovery area with p
 - **Lipo + Mastopexy** `/lipo-pexia` — Liposuction plus breast lift to define the body contour and raise the bust.
 - **Lipo + Breast Implants** `/lipo-protesis-aumento` — Body liposuction plus breast augmentation with implants.
 - **Lipectomy + Mastopexy** `/lipectomia-pexia` — Abdominal lipectomy combined with breast lift.
+- **Liposuction + Breast Lift** `/liposuccion-pexia-mamaria` — Body contouring and breast lift in a single procedure.
 
 ### Facial surgery
 
@@ -71,6 +79,8 @@ The clinic operates three fully equipped operating rooms, a recovery area with p
 - **Rhinoplasty** `/rinoplastia` — Nasal surgery focused on facial harmony and respiratory function when indicated. Popular.
 - **Lipo + Rhinoplasty** `/lipo-rinoplastia` — Body liposuction plus nasal surgery in a single procedure.
 - **Blepharoplasty + Otoplasty + Lipectomy** `/blefaroplastia-otoplastia-lipectomia` — Combined eyelid rejuvenation, ear correction and abdominal contouring.
+- **Blepharoplasty** `/blefaroplastia` — Eyelid surgery for excess skin and under-eye bags, rejuvenating the gaze.
+- **Facelift** `/lifting-facial` — Facial and neck rejuvenation for skin laxity.
 
 ### Operating room rental
 
@@ -80,7 +90,7 @@ The clinic operates three fully equipped operating rooms, a recovery area with p
 
 Main pages and their content:
 
-- `/` — Landing page: video hero, benefits, services carousel (25 procedures with images), before/after slider, facilities gallery, statistics, testimonials, team, FAQ and final CTA.
+- `/` — Landing page: video hero, benefits, services carousel (30 procedures with images), before/after slider, facilities gallery, statistics, testimonials, team, FAQ and final CTA.
 - `/servicios` — Interactive services catalog with per-procedure detail pages.
 - `/resultados` — Interactive real-results gallery with before/after sliders per procedure.
 - `/instalaciones` — Facilities: surgery room, consultation offices, sterilization, waiting room and surgical equipment.
@@ -127,15 +137,18 @@ Images correspond to real patients with express authorization (informed consent,
 
 ## 1. Resumen de la empresa
 
-Tiffany Esthetic Group Ips SAS (NIT 901634870) es una Institución Prestadora de Servicios de Salud (IPS) ubicada en el sur de Cali (Comuna 17), especializada en cirugía plástica, estética y reconstructiva. La clínica cuenta con habilitación sanitaria vigente (Resolución 3100 de 2019), está vigilada por la Superintendencia Nacional de Salud y trata datos personales conforme a la Ley 1581 de 2012.
+Tiffany Esthetic Group IPS SAS (NIT 901634870) es una Institución Prestadora de Servicios de Salud (IPS) ubicada en el sur de Cali (Comuna 17), especializada en cirugía plástica, estética y reconstructiva. La clínica cuenta con habilitación sanitaria vigente (Resolución 3100 de 2019), está vigilada por la Superintendencia Nacional de Salud y trata datos personales conforme a la Ley 1581 de 2012.
 
 Dispone de tres salas de cirugía totalmente equipadas, área de recuperación con enfermería permanente, farmacia habilitada y coordinación quirúrgica 24 horas. Todos los procedimientos son realizados por cirujanos plásticos miembros de la Sociedad Colombiana de Cirugía Plástica (SCCP), acompañados de anestesiólogos certificados, instrumentación, circulantes de cirugía y enfermería recuperadora.
 
 **Identificación**
-- Razón social: Tiffany Esthetic Group Ips SAS
+- Razón social: Tiffany Esthetic Group IPS SAS
+- También conocida como: Clínica Tiffany, Tiffany Esthetic Group, Tiffany E.G. IPS
 - NIT: 901634870
+- Código REPS: 7600113199-01
 - Representante legal: Sandra Milena Gomez Vasquez
 - Tipo: IPS habilitada
+- Fundación: 2022
 - País: Colombia — Ciudad: Cali, Valle del Cauca
 - Sitio web: https://www.clinicatiffany.com
 
@@ -145,7 +158,8 @@ Dispone de tres salas de cirugía totalmente equipadas, área de recuperación c
 - **Teléfono / WhatsApp:** +57 320 2703522
 - **Correo:** info@clinicatiffany.com
 - **Instagram:** https://www.instagram.com/tiffanyeg_ips/
-- **Horario:** Lunes a viernes 8:00 a. m. – 6:00 p. m. | Sábados 8:00 a. m. – 1:00 p. m. | Domingos cerrado
+- **Google Maps:** https://www.google.com/maps/place/Tiffany+Esthetic+Group+Ips+SAS/@3.3811893,-76.5383704,17z/data=!4m6!3m5!1s0x8e30a1a218ba2a73:0x9e0b5db8cc3e4ffa!8m2!3d3.3811893!4d-76.5357955!16s%2Fg%2F11s9pzn3td?entry=ttu
+- **Horario:** Lunes a viernes 8:00 a. m. – 5:00 p. m. | Sábados 8:00 a. m. – 12:00 p. m. | Domingos cerrado
 
 ## 3. Instalaciones y seguridad
 
@@ -167,6 +181,9 @@ Dispone de tres salas de cirugía totalmente equipadas, área de recuperación c
 - **Lipo + Lipectomía + Pexia Periareolar** `/lipo-lipectomia-pexia-periareolar` — Liposucción, lipectomía y elevación mamaria periareolar.
 - **Lipo + Lipectomía + Pexia** `/lipo-lipectomia-pexia` — Procedimiento integral de liposucción, lipectomía y pexia mamaria.
 - **Hernia** `/hernia` — Reparación quirúrgica de hernia abdominal o umbilical, combinable con procedimientos estéticos.
+- **Liposucción + aumento** `/liposuccion-aumento` — Liposucción de contorno corporal con aumento de volumen por transferencia de grasa autóloga.
+- **Liposucción + lipectomía** `/liposuccion-lipectomia` — Remodelación corporal con liposucción, lipectomía y transferencia de grasa autóloga.
+- **Lipoescultura en Cali** `/lipoescultura-lipoinyeccion-glutea-cali` — Moldeamiento corporal con transferencia de grasa autóloga, con página de ubicación para pacientes en Cali.
 
 ### Cirugía mamaria
 
@@ -181,6 +198,7 @@ Dispone de tres salas de cirugía totalmente equipadas, área de recuperación c
 - **Lipo + Pexia** `/lipo-pexia` — Liposucción y pexia mamaria para definir contorno y elevar el busto.
 - **Lipo + Prótesis de aumento** `/lipo-protesis-aumento` — Liposucción corporal y aumento mamario con prótesis.
 - **Lipectomía + Pexia** `/lipectomia-pexia` — Lipectomía abdominal con elevación mamaria.
+- **Liposucción + pexia mamaria** `/liposuccion-pexia-mamaria` — Contorno corporal y elevación mamaria en un solo procedimiento.
 
 ### Cirugía facial
 
@@ -190,6 +208,8 @@ Dispone de tres salas de cirugía totalmente equipadas, área de recuperación c
 - **Rinoplastia** `/rinoplastia` — Cirugía nasal con enfoque estético y funcional. Popular.
 - **Lipo + Rinoplastia** `/lipo-rinoplastia` — Liposucción corporal y rinoplastia en un solo procedimiento.
 - **Blefaroplastia + Otoplastia + Lipectomía** `/blefaroplastia-otoplastia-lipectomia` — Rejuvenecimiento de la mirada, corrección de orejas y contorno abdominal.
+- **Blefaroplastia** `/blefaroplastia` — Cirugía de párpados para exceso de piel y bolsas, rejuvenecimiento de la mirada.
+- **Lifting facial** `/lifting-facial` — Rejuvenecimiento de rostro y cuello frente a la flacidez.
 
 ### Alquiler de quirófanos
 
@@ -197,7 +217,7 @@ Dispone de tres salas de cirugía totalmente equipadas, área de recuperación c
 
 ## 5. Mapa del sitio web
 
-- `/` — Landing: hero con video, beneficios, carrusel de servicios (25 procedimientos con imagen), antes/después, galería de instalaciones, estadísticas, testimonios, equipo, FAQ y CTA final.
+- `/` — Landing: hero con video, datos clave, beneficios, carrusel de servicios (30 procedimientos con imagen), antes/después, galería de instalaciones, estadísticas, testimonios, equipo, FAQ y CTA final.
 - `/servicios` — Catálogo interactivo de procedimientos.
 - `/resultados` — Galería interactiva de resultados reales con antes/después por procedimiento.
 - `/instalaciones` — Sala de cirugía, consultorios, esterilización, sala de espera y equipo quirúrgico.
@@ -242,7 +262,7 @@ Corresponden a pacientes reales con autorización expresa (consentimiento inform
 
 ## Información legal
 
-- Razón social: Tiffany Esthetic Group Ips SAS — NIT 901634870
+- Razón social: Tiffany Esthetic Group IPS SAS — NIT 901634870
 - Tipo: Institución Prestadora de Servicios de Salud (IPS)
 - Habilitación: Secretaría de Salud (Res. 3100 de 2019)
 - Vigilancia: Superintendencia Nacional de Salud

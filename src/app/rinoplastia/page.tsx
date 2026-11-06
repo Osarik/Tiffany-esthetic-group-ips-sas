@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildMetadata, clampDescription } from "@/lib/metadata";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 import AnimateInView, { StaggerGrid, StaggerItem } from "@/components/ui/AnimateInView";
@@ -22,26 +23,6 @@ const jsonLd = {
       aspect: "Treatment",
     },
     {
-      "@type": "MedicalClinic",
-      "@id": "https://www.clinicatiffany.com/#business",
-      name: "Tiffany Esthetic Group IPS",
-      image: "https://www.clinicatiffany.com/icon.svg",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "13a1-25, Cra 85c, Comuna 17",
-        addressLocality: "Cali",
-        addressRegion: "Valle del Cauca",
-        addressCountry: "CO",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: 3.3811893,
-        longitude: -76.5357955,
-      },
-      telephone: "+57 320 270 3522",
-      medicalSpecialty: "PlasticSurgery",
-    },
-    {
       "@type": "SurgicalProcedure",
       url: "https://www.clinicatiffany.com/rinoplastia",
       name: "Rinoplastia",
@@ -52,24 +33,14 @@ const jsonLd = {
   ],
 };
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Rinoplastia en Cali | Tiffany Esthetic Group",
-  description:
-    "Cirugía nasal enfocada en la armonía facial y la función respiratoria cuando aplica. IPS habilitada en Cali. Rinoplastia abierta y cerrada. Agenda tu valoración.",
-  robots: { index: true, follow: true },
-  alternates: {
-    canonical: "/rinoplastia",
-  },
-  openGraph: {
-    title: "Rinoplastia en Cali",
-    description:
-      "Cirugía nasal para armonía facial y función respiratoria. Técnicas abierta y cerrada adaptadas a cada paciente.",
-    url: "https://www.clinicatiffany.com/rinoplastia",
-    siteName: "Tiffany Esthetic Group",
-    locale: "es_CO",
-    type: "article",
-  },
-};
+  description: clampDescription(
+    "Rinoplastia en Cali para armonía facial y función respiratoria. Técnicas abierta y cerrada en una IPS habilitada. Agenda tu valoración."
+  ),
+  path: "/rinoplastia",
+  type: "article",
+});
 
 const gradientFrom = "#4A8DB7";
 const gradientTo = "#6DB3D9";
@@ -272,8 +243,8 @@ export default function RinoplastiaPage() {
         <section className="relative bg-[#4A8DB7] pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
           <div className="absolute inset-0" aria-hidden="true">
             <img
-              src="https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830677/ChatGPT_Image_11_jul_2026_10_34_24_p.m._nagkar.png"
-              alt=""
+              src="/images/schema/25-16x9.webp"
+              alt="Sala de cirugía de Tiffany Esthetic Group IPS en Cali"
               className="w-full h-full object-cover"
             />
             <div

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildMetadata, clampDescription } from "@/lib/metadata";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 
@@ -21,26 +22,6 @@ const jsonLd = {
       aspect: "Treatment",
     },
     {
-      "@type": "MedicalClinic",
-      "@id": "https://www.clinicatiffany.com/#business",
-      name: "Tiffany Esthetic Group IPS",
-      image: "https://www.clinicatiffany.com/icon.svg",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "13a1-25, Cra 85c, Comuna 17",
-        addressLocality: "Cali",
-        addressRegion: "Valle del Cauca",
-        addressCountry: "CO",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: 3.3811893,
-        longitude: -76.5357955,
-      },
-      telephone: "+57 320 270 3522",
-      medicalSpecialty: "PlasticSurgery",
-    },
-    {
       "@type": "SurgicalProcedure",
       url: "https://www.clinicatiffany.com/blefaroplastia",
       name: "Blefaroplastia Superior",
@@ -59,24 +40,14 @@ const jsonLd = {
   ],
 };
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Blefaroplastia en Cali | Tiffany Esthetic Group",
-  description:
-    "Rejuvenecimiento de la mirada mediante blefaroplastia superior e inferior. Manejo del exceso de piel y bolsas palpebrales. IPS habilitada en Cali. Agenda tu valoración.",
-  robots: { index: true, follow: true },
-  alternates: {
-    canonical: "/blefaroplastia",
-  },
-  openGraph: {
-    title: "Blefaroplastia en Cali",
-    description:
-      "Rejuvenecimiento de la mirada con blefaroplastia superior e inferior. Resultados naturales que realzan la expresión facial.",
-    url: "https://www.clinicatiffany.com/blefaroplastia",
-    siteName: "Tiffany Esthetic Group",
-    locale: "es_CO",
-    type: "article",
-  },
-};
+  description: clampDescription(
+    "Blefaroplastia superior e inferior en Cali para corregir exceso de piel y bolsas palpebrales. IPS habilitada y valoración médica. Agenda tu cita."
+  ),
+  path: "/blefaroplastia",
+  type: "article",
+});
 
 const procedureSteps = [
   {
@@ -292,8 +263,8 @@ export default function BlefaroplastiaPage() {
         <section className="relative bg-[#0F4A44] pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
           <div className="absolute inset-0" aria-hidden="true">
             <img
-              src="https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830679/ChatGPT_Image_11_jul_2026_11_26_18_p.m._cfhfki.png"
-              alt=""
+              src="/images/schema/14-4x3.webp"
+              alt="Equipo quirúrgico de Tiffany Esthetic Group IPS en Cali"
               className="w-full h-full object-cover"
             />
             <div

@@ -138,8 +138,8 @@ function ComparisonView({
       }}
     >
       <Image
-        {...optimized(afterSrc)}
-        alt={`${alt} - ${afterLabel}`}
+        {...optimized(beforeSrc)}
+        alt={`${alt} - ${beforeLabel}`}
         fill
         sizes={sizes}
         quality={85}
@@ -147,11 +147,11 @@ function ComparisonView({
       />
       <div
         className="absolute inset-0 overflow-hidden"
-        style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
+        style={{ clipPath: `inset(0 0 0 ${position}%)` }}
       >
         <Image
-          {...optimized(beforeSrc)}
-          alt={`${alt} - ${beforeLabel}`}
+          {...optimized(afterSrc)}
+          alt={`${alt} - ${afterLabel}`}
           fill
           sizes={sizes}
           quality={85}
@@ -261,7 +261,7 @@ export default function BeforeAfterSlider({
   afterSrc = SAMPLE_AFTER,
   beforeLabel = "Antes",
   afterLabel = "Después",
-  alt = "Antes y después",
+  alt = "Resultado de cirugía estética",
 }: Partial<ComparisonSrc>) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const openLightbox = useCallback(() => setLightboxOpen(true), []);

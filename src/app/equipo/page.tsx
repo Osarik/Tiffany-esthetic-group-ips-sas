@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildMetadata, clampDescription } from "@/lib/metadata";
 import ScrollExpandMedia from "@/components/ui/scroll-expansion-hero";
 import Container from "@/components/ui/Container";
 import AnimateInView, { StaggerGrid, StaggerItem } from "@/components/ui/AnimateInView";
@@ -104,50 +105,16 @@ const jsonLd = {
       medicalAudience: "Patient",
       about: { "@id": "https://www.clinicatiffany.com/#business" },
     },
-    {
-      "@type": "MedicalClinic",
-      "@id": "https://www.clinicatiffany.com/#business",
-      name: "Tiffany Esthetic Group IPS",
-      image: "https://www.clinicatiffany.com/icon.svg",
-      description:
-        "Equipo de cirujanos plásticos miembros de la SCCP, anestesiólogos certificados por el Consejo de Anestesiología, enfermería recuperadora y jefe de planta.",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "13a1-25, Cra 85c, Comuna 17",
-        addressLocality: "Cali",
-        addressRegion: "Valle del Cauca",
-        addressCountry: "CO",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: 3.3811893,
-        longitude: -76.5357955,
-      },
-      telephone: "+57 320 270 3522",
-      medicalSpecialty: "PlasticSurgery",
-      availableService: [
-        { "@type": "MedicalProcedure", name: "Cirugía plástica y estética" },
-        { "@type": "MedicalProcedure", name: "Anestesiología" },
-        { "@type": "MedicalProcedure", name: "Enfermería y recuperación postoperatoria" },
-      ],
-    },
   ],
 };
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Equipo Médico en Cali | Tiffany Esthetic Group",
-  description:
-    "Cirujanos plásticos miembros de la Sociedad Colombiana de Cirugía Plástica (SCCP), anestesiólogos certificados por el Consejo de Anestesiología, enfermería recuperadora y servicios quirúrgicos en Cali. IPS habilitada.",
-  robots: { index: true, follow: true },
-  alternates: { canonical: "/equipo" },
-  openGraph: {
-    title: "Equipo Médico en Cali | Tiffany Esthetic Group",
-    description:
-      "Cirujanos plásticos miembros de la SCCP, anestesiólogos certificados y personal de enfermería especializado. IPS habilitada con 3 salas de cirugía en Cali.",
-    locale: "es_CO",
-    type: "website",
-  },
-};
+  description: clampDescription(
+    "Cirujanos plásticos de la SCCP, anestesiólogos certificados y enfermería especializada en Cali. Conoce al equipo de una IPS habilitada."
+  ),
+  path: "/equipo",
+});
 
 export default function EquipoPage() {
   return (

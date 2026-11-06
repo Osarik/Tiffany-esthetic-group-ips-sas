@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildMetadata, clampDescription } from "@/lib/metadata";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 
@@ -21,26 +22,6 @@ const jsonLd = {
       aspect: "Treatment",
     },
     {
-      "@type": "MedicalClinic",
-      "@id": "https://www.clinicatiffany.com/#business",
-      name: "Tiffany Esthetic Group IPS",
-      image: "https://www.clinicatiffany.com/icon.svg",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "13a1-25, Cra 85c, Comuna 17",
-        addressLocality: "Cali",
-        addressRegion: "Valle del Cauca",
-        addressCountry: "CO",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: 3.3811893,
-        longitude: -76.5357955,
-      },
-      telephone: "+57 320 270 3522",
-      medicalSpecialty: "PlasticSurgery",
-    },
-    {
       "@type": "SurgicalProcedure",
       url: "https://www.clinicatiffany.com/liposuccion-aumento",
       name: "Liposucción",
@@ -59,24 +40,14 @@ const jsonLd = {
   ],
 };
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Liposucción en Cali | Tiffany Esthetic Group",
-  description:
-    "Plan quirúrgico integral para definir el cuerpo con liposucción y complementar volumen con transferencia de grasa autóloga. IPS habilitada en Cali. Agenda tu valoración.",
-  robots: { index: true, follow: true },
-  alternates: {
-    canonical: "/liposuccion-aumento",
-  },
-  openGraph: {
-    title: "Liposucción y Aumento de Volumen en Cali",
-    description:
-      "Plan quirúrgico integral: liposucción de contorno corporal y aumento de volumen con grasa autóloga en una misma intervención.",
-    url: "https://www.clinicatiffany.com/liposuccion-aumento",
-    siteName: "Tiffany Esthetic Group",
-    locale: "es_CO",
-    type: "article",
-  },
-};
+  description: clampDescription(
+    "Liposucción con aumento de volumen por transferencia de grasa autóloga en Cali. Define tu contorno en una IPS habilitada. Agenda tu cita."
+  ),
+  path: "/liposuccion-aumento",
+  type: "article",
+});
 
 const procedureSteps = [
   {

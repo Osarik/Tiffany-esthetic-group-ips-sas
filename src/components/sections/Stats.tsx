@@ -19,14 +19,32 @@ function AnimatedCounter({
 }) {
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
-  const [count, setCount] = useState(0);
+  // Arranca en el valor real: así el HTML servido (SSR) y cualquier crawler
+  // o motor de IA sin JavaScript leen el dato correcto, no un cero.
+  const [count, setCount] = useState(value);
+  const hasAnimated = useRef(false);
+  const mountedAt = useRef(0);
 
   useEffect(() => {
-    if (!isInView) return;
+    mountedAt.current = Date.now();
+  }, []);
+
+  useEffect(() => {
+    if (!isInView || hasAnimated.current) return;
+    hasAnimated.current = true;
+
+    // Si el bloque ya estaba en pantalla al hidratar, no lo reiniciamos a 0
+    // para no provocar un parpadeo: se queda con el valor final.
+    if (Date.now() - mountedAt.current < 500) {
+      setCount(value);
+      return;
+    }
+
     const duration = 1000;
     const steps = 30;
     const increment = value / steps;
     let current = 0;
+    setCount(0);
     const timer = setInterval(() => {
       current += increment;
       if (current >= value) {

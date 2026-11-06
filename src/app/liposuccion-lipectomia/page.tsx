@@ -1,28 +1,19 @@
 import type { Metadata } from "next";
+import { buildMetadata, clampDescription } from "@/lib/metadata";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 
 const whatsappUrl =
   "https://wa.me/573202703522?text=Hola%2C%20quiero%20agendar%20mi%20valoraci%C3%B3n%20para%20liposucci%C3%B3n%20o%20lipectom%C3%ADa%20en%20Cali.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Liposucción y Lipectomía en Cali | Tiffany Esthetic Group",
-  description:
-    "Remodelación corporal mediante liposucción, lipectomía y transferencia de grasa autóloga en Cali. IPS habilitada con protocolos clínicos establecidos. Agenda tu valoración.",
-  robots: { index: true, follow: true },
-  alternates: {
-    canonical: "/liposuccion-lipectomia",
-  },
-  openGraph: {
-    title: "Liposucción y Lipectomía en Cali",
-    description:
-      "Procedimientos quirúrgicos de contorno corporal: liposucción selectiva, lipectomía y transferencia de grasa autóloga.",
-    url: "https://www.clinicatiffany.com/liposuccion-lipectomia",
-    siteName: "Tiffany Esthetic Group",
-    locale: "es_CO",
-    type: "article",
-  },
-};
+  description: clampDescription(
+    "Liposucción y lipectomía en Cali para retirar grasa y exceso de piel en una sola cirugía. IPS habilitada. Agenda tu valoración médica."
+  ),
+  path: "/liposuccion-lipectomia",
+  type: "article",
+});
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -38,26 +29,6 @@ const jsonLd = {
       inLanguage: "es",
       medicalAudience: "Patient",
       aspect: "Treatment",
-    },
-    {
-      "@type": "MedicalClinic",
-      "@id": "https://www.clinicatiffany.com/#business",
-      name: "Tiffany Esthetic Group IPS",
-      image: "https://www.clinicatiffany.com/icon.svg",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "13a1-25, Cra 85c, Comuna 17",
-        addressLocality: "Cali",
-        addressRegion: "Valle del Cauca",
-        addressCountry: "CO",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: 3.3811893,
-        longitude: -76.5357955,
-      },
-      telephone: "+57 320 270 3522",
-      medicalSpecialty: "PlasticSurgery",
     },
     {
       "@type": "SurgicalProcedure",

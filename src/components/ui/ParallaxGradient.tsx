@@ -13,6 +13,7 @@ interface ParallaxGradientProps {
   id?: string;
   image?: string;
   serviceTitle?: string;
+  alt?: string;
 }
 
 function placeholderImage(from: string, to: string, title: string): string {
@@ -43,6 +44,7 @@ export default function ParallaxGradient({
   id,
   image,
   serviceTitle,
+  alt = "",
 }: ParallaxGradientProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -66,7 +68,7 @@ export default function ParallaxGradient({
       >
         <Image
           src={imgSrc}
-          alt=""
+          alt={alt}
           fill
           className="object-cover"
           sizes="100vw"

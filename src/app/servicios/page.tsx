@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildMetadata, clampDescription } from "@/lib/metadata";
 import Image from "next/image";
 import Container from "@/components/ui/Container";
 import AnimateInView, { StaggerGrid, StaggerItem } from "@/components/ui/AnimateInView";
@@ -100,26 +101,6 @@ const jsonLd = {
       about: { "@id": "https://www.clinicatiffany.com/#business" },
     },
     {
-      "@type": "MedicalClinic",
-      "@id": "https://www.clinicatiffany.com/#business",
-      name: "Tiffany Esthetic Group IPS",
-      image: "https://www.clinicatiffany.com/icon.svg",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "13a1-25, Cra 85c, Comuna 17",
-        addressLocality: "Cali",
-        addressRegion: "Valle del Cauca",
-        addressCountry: "CO",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: 3.3811893,
-        longitude: -76.5357955,
-      },
-      telephone: "+57 320 270 3522",
-      medicalSpecialty: "PlasticSurgery",
-    },
-    {
       "@type": "ItemList",
       itemListElement: services.map((s, i) => ({
         "@type": "ListItem",
@@ -137,24 +118,13 @@ const jsonLd = {
   ],
 };
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Cirugía Plástica en Cali | Tiffany Esthetic Group",
-  description:
-    "Conoce todos los procedimientos de cirugía plástica y estética en Cali: lipoescultura, liposucción, pexia mamaria, rinoplastia, blefaroplastia y lifting facial. IPS habilitada.",
-  robots: { index: true, follow: true },
-  alternates: {
-    canonical: "/servicios",
-  },
-  openGraph: {
-    title: "Procedimientos Quirúrgicos Estéticos en Cali",
-    description:
-      "Cirugía corporal, mamaria y facial en Cali. IPS habilitada con sala de cirugía, recuperación, farmacia y personal calificado.",
-    url: "https://www.clinicatiffany.com/servicios",
-    siteName: "Tiffany Esthetic Group",
-    locale: "es_CO",
-    type: "website",
-  },
-};
+  description: clampDescription(
+    "Procedimientos de cirugía plástica y estética en Cali: corporal, mamaria y facial. IPS habilitada con quirófanos propios. Agenda tu valoración."
+  ),
+  path: "/servicios",
+});
 
 import ServiceTabs from "./ServiceTabs";
 

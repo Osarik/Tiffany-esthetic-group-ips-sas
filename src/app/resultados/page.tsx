@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildMetadata, clampDescription } from "@/lib/metadata";
 import Image from "next/image";
 import Container from "@/components/ui/Container";
 import ImageMouseTrail3 from "@/components/ui/image-mousetrail-without-component";
@@ -46,20 +47,13 @@ const stats = [
   { value: "100%", label: "Compromiso de confidencialidad" },
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Antes y Después en Cali | Tiffany Esthetic Group",
-  description:
-    "Galería de resultados quirúrgicos reales de pacientes de Tiffany Esthetic Group IPS en Cali. Procedimientos de cirugía plástica realizados por cirujanos plásticos calificados.",
-  robots: { index: true, follow: true },
-  alternates: { canonical: "/resultados" },
-  openGraph: {
-    title: "Antes y Después en Cali | Tiffany Esthetic Group",
-    description:
-      "Conoce resultados reales de cirugía plástica en Cali. Procedimientos realizados por cirujanos plásticos calificados en instalaciones habilitadas por la Secretaría de Salud.",
-    locale: "es_CO",
-    type: "website",
-  },
-};
+  description: clampDescription(
+    "Galería de resultados reales de cirugía plástica en Cali. Casos de lipoescultura, rinoplastia, blefaroplastia y más en una IPS habilitada."
+  ),
+  path: "/resultados",
+});
 
 export default function ResultadosPage() {
   const resultadosSchema = {
@@ -80,20 +74,6 @@ export default function ResultadosPage() {
         "@id": "https://www.clinicatiffany.com/resultados/#gallery",
         url: "https://www.clinicatiffany.com/resultados",
         about: { "@id": "https://www.clinicatiffany.com/#business" },
-      },
-      {
-        "@type": "MedicalClinic",
-        "@id": "https://www.clinicatiffany.com/#business",
-        name: "Tiffany Esthetic Group IPS",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "13a1-25, Cra 85c, Comuna 17",
-          addressLocality: "Cali",
-          addressRegion: "Valle del Cauca",
-          addressCountry: "CO",
-        },
-        telephone: "+57 320 270 3522",
-        medicalSpecialty: "PlasticSurgery",
       },
     ],
   };

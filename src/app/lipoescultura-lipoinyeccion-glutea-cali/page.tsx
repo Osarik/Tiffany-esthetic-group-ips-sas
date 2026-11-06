@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildMetadata, clampDescription } from "@/lib/metadata";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 
@@ -18,26 +19,6 @@ const jsonLd = {
       aspect: "Treatment",
     },
     {
-      "@type": "MedicalClinic",
-      "@id": "https://www.clinicatiffany.com/#business",
-      name: "Tiffany Esthetic Group IPS",
-      image: "https://www.clinicatiffany.com/icon.svg",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "13a1-25, Cra 85c, Comuna 17",
-        addressLocality: "Cali",
-        addressRegion: "Valle del Cauca",
-        addressCountry: "CO",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: 3.3811893,
-        longitude: -76.5357955,
-      },
-      telephone: "+57 320 270 3522",
-      medicalSpecialty: "PlasticSurgery",
-    },
-    {
       "@type": "SurgicalProcedure",
       url: "https://www.clinicatiffany.com/lipoescultura-lipoinyeccion-glutea-cali",
       name: "Lipoescultura con Lipoinyección Glútea",
@@ -48,21 +29,14 @@ const jsonLd = {
   ],
 };
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Lipoescultura en Cali | Tiffany Esthetic Group",
-  description:
-    "Remodela tu contorno corporal mediante lipoescultura y transferencia de grasa autóloga en Cali. Procedimiento seguro en una IPS habilitada. Agenda tu valoración médica especializada.",
-  robots: { index: true, follow: true },
-  alternates: { canonical: "/lipoescultura-lipoinyeccion-glutea-cali" },
-  openGraph: {
-    title: "Lipoescultura en Cali | Tiffany Esthetic Group",
-    description:
-      "Procedimiento quirúrgico de moldeamiento corporal mediante transferencia de grasa autóloga.",
-    url: "https://www.clinicatiffany.com/lipoescultura-lipoinyeccion-glutea-cali",
-    locale: "es_CO",
-    type: "website",
-  },
-};
+  description: clampDescription(
+    "Lipoescultura con lipoinyección glútea en Cali: moldea tu contorno con grasa autóloga en una IPS habilitada. Agenda tu valoración médica."
+  ),
+  path: "/lipoescultura-lipoinyeccion-glutea-cali",
+  type: "article",
+});
 
 const steps = [
   {
@@ -194,8 +168,8 @@ export default function LipoesculturaPage() {
         <section className="relative bg-[#0F4A44] pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
           <div className="absolute inset-0" aria-hidden="true">
             <img
-              src="https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783832108/ChatGPT_Image_11_jul_2026_11_37_31_p.m._mwqeu8.png"
-              alt=""
+              src="/images/schema/25-16x9.webp"
+              alt="Sala de cirugía de Tiffany Esthetic Group IPS en Cali"
               className="w-full h-full object-cover"
             />
             <div

@@ -1,24 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { buildMetadata, clampDescription } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Política de Cookies | Tiffany Esthetic Group",
-  description:
-    "Conoce cómo Tiffany Esthetic Group Ips SAS utiliza cookies y tecnologías similares en su sitio web, conforme a la Ley 1581 de 2012 y la normativa colombiana de protección de datos.",
-  robots: "index, follow",
-  alternates: {
-    canonical: "/politica-de-cookies",
-  },
-  openGraph: {
-    title: "Política de Cookies | Tiffany Esthetic Group",
-    description:
-      "Política de cookies de Tiffany Esthetic Group Ips SAS, IPS habilitada en Cali, Colombia.",
-    url: "https://www.clinicatiffany.com/politica-de-cookies",
-    siteName: "Tiffany Esthetic Group",
-    locale: "es_CO",
-    type: "website",
-  },
-};
+  description: clampDescription(
+    "Conoce cómo Tiffany Esthetic Group IPS SAS usa cookies en su sitio web, conforme a la Ley 1581 de 2012 y la normativa colombiana de protección de datos."
+  ),
+  path: "/politica-de-cookies",
+});
 
 export default function PoliticaDeCookies() {
   return (

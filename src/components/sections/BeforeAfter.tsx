@@ -6,9 +6,9 @@ import Heading from "@/components/ui/Heading";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 
 const cases = [
-  { id: "case1", beforeLabel: "Antes", afterLabel: "Después", beforeSrc: "/images/aa1.webp", afterSrc: "/images/aa2.webp" },
-  { id: "case2", beforeLabel: "Antes", afterLabel: "Después", beforeSrc: "/images/bb1.jpeg", afterSrc: "/images/bb2.jpeg" },
-  { id: "case3", beforeLabel: "Antes", afterLabel: "Después", beforeSrc: "/images/dd1.webp", afterSrc: "/images/dd2.jpeg" },
+  { id: "case1", alt: "Pexia mamaria", beforeLabel: "Antes", afterLabel: "Después", beforeSrc: "/images/aa1.webp", afterSrc: "/images/aa2.webp" },
+  { id: "case2", alt: "Lipo + Lipectomía", beforeLabel: "Antes", afterLabel: "Después", beforeSrc: "/images/bb1.jpeg", afterSrc: "/images/bb2.jpeg" },
+  { id: "case3", alt: "Lipoescultura", beforeLabel: "Antes", afterLabel: "Después", beforeSrc: "/images/dd1.webp", afterSrc: "/images/dd2.jpeg" },
 ];
 
 export default function BeforeAfter() {
@@ -47,6 +47,7 @@ export default function BeforeAfter() {
               afterSrc={c.afterSrc}
               beforeLabel={c.beforeLabel}
               afterLabel={c.afterLabel}
+              alt={c.alt}
             />
           </motion.div>
         ))}

@@ -1,10 +1,15 @@
-import { clinicData } from "@/data/clinic";
+import { clinicData, clinicSameAs } from "@/data/clinic";
 import { services } from "@/data/services";
 import { testimonialsData } from "@/data/testimonials";
 
 export default function SchemaMarkup() {
   const siteUrl = "https://www.clinicatiffany.com";
   const whatsappUrl = `https://wa.me/${clinicData.whatsapp}`;
+
+  const identifiers = [
+    { "@type": "PropertyValue", name: "NIT", value: clinicData.nit },
+    { "@type": "PropertyValue", name: "REPS", value: clinicData.reps },
+  ];
 
   const clinicImages = [
     {
@@ -54,24 +59,22 @@ export default function SchemaMarkup() {
       {
         "@type": "Organization",
         "@id": `${siteUrl}/#organization`,
-        name: "Tiffany Esthetic Group Ips SAS",
-        alternateName: "Tiffany Esthetic Group",
-        legalName: "Tiffany Esthetic Group Ips SAS",
+        name: clinicData.legalName,
+        alternateName: clinicData.alternateNames,
+        legalName: clinicData.legalName,
         description:
           "Institución prestadora de servicios de salud habilitada ante las autoridades sanitarias de Colombia, especializada en cirugía plástica y estética en Cali.",
         url: siteUrl,
-        taxID: "901634870",
-        foundingDate: "2022-09-16",
+        taxID: clinicData.nit,
+        identifier: identifiers,
+        foundingDate: clinicData.foundingDate,
         logo: {
           "@type": "ImageObject",
           url: `${siteUrl}/icon.svg`,
           width: 512,
           height: 512,
         },
-        sameAs: [
-          "https://www.instagram.com/tiffanyeg_ips/",
-          "https://share.google/MzXxcRbLtvpwRjNLt",
-        ],
+        sameAs: clinicSameAs,
         contactPoint: {
           "@type": "ContactPoint",
           telephone: "+57-3202703522",
@@ -84,17 +87,18 @@ export default function SchemaMarkup() {
       {
         "@type": "MedicalClinic",
         "@id": `${siteUrl}/#business`,
-        name: "Tiffany Esthetic Group Ips SAS",
-        alternateName: "Tiffany Esthetic Group",
-        legalName: "Tiffany Esthetic Group Ips SAS",
+        name: clinicData.legalName,
+        alternateName: clinicData.alternateNames,
+        legalName: clinicData.legalName,
         description:
           "Institución habilitada por la Secretaría de Salud con salas de cirugía, área de recuperación, farmacia habilitada y personal calificado para procedimientos de cirugía plástica y estética en Cali, Colombia.",
         url: siteUrl,
         telephone: "+57-3202703522",
         email: clinicData.email,
-        taxID: "901634870",
-        vatID: "CO901634870",
-        foundingDate: "2022-09-16",
+        taxID: clinicData.nit,
+        vatID: `CO${clinicData.nit}`,
+        identifier: identifiers,
+        foundingDate: clinicData.foundingDate,
         medicalSpecialty: "PlasticSurgery",
         priceRange: "$$$",
         paymentAccepted: "cash, credit card",
@@ -108,11 +112,11 @@ export default function SchemaMarkup() {
         },
         address: {
           "@type": "PostalAddress",
-          addressCountry: "CO",
-          addressLocality: "Cali",
-          addressRegion: "Valle del Cauca",
-          streetAddress: "Cra 85c #13a1-25, Comuna 17",
-          postalCode: "760032",
+          addressCountry: clinicData.country,
+          addressLocality: clinicData.locality,
+          addressRegion: clinicData.region,
+          streetAddress: clinicData.streetAddress,
+          postalCode: clinicData.postalCode,
         },
         geo: {
           "@type": "GeoCoordinates",
@@ -134,10 +138,7 @@ export default function SchemaMarkup() {
             closes: "12:00",
           },
         ],
-        sameAs: [
-          "https://www.instagram.com/tiffanyeg_ips/",
-          "https://share.google/MzXxcRbLtvpwRjNLt",
-        ],
+        sameAs: clinicSameAs,
         parentOrganization: { "@id": `${siteUrl}/#organization` },
         contactPoint: {
           "@type": "ContactPoint",
@@ -170,7 +171,8 @@ export default function SchemaMarkup() {
         "@type": "WebSite",
         "@id": `${siteUrl}/#website`,
         url: siteUrl,
-        name: "Tiffany Esthetic Group | Cirugía Plástica en Cali",
+        name: "Clínica Tiffany | Tiffany Esthetic Group IPS SAS",
+        alternateName: clinicData.alternateNames,
         description:
           "Clínica boutique de cirugía plástica y estética en Cali, Colombia. Habilitada por la Secretaría de Salud.",
         publisher: { "@id": `${siteUrl}/#organization` },

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildMetadata, clampDescription } from "@/lib/metadata";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 
@@ -21,26 +22,6 @@ const jsonLd = {
       aspect: "Treatment",
     },
     {
-      "@type": "MedicalClinic",
-      "@id": "https://www.clinicatiffany.com/#business",
-      name: "Tiffany Esthetic Group IPS",
-      image: "https://www.clinicatiffany.com/icon.svg",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "13a1-25, Cra 85c, Comuna 17",
-        addressLocality: "Cali",
-        addressRegion: "Valle del Cauca",
-        addressCountry: "CO",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: 3.3811893,
-        longitude: -76.5357955,
-      },
-      telephone: "+57 320 270 3522",
-      medicalSpecialty: "PlasticSurgery",
-    },
-    {
       "@type": "SurgicalProcedure",
       url: "https://www.clinicatiffany.com/lifting-facial",
       name: "Lifting Facial o Ritidectomía",
@@ -59,24 +40,14 @@ const jsonLd = {
   ],
 };
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Lifting Facial en Cali | Tiffany Esthetic Group",
-  description:
-    "Cirugía de rejuvenecimiento facial para mejorar flacidez y contornos del rostro. Técnicas SMAS, lifting de tercio medio y mini-lifting. IPS habilitada en Cali. Agenda tu valoración.",
-  robots: { index: true, follow: true },
-  alternates: {
-    canonical: "/lifting-facial",
-  },
-  openGraph: {
-    title: "Lifting Facial en Cali",
-    description:
-      "Rejuvenecimiento facial quirúrgico con técnicas personalizadas. Resultados naturales que armonizan los contornos del rostro y el cuello.",
-    url: "https://www.clinicatiffany.com/lifting-facial",
-    siteName: "Tiffany Esthetic Group",
-    locale: "es_CO",
-    type: "article",
-  },
-};
+  description: clampDescription(
+    "Lifting facial en Cali para corregir flacidez de rostro y cuello con técnicas SMAS personalizadas. IPS habilitada y valoración médica previa."
+  ),
+  path: "/lifting-facial",
+  type: "article",
+});
 
 const procedureSteps = [
   {
@@ -292,8 +263,8 @@ export default function LiftingFacialPage() {
         <section className="relative bg-[#0F4A44] pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
           <div className="absolute inset-0" aria-hidden="true">
             <img
-              src="https://res.cloudinary.com/dkmf5vt2k/image/upload/v1783830876/ChatGPT_Image_11_jul_2026_11_34_27_p.m._z2zube.png"
-              alt=""
+              src="/images/schema/23-4x3.webp"
+              alt="Consultorio de valoración de Tiffany Esthetic Group IPS en Cali"
               className="w-full h-full object-cover"
             />
             <div
